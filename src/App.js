@@ -1,5 +1,5 @@
 import './App.css';
-import React from 'react';
+// import React from 'react';
 import { Helmet } from 'react-helmet';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'; // Importálás a Routerhez
 import Navbar from './components/Navbar';
@@ -8,8 +8,8 @@ import IntroAnimation from './components/IntroAnimation';
 import Prices from './components/Prices';
 import Services from './components/Services';
 import Offer from './components/Offer';
-import UsSection from './components/UsSection';
-import Reviews from './components/Reviews';
+// import UsSection from './components/UsSection';
+// import Reviews from './components/Reviews';
 import CTA from './components/CTA';
 import Footer from './components/Footer';
 import ScrollAnimation from './components/ScrollAnimation';

@@ -3,7 +3,7 @@ import Logo from '../images/GM website design and seo logo.webp'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { faFacebookF, faInstagram } from '@fortawesome/free-brands-svg-icons';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 
 const links = [

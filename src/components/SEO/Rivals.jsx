@@ -24,7 +24,7 @@ const Rivals = () => {
       {/* Kép rész */}
       <div className="scroll-in w-full md:w-1/2 h-64 sm:h-96 md:h-full md:mt-0 order-1">
         <img src={Workspace} alt="
-          Workspace image illustrating the proven results of our SEO services
+          Illustrating the proven results of our SEO services
         " className="w-full h-full object-cover" />
       </div>
     </section>
