@@ -1,5 +1,5 @@
 {
-  "name": "gmdesign1",
+  "name": "grlab",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -24,6 +24,7 @@
     "webpack": "^5.97.1"
   },
   "scripts": {
+    "dev": "react-scripts start",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",

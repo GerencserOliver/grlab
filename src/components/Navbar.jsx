@@ -1,88 +1,76 @@
-import { Link } from 'react-router-dom'; // React Router Link import
-import logo from '../images/GM website design and seo logo.webp'
-import { useState } from 'react'
+import { Link, useLocation } from 'react-router-dom';
+import logo from '../images/GR website design and seo logo.png';
+import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
 const links = [
-  { name: "Website Development", href: "/website"},
-  { name: "SEO", href: "/seo"},
-  { name: "Portfolio", href: "/portfolio"},
-  { name: "Contact", href: "/contact"},
-]
+  { key: 'website', href: '/website' },
+  { key: 'seo', href: '/seo' },
+  { key: 'portfolio', href: '/portfolio' },
+  { key: 'contact', href: '/contact' },
+];
 
 const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false)
+  const [isOpen, setIsOpen] = useState(false);
+  const location = useLocation();
+  const { t, i18n } = useTranslation();
 
-  const { i18n } = useTranslation();
+  useEffect(() => {
+    setIsOpen(false);
+  }, [location.pathname]);
 
   const changeLanguage = (lng) => {
     i18n.changeLanguage(lng);
-    localStorage.setItem('language', lng); // Nyelv mentése
-  }
+    localStorage.setItem('language', lng);
+  };
 
   return (
-    <nav className='md:scroll-in top-0 z-50 px-10 w-full wrapper h-48'>
-        <div className="flex items-center justify-between h-full text-black container mx-auto max-w-[1480px]">
-            <button>
-              <Link to='/'>
-                <img src={logo} alt="
-                GM logo – Website Design and SEO Optimization Services
-                " className='w-24' />
-              </Link>
-            </button>
+    <nav className='sticky top-0 z-50 w-full border-b border-[#dfe7e1] bg-white/95 px-5 backdrop-blur md:px-10' aria-label={t('nav.ariaLabel')}>
+      <div className='mx-auto flex h-24 max-w-[1440px] items-center justify-between'>
+        <Link to='/' aria-label={t('nav.home')}>
+          <img src={logo} alt='GRLab' className='w-16' />
+        </Link>
 
-            {/* hamburger */}
-            <div className='block md:hidden'>
-              <button onClick={() => setIsOpen(!isOpen)}
-                className='text-black focus:outline-none'>
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12" fill="none" viewBox="0 0 24 24"
-                    stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
-                      d="M4 6h16M4 12h16m-7 6h7" />
-                  </svg>
-              </button>
-            </div>
+        <button
+          type='button'
+          onClick={() => setIsOpen((open) => !open)}
+          className='rounded-lg p-3 text-[#102a2d] focus:outline-none focus:ring-2 focus:ring-orange-700 md:hidden'
+          aria-label={isOpen ? t('nav.closeMenu') : t('nav.openMenu')}
+          aria-expanded={isOpen}
+          aria-controls='mobile-navigation'
+        >
+          <span className='text-2xl' aria-hidden='true'>{isOpen ? '×' : '☰'}</span>
+        </button>
 
-            {/* large */}
-            <ul className='hidden md:flex items-center justify-end h-full ml-auto'>
-                {links.map((link) => (
-                  <li key={link.name} className='text-black font-semibold text-xl font-poppins li p-2 pr-4 pl-4'>
-                    <a href={link.href}>{link.name}</a>
-                  </li>
-                ))}
-                <div className="md:w-1/4 flex justify-center items-center ml-12">
-                  <button onClick={() => changeLanguage('en')} className='mr-3 md:mb-0 mb-4 hover:bg-gray-800 bg-orange-700 p-3 pr-8 pl-8 rounded-md text-white font-poppins max-w-full'>English</button>
-                  <button onClick={() => changeLanguage('hu')} className='hover:bg-gray-800 md:mb-0 mb-4 bg-orange-700 p-3 pr-8 pl-8 rounded-md text-white font-poppins max-w-full'>Magyar</button>
-                </div>
-            </ul>
-
-            {/* mobile */}
-            <ul className={`fixed inset-0 bg-white flex flex-col justify-center items-center space-y-6 text-black font-bold text-2xl transition-transform ease-in-out duration-500 ${isOpen ? 'translate-x-0' : '-translate-x-full'}`}style={{ zIndex: 60 }}>
-              <button onClick={() => setIsOpen(!isOpen)} className='text-black absolute top-12 right-5 p-4'>
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12" fill="none" viewBox="0 0 24 24"
-                  stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
-                    d="M6 18L18 6M6 6l12 12" />
-                </svg>
-              </button>
-              <li className='block py-4 text-xl font-poppins'>
-                  <a href='/' >Home</a>
-              </li>
-              {links.map((link) => (
-                <li key={link.name} className='block py-4 text-xl font-poppins'>
-                  <a href={link.href}>{link.name}</a>
-                </li>
-              ))}
-              <li className='block text-xl font-poppins'>
-                <button onClick={() => changeLanguage('en')} className='md:mb-0 hover:bg-gray-800 bg-orange-700 p-3 pr-8 pl-8 rounded-md text-white font-poppins max-w-full'>English</button>
-              </li>
-              <li className='block text-xl font-poppins'>
-                <button onClick={() => changeLanguage('hu')} className='hover:bg-gray-800 md:mb-0 mb-4 bg-orange-700 p-3 pr-8 pl-8 rounded-md text-white font-poppins max-w-full'>Magyar</button>
-              </li>
-            </ul>
+        <div className='hidden items-center gap-2 md:flex'>
+          {links.map((link) => (
+            <Link
+              key={link.key}
+              to={link.href}
+              className={`rounded-lg px-4 py-3 font-poppins text-sm font-semibold transition-colors ${location.pathname === link.href ? 'bg-[#102a2d] text-white' : 'text-[#102a2d] hover:bg-[#eef4ef]'}`}
+            >
+              {t(`nav.${link.key}`)}
+            </Link>
+          ))}
+          <div className='ml-4 flex gap-1 rounded-lg bg-[#eef4ef] p-1' aria-label={t('nav.languageLabel')}>
+            <button type='button' onClick={() => changeLanguage('hu')} className={`rounded-md px-3 py-2 text-xs font-bold ${i18n.language === 'hu' ? 'bg-white text-[#102a2d] shadow-sm' : 'text-[#315b5d]'}`}>HU</button>
+            <button type='button' onClick={() => changeLanguage('en')} className={`rounded-md px-3 py-2 text-xs font-bold ${i18n.language === 'en' ? 'bg-white text-[#102a2d] shadow-sm' : 'text-[#315b5d]'}`}>EN</button>
+          </div>
         </div>
+
+        <div id='mobile-navigation' className={`${isOpen ? 'flex' : 'hidden'} absolute left-0 top-24 w-full flex-col gap-2 border-b border-[#dfe7e1] bg-white p-5 shadow-lg md:hidden`}>
+          <Link to='/' className='rounded-lg px-4 py-3 font-semibold text-[#102a2d]'>{t('nav.home')}</Link>
+          {links.map((link) => (
+            <Link key={link.key} to={link.href} className='rounded-lg px-4 py-3 font-semibold text-[#102a2d]'>{t(`nav.${link.key}`)}</Link>
+          ))}
+          <div className='mt-2 flex gap-2 border-t border-[#dfe7e1] pt-4'>
+            <button type='button' onClick={() => changeLanguage('hu')} className='rounded-lg bg-[#eef4ef] px-4 py-2 font-bold'>HU</button>
+            <button type='button' onClick={() => changeLanguage('en')} className='rounded-lg bg-[#eef4ef] px-4 py-2 font-bold'>EN</button>
+          </div>
+        </div>
+      </div>
     </nav>
-  )
-}
+  );
+};
 
 export default Navbar

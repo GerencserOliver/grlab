@@ -1,12 +1,7 @@
-import React from 'react'
 import { Helmet } from 'react-helmet'
 import CTA from '../../components/CTA'
 import ScrollAnimation from '../../components/ScrollAnimation'
 import IntroAnimation from '../../components/IntroAnimation'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
-import { faFacebookF, faInstagram } from '@fortawesome/free-brands-svg-icons';
-import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 
 const Contact = () => {
@@ -15,58 +10,31 @@ const Contact = () => {
   return (
     <div>
       <Helmet>
-        <title>GM | Contact</title>
+        <title>Kapcsolat | GRLab</title>
         <meta
           name='description'
-          content='Get in touch with me to discuss your project. Professional website development services using React and Tailwind CSS.'
+          content='Beszéljük át weboldal-, webalkalmazás- vagy egyedi üzleti rendszer ötletét. Kérjen személyre szabott ajánlatot.'
         />
         <meta name='robots' content='index, follow' />
-        <link rel='canonical' href='https://gmdesign.vercel.app/contact' />
+        <link rel='canonical' href='https://grlab.vercel.app/contact' />
       </Helmet>
         <IntroAnimation />
         <ScrollAnimation />
-        <section className='flex items-center justify-center'>
-          <div className='container mx-auto max-w-[1570px] flex flex-col md:flex-row px-4 md:px-10 z-1'>
-            <div className='scroll-in w-full md:w-4/6 text-center md:text-left'>
-              <h2 className='text-black font-bold font-poppins text-xl mb-6'>
+        <section className='border-b border-[#dfe7e1] bg-[#f5f7f4]'>
+          <div className='container mx-auto flex max-w-[1440px] flex-col gap-8 px-6 py-16 md:flex-row md:items-end md:px-10 md:py-24'>
+            <div className='scroll-in w-full md:w-2/3'>
+              <p className='mb-5 text-sm font-bold uppercase tracking-[0.18em] text-orange-700'>
                 {t('contact.subtitle')}
-              </h2>
-              <h1 className='text-black font-bold font-poppins text-3xl sm:text-5xl md:text-8xl mb-6'>
+              </p>
+              <h1 className='mb-5 font-poppins text-4xl font-extrabold leading-tight text-[#102a2d] sm:text-5xl md:text-7xl'>
                 {t('contact.title')}
               </h1>
+              <p className='max-w-2xl text-lg leading-relaxed text-[#315b5d] md:text-xl'>{t('contact.description')}</p>
             </div>
-          </div>
-          <div className="flex-col items-center space-y-4 text-black mt-10 hidden md:block fixed left-0 z-10">
-            <div className="flex flex-col items-center space-y-4 text-white p-12 mt-72">
-              {/* Email Link */}
-              <a
-                href="mailto:gmwebsitedesign@gmail.com"
-                className="flex items-center justify-center w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 bg-black rounded-full p-3"
-              >
-                <FontAwesomeIcon icon={faEnvelope} className="text-white h-8" />
-              </a>
-    
-              {/* Facebook Link */}
-              <a
-                href="https://www.facebook.com/oliver.gerencser.5/"
-                className="flex items-center justify-center w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 bg-black rounded-full p-3"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Facebook"
-              >
-                <FontAwesomeIcon icon={faFacebookF} className="text-white h-8" />
-              </a>
-    
-              {/* Instagram Link */}
-              <a
-                href="https://www.instagram.com/oliveerphd/"
-                className="flex items-center justify-center w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 bg-black rounded-full p-3"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Instagram"
-              >
-                <FontAwesomeIcon icon={faInstagram} className="text-white h-8" />
-              </a>
+            <div className='w-full rounded-2xl border border-[#c9d8cc] bg-white p-6 shadow-sm md:w-1/3'>
+              <p className='text-sm font-bold uppercase tracking-widest text-orange-700'>{t('contact.cardEyebrow')}</p>
+              <a href='mailto:info@grlab.com' className='mt-3 block break-all text-lg font-bold text-[#102a2d] transition-colors hover:text-orange-700'>info@grlab.com</a>
+              <p className='mt-3 text-sm leading-relaxed text-[#315b5d]'>{t('contact.cardText')}</p>
             </div>
           </div>
         </section>

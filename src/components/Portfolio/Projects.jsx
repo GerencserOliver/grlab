@@ -1,5 +1,6 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React from 'react';
+import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Portfolio1 from '../../images/Portfolio/Responsive web design project for Oliver – modern UIUX and mobile-friendly layout.webp'
 import Portfolio2 from '../../images/Portfolio/Mobile app development showcase  with intuitive user interface and real-time features.webp'
 import Portfolio3 from '../../images/Portfolio/Brand identity design portfolio – logo, typography, and marketing materials for Oliver.webp'
@@ -14,98 +15,79 @@ import Gym4 from '../../images/gym/One-on-one personal training – customized f
 import Gym5 from '../../images/gym/Relaxation area with sauna, steam room, and massage services – post-workout recovery.webp'
 import Gym6 from '../../images/gym/Cardio zone with treadmills, rowing machines, and ellipticals – burn calories efficiently.webp'
 import Gym7 from '../../images/gym/Sports nutrition shop – protein powders, vitamins, and health supplements.webp'
-import { useTranslation } from 'react-i18next' 
+import { useTranslation } from 'react-i18next';
+
+const projectGroups = [
+    {
+        key: 'digital',
+        image: Portfolio1,
+        gallery: [Portfolio2, Portfolio3, Portfolio4],
+        descriptionKey: 'description1',
+        link: 'https://oliver-dev.vercel.app/',
+    },
+    {
+        key: 'rental',
+        image: CarRental1,
+        gallery: [],
+        descriptionKey: 'description2',
+    },
+    {
+        key: 'fitness',
+        image: Gym1,
+        gallery: [Gym3, Gym2, Gym4, Gym5, Gym6, Gym7],
+        descriptionKey: 'description3',
+        link: 'https://gym-website-gamma-five.vercel.app/',
+    },
+];
 
 const Projects = () => {
     const { t } = useTranslation();
 
   return (
-    <section className='flex items-center justify-center bg-white mt-12'>
-        <div className='container mx-auto max-w-[1570px] flex flex-col px-4 md:px-10 md:mt-0 mt-12'>
-            <div className='max-w-[800px] scroll-in'>
-                <h2 className='text-black font-extrabold font-poppins text-3xl md:text-6xl'>{t('projects.title')}</h2>
-                <div className='border-black border-b-8 w-36 h-8'></div>
-            </div>
-            <div className='flex items-center justify-center mt-16 md:mt-32 shadow-2xl scroll-in'>
-                <img src={Portfolio1} alt="
-                    My personal digital portfolio showcasing web design and UI/UX projects
-                " className='w-full h-full object-cover' />
-            </div>
-            <div className='grid grid-cols-3 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-40 md:mt-96 mt-24 scroll-in scroll-in'>
-                <img src={Portfolio2} alt="
-                    UI/UX case study: An app for a portfolio showcasing web design and UI/UX projects
-                " className='w-full object-cover shadow-2xl' />
-                <img src={Portfolio3} alt="
-                    Screenshot of my portfolio homepage – Oliver's digital portfolio
-                " className='w-full object-cover shadow-2xl' />
-                <img src={Portfolio4} alt="
-                    Creative web design portfolio with case studies
-                " className='w-full object-cover shadow-2xl' />
-            </div>
-            <div className="mt-32 w-full h-auto flex flex-col items-center justify-center bg-gradient-to-r from-blue-500 via-teal-500 to-green-500 p-16 rounded-lg shadow-lg transform hover:scale-105 transition-all">
-                <h2 className="text-white font-extrabold text-3xl md:text-4xl text-center mb-8">
-                    {t('projects.description1')}
-                </h2>
-                <Link to="https://oliver-dev.vercel.app/" target="_blank">
-                    <button className="bg-orange-700 hover:bg-orange-800 text-white text-lg md:text-xl font-bold py-3 px-6 rounded-full shadow-xl hover:shadow-2xl transition-all duration-300 mb-8">
-                        {t('projects.viewProject')}
-                    </button>
-                </Link>
-            </div>
-            <div className='flex items-center justify-center mt-16 md:mt-32 shadow-2xl scroll-in'>
-                <img src={CarRental1} alt="
-                    Car rental website design with a modern and clean user interface for a car rental company
-                " className='w-full h-full object-cover' />
-            </div>
-            <div className="mt-32 w-full h-auto flex flex-col items-center justify-center bg-gradient-to-r from-yellow-500 via-yellow-600 to-yellow-700 p-16 rounded-lg shadow-lg transform hover:scale-105 transition-all">
-                <h2 className="text-white font-extrabold text-3xl md:text-4xl text-center">
-                    {t('projects.description2')}
-                </h2>
-                {/* <Link to="https://car-rental-website-omega.vercel.app/" target="_blank">
-                    <button className="bg-orange-700 hover:bg-orange-800 text-white text-lg md:text-xl font-bold py-3 px-6 rounded-full shadow-xl hover:shadow-2xl transition-all duration-300 mb-8">
-                        View Project
-                    </button>
-                </Link> */}
-            </div>
-            <div className='grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-2 gap-4 md:gap-40 md:mt-32 mt-24 scroll-in scroll-in'>
-                <img src={Gym1} alt="
-                    Gym website design with a modern and clean user interface for a gym and fitness center
-                " className='w-full object-cover shadow-2xl' />
-                <img src={Gym3} alt="
-                    Modern gym in Győr with state-of-the-art fitness equipment and friendly atmosphere
-                " className='w-full object-cover shadow-2xl' />
-                <img src={Gym2} alt="
-                    Weightlifting area in Győr: barbells, dumbbells, and power racks for strength training
-                " className='w-full object-cover shadow-2xl' />
-                <img src={Gym4} alt="
-                    Cardio zone with treadmills, ellipticals, and rowing machines – burn calories in Győr's best gym
-                " className='w-full object-cover shadow-2xl' />
-            </div>
-            <div className='grid grid-cols-3 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-40 md:mt-96 mt-24 scroll-in scroll-in'>
-                <img src={Gym5} alt="
-                    High-energy spinning class in Győr – group workouts for maximum motivation
-                " className='w-full object-cover shadow-2xl' />
-                <img src={Gym6} alt="
-                    Group fitness classes in Győr – yoga, pilates, and HIIT for all fitness levels
-                " className='w-full object-cover shadow-2xl' />
-                <img src={Gym7} alt="
-                    Personal training sessions in Győr – one-on-one coaching for your fitness goals
-                " className='w-full object-cover shadow-2xl' />
-            </div>
-            <div className="mt-32 md:mb-16 w-full h-auto flex flex-col items-center justify-center bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 p-16 rounded-lg shadow-lg transform hover:scale-105 transition-all">
-                <h2 className="text-white font-extrabold text-3xl md:text-4xl text-center mb-8">
-                    {t('projects.description3')}
-                </h2>
-                <Link to="https://gym-website-gamma-five.vercel.app/" target="_blank">
-                    <button className="bg-orange-700 hover:bg-orange-800 text-white text-lg md:text-xl font-bold py-3 px-6 rounded-full shadow-xl hover:shadow-2xl transition-all duration-300 mb-8">
-                        {t('projects.viewProject')}
-                    </button>
-                </Link>
-            </div>
-        </div>
-    </section>
-    // grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-16 scroll-in
-  )
-}
+        <section className='bg-white' aria-labelledby='projects-heading'>
+            <div className='container mx-auto max-w-[1440px] px-6 py-20 md:px-10 md:py-24'>
+                <header className='scroll-in max-w-3xl'>
+                    <p className='mb-4 text-sm font-bold uppercase tracking-[0.18em] text-orange-700'>{t('projects.eyebrow')}</p>
+                    <h2 id='projects-heading' className='font-poppins text-3xl font-extrabold leading-tight text-[#102a2d] md:text-5xl'>
+                        {t('projects.title')}
+                    </h2>
+                    <p className='mt-5 text-lg leading-relaxed text-[#315b5d] md:text-xl'>{t('projects.intro')}</p>
+                </header>
 
-export default Projects
+                <div className='mt-12 space-y-12'>
+                    {projectGroups.map((project) => (
+                            <article key={project.key} className='scroll-in overflow-hidden rounded-3xl border border-[#dfe7e1] bg-[#f5f7f4] shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-xl'>
+                            <div className='grid lg:grid-cols-[1.15fr_0.85fr]'>
+                                <div className='group overflow-hidden bg-[#dce9df]'>
+                                    <img src={project.image} alt={t(`projects.${project.key}.imageAlt`)} loading='lazy' className='aspect-[16/10] h-full w-full object-cover transition duration-700 group-hover:scale-105' />
+                                </div>
+                                <div className='flex flex-col justify-center p-7 md:p-10'>
+                                    <p className='text-sm font-bold uppercase tracking-[0.18em] text-orange-700'>{t(`projects.${project.key}.label`)}</p>
+                                    <h3 className='mt-3 font-poppins text-2xl font-bold text-[#102a2d] md:text-3xl'>{t(`projects.${project.key}.title`)}</h3>
+                                    <p className='mt-4 text-base leading-relaxed text-[#315b5d] md:text-lg'>{t(`projects.${project.descriptionKey}`)}</p>
+                                    {project.link && (
+                                        <a href={project.link} target='_blank' rel='noopener noreferrer' className='mt-7 inline-flex w-fit items-center gap-3 rounded-full bg-orange-700 px-6 py-3 font-bold text-white transition-colors hover:bg-orange-800'>
+                                            {t('projects.viewProject')} <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
+                                        </a>
+                                    )}
+                                </div>
+                            </div>
+
+                            {project.gallery.length > 0 && (
+                                <div className='grid grid-cols-2 gap-3 border-t border-[#dfe7e1] bg-white/50 p-3 sm:grid-cols-3 lg:grid-cols-4'>
+                                    {project.gallery.map((image, index) => (
+                                        <div key={`${project.key}-${index}`} className='group overflow-hidden rounded-2xl bg-white'>
+                                            <img src={image} alt={t(`projects.${project.key}.galleryAlt`)} loading='lazy' className='aspect-[4/3] w-full object-cover transition duration-500 group-hover:scale-105' />
+                                        </div>
+                                    ))}
+                                </div>
+                            )}
+                        </article>
+                    ))}
+                </div>
+            </div>
+        </section>
+    );
+};
+
+export default Projects;

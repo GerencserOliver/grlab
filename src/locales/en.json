@@ -1,356 +1,403 @@
 {
-    "english": "English",
-    "hungarian": "Magyar",
-    "hero": {
-      "subtitle": "Website Design & Development | Performance-Driven | Győr",
-      "title": "Website Development to Build Your Online Presence",
-      "description": "Custom websites that captivate, perform, and grow your business. From design to deployment, we bring your ideas to life.",
-      "button_text": "Request a Quote"
+  "english": "English",
+  "hungarian": "Magyar",
+  "nav": {
+    "ariaLabel": "Main navigation",
+    "home": "Home",
+    "website": "Web Development",
+    "seo": "Online Presence",
+    "portfolio": "Portfolio",
+    "contact": "Contact",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "languageLabel": "Language selector"
+  },
+  "hero": {
+    "subtitle": "Web Development & Custom Digital Solutions | Győr",
+    "title": "Digital solutions for growing businesses",
+    "description": "We build modern websites, web applications and mobile apps — from a professional online presence to custom business systems with backend, databases and integrations.",
+    "button_text": "Discuss your project",
+    "secondaryButton": "View our work",
+    "proofPoints": ["Custom development", "Mobile-first experience", "Long-term support"],
+    "imageAlt": "Custom digital product being designed on a laptop",
+    "cardLabel": "From idea to working system",
+    "cardText": "Planning, development and support in one place."
+  },
+  "prices": {
+    "eyebrow": "Solutions for business goals",
+    "header": {
+      "title": "A digital solution built around your business",
+      "subtitle": "We don't force every project into the same package. We design and develop the solution around your goals, processes and actual requirements."
     },
-    "prices": {
-        "header": {
-        "title": "Stand Out from the Competition and Achieve Your Goals!",
-        "subtitle": "Websites and webshops designed for performance – SEO optimization, UX design, and efficiency enhancements tailored to the latest trends."
-        },
-        "packages": {
-        "seo": {
-            "name": "SEO Optimization Services",
-            "description": "Boost your business visibility by improving your Google rankings. Our monthly SEO services increase organic traffic and help you stand out in search results."
-        },
-        "website": {
-            "name": "Website Design & Development",
-            "description": "Create a visually appealing and user-friendly website with modern design techniques. We ensure fast loading times and intuitive navigation, making the first impression count."
-        },
-        "ux": {
-            "name": "UX Design & Optimization",
-            "description": "Optimize your website’s usability and functionality. We focus on intuitive navigation and fast loading speeds to provide the best user experience from the first visit."
-        }
-        },
-        "button_text": "Prices"
+    "packages": {
+      "seo": {
+        "name": "Online Presence",
+        "description": "A strong digital foundation with technical SEO, Google Business Profile support and a professional web presence."
+      },
+      "website": {
+        "name": "Website Development",
+        "description": "Fast, responsive and modern websites designed around your business, brand and customers."
+      },
+      "ux": {
+        "name": "Custom Web Applications",
+        "description": "Custom customer portals, booking systems, admin interfaces and business applications built around your workflows."
+      }
     },
-    "services": {
-        "header": {
-        "title": "Our Services: The Key to Success in the Digital World"
-        },
-        "web_design": {
-        "name": "Web Design",
-        "description": "Creating visually stunning, user-friendly, and responsive websites that captivate your audience."
-        },
-        "seo": {
-        "name": "SEO Optimization",
-        "description": "Improving your website's visibility on search engines with the latest SEO strategies to drive organic traffic."
-        },
-        "ecommerce": {
-        "name": "E-commerce Solutions",
-        "description": "Building robust online stores with smooth shopping experiences and payment gateway integrations."
-        },
-        "ux_ui": {
-        "name": "UX/UI Design",
-        "description": "Enhancing the user experience with intuitive, aesthetically pleasing designs that encourage engagement."
-        },
-        "maintenance": {
-        "name": "Website Maintenance",
-        "description": "Ongoing support and maintenance services to ensure your website runs smoothly and is always up-to-date."
-        },
-        "content": {
-        "name": "Content Creation",
-        "description": "Crafting high-quality content, including blogs, videos, and infographics, to engage your audience and drive conversions."
-        }
+    "button_text": "Our Services"
+  },
+  "services": {
+    "eyebrow": "How we can help",
+    "header": {
+      "title": "The right digital solution for your business goals",
+      "description": "We do not force every business into a fixed package. We understand how you work, then build the digital product that fits."
     },
-    "offer": {
-        "header": "Boost the Performance of Your Business Website or Online Store",
-        "description": "In-depth analysis, SEO optimization, and UX improvements for websites and online stores.",
-        "button": "Request a Quote",
-        "imageAlt": "Laptop showing business performance improvements regarding SEO and UX"
+    "web_design": {
+      "name": "Websites",
+      "description": "Modern, fast and responsive websites for businesses — from simple company websites to more advanced online platforms."
     },
-    "usSection": {
-        "introductionTitle": "Introduction",
-        "introductionText": "Get to know me and learn more about who I am.",
-        "servicesTitle": "Services",
-        "servicesText": "Discover the services I provide and how they can benefit you.",
-        "learnMore": "Learn More"
+    "seo": {
+      "name": "Google Business Profile & Online Presence",
+      "description": "Google Business Profile setup and management, together with technical SEO foundations for a stronger online presence."
     },
-    "cta": {
-        "title": "Let's Collaborate!",
-        "description": "If you have any questions—whether it's a simple inquiry, a potential collaboration, or a business proposal—I'm here and ready to assist.",
-        "namePlaceholder": "Full Name",
-        "emailPlaceholder": "Email Address",
-        "messagePlaceholder": "Your Message",
-        "submitButton": "Send Message",
-        "sending": "Sending...",
-        "successMessage": "Message sent successfully!",
-        "failureMessage": "Failed to send message.",
-        "errorMessage": "Error: "
+    "ecommerce": {
+      "name": "E-commerce Solutions",
+      "description": "Custom or integrated online stores with the features, payment solutions and workflows your business needs."
     },
-    "wdhero": {
-        "subtitle": "Website Design & Development | Performance-Driven | Győr",
-        "title": "Website Design & Development",
-        "description": "Crafting Modern, Functional Websites Tailored to Your Needs",
-        "button_text": "Request a Quote"
+    "ux_ui": {
+      "name": "UX/UI Design",
+      "description": "Clear and intuitive interfaces designed around real users, business goals and the way your product is actually used."
     },
-    "introduction": {
-    "title": "Tailored Websites for Your Business",
-    "subtitle": "GMWebDesign creates custom websites that fit your business needs, from showcase sites to online stores, helping you elevate your online presence.",
+    "maintenance": {
+      "name": "Maintenance & Further Development",
+      "description": "Updates, bug fixes, improvements and new features to keep your digital product reliable and useful over time."
+    },
+    "content": {
+      "name": "Custom Business Systems",
+      "description": "Backend systems, databases, APIs and custom business applications that simplify and automate everyday processes."
+    }
+  },
+  "offer": {
+    "eyebrow": "Start with the idea",
+    "header": "Let's build the right digital solution for your business",
+    "description": "Tell us what you want to achieve. We'll help you define the right technical solution, from a website to a complete custom business system.",
+    "button": "Request a Quote",
+    "imageAlt": "Custom digital business system displayed on a laptop"
+  },
+  "usSection": {
+    "eyebrow": "Why work with us?",
+    "introductionTitle": "Who are we?",
+    "introductionText": "We are two developers building practical digital products for businesses — not just websites, but complete solutions tailored to real business needs.",
+    "servicesTitle": "What can we build?",
+    "servicesText": "Websites, web applications, mobile apps, backend systems, databases, APIs and custom business solutions.",
+    "point2Title": "A clear process",
+    "point2Text": "We agree on goals, features and next steps early, so the project stays transparent and predictable.",
+    "point3Title": "A long-term partner",
+    "point3Text": "We remain available after launch for maintenance, fixes and further development.",
+    "learnMore": "Learn More"
+  },
+  "cta": {
+    "eyebrow": "Next step",
+    "title": "Let's talk about your idea",
+    "description": "Tell us briefly what you need. We'll get back to you and discuss how your idea can become a working digital solution.",
+    "namePlaceholder": "Full Name",
+    "emailPlaceholder": "Email Address",
+    "messagePlaceholder": "What can we help you with?",
+    "nameLabel": "Name",
+    "emailLabel": "Email address",
+    "messageLabel": "Brief project description",
+    "imageAlt": "Discussing a digital project on a laptop",
+    "submitButton": "Send Message",
+    "sending": "Sending...",
+    "successMessage": "Message sent successfully!",
+    "failureMessage": "Failed to send message.",
+    "errorMessage": "Error: "
+  },
+  "wdhero": {
+    "subtitle": "Website Development | Fast, Modern, Custom | Győr",
+    "title": "A website built around your business",
+    "description": "We create modern, fast and responsive websites designed around your goals, brand and customers — without unnecessary complexity.",
+    "button_text": "Request a Quote"
+  },
+  "introduction": {
+    "eyebrow": "The foundation",
+    "title": "More than just a website",
+    "subtitle": "A good website should do more than look professional. It should build trust, make it easy for customers to contact you and provide a solid foundation for your digital presence.",
     "sections": [
       {
-        "title": "Stand Out from the Crowd",
-        "description": "Stand out and effectively communicate your business values to your target audience. Get a premium website tailored specifically for your business."
+        "title": "Built around your business",
+        "description": "We learn how your business works, who your customers are and what you want to achieve. Then we shape the structure, content and functionality around those goals."
       },
       {
-        "title": "Leverage Cutting-Edge Technology",
-        "description": "Take full advantage of the latest DIY technology to easily update and manage your website content without hassle."
+        "title": "Modern technology",
+        "description": "We use modern development technologies to build fast, maintainable and scalable websites and web applications."
       },
       {
-        "title": "Mobile-Friendly is a Must",
-        "description": "In today's mobile-driven digital world, having a unique, sleek, and functional website that looks perfect on any device is essential for any serious business to succeed."
+        "title": "Responsive by default",
+        "description": "Your website will be designed to work properly across phones, tablets and desktop devices."
       }
-     ]
+    ]
+  },
+  "guarantee": {
+    "eyebrow": "We stay involved after launch",
+    "title": "Support beyond launch",
+    "description": "Our work doesn't have to end when the website goes live. We can help with maintenance, improvements, new features and further development as your business grows.",
+    "button": "Request a Quote",
+    "imageAlt": "Modern development workspace with laptop",
+    "points": ["Clear communication", "Responsive support", "A system built to evolve"]
+  },
+  "wdprices": {
+    "eyebrow": "A clear proposal",
+    "title": "Every project is different",
+    "description": "We don't want to force different businesses into fixed packages. A simple company website and a custom business application are completely different projects, so we prepare an individual proposal based on your requirements.",
+    "startingFrom": "Custom quote",
+    "requestQuote": "Request a Quote",
+    "note": "The final price depends on the required functionality, design, integrations and development effort.",
+    "basic": {
+      "title": "Website",
+      "price": "Custom quote",
+      "description": "For businesses that need a professional and reliable online presence.",
+      "features": [
+        "Custom or tailored design",
+        "Responsive layout",
+        "Contact form",
+        "Technical SEO foundations",
+        "Google Business Profile support",
+        "Performance optimization"
+      ]
     },
-    "guarantee": {
-        "title": "Business Website Development with a 100% Guarantee",
-        "description": "Get a professional and custom-built website that perfectly represents your business. We offer a 100% satisfaction guarantee, ensuring your site meets your expectations and drives results.",
-        "button": "Request a Quote",
-        "imageAlt": "Modern office workspace with laptop and tools illustrating business website development guarantee"
+    "pro": {
+      "title": "Web Application",
+      "price": "Custom quote",
+      "description": "For businesses that need custom functionality in addition to a public-facing website.",
+      "features": [
+        "Custom user interface",
+        "Authentication and user roles",
+        "Backend and database",
+        "API integrations",
+        "Admin interface",
+        "Custom business functionality"
+      ]
     },
-    "wdprices": {
-        "title": "Pricing and Packages",
-        "description": "We offer a range of website development packages to suit businesses of all sizes. Whether you need a basic site, a premium custom design, or an enterprise-level solution, we have the right option for you. Custom solutions are also available to meet your specific needs.",
-        "startingFrom": "Starting from",
-        "requestQuote": "Request a Quote",
-        "note": "The prices listed for the packages are for informational purposes only. A customized quote will be provided for each individual case.",
-        "basic": {
-        "title": "Basic Package",
-        "price": "500,000 HUF",
-        "description": "Great for small businesses or personal projects needing a professional online presence.",
-        "features": [
-            "5-page website design",
-            "Mobile responsive design",
-            "Basic SEO optimization",
-            "Contact form integration",
-            "Social media integration",
-            "1 round of revisions"
-        ]
-        },
-        "pro": {
-        "title": "Pro Package",
-        "price": "800,000 HUF",
-        "description": "Ideal for growing businesses requiring a more robust website with advanced features.",
-        "features": [
-            "10-page website design",
-            "Custom website design",
-            "Mobile and tablet responsive design",
-            "Advanced SEO optimization",
-            "Contact form with validation",
-            "Basic security features",
-            "Social media integration",
-            "Google Analytics integration",
-            "2 rounds of revisions"
-        ]
-        },
-        "premium": {
-        "title": "Premium Package",
-        "price": "1,500,000 HUF",
-        "description": "Tailored for larger companies seeking a highly customized, feature-rich website with ongoing support.",
-        "features": [
-            "30-page custom website design",
-            "Custom development",
-            "E-commerce integration",
-            "Advanced SEO & analytics setup",
-            "Premium security features",
-            "Content Management System (CMS)",
-            "SEO blog integration",
-            "1-year maintenance",
-            "Unlimited revisions",
-            "Priority support"
-        ]
+    "premium": {
+      "title": "Custom System",
+      "price": "Custom quote",
+      "description": "For complex web or mobile products built around specific business processes.",
+      "features": [
+        "Fully custom development",
+        "Web and/or mobile application",
+        "Backend and database",
+        "APIs and external integrations",
+        "Administration interface",
+        "Multiple user roles",
+        "Maintenance and further development"
+      ]
     }
   },
   "websiteBuilding": {
-    "title": "Building Your Website, Step by Step",
-    "description": "From consultation to ongoing support, discover the phases that bring your website to life.",
+    "eyebrow": "A clear process",
+    "title": "How we work together",
+    "description": "A clear process from the first idea to a working digital product.",
     "steps": [
       {
-        "title": "1. Initial Consultation",
-        "description": "We start with a personalized consultation to understand your business needs, goals, and target audience. This step ensures we create a website strategy tailored to your success."
+        "title": "1. Discovery",
+        "description": "We discuss your business, goals, users and the problem you want to solve."
       },
       {
-        "title": "2. Planning and Strategy",
-        "description": "Based on our discussions, we map out the structure of your website, creating a blueprint for its layout and content. This plan is reviewed and refined collaboratively before moving to the next stage."
+        "title": "2. Planning",
+        "description": "We define the required functionality, user flows and technical approach. This becomes the basis of the proposal."
       },
       {
-        "title": "3. Design Phase",
-        "description": "The creative process begins as we design your website. Whether we’re creating a custom design or adapting a premium template, our focus is on producing a visually appealing and functional layout that matches your brand identity."
+        "title": "3. Design",
+        "description": "We shape the visual identity and user experience around your brand, users and business goals."
       },
       {
         "title": "4. Development",
-        "description": "Your website starts to take shape as we code and configure the necessary elements. Content is added, visuals are optimized, and features are integrated to ensure a smooth user experience across all devices."
+        "description": "We turn the approved design into a working website, web application or mobile application, including the required backend and database."
       },
       {
-        "title": "5. Launch and Go Live",
-        "description": "Once testing is complete and every detail is perfected, your website is ready for launch. We handle the technical aspects to ensure a seamless deployment and an impressive debut."
+        "title": "5. Testing & Launch",
+        "description": "We test the important user flows, responsiveness, performance and functionality before deploying the product."
       },
       {
-        "title": "6. Ongoing Support",
-        "description": "After launch, we provide continued support to keep your website running flawlessly. From content updates to performance monitoring and SEO optimization, we’re here to help your site stay effective and relevant."
+        "title": "6. Support & Further Development",
+        "description": "After launch, we can continue with maintenance, bug fixes, improvements and new features."
       }
     ]
   },
   "questions": {
+    "eyebrow": "Frequently asked",
     "title": "Frequently Asked Questions",
     "faqData": [
       {
-        "question": "Who Should Choose the Basic Website Package?",
-        "answer": "The Basic Website Package is perfect for businesses with a limited budget or personal projects that need a clean, professional online presence. With a template-based design and a new-generation website engine, this option is ideal if you need a simple, easy-to-manage website. You’ll be able to update your content quickly and easily from any device, anytime, anywhere."
+        "question": "What kind of businesses do you work with?",
+        "answer": "We primarily work with individual entrepreneurs and small and medium-sized businesses. We can help with anything from a simple company website to a custom business application."
       },
       {
-        "question": "Who Should Choose the Pro Website Package?",
-        "answer": "The Pro Website Package is designed for businesses looking for a modern, clean, and minimalistic design with a professional touch. It offers a custom design, AMP-supported blog, and a new-generation website engine at an affordable price. If you like staying ahead of the curve and want a responsive, modern website, this package is for you."
+        "question": "Do you only build websites?",
+        "answer": "No. We also develop web applications, backend systems, databases, APIs and mobile applications."
       },
       {
-        "question": "Who Should Choose the Premium Website Package?",
-        "answer": "The Premium Website Package is perfect for innovative thinkers who love modern technology and a high-quality design. With a fully custom UX-based design and new-generation website engine, this package provides an entirely unique solution, pushed to the limits for maximum impact."
+        "question": "Can you work on an existing system?",
+        "answer": "Yes. We can assess an existing website or application and help with bug fixes, integrations, improvements and new functionality."
       },
       {
-        "question": "What’s the Difference Between the Basic, Pro, and Premium Packages?",
-        "answer": "The Basic Package uses a template-based design with a rentable content management system. The Pro Package features a fully custom design with a rentable content management system. The Premium Package includes a UX-based custom design with either a custom-installed content management system or a rentable one, offering the highest level of customization."
+        "question": "How much does a website cost?",
+        "answer": "The price depends on the number of pages, design requirements, functionality and any custom development or integrations. We prepare a tailored proposal after discussing the project."
       },
       {
-        "question": "Can I Customize My Website Development Process, Regardless of the Package?",
-        "answer": "Yes, absolutely! Every website project is unique. However, please keep in mind that some elements of the web development process cannot be skipped, depending on the package you choose."
+        "question": "How long does a project take?",
+        "answer": "A simple website can often be completed within a few weeks, while a custom web or mobile application may take several weeks or months. The exact timeline depends on the scope."
       },
       {
-        "question": "How Long Does It Take to Build a Business Website?",
-        "answer": "With the Basic Website Package, we will build your site in two weeks, provided that all necessary materials (such as logo, text, images) are available. The Pro Website Package will be completed within a month, while the Premium Website Package will take up to three months. Deadlines may vary depending on the client’s specific needs and requirements."
+        "question": "Can you help with domain and hosting?",
+        "answer": "Yes. We can help with domain, hosting, email, SSL and the technical steps required to launch your website."
+      },
+      {
+        "question": "Can the system be extended later?",
+        "answer": "Yes. We aim to build systems that can be maintained and extended as your business needs change."
       }
     ]
   },
   "portfolio": {
-    "tagline": "Website Design & Development | Performance-Driven | Győr",
-    "title": "Digital Portfolio",
+    "tagline": "Custom Digital Solutions | Web, Mobile & Business Systems | Győr",
+    "title": "Our Work",
+    "description": "A selection of projects showing how we turn business goals into thoughtful, useful digital products.",
     "requestQuote": "Request a Quote"
   },
   "projects": {
-    "title": "Public Projects",
-    "description1": "Elegant and modern design. Tailored to your needs, delivered with precision.",
-    "description2": "Modern and sleek design. Tailored to your needs, delivered with precision.",
-    "description3": "Custom minimalist web design. Crafted with precision, delivered on time.",
-    "viewProject": "View Project"
+    "eyebrow": "Our work, real digital products",
+    "title": "Our Projects",
+    "intro": "The goal is consistent across every project: a clear experience and reliable technology aligned with the client's business goals.",
+    "description1": "Custom solutions, thoughtful user experiences and precise development.",
+    "description2": "Modern digital products built around real business requirements.",
+    "description3": "From the initial idea to a working digital product — planned, designed and developed.",
+    "viewProject": "View Project",
+    "digital": { "label": "Digital product", "title": "A modern web experience for business goals", "imageAlt": "Modern responsive website interface", "galleryAlt": "Digital product detail" },
+    "rental": { "label": "Service business website", "title": "A clear online presence for a car rental business", "imageAlt": "Car rental website concept", "galleryAlt": "Car rental website detail" },
+    "fitness": { "label": "Local service business", "title": "A digital introduction for a Győr fitness centre", "imageAlt": "Fitness centre website project", "galleryAlt": "Fitness centre website detail" }
   },
   "seo": {
-    "subtitle": "Website Design & Development | Performance-Driven | Győr",
-    "title": "Search Engine Optimization",
-    "description": "Enhance your website's visibility and drive organic traffic with proven SEO strategies.",
-    "cta": "Request a Quote"
+    "subtitle": "Technical SEO | Performance | Online Presence",
+    "title": "Online Presence & Technical SEO",
+    "description": "We build websites with technical SEO, performance, mobile usability and a search-friendly structure in mind.",
+    "cta": "Request a Quote",
+    "imageAlt": "Business discussion about improving online presence"
   },
   "important": {
-    "heading1": "Elevate Your Business on Google",
-    "subheading1": "Make your business stand out and don’t let competitors attract your potential customers. Select the SEO plan that suits your goals and start improving your online presence today.",
+    "eyebrow": "The foundation of visibility",
+    "heading1": "Build a strong online presence",
+    "subheading1": "A professional website, a properly configured Google Business Profile and a solid technical foundation all contribute to a reliable online presence.",
     "box1": {
-      "title": "Get Noticed Online",
-      "content": "Boost your organic traffic and secure a top spot in Google search results. Without proper SEO, your competition could easily overshadow you."
+      "title": "Google Business Profile",
+      "content": "We can help set up and manage your Google Business Profile so that your business information is presented clearly across Google."
     },
     "box2": {
-      "title": "Outperform Your Competition",
-      "content": "Leverage the full potential of SEO to drive visitors to your site. Being the first to capture attention gives you an undeniable edge, helping you connect with your audience before others do."
+      "title": "Technical foundation",
+      "content": "We build fast, responsive and technically sound websites that provide a strong foundation for your long-term online presence."
     },
-    "heading2": "Visibility Equals Success",
-    "paragraph": "In today’s digital era, search engine optimization is a must-have for any business with an online presence. No matter how impressive your website is, without ranking on Google’s first page, it’s nearly invisible to your audience. Don’t let your site get lost—ensure it’s the one customers find first."
+    "heading2": "Your website is part of a larger system",
+    "paragraph": "Your website, Google Business Profile, technical SEO, user experience and business processes can work together as one digital foundation for your business."
   },
   "SEOservices": {
-    "heading": "Our SEO Services: Elevate Your Online Visibility",
+    "eyebrow": "Visibility that supports growth",
+    "heading": "Services supporting your online presence",
+    "description": "Online presence is more than a single SEO setting. We build the technical foundation, content direction and measurable user experience together.",
     "seoStrategy": {
-      "name": "SEO Strategy",
-      "description": "Tailored SEO strategies to boost your search engine rankings and drive targeted organic traffic."
+      "name": "Technical SEO",
+      "description": "Optimizing the technical structure of your website for performance, accessibility and search-friendly operation."
     },
     "keywordResearch": {
       "name": "Keyword Research",
-      "description": "Identifying high-value keywords to ensure your content reaches the right audience."
+      "description": "Identifying relevant search terms based on your business and target audience."
     },
     "onPageOptimization": {
       "name": "On-Page Optimization",
-      "description": "Optimizing website elements like meta tags, headings, and content for better visibility."
+      "description": "Optimizing titles, metadata, headings, content structure and internal links."
     },
     "technicalSeo": {
-      "name": "Technical SEO",
-      "description": "Improving site speed, mobile responsiveness, and fixing technical issues for optimal performance."
+      "name": "Performance Optimization",
+      "description": "Identifying and improving loading speed, mobile performance and technical issues."
     },
     "linkBuilding": {
-      "name": "Link Building",
-      "description": "Building high-quality backlinks to increase your domain authority and improve rankings."
+      "name": "Google Business Profile",
+      "description": "Setting up, configuring and maintaining your Google Business Profile."
     },
     "contentMarketing": {
-      "name": "Content Marketing",
-      "description": "Creating engaging content that resonates with your audience and supports your SEO goals."
+      "name": "Online Content",
+      "description": "Creating a content structure that supports your website goals and communicates your business clearly."
     }
   },
-  "rivals":{
-    "heading": "SEO Services with Proven Results",
-    "description": "Maximize your online visibility with tailored SEO strategies designed to rank your website higher on search engines. From keyword optimization to technical audits, we ensure your business gets noticed by the right audience and stays ahead of the competition. Let us turn your website into a traffic-driving powerhouse.",
-    "cta": "Request a Quote"
+  "rivals": {
+    "eyebrow": "More than visibility",
+    "heading": "Build a digital foundation that works for your business",
+    "description": "The goal isn't to use as many marketing buzzwords as possible. It's to build a practical digital foundation: a fast website, solid technical setup, Google Business Profile and, when needed, a custom business system.",
+    "cta": "Let's Talk"
   },
   "seoProcess": {
-    "heading": "Building Your SEO Strategy, Step by Step",
-    "subheading": "From research to ongoing optimization, follow the phases that will take your website to the top of search results.",
+    "eyebrow": "Measurable foundations",
+    "heading": "Improving your online presence step by step",
+    "subheading": "From assessment to implementation, we work through a clear and practical process.",
     "steps": {
       "1": {
-        "title": "1. SEO Consultation",
-        "description": "We start by understanding your business goals, audience, and current online presence. This consultation allows us to create an SEO strategy tailored to your business needs."
+        "title": "1. Assessment",
+        "description": "We review your current website and online presence and discuss your business goals."
       },
       "2": {
-        "title": "2. Keyword Research",
-        "description": "We conduct in-depth keyword research to identify high-value keywords that will bring targeted traffic to your site. These keywords are the foundation of your content strategy."
+        "title": "2. Technical Review",
+        "description": "We identify issues related to performance, mobile usability, structure and technical SEO."
       },
       "3": {
-        "title": "3. On-Page SEO",
-        "description": "We optimize every page of your website by improving meta tags, headers, content structure, and internal linking to make it more search engine-friendly."
+        "title": "3. On-Page Optimization",
+        "description": "We optimize relevant pages, metadata, headings and content structure."
       },
       "4": {
-        "title": "4. Technical SEO",
-        "description": "We address all technical SEO aspects of your website, such as site speed, mobile-friendliness, and error fixes, to ensure optimal performance for search engines."
+        "title": "4. Performance Optimization",
+        "description": "Where needed, we improve loading speed and technical performance."
       },
       "5": {
-        "title": "5. Content Creation",
-        "description": "We create high-quality, SEO-optimized content that speaks to your audience while boosting your rankings on search engines."
+        "title": "5. Google Business Profile",
+        "description": "We help configure your Google Business Profile and keep your business information up to date."
       },
       "6": {
-        "title": "6. Link Building",
-        "description": "We work on building high-quality backlinks from reputable sources to improve your website's domain authority and boost its visibility in search rankings."
+        "title": "6. Ongoing Improvements",
+        "description": "Your website and online presence can continue to evolve as your business needs change."
       },
       "7": {
-        "title": "7. SEO Monitoring and Reporting",
-        "description": "We continually monitor your SEO performance, providing detailed reports and ongoing adjustments to ensure your website ranks higher over time."
+        "title": "7. Measurement",
+        "description": "Available analytics data can help track how your digital presence performs over time."
       },
       "8": {
-        "title": "8. Continuous Optimization",
-        "description": "SEO is an ongoing process. We continuously optimize your website with new strategies, content updates, and regular SEO audits to maintain and improve your rankings."
+        "title": "8. Further Development",
+        "description": "We can add new features and technical improvements as new requirements emerge."
       }
     }
   },
   "seoQuestions": {
-    "heading": "Frequently Asked SEO Questions",
+    "heading": "Frequently Asked Questions About Online Presence",
     "questions": {
       "1": {
-        "question": "What is SEO Consultation and How Can It Help My Business?",
-        "answer": "SEO consultation involves working with experts to analyze and improve your website's visibility on search engines. It helps you understand your site's strengths and weaknesses, identify the best keywords to target, and develop a strategy to improve your rankings and drive more organic traffic."
+        "question": "Why is technical SEO important?",
+        "answer": "A sound technical structure helps search engines understand and crawl your website and contributes to a fast and usable experience."
       },
       "2": {
-        "question": "How Long Does It Take to See Results from SEO Efforts?",
-        "answer": "SEO is a long-term strategy, and it can take anywhere from 3 to 6 months to see significant results. The exact timeline varies based on the competitiveness of your industry, the quality of your website, and the strategies implemented. However, with consistent effort, you will start seeing improvements over time."
+        "question": "When can I expect SEO results?",
+        "answer": "Results vary from project to project and depend on factors such as the starting point, competition, content and target search terms. SEO should generally be treated as a longer-term activity."
       },
       "3": {
-        "question": "Why is Keyword Research Important for SEO?",
-        "answer": "Keyword research is a critical part of SEO because it helps you identify the terms and phrases your target audience is searching for. By optimizing your website content around these keywords, you increase the chances of your site ranking higher on search engine results pages, driving more relevant traffic to your site."
+        "question": "Does website development include SEO?",
+        "answer": "We take basic technical SEO and search-friendly structure into account during development. More extensive SEO work can be agreed separately."
       },
       "4": {
-        "question": "What Are the Key Elements of On-Page SEO?",
-        "answer": "On-page SEO refers to the optimizations made directly on your website. Key elements include the use of relevant keywords in titles, meta descriptions, headers, and body content. Additionally, optimizing images, improving page load speed, and ensuring mobile-friendliness are important factors in improving on-page SEO and boosting your search engine rankings."
+        "question": "Can you help with Google Business Profile?",
+        "answer": "Yes. We can help with setup, configuration and ongoing management of your business information."
       }
     }
   },
   "contact": {
-    "subtitle": "Website Design & Development | Performance-Driven | Győr",
-    "title": "Contact"
+    "subtitle": "Custom Digital Solutions | Web, Mobile & Business Systems | Győr",
+    "title": "Let's discuss your next digital project",
+    "description": "Tell us briefly what you want to improve or build. We will help clarify the options, functionality and next step.",
+    "cardEyebrow": "Direct contact",
+    "cardText": "We will get back to you and arrange an initial conversation about your project."
   }
 }
-
- 

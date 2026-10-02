@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import ctaImg from '../images/Illustration of website development.webp';
+import ctaImg from '../images/Illustration of website development.png';
 
 const CTA = () => {
   const [formData, setFormData] = useState({
@@ -46,52 +46,62 @@ const CTA = () => {
   };
 
   return (
-    <section className='flex items-center justify-center bg-white md:h-[80vh] p-4'>
-      <div className='flex flex-col-reverse md:flex-row items-center justify-center md:container mx-auto'>
-        <form onSubmit={handleSubmit} className='w-full md:w-6/12 p-4 md:pr-12'>
-          <h2 className='text-black font-extrabold font-poppins text-3xl md:text-5xl mb-6 text-center md:text-left'>
+    <section className='flex items-center justify-center bg-[#f5f7f4] px-5 py-16 md:py-24'>
+      <div className='mx-auto flex w-full max-w-[1200px] flex-col-reverse items-center gap-10 md:flex-row'>
+        <form onSubmit={handleSubmit} className='w-full md:w-1/2' aria-describedby='contact-description'>
+          <p className='mb-4 text-sm font-bold uppercase tracking-[0.18em] text-orange-700'>{t('cta.eyebrow')}</p>
+          <h2 className='mb-4 text-center font-poppins text-3xl font-extrabold leading-tight text-[#102a2d] md:text-left md:text-5xl'>
             {t('cta.title')}
           </h2>
-          <div className='border-black border-b-4 w-24 md:w-36 h-2 md:h-4 mb-6 mx-auto md:mx-0'></div>
-          <div className='space-y-4'>
+          <p id='contact-description' className='mb-8 text-center leading-relaxed text-[#315b5d] md:text-left'>{t('cta.description')}</p>
+          <div className='space-y-5'>
+            <label className='block font-semibold text-[#102a2d]' htmlFor='contact-name'>{t('cta.nameLabel')}
             <input
+              id='contact-name'
               name="name"
               value={formData.name}
               onChange={handleChange}
-              className='rounded-3xl block w-full border-b font-poppins b-gray-200 text-base md:text-xl text-black py-2 md:py-3 px-4 leading-tight focus:outline-none focus:placeholder:text-black'
+              className='mt-2 block w-full rounded-xl border border-[#c9d8cc] bg-white px-4 py-3 font-poppins text-base text-black outline-none focus:border-orange-700 focus:ring-2 focus:ring-orange-200'
               type='text'
-              placeholder={t('cta.namePlaceholder')}
+              required
             />
+            </label>
+            <label className='block font-semibold text-[#102a2d]' htmlFor='contact-email'>{t('cta.emailLabel')}
             <input
+              id='contact-email'
               name="email"
               value={formData.email}
               onChange={handleChange}
-              className='rounded-3xl block w-full border-b font-poppins b-gray-200 text-base md:text-xl text-black py-2 md:py-3 px-4 leading-tight focus:outline-none focus:placeholder:text-black'
+              className='mt-2 block w-full rounded-xl border border-[#c9d8cc] bg-white px-4 py-3 font-poppins text-base text-black outline-none focus:border-orange-700 focus:ring-2 focus:ring-orange-200'
               type='email'
-              placeholder={t('cta.emailPlaceholder')}
+              required
             />
+            </label>
+            <label className='block font-semibold text-[#102a2d]' htmlFor='contact-message'>{t('cta.messageLabel')}
             <textarea
+              id='contact-message'
               name="message"
               value={formData.message}
               onChange={handleChange}
-              className='rounded-3xl h-32 md:h-48 block w-full border-b font-poppins b-gray-200 text-base md:text-xl text-black py-2 md:py-3 px-4 leading-tight focus:outline-none focus:placeholder:text-black'
-              placeholder={t('cta.messagePlaceholder')}
+              className='mt-2 block h-36 w-full rounded-xl border border-[#c9d8cc] bg-white px-4 py-3 font-poppins text-base text-black outline-none focus:border-orange-700 focus:ring-2 focus:ring-orange-200'
+              required
             />
+            </label>
           </div>
           <button
             type="submit"
-            className='mt-6 bg-orange-700 hover:bg-gray-800 text-white font-bold font-poppins py-2 md:py-4 px-6 md:px-8 rounded-3xl w-full'
+            className='mt-2 w-full rounded-xl bg-orange-700 px-6 py-4 font-poppins font-bold text-white transition-colors hover:bg-orange-800 focus:outline-none focus:ring-2 focus:ring-orange-300'
           >
             {t('cta.submitButton')}
           </button>
           {status && (
-            <p className='text-teal-700 font-poppins text-sm md:text-lg mt-6 text-center md:text-left'>
+            <p role='status' aria-live='polite' className='mt-4 text-sm font-semibold text-[#0f766e]'>
               {status}
             </p>
           )}
         </form>
-        <div className='w-full md:w-6/12 p-4'>
-          <img src={ctaImg} alt='Illustration of website development with a person using a laptop and developer tools' className='w-full h-auto object-contain mx-auto' />
+        <div className='w-full md:w-1/2'>
+          <img src={ctaImg} alt={t('cta.imageAlt')} loading='lazy' className='mx-auto h-auto w-full max-w-lg object-contain' />
         </div>
       </div>
     </section>

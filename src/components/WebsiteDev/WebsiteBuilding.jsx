@@ -48,30 +48,30 @@ const WebsiteBuilding = () => {
 
   return (
     <section className="flex items-center justify-center bg-white">
-      <div className="scroll-in container mx-auto max-w-[1570px] flex flex-col px-4 md:px-10 md:mt-12 mt-12 mb-12">
-        <h2 className="text-black font-extrabold font-poppins text-3xl md:text-6xl max-w-screen-lg">
+      <div className="scroll-in container mx-auto flex max-w-[1440px] flex-col px-6 py-20 md:px-10 md:py-24">
+        <p className="mb-4 text-sm font-bold uppercase tracking-[0.18em] text-orange-700">{t('websiteBuilding.eyebrow')}</p>
+        <h2 className="max-w-4xl font-poppins text-3xl font-extrabold leading-tight text-[#102a2d] md:text-5xl">
           {t('websiteBuilding.title')}
         </h2>
-        <h3 className="text-black font-bold font-poppins text-2xl md:text-3xl mt-8 max-w-screen-lg md:mt-16">
+        <p className="mt-5 max-w-3xl text-lg leading-relaxed text-[#315b5d] md:text-xl">
           {t('websiteBuilding.description')}
-        </h3>
-        <div className="border-black border-b-8 w-36 h-8 mb-8"></div>
+        </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+        <div className="mt-12 grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
           {steps.map((step, index) => (
             <div
               key={index}
-              className="flex flex-col items-start bg-gray-100 p-6 shadow-md rounded-lg hover:shadow-lg transition-shadow duration-300"
+              className="flex flex-col items-start rounded-2xl border border-[#dfe7e1] bg-[#f5f7f4] p-7 transition-shadow duration-300 hover:shadow-lg"
             >
               <FontAwesomeIcon
                 icon={step.icon}
                 size="3x"
-                className="text-teal-600 mb-4"
+                className="mb-4 text-orange-700"
               />
-              <h3 className="text-black font-bold font-poppins text-2xl md:text-3xl mt-4">
+              <h3 className="mt-4 font-poppins text-2xl font-bold text-[#102a2d]">
                 {step.title}
               </h3>
-              <p className="text-teal-700 font-poppins text-xl md:text-2xl mt-4">
+              <p className="mt-4 font-poppins text-base leading-relaxed text-[#315b5d]">
                 {step.description}
               </p>
               <hr className="block md:hidden border-gray-300 mt-6 mb-3 w-full" />

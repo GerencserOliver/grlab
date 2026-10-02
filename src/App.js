@@ -9,7 +9,6 @@ import Prices from './components/Prices';
 import Services from './components/Services';
 import Offer from './components/Offer';
 import UsSection from './components/UsSection';
-import Reviews from './components/Reviews';
 import CTA from './components/CTA';
 import Footer from './components/Footer';
 import ScrollAnimation from './components/ScrollAnimation';
@@ -20,19 +19,21 @@ import Website from './Pages/Website/Website';
 import Portfolio from './Pages/Portfolio/Portfolio';
 import SEO from './Pages/SEO/SEO';
 import './i18n';
+import ScrollToTop from './components/ScrollToTop';
 
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <div className='wrapper'>
         <Helmet>
-          <title>GM Website Design</title>
+          <title>GRLab | Egyedi digitális megoldások</title>
           <meta
             name="description"
-            content="GM Design is a web development agency that specializes in creating modern, responsive websites and SEO optimization."
+            content="Egyedi weboldalak, webalkalmazások és digitális üzleti rendszerek vállalkozásoknak Győrben és Magyarországon."
           />
           <meta name="robots" content="index, follow" />
-          <link rel="canonical" href="https://gmdesign.vercel.app" />
+          <link rel="canonical" href="https://grlab.vercel.app" />
         </Helmet>
         <Navbar />
         <Routes>
@@ -45,9 +46,9 @@ function App() {
                 <IntroAnimation />
                 <Hero />
                 <Services />
+                <UsSection />
                 <Prices />
                 <Offer />
-                { /* <UsSection /> */ }
                 <CTA />
               </>
             }

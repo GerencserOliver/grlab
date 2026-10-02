@@ -9,12 +9,18 @@ i18n.use(initReactI18next).init({
     en: { translation: en },
     hu: { translation: hu },
   },
-  lng: localStorage.getItem('language') || 'en', // Tárolt nyelv betöltése
+  lng: localStorage.getItem('language') || 'hu',
   fallbackLng: 'en',
   interpolation: {
     escapeValue: false,
   },
 });
+
+i18n.on('languageChanged', (language) => {
+  document.documentElement.lang = language;
+});
+
+document.documentElement.lang = i18n.language;
 
 
 export default i18n;

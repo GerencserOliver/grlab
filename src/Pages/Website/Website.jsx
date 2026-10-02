@@ -25,74 +25,42 @@ const Website = () => {
   return (
     <div>
       <Helmet>
-        <title>GM | Website Development</title>
+        <title>GRLab | Website Development</title>
         <meta
           name="description"
           content="Professional website development services using React and Tailwind CSS. Explore my portfolio and see how I can bring your ideas to life!"
         />
         <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://gmdesign.vercel.app/website-development" />
+        <link rel="canonical" href="https://grlab.vercel.app/website" />
       </Helmet>
 
       <IntroAnimation />
       <ScrollAnimation />
-      <section>
-        <div className='container mx-auto max-w-[1570px] flex flex-col md:flex-row px-4 md:px-10 z-1'>
-          <div className='scroll-in w-full md:w-4/6 text-center md:text-left'>
-            <h2 className='text-black font-bold font-poppins text-xl mb-6'>
+      <section className='border-b border-[#dfe7e1] bg-[#f5f7f4]'>
+        <div className='container mx-auto flex max-w-[1440px] flex-col gap-8 px-6 py-16 md:flex-row md:items-end md:px-10 md:py-24'>
+          <div className='scroll-in w-full md:w-2/3'>
+            <p className='mb-5 text-sm font-bold uppercase tracking-[0.18em] text-orange-700'>
               {t('wdhero.subtitle')}
-            </h2>
-            <h1 className='text-black font-bold font-poppins text-3xl sm:text-5xl md:text-8xl mb-6'>
+            </p>
+            <h1 className='mb-5 font-poppins text-4xl font-extrabold leading-tight text-[#102a2d] sm:text-5xl md:text-7xl'>
               {t('wdhero.title')}
             </h1>
-            <p className='text-teal-700 font-poppins text-lg sm:text-xl md:text-3xl mb-6'>
+            <p className='max-w-3xl text-lg leading-relaxed text-[#315b5d] md:text-xl'>
               {t('wdhero.description')}
             </p>
           </div>
-          <div className='md:w-2/6' >
-            <button className='bg-orange-700 hover:bg-gray-800 text-white text-base sm:text-lg md:text-xl w-full font-bold font-poppins md:px-24 px-6 py-6 mt-4 rounded-full mb-16 md:mb-0'>
-            <Link to='/contact'>{t('wdhero.button_text')}</Link>
-            </button>
+          <div className='w-full md:w-1/3 md:text-right'>
+            <Link to='/contact' className='inline-flex w-full justify-center rounded-full bg-orange-700 px-7 py-4 font-poppins text-lg font-bold text-white transition-colors hover:bg-orange-800 md:w-auto'>
+              {t('wdhero.button_text')}
+            </Link>
           </div>
         </div>
-        <div className="items-center space-y-4 text-black mt-10 right-0 z-10">
+        <div className="items-center space-y-4 text-black right-0 z-10">
           <img src={Construction} alt="
           Construction Site illustration of a website under construction"
-          className='w-full object-cover h-[800px]' />
+          className='w-full aspect-[16/7] object-cover' loading='lazy' />
         </div>
-        <div className="flex-col items-center space-y-4 text-black mt-10 hidden md:block fixed left-0 z-10 top-1/2 -translate-y-1/2">
-          <div className="flex flex-col items-center space-y-4 text-white p-12">
-            {/* Email Link */}
-            <a
-              href="mailto:gmwebsitedesign@gmail.com"
-              className="flex items-center justify-center w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 bg-black rounded-full p-3"
-            >
-              <FontAwesomeIcon icon={faEnvelope} className="text-white h-8" />
-            </a>
-    
-            {/* Facebook Link */}
-            <a
-              href="https://www.facebook.com/oliver.gerencser.5/"
-              className="flex items-center justify-center w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 bg-black rounded-full p-3"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Facebook"
-            >
-              <FontAwesomeIcon icon={faFacebookF} className="text-white h-8" />
-            </a>
-    
-            {/* Instagram Link */}
-            <a
-              href="https://www.instagram.com/oliveerphd/"
-              className="flex items-center justify-center w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 bg-black rounded-full p-3"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Instagram"
-            >
-              <FontAwesomeIcon icon={faInstagram} className="text-white h-8" />
-            </a>
-          </div>
-        </div>
+
       </section>
       <WebsiteDev />
       <Guarantee />

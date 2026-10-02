@@ -1,11 +1,29 @@
 const nodemailer = require('nodemailer');
 
+const MAX_LENGTHS = {
+  name: 120,
+  email: 254,
+  message: 5000,
+};
+
+const cleanText = (value) => String(value || '').trim();
+
 export default async function handler(req, res) {
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method not allowed. Use POST.' });
   }
 
-  const { name, email, message } = req.body;
+  const name = cleanText(req.body?.name);
+  const email = cleanText(req.body?.email);
+  const message = cleanText(req.body?.message);
+
+  if (!name || !email || !message || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+    return res.status(400).json({ error: 'Name, valid email and message are required.' });
+  }
+
+  if (name.length > MAX_LENGTHS.name || email.length > MAX_LENGTHS.email || message.length > MAX_LENGTHS.message) {
+    return res.status(413).json({ error: 'One or more fields are too long.' });
+  }
 
   // Nodemailer transporter beállítása
   const transporter = nodemailer.createTransport({
@@ -20,14 +38,9 @@ export default async function handler(req, res) {
 
   const mailOptions = {
     from: process.env.EMAIL_USER, // Az email cím, amelyről küldöd az üzeneteket
-    to: 'gmwebsitedesign@gmail.com', // Az email cím, amelyre érkeznek az üzenetek
+    to: 'grlab@gmail.com', // Az email cím, amelyre érkeznek az üzenetek
     subject: 'New Contact Form Submission',
-    html: `
-      <h1>New Message from ${name}</h1>
-      <p><strong>Name:</strong> ${name}</p>
-      <p><strong>Email:</strong> ${email}</p>
-      <p><strong>Message:</strong> ${message}</p>
-    `,
+    text: `New message from ${name}\n\nName: ${name}\nEmail: ${email}\n\nMessage:\n${message}`,
   };
 
   try {

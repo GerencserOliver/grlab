@@ -1,355 +1,403 @@
 {
-    "english": "English",
-    "hungarian": "Magyar",
-    "hero": 
-    {
-        "subtitle": "Weboldal tervezés és fejlesztés | Teljesítményorientált | Győr",
-        "title": "Weboldal Készítés az Online Jelenlétedért",
-        "description": "Egyedi weboldalak, amelyek megragadják a figyelmet, teljesítenek, és növelik vállalkozásod. A tervezéstől a megvalósításig életre keltjük ötleteid.",
-        "button_text": "Kérj ajánlatot"
+  "english": "English",
+  "hungarian": "Magyar",
+  "nav": {
+    "ariaLabel": "Fő navigáció",
+    "home": "Kezdőlap",
+    "website": "Webfejlesztés",
+    "seo": "Online jelenlét",
+    "portfolio": "Referenciák",
+    "contact": "Kapcsolat",
+    "openMenu": "Menü megnyitása",
+    "closeMenu": "Menü bezárása",
+    "languageLabel": "Nyelvválasztó"
+  },
+  "hero": {
+    "subtitle": "Weboldalak és egyedi digitális rendszerek | Győr",
+    "title": "Digitális megoldások, amelyek előreviszik a vállalkozásodat",
+    "description": "Weboldalt, webalkalmazást vagy egyedi üzleti rendszert készítünk úgy, hogy az ne csak jól nézzen ki, hanem segítsen ügyfeleket szerezni és egyszerűsíteni a működésedet.",
+    "button_text": "Beszéljük át a projektet",
+    "secondaryButton": "Referenciák megtekintése",
+    "proofPoints": ["Egyedi fejlesztés", "Mobilbarát működés", "Hosszú távú támogatás"],
+    "imageAlt": "Egyedi digitális termék tervezése laptopon",
+    "cardLabel": "A projektedből működő rendszer",
+    "cardText": "Tervezés, fejlesztés és támogatás egy helyen."
+  },
+  "prices": {
+    "eyebrow": "Megoldások üzleti célokra",
+    "header": {
+      "title": "Egyedi megoldás, valódi üzleti igényekre",
+      "subtitle": "Nem sablonokban gondolkodunk. A projekt céljaihoz és a vállalkozásod működéséhez igazított digitális megoldást készítünk."
     },
-    "prices": {
-        "header": {
-        "title": "Tűnj ki a versenytársak közül és érd el céljaidat!",
-        "subtitle": "Teljesítményorientált weboldalak és webáruházak – SEO optimalizálás, UX tervezés és hatékonyságnövelés a legújabb trendek alapján."
-        },
-        "packages": {
-        "seo": {
-            "name": "SEO Optimalizálás és Tanácsadás",
-            "description": "Növelje vállalkozása láthatóságát a Google helyezések javításával. Havi SEO szolgáltatásaink növelik az organikus forgalmat, és kiemelik Önt a keresési eredmények között."
-        },
-        "website": {
-            "name": "Weboldal Tervezés és Fejlesztés",
-            "description": "Hozzon létre vizuálisan vonzó és felhasználóbarát weboldalt modern tervezési technikákkal. Gyors betöltési időket és intuitív navigációt biztosítunk, hogy az első benyomás számítson."
-        },
-        "ux": {
-            "name": "UX Tervezés és Felhasználói Élmény",
-            "description": "Optimalizálja weboldala használhatóságát és funkcionalitását. Az intuitív navigációra és a gyors betöltési sebességre összpontosítunk, hogy a legjobb felhasználói élményt nyújtsuk az első látogatástól kezdve."
-        }
-        },
-        "button_text": "Árak"
+    "packages": {
+      "seo": {
+        "name": "Online jelenlét",
+        "description": "Segítünk abban, hogy vállalkozása könnyebben megtalálható és professzionálisabb legyen online – technikai SEO-val, Google Cégprofil-kezeléssel és megfelelő webes struktúrával."
+      },
+      "website": {
+        "name": "Weboldal fejlesztés",
+        "description": "Modern, gyors és reszponzív weboldalakat készítünk, amelyek illeszkednek vállalkozása arculatához és céljaihoz."
+      },
+      "ux": {
+        "name": "Egyedi webalkalmazások",
+        "description": "Ügyfélkezelők, admin felületek, foglalási rendszerek és más üzleti alkalmazások egyedi igényekre szabva."
+      }
     },
-    "services": {
-        "header": {
-          "title": "Szolgáltatásaink: Kulcs a digitális világ sikeréhez"
-        },
-        "web_design": {
-          "name": "Webdesign",
-          "description": "Lenyűgöző, felhasználóbarát és reszponzív weboldalak létrehozása, amelyek elvarázsolják a közönségedet."
-        },
-        "seo": {
-          "name": "SEO Optimalizálás",
-          "description": "Weboldalad láthatóságának javítása a keresőkben a legújabb SEO stratégiákkal, hogy organikus forgalmat irányíts."
-        },
-        "ecommerce": {
-          "name": "E-kereskedelmi megoldások",
-          "description": "Erős online áruházak építése gördülékeny vásárlási élményekkel és fizetési kapu integrációval."
-        },
-        "ux_ui": {
-          "name": "UX/UI Tervezés",
-          "description": "A felhasználói élmény javítása intuitív, esztétikus tervezéssel, amely ösztönzi az elköteleződést."
-        },
-        "maintenance": {
-          "name": "Weboldal karbantartás",
-          "description": "Folyamatos támogatás és karbantartási szolgáltatások annak biztosítására, hogy weboldalad mindig zökkenőmentesen működjön és naprakész legyen."
-        },
-        "content": {
-          "name": "Tartalomkészítés",
-          "description": "Magas színvonalú tartalmak készítése, beleértve a blogokat, videókat és infografikákat, hogy elkötelezd a közönségedet és növeld az átváltásokat."
-        }
+    "button_text": "Szolgáltatások"
+  },
+  "services": {
+    "eyebrow": "Amiben segítünk",
+    "header": {
+      "title": "A megfelelő digitális megoldás a valódi üzleti céljaidhoz",
+      "description": "Nem kész csomagokat erőltetünk rád. Megértjük, hogyan működik a vállalkozásod, és ahhoz tervezzük meg a szükséges digitális eszközt."
     },
-    "offer": {
-        "header": "Növeld vállalkozásod weboldalának vagy webshopjának teljesítményét",
-        "description": "Részletes elemzés, SEO optimalizálás és UX fejlesztések weboldalakhoz és webshopokhoz.",
-        "button": "Árajánlat kérése",
-        "imageAlt": "Laptop, amely üzleti teljesítményjavulást mutat SEO és UX fejlesztésekkel"
+    "web_design": {
+      "name": "Weboldalak",
+      "description": "Modern, gyors és reszponzív weboldalak vállalkozásoknak, az egyszerű bemutatkozó oldaltól az összetettebb üzleti weboldalakig."
     },
-    "usSection": {
-        "introductionTitle": "Bemutatkozás",
-        "introductionText": "Ismerj meg engem, és tudj meg többet arról, hogy ki vagyok.",
-        "servicesTitle": "Szolgáltatások",
-        "servicesText": "Fedezd fel, milyen szolgáltatásokat nyújtok, és hogyan segíthetnek neked.",
-        "learnMore": "Tudj meg többet"
+    "seo": {
+      "name": "Google Cégprofil és online jelenlét",
+      "description": "Google Cégprofil beállítás, optimalizálás és kezelés, valamint technikai SEO a jobb online jelenlétért."
     },
-    "cta": {
-        "title": "Kezdjük el az együttműködést!",
-        "description": "Ha bármilyen kérdésed van—legyen az egy egyszerű érdeklődés, egy lehetséges együttműködés, vagy üzleti javaslat—itt vagyok és készen állok segíteni.",
-        "namePlaceholder": "Teljes név",
-        "emailPlaceholder": "Email cím",
-        "messagePlaceholder": "Üzenet",
-        "submitButton": "Üzenet küldése",
-        "sending": "Küldés folyamatban...",
-        "successMessage": "Üzenet sikeresen elküldve!",
-        "failureMessage": "Az üzenet küldése nem sikerült.",
-        "errorMessage": "Hiba: "
+    "ecommerce": {
+      "name": "Webshopok",
+      "description": "Egyedi vagy integrált e-kereskedelmi megoldások biztonságos fizetéssel és a vállalkozás működéséhez igazított funkciókkal."
     },
-    "wdhero": {
-      "subtitle": "Weboldal Készítés és Fejlesztés | Teljesítményorientált | Győr",
-      "title": "Weboldal Készítés és Fejlesztés",
-      "description": "Modern, funkcionális weboldalak készítése az Ön igényeire szabva",
-      "button_text": "Árajánlat Kérése"
+    "ux_ui": {
+      "name": "UX/UI tervezés",
+      "description": "Átgondolt felhasználói felületek és folyamatok, hogy a digitális termék ne csak jól nézzen ki, hanem könnyen használható is legyen."
     },
-    "introduction": {
-      "title": "Személyre Szabott Weboldalak Az Ön Vállalkozásának",
-      "subtitle": "A GMWebDesign egyedi weboldalakat készít, amelyek illeszkednek vállalkozása igényeihez, bemutatkozó oldalaktól kezdve webáruházakig, segítve ezzel online jelenlétének fejlesztését.",
-      "sections": [
-        {
-          "title": "Tűnjön Ki a Tömegből",
-          "description": "Emelkedjen ki, és hatékonyan kommunikálja vállalkozása értékeit a célközönsége felé. Szerezzen prémium weboldalt, amelyet kifejezetten az Ön vállalkozásához terveztek."
-        },
-        {
-          "title": "Használja Ki a Legmodernebb Technológiákat",
-          "description": "Használja ki a legújabb, egyszerűen kezelhető technológiákat, hogy gond nélkül frissíthesse és kezelhesse weboldala tartalmát."
-        },
-        {
-          "title": "A Mobilbarát Megoldás Kötelező",
-          "description": "A mai mobilközpontú digitális világban elengedhetetlen, hogy egy egyedi, elegáns és funkcionális weboldala legyen, amely minden eszközön tökéletesen mutat. Ez alapvető a sikeres üzlet érdekében."
-        }
+    "maintenance": {
+      "name": "Karbantartás és továbbfejlesztés",
+      "description": "A fejlesztés az indulással nem ér véget. Frissítésekkel, hibajavításokkal és új funkciók fejlesztésével hosszú távon is támogatjuk a rendszert."
+    },
+    "content": {
+      "name": "Egyedi üzleti rendszerek",
+      "description": "Backenddel, adatbázissal és API-kkal rendelkező rendszerek, amelyek automatizálják és egyszerűsítik a vállalkozás mindennapi folyamatait."
+    }
+  },
+  "offer": {
+    "eyebrow": "Kezdjük az ötlettel",
+    "header": "Van egy ötlete? Építsük meg együtt.",
+    "description": "Beszéljük át, mire van szüksége a vállalkozásának, és megmutatjuk, milyen digitális megoldással lehet a legegyszerűbben megvalósítani.",
+    "button": "Kérj ajánlatot",
+    "imageAlt": "Modern digitális üzleti rendszer laptopon"
+  },
+  "usSection": {
+    "eyebrow": "Miért velünk?",
+    "introductionTitle": "Kik vagyunk?",
+    "introductionText": "Két fejlesztő, akik nem csak weboldalakat készítenek. Olyan digitális megoldásokat építünk, amelyek valódi üzleti problémákra adnak választ.",
+    "servicesTitle": "Miben tudunk segíteni?",
+    "servicesText": "A bemutatkozó weboldalaktól az egyedi webalkalmazásokon és mobilappokon át a teljes backend rendszerekig.",
+    "point2Title": "Érthető folyamat",
+    "point2Text": "Előre tisztázzuk a célokat, a funkciókat és a következő lépéseket, hogy ne legyenek kellemetlen meglepetések.",
+    "point3Title": "Hosszú távú partner",
+    "point3Text": "Az élesítés után is számíthatsz ránk karbantartásban, hibajavításban és további fejlesztésekben.",
+    "learnMore": "Tudj meg többet"
+  },
+  "cta": {
+    "eyebrow": "Következő lépés",
+    "title": "Beszéljük át az ötletedet!",
+    "description": "Írd meg röviden, mire lenne szükséged. Megnézzük, hogyan lehet az elképzelésből működő digitális megoldás.",
+    "namePlaceholder": "Teljes név",
+    "emailPlaceholder": "E-mail cím",
+    "messagePlaceholder": "Miben segíthetünk?",
+    "nameLabel": "Név",
+    "emailLabel": "E-mail cím",
+    "messageLabel": "Projekt rövid leírása",
+    "imageAlt": "Digitális projekt egyeztetése laptopon",
+    "submitButton": "Üzenet küldése",
+    "sending": "Küldés folyamatban...",
+    "successMessage": "Üzenet sikeresen elküldve!",
+    "failureMessage": "Az üzenet küldése nem sikerült.",
+    "errorMessage": "Hiba: "
+  },
+  "wdhero": {
+    "subtitle": "Weboldal készítés és fejlesztés | Gyors, modern, egyedi",
+    "title": "Weboldal, ami a vállalkozásodhoz készül",
+    "description": "Nem sablonban gondolkodunk. A vállalkozásod céljaihoz, arculatához és működéséhez igazított weboldalt fejlesztünk.",
+    "button_text": "Kérj ajánlatot"
+  },
+  "introduction": {
+    "eyebrow": "A fejlesztés alapjai",
+    "title": "Több mint egy weboldal",
+    "subtitle": "Egy jól elkészített weboldal nem csak bemutatja a vállalkozást. Bizalmat épít, ügyfeleket szerez és a megfelelő esetben a vállalkozás működésének részévé válik.",
+    "sections": [
+      {
+        "title": "A vállalkozásodhoz igazítva",
+        "description": "Megismerjük, mivel foglalkozol, kik az ügyfeleid és mit szeretnél elérni. Ezek alapján alakítjuk ki a weboldal felépítését, tartalmát és funkcióit."
+      },
+      {
+        "title": "Modern technológiával",
+        "description": "Olyan technológiákat használunk, amelyekkel gyors, biztonságos és jól karbantartható weboldalakat és webalkalmazásokat tudunk építeni."
+      },
+      {
+        "title": "Mobilon is tökéletesen",
+        "description": "A weboldal minden eszközön megfelelően működik, legyen szó telefonról, tabletről vagy asztali számítógépről."
+      }
+    ]
+  },
+  "guarantee": {
+    "eyebrow": "Nem tűnünk el az élesítés után",
+    "title": "A fejlesztés nálunk nem ér véget az élesítéssel",
+    "description": "A tervezéstől és fejlesztéstől az induláson át a későbbi karbantartásig és továbbfejlesztésig számíthatsz ránk.",
+    "button": "Kérj ajánlatot",
+    "imageAlt": "Modern fejlesztői munkakörnyezet",
+    "points": ["Átlátható egyeztetés", "Gyors segítség", "Továbbfejleszthető rendszer"]
+  },
+  "wdprices": {
+    "eyebrow": "Átlátható ajánlat",
+    "title": "Minden projekt más",
+    "description": "Nem szeretnénk mesterségesen előre meghatározott csomagokba szorítani az igényeidet. Egy egyszerű bemutatkozó oldal és egy összetett üzleti rendszer teljesen más fejlesztési feladat.",
+    "startingFrom": "Egyedi ajánlat",
+    "requestQuote": "Kérj ajánlatot",
+    "note": "Az ajánlatot a funkciók, a projekt összetettsége és a szükséges fejlesztési idő alapján állítjuk össze.",
+    "basic": {
+      "title": "Weboldal",
+      "price": "Egyedi ajánlat",
+      "description": "Ideális választás, ha professzionális online jelenlétre van szükséged.",
+      "features": [
+        "Egyedi vagy a vállalkozáshoz igazított design",
+        "Reszponzív megjelenés",
+        "Kapcsolati űrlap",
+        "Alapvető technikai SEO",
+        "Google Cégprofilhoz igazított online jelenlét",
+        "Teljesítményoptimalizálás"
       ]
     },
-    "guarantee": {
-      "title": "Üzleti weboldalak fejlesztése 100%-os garanciával",
-      "description": "Készíttessen professzionális és egyedi weboldalt, amely tökéletesen képviseli vállalkozását. 100%-os elégedettségi garanciát kínálunk, hogy az oldal megfeleljen elvárásainak és eredményeket hozzon.",
-      "button": "Árajánlat kérése",
-      "imageAlt": "Modern irodai munkaterület laptop és eszközök"
+    "pro": {
+      "title": "Webalkalmazás",
+      "price": "Egyedi ajánlat",
+      "description": "Ha a weboldal mellett már üzleti funkciókra és saját rendszerre is szükséged van.",
+      "features": [
+        "Egyedi felhasználói felület",
+        "Bejelentkezés és jogosultságkezelés",
+        "Backend és adatbázis",
+        "API-integrációk",
+        "Adminisztrációs felület",
+        "Egyedi üzleti funkciók"
+      ]
     },
-    "wdprices": {
-      "title": "Árak és csomagok",
-      "description": "Webfejlesztési csomagok széles választékát kínáljuk, hogy minden vállalkozás megtalálja a számára megfelelőt. Legyen szó alapvető weboldalról, prémium egyedi designról, vagy vállalati szintű megoldásról, nálunk megtalálja. Egyedi megoldások is elérhetőek az Ön igényeinek megfelelően.",
-      "startingFrom": "Kezdőár",
-      "requestQuote": "Árajánlat kérése",
-      "note": "A feltüntetett árak tájékoztató jellegűek. Minden esetben egyedi árajánlat készül.",
-      "basic": {
-        "title": "Alap csomag",
-        "price": "500,000 HUF",
-        "description": "Kiváló választás kisvállalkozások vagy személyes projektek számára, akiknek professzionális online jelenlétre van szükségük.",
-        "features": [
-          "5 oldalas weboldal tervezés",
-          "Mobilbarát design",
-          "Alapvető SEO optimalizálás",
-          "Kapcsolati űrlap integráció",
-          "Közösségi média integráció",
-          "1 módosítási kör"
-        ]
-      },
-      "pro": {
-        "title": "Pro csomag",
-        "price": "800,000 HUF",
-        "description": "Ideális választás fejlődő vállalkozások számára, akik fejlettebb funkciókkal rendelkező weboldalt igényelnek.",
-        "features": [
-          "10 oldalas weboldal tervezés",
-          "Egyedi weboldal design",
-          "Mobil- és tabletbarát design",
-          "Haladó SEO optimalizálás",
-          "Validációval rendelkező kapcsolati űrlap",
-          "Alapvető biztonsági funkciók",
-          "Közösségi média integráció",
-          "Google Analytics integráció",
-          "2 módosítási kör"
-        ]
-      },
-      "premium": {
-        "title": "Prémium csomag",
-        "price": "1,500,000 HUF",
-        "description": "Nagyobb vállalatok számára készült, testreszabott, funkciókban gazdag weboldal, folyamatos támogatással.",
-        "features": [
-          "30 oldalas egyedi weboldal tervezés",
-          "Egyedi fejlesztés",
-          "E-kereskedelmi integráció",
-          "Haladó SEO és analitikai beállítások",
-          "Prémium biztonsági funkciók",
-          "Tartalomkezelő rendszer (CMS)",
-          "SEO blog integráció",
-          "1 év karbantartás",
-          "Korlátlan módosítási lehetőség",
-          "Elsőbbségi támogatás"
-        ]
-      }
+    "premium": {
+      "title": "Komplex rendszer",
+      "price": "Egyedi ajánlat",
+      "description": "Összetett webes vagy mobil rendszer egyedi üzleti folyamatokra.",
+      "features": [
+        "Teljesen egyedi fejlesztés",
+        "Webes és/vagy mobilalkalmazás",
+        "Backend és adatbázis",
+        "API-k és külső rendszerek integrációja",
+        "Adminisztrációs felület",
+        "Többféle felhasználói szerepkör",
+        "Üzemeltetés és továbbfejlesztés"
+      ]
+    }
   },
   "websiteBuilding": {
-    "title": "Weboldal építése lépésről lépésre",
-    "description": "A konzultációtól a folyamatos támogatásig, ismerje meg azokat a fázisokat, amelyek életre keltik weboldalát.",
+    "eyebrow": "Átlátható folyamat",
+    "title": "Így dolgozunk együtt",
+    "description": "Átlátható folyamatban haladunk az első ötlettől a működő rendszerig.",
     "steps": [
       {
-        "title": "1. Kezdeti konzultáció",
-        "description": "Egy személyre szabott konzultációval kezdünk, hogy megértsük vállalkozása igényeit, céljait és célközönségét. Ez a lépés biztosítja, hogy a sikeréhez igazított weboldal stratégiát alakítsunk ki."
+        "title": "1. Megismerjük az igényeket",
+        "description": "Megbeszéljük, mivel foglalkozik a vállalkozás, milyen problémát szeretne megoldani, és mit kell tudnia a kész rendszernek."
       },
       {
-        "title": "2. Tervezés és stratégia",
-        "description": "A megbeszéléseink alapján felvázoljuk weboldala struktúráját, és elkészítjük az elrendezés és tartalom tervét. Ezt a tervet közösen felülvizsgáljuk és finomítjuk, mielőtt tovább lépnénk a következő szakaszra."
+        "title": "2. Megtervezzük a megoldást",
+        "description": "Kialakítjuk a szükséges funkciókat, a felhasználói folyamatokat és a technikai megoldást. Ez alapján készül el az ajánlat."
       },
       {
-        "title": "3. Tervezési fázis",
-        "description": "A kreatív folyamat akkor kezdődik, amikor megtervezzük weboldalát. Akár egyedi design-t készítünk, akár egy prémium sablont alkalmazunk, célunk, hogy vizuálisan vonzó és funkcionális elrendezést hozzunk létre, amely összhangban van a márka identitásával."
+        "title": "3. Megtervezzük a felületet",
+        "description": "A felhasználói élményt és a vizuális megjelenést úgy alakítjuk ki, hogy az illeszkedjen a vállalkozás arculatához és a felhasználók igényeihez."
       },
       {
-        "title": "4. Fejlesztés",
-        "description": "Weboldala formát ölt, miközben kódoljuk és konfiguráljuk a szükséges elemeket. A tartalom hozzáadása, a vizuális elemek optimalizálása és a funkciók integrálása biztosítja a zökkenőmentes felhasználói élményt minden eszközön."
+        "title": "4. Fejlesztünk",
+        "description": "A megtervezett felületből működő weboldalt, webalkalmazást vagy mobilalkalmazást készítünk, a szükséges backenddel és adatbázissal."
       },
       {
-        "title": "5. Indítás és online elérhetőség",
-        "description": "Miután befejeződtek a tesztelések és minden részlet tökéletesre van hangolva, a weboldala készen áll a launch-ra. Mi kezeljük a technikai részleteket, hogy biztosítsuk a zökkenőmentes telepítést és lenyűgöző bemutatkozást."
+        "title": "5. Tesztelünk és élesítünk",
+        "description": "Ellenőrizzük a működést, a reszponzivitást, a teljesítményt és a fontosabb felhasználói folyamatokat, majd élesítjük a rendszert."
       },
       {
-        "title": "6. Folyamatos támogatás",
-        "description": "Az indítást követően folyamatos támogatást nyújtunk, hogy weboldala hibátlanul működjön. A tartalomfrissítésektől kezdve a teljesítmény figyelésén át az SEO optimalizálásig, segítünk abban, hogy weboldala mindig hatékony és naprakész maradjon."
+        "title": "6. Továbbra is elérhetőek vagyunk",
+        "description": "A későbbiekben is segítünk karbantartással, hibajavítással, új funkciókkal és a rendszer továbbfejlesztésével."
       }
     ]
   },
   "questions": {
+    "eyebrow": "Gyakori kérdések",
     "title": "Gyakran Ismételt Kérdések",
     "faqData": [
       {
-        "question": "Kinek ajánlott az Alap Weboldal Csomag?",
-        "answer": "Az Alap Weboldal Csomag ideális olyan vállalkozások számára, amelyeknek korlátozott költségvetésük van, vagy személyes projektekhez, amelyek tiszta, professzionális online jelenlétet igényelnek. Template-alapú dizájnnal és új generációs weboldal motorral rendelkezik, így egyszerűen kezelhető és könnyen frissíthető weboldalt biztosít, bárhol, bármikor."
+        "question": "Milyen vállalkozásoknak dolgoztok?",
+        "answer": "Elsősorban egyéni vállalkozóknak és kis- és középvállalkozásoknak készítünk digitális megoldásokat. Egy egyszerű bemutatkozó weboldaltól egészen az összetettebb egyedi rendszerekig tudunk segíteni."
       },
       {
-        "question": "Kinek ajánlott a Pro Weboldal Csomag?",
-        "answer": "A Pro Weboldal Csomag modern, tiszta és minimalista dizájnt kínál, professzionális érintéssel. Egyedi dizájnt, AMP-támogatott blogot és új generációs weboldal motort kínál kedvező áron. Ha előre akarsz lépni, és szeretnél egy reszponzív, modern weboldalt, akkor ez a csomag neked való."
+        "question": "Csak weboldalakat készítetek?",
+        "answer": "Nem. Weboldalak mellett webalkalmazásokat, backend rendszereket, adatbázisokat, API-kat és mobilalkalmazásokat is fejlesztünk."
       },
       {
-        "question": "Kinek ajánlott a Prémium Weboldal Csomag?",
-        "answer": "A Prémium Weboldal Csomag tökéletes az innovatív gondolkodók számára, akik szeretik a modern technológiát és a magas szintű dizájnt. Egy teljesen egyedi UX-alapú dizájnt és új generációs weboldal motort tartalmaz, így maximális hatást biztosít."
+        "question": "Tudtok meglévő rendszert továbbfejleszteni?",
+        "answer": "Igen. Meglévő weboldal vagy alkalmazás esetén is fel tudjuk mérni a rendszert, és szükség esetén új funkciókkal, integrációkkal vagy hibajavításokkal továbbfejlesztjük."
       },
       {
-        "question": "Mi a különbség az Alap, Pro és Prémium csomagok között?",
-        "answer": "Az Alap csomag template-alapú dizájnt használ, egy bérbe vehető tartalomkezelő rendszerrel. A Pro csomag egy teljesen egyedi dizájnt kínál, bérbe vehető tartalomkezelő rendszerrel. A Prémium csomag UX-alapú egyedi dizájnt kínál, saját vagy bérbe vehető tartalomkezelő rendszerrel, a legmagasabb szintű testreszabhatóságot biztosítva."
+        "question": "Mennyibe kerül egy weboldal?",
+        "answer": "A projekt ára a szükséges funkcióktól, az oldalak számától, a design összetettségétől és az esetleges egyedi fejlesztésektől függ. Ezért minden projektre személyre szabott ajánlatot készítünk."
       },
       {
-        "question": "Testreszabhatom a weboldal fejlesztési folyamatot, függetlenül a csomagtól?",
-        "answer": "Igen, természetesen! Minden weboldal projekt egyedi. Azonban kérjük, vegye figyelembe, hogy bizonyos webfejlesztési lépéseket nem lehet kihagyni a választott csomagtól függően."
+        "question": "Mennyi idő alatt készül el egy projekt?",
+        "answer": "Egy egyszerű weboldal néhány héten belül elkészülhet, míg egy összetettebb webalkalmazás vagy mobilalkalmazás több hetes vagy akár több hónapos fejlesztés is lehet. A pontos ütemezést a projekt felmérése után tudjuk meghatározni."
       },
       {
-        "question": "Mennyi ideig tart egy üzleti weboldal elkészítése?",
-        "answer": "Az Alap Weboldal Csomaggal két hét alatt elkészítjük az oldalát, amennyiben minden szükséges anyag (például logó, szöveg, képek) rendelkezésre áll. A Pro Weboldal Csomag egy hónap alatt készül el, míg a Prémium Weboldal Csomag akár három hónapot is igénybe vehet. A határidők változhatnak a kliens specifikus igényeitől függően."
+        "question": "Segítetek a domainnel és tárhellyel is?",
+        "answer": "Igen. Segítünk a domain, tárhely, e-mail, SSL és az élesítés technikai beállításaiban is."
+      },
+      {
+        "question": "Később lehet új funkciókat hozzáadni?",
+        "answer": "Igen. A rendszereket úgy tervezzük, hogy az igények változásával tovább lehessen fejleszteni őket."
       }
     ]
   },
   "portfolio": {
-    "tagline": "Weboldal tervezés és fejlesztés | Teljesítményorientált | Győr",
-    "title": "Digitális Portfólió",
-    "requestQuote": "Kérjen ajánlatot"
+    "tagline": "Egyedi digitális megoldások | Web, mobil és üzleti rendszerek | Győr",
+    "title": "Referenciáink",
+    "description": "Néhány példa arra, hogyan alakítunk üzleti célokat átgondolt, használható digitális termékekké.",
+    "requestQuote": "Kérj ajánlatot"
   },
   "projects": {
-    "title": "Publikus Projektek",
-    "description1": "Elegáns és modern dizájn. Igényekre szabva, precízen megvalósítva.",
-    "description2": "Modern és letisztult dizájn. Igényekre szabva, precízen megvalósítva.",
-    "description3": "Egyedi minimalista webdesign. Precízen kidolgozva, időben elkészítve.",
-    "viewProject": "Projektek megtekintése"
+    "eyebrow": "Munkáink, valódi digitális termékek",
+    "title": "Projektjeink",
+    "intro": "A cél minden projektben ugyanaz: érthető felületet és működő technológiát adni, amely illeszkedik az ügyfél üzleti céljaihoz.",
+    "description1": "Egyedi megoldás, átgondolt felhasználói élmény és precíz fejlesztés.",
+    "description2": "Modern webes technológiákra épített, vállalkozási igényekhez igazított rendszer.",
+    "description3": "Az ötlettől a működő digitális termékig – megtervezve és lefejlesztve.",
+    "viewProject": "Projekt megtekintése",
+    "digital": { "label": "Digitális termék", "title": "Modern webes élmény üzleti célokra", "imageAlt": "Modern reszponzív weboldal felülete", "galleryAlt": "Digitális termék részlete" },
+    "rental": { "label": "Szolgáltatói weboldal", "title": "Átlátható online jelenlét egy autókölcsönzőnek", "imageAlt": "Autókölcsönző weboldal látványterve", "galleryAlt": "Autókölcsönző weboldal részlete" },
+    "fitness": { "label": "Helyi szolgáltató", "title": "Digitális bemutatkozás egy győri fitneszteremnek", "imageAlt": "Fitneszterem weboldal projekt", "galleryAlt": "Fitneszterem weboldal részlete" }
   },
   "seo": {
-    "subtitle": "Weboldal Tervezés és Fejlesztés | Teljesítményközpontú | Győr",
-    "title": "Keresőoptimalizálás",
-    "description": "Növelje weboldala láthatóságát és hajtson organikus forgalmat bevált SEO stratégiákkal.",
-    "cta": "Ajánlatkérés"
+    "subtitle": "Technikai SEO | Teljesítmény | Online láthatóság",
+    "title": "Online jelenlét és technikai SEO",
+    "description": "A weboldal fejlesztése során a technikai SEO-ra, a sebességre, a mobilbarát működésre és a keresőmotorok számára megfelelő struktúrára is figyelünk.",
+    "cta": "Kérj ajánlatot",
+    "imageAlt": "Üzleti egyeztetés az online jelenlét fejlesztéséről"
   },
   "important": {
-    "heading1": "Emeld ki vállalkozásodat a Google-ön",
-    "subheading1": "Tedd vállalkozásodat kiemelkedővé, és ne hagyd, hogy a versenytársak elvonják potenciális ügyfeleidet. Válaszd ki a céljaidhoz illő SEO-tervet, és kezdj el dolgozni az online jelenléted javításán még ma.",
+    "eyebrow": "A láthatóság alapjai",
+    "heading1": "Legyen a vállalkozásod könnyen megtalálható online",
+    "subheading1": "A professzionális weboldal mellett a megfelelő technikai alapok és a Google Cégprofil is fontos része az online jelenlétnek.",
     "box1": {
-      "title": "Tűnj ki az online térben",
-      "content": "Növeld az organikus forgalmat, és biztosítsd a helyedet a Google keresési eredményeinek élén. Megfelelő SEO nélkül a versenytársak könnyen túlszárnyalhatnak."
+      "title": "Google Cégprofil",
+      "content": "Segítünk a Google Cégprofil beállításában és kezelésében, hogy vállalkozásod megfelelő információkkal jelenjen meg a Google felületein."
     },
     "box2": {
-      "title": "Légy jobb, mint a versenytársaid",
-      "content": "Használd ki a SEO teljes potenciálját, hogy látogatókat irányíts a weboldaladra. Az elsőként megragadott figyelem tagadhatatlan előnyt nyújt, lehetővé téve, hogy először érd el közönségedet."
+      "title": "Technikai alapok",
+      "content": "Gyors, reszponzív és technikailag megfelelő weboldalt készítünk, amely jó alapot ad a hosszú távú online jelenléthez."
     },
-    "heading2": "A láthatóság egyenlő a sikerrel",
-    "paragraph": "A mai digitális korszakban a keresőoptimalizálás elengedhetetlen minden online jelenléttel rendelkező vállalkozás számára. Bármennyire is lenyűgöző a weboldalad, ha nem szerepel a Google első oldalán, szinte láthatatlan a közönséged számára. Ne hagyd, hogy az oldalad eltűnjön – gondoskodj róla, hogy ügyfeleid először találják meg."
+    "heading2": "A jó weboldal nem önmagában működik",
+    "paragraph": "A weboldal, a Google Cégprofil, a technikai SEO, a megfelelő felhasználói élmény és az üzleti folyamatok együtt alkotják azt a digitális rendszert, amely valóban hasznos lehet egy vállalkozás számára."
   },
   "SEOservices": {
-    "heading": "SEO szolgáltatásaink: Növeld online láthatóságodat",
+    "eyebrow": "Láthatóság, ami üzletet támogat",
+    "heading": "Online jelenléthez kapcsolódó szolgáltatásaink",
+    "description": "Az online jelenlét nem egyetlen SEO-beállítás. A technikai alapokat, a tartalmi irányt és a mérhető felhasználói élményt együtt építjük fel.",
     "seoStrategy": {
-      "name": "SEO Stratégia",
-      "description": "Egyedi SEO stratégiák, amelyek javítják keresőmotoros rangsorolásodat és növelik a célzott organikus forgalmat."
+      "name": "Technikai SEO",
+      "description": "A weboldal technikai felépítésének optimalizálása a megfelelő teljesítmény és keresőbarát működés érdekében."
     },
     "keywordResearch": {
       "name": "Kulcsszókutatás",
-      "description": "Nagy értékű kulcsszavak azonosítása, hogy tartalmad elérje a megfelelő közönséget."
+      "description": "A vállalkozás és a célközönség szempontjából releváns keresési kifejezések feltérképezése."
     },
     "onPageOptimization": {
-      "name": "On-Page Optimalizáció",
-      "description": "Weboldal elemek, például meta címkék, címsorok és tartalom optimalizálása a jobb láthatóság érdekében."
+      "name": "On-Page optimalizáció",
+      "description": "Címek, metaadatok, tartalmi struktúra és belső hivatkozások optimalizálása."
     },
     "technicalSeo": {
-      "name": "Technikai SEO",
-      "description": "Weboldal sebesség javítása, mobil reszponzivitás és technikai problémák megoldása az optimális teljesítmény érdekében."
+      "name": "Teljesítményoptimalizálás",
+      "description": "Betöltési idő, mobilos teljesítmény és technikai problémák feltárása és javítása."
     },
     "linkBuilding": {
-      "name": "Linképítés",
-      "description": "Magas minőségű hivatkozások építése, hogy növeld domain tekintélyedet és rangsorolásodat."
+      "name": "Google Cégprofil",
+      "description": "Google Cégprofil létrehozása, beállítása és folyamatos kezelése."
     },
     "contentMarketing": {
-      "name": "Tartalommarketing",
-      "description": "Olyan tartalmak létrehozása, amelyek rezonálnak közönségeddel és támogatják SEO céljaidat."
+      "name": "Online tartalom",
+      "description": "A weboldal céljaihoz és a vállalkozás kommunikációjához illeszkedő tartalmi struktúra kialakítása."
     }
   },
   "rivals": {
-    "heading": "Eredményes SEO Szolgáltatások",
-    "description": "Maximalizáld online láthatóságodat egyedi SEO stratégiákkal, amelyek segítenek weboldalad keresőmotoros rangsorolásának javításában. A kulcsszavak optimalizálásától a technikai auditokig biztosítjuk, hogy vállalkozásod a megfelelő közönség előtt jelenjen meg, és versenytársaid előtt maradjon. Tegyük weboldaladat egy forgalomgeneráló erőművé.",
-    "cta": "Ajánlat kérése"
+    "eyebrow": "Nem csak jelenlétet építünk",
+    "heading": "Építsünk stabil online jelenlétet",
+    "description": "A cél nem az, hogy minél több marketinges kifejezést használjunk, hanem hogy a vállalkozásod számára működő digitális alapot építsünk: gyors weboldalt, megfelelő technikai felépítést, Google Cégprofilt és szükség esetén egyedi üzleti rendszert.",
+    "cta": "Beszéljük át"
   },
   "seoProcess": {
-    "heading": "SEO felépítése lépésről lépésre",
-    "subheading": "A kutatástól az állandó optimalizálásig kövesd a fázisokat, amelyek a weboldaladat a keresési eredmények élére juttatják.",
+    "eyebrow": "Mérhető alapok",
+    "heading": "Online jelenlét lépésről lépésre",
+    "subheading": "A felméréstől a technikai megvalósításig átlátható folyamatban dolgozunk.",
     "steps": {
       "1": {
-        "title": "1. SEO Konzultáció",
-        "description": "Megismerjük az üzleti céljaidat, közönségedet és online jelenlétedet. Ez a konzultáció lehetővé teszi, hogy az üzleti igényeidhez szabott SEO stratégiát hozzunk létre."
+        "title": "1. Felmérés",
+        "description": "Megnézzük a jelenlegi weboldalt és online jelenlétet, valamint megismerjük a vállalkozás céljait."
       },
       "2": {
-        "title": "2. Kulcsszókutatás",
-        "description": "Részletes kulcsszókutatást végzünk, hogy azonosítsuk azokat a kulcsszavakat, amelyek célzott forgalmat hoznak a weboldaladra. Ezek a kulcsszavak adják tartalomstratégiád alapját."
+        "title": "2. Technikai elemzés",
+        "description": "Feltárjuk a sebességgel, mobilos megjelenéssel, struktúrával és technikai SEO-val kapcsolatos problémákat."
       },
       "3": {
-        "title": "3. On-Page SEO",
-        "description": "Optimalizáljuk a weboldalad minden oldalát, beleértve a meta címkéket, fejlécszerkezetet, tartalmi struktúrát és belső linkeket, hogy az barátságosabb legyen a keresőmotorok számára."
+        "title": "3. On-Page optimalizáció",
+        "description": "Optimalizáljuk a releváns oldalakat, metaadatokat, címsorokat és tartalmi struktúrát."
       },
       "4": {
-        "title": "4. Technikai SEO",
-        "description": "Kijavítjuk a weboldalad összes technikai SEO aspektusát, mint például a betöltési sebesség, mobilbarátság és hibák, hogy biztosítsuk az optimális teljesítményt a keresőmotorok számára."
+        "title": "4. Teljesítményoptimalizálás",
+        "description": "Ahol szükséges, javítjuk az oldal betöltési sebességét és technikai teljesítményét."
       },
       "5": {
-        "title": "5. Tartalomkészítés",
-        "description": "Magas minőségű, SEO-optimalizált tartalmat készítünk, amely megszólítja a közönségedet, miközben növeli a keresőmotoros helyezéseket."
+        "title": "5. Google Cégprofil",
+        "description": "Segítünk a Google Cégprofil megfelelő beállításában és a vállalkozás adatainak kezelésében."
       },
       "6": {
-        "title": "6. Linképítés",
-        "description": "Magas minőségű backlinkeket építünk megbízható forrásokból, hogy növeljük weboldalad domain autoritását és javítsuk a láthatóságát a keresési rangsorokban."
+        "title": "6. Folyamatos fejlesztés",
+        "description": "A weboldal és az online jelenlét később is továbbfejleszthető az üzleti igények alapján."
       },
       "7": {
-        "title": "7. SEO Nyomonkövetés és Jelentéskészítés",
-        "description": "Folyamatosan nyomon követjük az SEO teljesítményedet, részletes jelentéseket készítünk, és folyamatos módosításokat végzünk, hogy weboldalad idővel egyre magasabb helyre kerüljön."
+        "title": "7. Mérés és visszajelzés",
+        "description": "A rendelkezésre álló analitikai adatok alapján követhető, hogyan teljesít a digitális jelenlét."
       },
       "8": {
-        "title": "8. Folyamatos Optimalizálás",
-        "description": "Az SEO egy folyamatos folyamat. Folyamatosan optimalizáljuk weboldaladat új stratégiákkal, tartalomfrissítésekkel és rendszeres SEO auditokkal, hogy fenntartsuk és javítsuk a helyezéseidet."
+        "title": "8. Továbbfejlesztés",
+        "description": "Az új igényekhez igazodva új funkciókkal és technikai fejlesztésekkel bővítjük a rendszert."
       }
     }
   },
   "seoQuestions": {
-    "heading": "Gyakran Ismételt Kérdések az SEO-val kapcsolatban",
+    "heading": "Gyakran Ismételt Kérdések az online jelenlétről",
     "questions": {
       "1": {
-        "question": "Mi az SEO konzultáció, és hogyan segíthet az üzletemnek?",
-        "answer": "Az SEO konzultáció során szakértőkkel dolgozol együtt, akik elemzik és javítják a weboldalad láthatóságát a keresőmotorokban. Segítenek megérteni a weboldalad erősségeit és gyengeségeit, azonosítani a legjobb kulcsszavakat, és stratégiát dolgoznak ki a rangsorolás javítása és a több organikus forgalom érdekében."
+        "question": "Miért fontos a technikai SEO?",
+        "answer": "A megfelelő technikai felépítés segíti a keresőmotorokat az oldal feltérképezésében, és hozzájárulhat a gyorsabb, jobb felhasználói élményhez."
       },
       "2": {
-        "question": "Mennyi időbe telik, amíg az SEO erőfeszítések eredményt hoznak?",
-        "answer": "Az SEO hosszú távú stratégia, és általában 3-6 hónapig tart, amíg jelentős eredményeket látsz. A pontos időtartam a versenyképességtől, a weboldalad minőségétől és az alkalmazott stratégiáktól függ. Azonban a folyamatos erőfeszítéssel idővel kezded látni a javulást."
+        "question": "Mikor láthatóak a SEO eredményei?",
+        "answer": "A SEO eredményei projektenként eltérőek. Függnek többek között a kiinduló állapottól, a versenytől, a tartalomtól és a keresési kifejezésektől."
       },
       "3": {
-        "question": "Miért fontos a kulcsszó-kutatás az SEO-ban?",
-        "answer": "A kulcsszó-kutatás kulcsfontosságú része az SEO-nak, mivel segít meghatározni azokat a kifejezéseket és szavakat, amelyeket a célközönséged keres. Ha a weboldalad tartalmát ezen kulcsszavak köré optimalizálod, növeled annak esélyét, hogy weboldalad magasabb helyezést érjen el a keresőmotorok találati oldalán, és releváns forgalmat vonzzon."
+        "question": "A weboldal készítés tartalmaz SEO-t?",
+        "answer": "Az alapvető technikai SEO-t és a keresőbarát struktúrát már a fejlesztés során figyelembe vesszük. Kiterjedtebb SEO munkát külön egyeztetés alapján végzünk."
       },
       "4": {
-        "question": "Mik az on-page SEO kulcsfontosságú elemei?",
-        "answer": "Az on-page SEO a weboldalon végzett optimalizálásokat jelenti. A kulcsfontosságú elemek közé tartozik a releváns kulcsszavak használata a címekben, meta leírásokban, fejlécekben és a szövegben. Ezen kívül a képek optimalizálása, az oldalbetöltési sebesség javítása és a mobilbarát kialakítás is fontos tényezők az on-page SEO javításában és a keresőmotoros rangsorok növelésében."
+        "question": "Segítetek Google Cégprofilban?",
+        "answer": "Igen. A profil létrehozásában, beállításában és a vállalkozás adatainak kezelésében is tudunk segíteni."
       }
     }
   },
   "contact": {
-    "subtitle": "Website Design & Development | Performance-Driven | Győr",
-    "title": "Kapcsolat"
+    "subtitle": "Egyedi digitális megoldások | Web, mobil és üzleti rendszerek | Győr",
+    "title": "Beszéljük át a következő digitális projektedet",
+    "description": "Írd meg röviden, milyen problémát szeretnél megoldani. Segítünk tisztázni a lehetőségeket, a szükséges funkciókat és a következő lépést.",
+    "cardEyebrow": "Közvetlen kapcsolat",
+    "cardText": "Röviden válaszolunk, és egyeztetünk egy első beszélgetést a projektről."
   }
 }
