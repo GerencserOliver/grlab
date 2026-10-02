@@ -31,7 +31,7 @@ const Website = () => {
           content="Professional website development services using React and Tailwind CSS. Explore my portfolio and see how I can bring your ideas to life!"
         />
         <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://grlab.vercel.app/website" />
+        <link rel="canonical" href="https://www.grlab.hu/website" />
       </Helmet>
 
       <IntroAnimation />

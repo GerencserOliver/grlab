@@ -19,7 +19,7 @@ const Portfolio = () => {
           content='Tekintse meg weboldal-, webalkalmazás- és üzleti rendszer projektjeinket. Egyedi digitális megoldások magyar vállalkozásoknak.'
         />
         <meta name='robots' content='index, follow' />
-        <link rel='canonical' href='https://grlab.vercel.app/portfolio' />
+        <link rel='canonical' href='https://www.grlab.hu/portfolio' />
       </Helmet>
 
       <IntroAnimation />

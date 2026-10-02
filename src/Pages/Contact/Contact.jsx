@@ -2,6 +2,10 @@ import { Helmet } from 'react-helmet'
 import CTA from '../../components/CTA'
 import ScrollAnimation from '../../components/ScrollAnimation'
 import IntroAnimation from '../../components/IntroAnimation'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import { faFacebookF, faInstagram } from '@fortawesome/free-brands-svg-icons';
+// import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 
 const Contact = () => {
@@ -16,7 +20,7 @@ const Contact = () => {
           content='Beszéljük át weboldal-, webalkalmazás- vagy egyedi üzleti rendszer ötletét. Kérjen személyre szabott ajánlatot.'
         />
         <meta name='robots' content='index, follow' />
-        <link rel='canonical' href='https://grlab.vercel.app/contact' />
+        <link rel='canonical' href='https://www.grlab.hu/contact' />
       </Helmet>
         <IntroAnimation />
         <ScrollAnimation />

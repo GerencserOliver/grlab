@@ -1,5 +1,5 @@
 import './App.css';
-import React from 'react';
+// import React from 'react';
 import { Helmet } from 'react-helmet';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'; // Importálás a Routerhez
 import Navbar from './components/Navbar';
@@ -12,6 +12,8 @@ import UsSection from './components/UsSection';
 import CTA from './components/CTA';
 import Footer from './components/Footer';
 import ScrollAnimation from './components/ScrollAnimation';
+import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/react"
 
 // pages
 import Contact from './Pages/Contact/Contact';
@@ -33,7 +35,7 @@ function App() {
             content="Egyedi weboldalak, webalkalmazások és digitális üzleti rendszerek vállalkozásoknak Győrben és Magyarországon."
           />
           <meta name="robots" content="index, follow" />
-          <link rel="canonical" href="https://grlab.vercel.app" />
+          <link rel="canonical" href="https://www.grlab.hu/" />
         </Helmet>
         <Navbar />
         <Routes>
@@ -61,6 +63,8 @@ function App() {
         </Routes>
         <Footer />
       </div>
+      <Analytics/>
+      <SpeedInsights/>
     </Router>
   );
 }
