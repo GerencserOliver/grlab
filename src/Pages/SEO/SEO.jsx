@@ -29,7 +29,7 @@ const SEO = () => {
           content="Professional SEO services to help you rank higher on Google. Increase your website traffic and grow your business with our SEO strategies."
         />
         <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://gmdesign.vercel.app/seo-services" />
+        <link rel="canonical" href="https://www.grlab.hu/seo" />
       </Helmet>
       
       <IntroAnimation />

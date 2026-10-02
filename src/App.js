@@ -34,7 +34,7 @@ function App() {
             content="GM Design is a web development agency that specializes in creating modern, responsive websites and SEO optimization."
           />
           <meta name="robots" content="index, follow" />
-          <link rel="canonical" href="https://gmdesign.vercel.app" />
+          <link rel="canonical" href="https://www.grlab.hu/" />
         </Helmet>
         <Navbar />
         <Routes>

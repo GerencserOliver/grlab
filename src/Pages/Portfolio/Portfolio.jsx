@@ -22,7 +22,7 @@ const Portfolio = () => {
           content='Explore my portfolio and see how I can bring your ideas to life! Professional website development services using React and Tailwind CSS.'
         />
         <meta name='robots' content='index, follow' />
-        <link rel='canonical' href='https://gmdesign.vercel.app/portfolio' />
+        <link rel='canonical' href='https://www.grlab.hu/portfolio' />
       </Helmet>
 
       <IntroAnimation />

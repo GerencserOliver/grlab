@@ -21,7 +21,7 @@ const Contact = () => {
           content='Get in touch with me to discuss your project. Professional website development services using React and Tailwind CSS.'
         />
         <meta name='robots' content='index, follow' />
-        <link rel='canonical' href='https://gmdesign.vercel.app/contact' />
+        <link rel='canonical' href='https://www.grlab.hu/contact' />
       </Helmet>
         <IntroAnimation />
         <ScrollAnimation />
