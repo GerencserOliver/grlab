@@ -38,29 +38,31 @@ function App() {
           <link rel="canonical" href="https://www.grlab.hu/" />
         </Helmet>
         <Navbar />
-        <Routes>
-          {/* Főoldal */}
-          <Route
-            path="/"
-            element={
-              <>
-                <ScrollAnimation />
-                <IntroAnimation />
-                <Hero />
-                <Services />
-                <UsSection />
-                <Prices />
-                <Offer />
-                <CTA />
-              </>
-            }
-          />
-          {/* Contact page */}
-          <Route path="/website" element={<Website />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/portfolio" element={<Portfolio />} />
-          <Route path="/seo" element={<SEO />} />
-        </Routes>
+        <main>
+          <Routes>
+            {/* Főoldal */}
+            <Route
+              path="/"
+              element={
+                <>
+                  <ScrollAnimation />
+                  <IntroAnimation />
+                  <Hero />
+                  <Services />
+                  <UsSection />
+                  <Prices />
+                  <Offer />
+                  <CTA />
+                </>
+              }
+            />
+            {/* Contact page */}
+            <Route path="/website" element={<Website />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/portfolio" element={<Portfolio />} />
+            <Route path="/seo" element={<SEO />} />
+          </Routes>
+        </main>
         <Footer />
       </div>
       <Analytics/>

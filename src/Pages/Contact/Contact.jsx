@@ -37,7 +37,7 @@ const Contact = () => {
             </div>
             <div className='w-full rounded-2xl border border-[#c9d8cc] bg-white p-6 shadow-sm md:w-1/3'>
               <p className='text-sm font-bold uppercase tracking-widest text-orange-700'>{t('contact.cardEyebrow')}</p>
-              <a href='mailto:info@grlab.com' className='mt-3 block break-all text-lg font-bold text-[#102a2d] transition-colors hover:text-orange-700'>info@grlab.com</a>
+              <a href='mailto:info@grlab.com' className='mt-3 block break-all text-lg font-bold text-[#102a2d] transition-colors hover:text-orange-700'>info@grlab.hu</a>
               <p className='mt-3 text-sm leading-relaxed text-[#315b5d]'>{t('contact.cardText')}</p>
             </div>
           </div>
