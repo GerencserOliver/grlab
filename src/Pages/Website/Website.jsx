@@ -50,7 +50,7 @@ const Website = () => {
         <div className="items-center space-y-4 text-black right-0 z-10">
           <img src={Construction} alt="
           Construction Site illustration of a website under construction"
-          className='w-full aspect-[16/7] object-cover' loading='lazy' />
+          className='w-full aspect-[16/7] object-cover' fetchPriority='high' />
         </div>
       </section>
       <WebsiteDev />

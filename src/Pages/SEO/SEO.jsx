@@ -47,7 +47,7 @@ const SEO = () => {
           </div>
         </div>
         <div className="mt-10 items-center space-y-4 text-black right-0 z-10">
-          <img src={Business} alt={t('seo.imageAlt')} className="aspect-[16/7] w-full object-cover" loading="lazy" />
+          <img src={Business} alt={t('seo.imageAlt')} className="aspect-[16/7] w-full object-cover" fetchPriority="high" />
         </div>
       </section>
       <Important />
