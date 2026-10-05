@@ -1,0 +1,16 @@
+{
+  "name": "GRLab",
+  "description": "Egyedi digitális megoldások, weboldalak, webalkalmazások és digitális üzleti rendszerek vállalkozásoknak.",
+  "url": "https://www.grlab.hu",
+  "contact_email": "info@grlab.hu",
+  "services": [
+    {
+      "name": "Webfejlesztés",
+      "url": "https://www.grlab.hu/website"
+    },
+    {
+      "name": "SEO & Google Cégprofil",
+      "url": "https://www.grlab.hu/seo"
+    }
+  ]
+}

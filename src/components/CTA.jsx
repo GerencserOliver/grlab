@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import ctaImg from '../images/Illustration of website development.png';
+import ctaImg from '../images/Illustration-of-website-development.webp';
 
 const CTA = () => {
   const [formData, setFormData] = useState({

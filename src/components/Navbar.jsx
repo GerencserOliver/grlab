@@ -1,5 +1,5 @@
 import { Link, useLocation } from 'react-router-dom';
-import logo from '../images/GR website design and seo logo.png';
+import logo from '../images/GR-website-design-and-seo-logo.webp';
 import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 

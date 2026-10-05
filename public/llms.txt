@@ -1,0 +1,10 @@
+# GRLab
+
+> Egyedi digitális megoldások, weboldalak, webalkalmazások és szoftveres rendszerek fejlesztése KKV-k számára.
+
+## Szolgáltatások
+
+- [Weboldal készítés](https://www.grlab.hu/website): Egyedi, villámgyors React/Next.js weboldalak fejlesztése.
+- [Google Cégprofil kezelés](https://www.grlab.hu/seo): Helyi SEO és Térkép optimálási szolgáltatások.
+- [Portfolio](https://www.grlab.hu/portfolio): Referenciáink és korábbi munkáink.
+- [Kapcsolat](https://www.grlab.hu/contact): Lépjen velünk kapcsolatba árajánlatért.
