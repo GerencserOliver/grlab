@@ -1,12 +1,9 @@
-import React from 'react';
 import { Helmet } from 'react-helmet';
 import ScrollAnimation from '../../components/ScrollAnimation';
 import IntroAnimation from '../../components/IntroAnimation';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next'; // Import the useTranslation hook
-
 import Business from '../../images/Business image illustrating partner.webp';
-
 import CTA from '../../components/CTA';
 import Important from '../../components/SEO/Important';
 import Rivals from '../../components/SEO/Rivals';
@@ -20,15 +17,14 @@ const SEO = () => {
   return (
     <div>
       <Helmet>
-        <title>GRLab | SEO Services</title>
+        <title>SEO Szolgáltatások | GRLab</title>
         <meta
           name="description"
-          content="Professional SEO services to help you rank higher on Google. Increase your website traffic and grow your business with our SEO strategies."
+          content="Fedezze fel SEO szolgáltatásainkat, amelyek segítenek weboldala láthatóságának növelésében és a keresőmotorokban való jobb helyezés elérésében. Növelje online jelenlétét és vonzza a célközönséget."
         />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://www.grlab.hu/seo" />
       </Helmet>
-      
       <IntroAnimation />
       <ScrollAnimation />
       <section className="border-b border-[#dfe7e1] bg-[#f5f7f4]">
@@ -62,6 +58,6 @@ const SEO = () => {
       <CTA />
     </div>
   );
-};
+}
 
 export default SEO;

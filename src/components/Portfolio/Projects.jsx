@@ -1,13 +1,10 @@
-import React from 'react';
 import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Portfolio1 from '../../images/Portfolio/Responsive web design project for Oliver – modern UIUX and mobile-friendly layout.webp'
 import Portfolio2 from '../../images/Portfolio/Mobile app development showcase  with intuitive user interface and real-time features.webp'
 import Portfolio3 from '../../images/Portfolio/Brand identity design portfolio – logo, typography, and marketing materials for Oliver.webp'
 import Portfolio4 from '../../images/Portfolio/Clean code example from my portfolio – React, tailwindcss development with best practices.webp'
-
 import CarRental1 from '../../images/carRental/Premium car rental fleet – luxury sedans, SUVs, and economy cars available 247.webp'
-
 import Gym1 from '../../images/gym/Professional weightlifting area – barbells, dumbbells, and power racks.webp'
 import Gym2 from '../../images/gym/High-intensity group training session – HIIT workout with certified trainers.webp'
 import Gym3 from '../../images/gym/Map - Conveniently located in Győr.webp'

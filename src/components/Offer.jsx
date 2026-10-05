@@ -1,4 +1,3 @@
-import React from 'react';
 import Laptop from '../images/Laptop for Offering.webp';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';

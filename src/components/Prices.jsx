@@ -1,4 +1,3 @@
-import React from 'react';
 import Laptop from '../images/Laptop for price.webp';
 import Office from '../images/Website Design & Development.webp';
 import Buildings from '../images/UX Design & Optimization.webp';

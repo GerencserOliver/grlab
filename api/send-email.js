@@ -38,7 +38,7 @@ export default async function handler(req, res) {
 
   const mailOptions = {
     from: process.env.EMAIL_USER, // Az email cím, amelyről küldöd az üzeneteket
-    to: 'grlab@gmail.com', // Az email cím, amelyre érkeznek az üzenetek
+    to: 'grlabteam@gmail.com', // Az email cím, amelyre érkeznek az üzenetek
     subject: 'New Contact Form Submission',
     text: `New message from ${name}\n\nName: ${name}\nEmail: ${email}\n\nMessage:\n${message}`,
   };

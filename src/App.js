@@ -1,5 +1,4 @@
 import './App.css';
-// import React from 'react';
 import { Helmet } from 'react-helmet';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'; // Importálás a Routerhez
 import Navbar from './components/Navbar';

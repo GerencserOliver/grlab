@@ -1,12 +1,7 @@
-import React from 'react';
 import { Helmet } from 'react-helmet';
 import ScrollAnimation from '../../components/ScrollAnimation';
 import IntroAnimation from '../../components/IntroAnimation';
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-// import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
-// import { faFacebookF, faInstagram } from '@fortawesome/free-brands-svg-icons';
 import { Link } from 'react-router-dom';
-
 import CTA from '../../components/CTA';
 import WebsiteDev from '../../components/WebsiteDev/Introduction';
 import Guarantee from '../../components/WebsiteDev/Guarantee';
@@ -14,9 +9,7 @@ import Prices from '../../components/WebsiteDev/Prices';
 import Services from '../../components/Services';
 import Questions from '../../components/WebsiteDev/Questions';
 import WebsiteBuilding from '../../components/WebsiteDev/WebsiteBuilding';
-
 import Construction from '../../images/Construction illustration of webdevelopment.webp';
-
 import { useTranslation } from 'react-i18next';
 
 const Website = () => {
@@ -25,15 +18,14 @@ const Website = () => {
   return (
     <div>
       <Helmet>
-        <title>GRLab | Website Development</title>
+        <title>Weboldalfejlesztés | GRLab</title>
         <meta
           name="description"
-          content="Professional website development services using React and Tailwind CSS. Explore my portfolio and see how I can bring your ideas to life!"
+          content="Fedezze fel weboldalfejlesztési szolgáltatásainkat, amelyek segítenek vállalkozása online jelenlétének növelésében. Professzionális weboldalak készítése, testreszabott megoldásokkal és modern dizájnnal."
         />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://www.grlab.hu/website" />
       </Helmet>
-
       <IntroAnimation />
       <ScrollAnimation />
       <section className='border-b border-[#dfe7e1] bg-[#f5f7f4]'>
@@ -60,7 +52,6 @@ const Website = () => {
           Construction Site illustration of a website under construction"
           className='w-full aspect-[16/7] object-cover' loading='lazy' />
         </div>
-
       </section>
       <WebsiteDev />
       <Guarantee />

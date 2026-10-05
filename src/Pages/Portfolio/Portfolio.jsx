@@ -1,4 +1,3 @@
-import React from 'react';
 import { Helmet } from 'react-helmet';
 import CTA from '../../components/CTA';
 import ScrollAnimation from '../../components/ScrollAnimation';
@@ -21,7 +20,6 @@ const Portfolio = () => {
         <meta name='robots' content='index, follow' />
         <link rel='canonical' href='https://www.grlab.hu/portfolio' />
       </Helmet>
-
       <IntroAnimation />
       <ScrollAnimation />
       <section className='border-b border-[#dfe7e1] bg-[#f5f7f4]'>

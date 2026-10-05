@@ -1,4 +1,3 @@
-import React from 'react';
 import { useTranslation } from 'react-i18next'; // Fordítási hook importálása
 import { Link } from 'react-router-dom';
 import Workspace from '../../images/workspace for website and seo.webp';

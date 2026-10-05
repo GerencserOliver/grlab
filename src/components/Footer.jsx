@@ -1,9 +1,7 @@
-import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import Logo from '../images/GR website design and seo logo.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
-// import { faFacebookF, faInstagram } from '@fortawesome/free-brands-svg-icons';
 import { useTranslation } from 'react-i18next';
 
 const links = [

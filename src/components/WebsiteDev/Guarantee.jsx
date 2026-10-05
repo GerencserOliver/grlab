@@ -1,4 +1,3 @@
-import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCheck, faComments, faLifeRing } from '@fortawesome/free-solid-svg-icons';
 import Office from '../../images/Laptop in an office illustrating website development.webp';

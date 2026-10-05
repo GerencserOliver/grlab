@@ -1,4 +1,3 @@
-import React from 'react';
 import { useTranslation } from 'react-i18next'; // Import useTranslation hook
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch, faChartLine, faFileCode, faUserShield, faSitemap, faPenFancy } from '@fortawesome/free-solid-svg-icons';
