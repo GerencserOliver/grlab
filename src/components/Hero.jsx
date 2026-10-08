@@ -10,7 +10,7 @@ const Hero = () => {
   return (
     <section className='border-b border-[#dfe7e1] bg-[#f5f7f4]'>
       <div className='container mx-auto flex max-w-[1440px] flex-col items-center gap-12 px-6 py-16 md:flex-row md:px-10 md:py-24'>
-        <div className='scroll-in w-full text-center md:w-3/5 md:text-left'>
+        <div className='scroll-in w-full md:w-3/5 text-left'>
           <p className='mb-6 text-sm font-bold uppercase tracking-[0.18em] text-orange-700 md:text-base'>
             {t('hero.subtitle')}
           </p>

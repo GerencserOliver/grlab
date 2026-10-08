@@ -50,10 +50,10 @@ const CTA = () => {
       <div className='mx-auto flex w-full max-w-[1200px] flex-col-reverse items-center gap-10 md:flex-row'>
         <form onSubmit={handleSubmit} className='w-full md:w-1/2' aria-describedby='contact-description'>
           <p className='mb-4 text-sm font-bold uppercase tracking-[0.18em] text-orange-700'>{t('cta.eyebrow')}</p>
-          <h2 className='mb-4 text-center font-poppins text-3xl font-extrabold leading-tight text-[#102a2d] md:text-left md:text-5xl'>
+          <h2 className='mb-4r font-poppins text-3xl font-extrabold leading-tight text-[#102a2d] text-left md:text-5xl'>
             {t('cta.title')}
           </h2>
-          <p id='contact-description' className='mb-8 text-center leading-relaxed text-[#315b5d] md:text-left'>{t('cta.description')}</p>
+          <p id='contact-description' className='mb-8 leading-relaxed text-[#315b5d] text-left'>{t('cta.description')}</p>
           <div className='space-y-5'>
             <label className='block font-semibold text-[#102a2d]' htmlFor='contact-name'>{t('cta.nameLabel')}
             <input

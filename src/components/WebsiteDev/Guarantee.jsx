@@ -21,7 +21,7 @@ const Guarantee = () => {
           {t('guarantee.points', { returnObjects: true }).map((point, index) => (
             <li key={point} className="flex flex-col gap-2 rounded-xl border border-[#426b6b] p-3">
               <FontAwesomeIcon icon={[faCheck, faComments, faLifeRing][index]} className="text-orange-300" />
-              <span>{point}</span>
+              <span className="hyphens-auto text-center">{point}</span>
             </li>
           ))}
         </ul>

@@ -1,7 +1,7 @@
-import { useTranslation } from 'react-i18next'; // Import the useTranslation hook
+import { useTranslation } from 'react-i18next';
 
 const Important = () => {
-  const { t } = useTranslation(); // Initialize translation function
+  const { t } = useTranslation();
 
   return (
     <section className="flex items-center justify-center bg-[#f5f7f4]">

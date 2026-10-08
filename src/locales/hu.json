@@ -162,7 +162,7 @@
         "Kapcsolati űrlap",
         "Alapvető technikai SEO",
         "Google Cégprofilhoz igazított online jelenlét",
-        "Teljesítményoptimalizálás"
+        "Teljesítmény optimalizálás"
       ]
     },
     "pro": {
@@ -315,7 +315,7 @@
       "description": "Címek, metaadatok, tartalmi struktúra és belső hivatkozások optimalizálása."
     },
     "technicalSeo": {
-      "name": "Teljesítményoptimalizálás",
+      "name": "Teljesítmény optimalizálás",
       "description": "Betöltési idő, mobilos teljesítmény és technikai problémák feltárása és javítása."
     },
     "linkBuilding": {
@@ -351,7 +351,7 @@
         "description": "Optimalizáljuk a releváns oldalakat, metaadatokat, címsorokat és tartalmi struktúrát."
       },
       "4": {
-        "title": "4. Teljesítményoptimalizálás",
+        "title": "4. Teljesítmény optimalizálás",
         "description": "Ahol szükséges, javítjuk az oldal betöltési sebességét és technikai teljesítményét."
       },
       "5": {
