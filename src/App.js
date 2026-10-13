@@ -1,5 +1,4 @@
 import './App.css';
-import { Helmet } from 'react-helmet';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'; // Importálás a Routerhez
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
@@ -21,21 +20,14 @@ import Portfolio from './Pages/Portfolio/Portfolio';
 import SEO from './Pages/SEO/SEO';
 import './i18n';
 import ScrollToTop from './components/ScrollToTop';
+import SEOHead from './components/SEOHead';
 
 function App() {
   return (
     <Router>
       <ScrollToTop />
       <div className='wrapper'>
-        <Helmet>
-          <title>GRLab | Egyedi digitális megoldások</title>
-          <meta
-            name="description"
-            content="Egyedi weboldalak, webalkalmazások és digitális üzleti rendszerek vállalkozásoknak Győrben és Magyarországon."
-          />
-          <meta name="robots" content="index, follow" />
-          <link rel="canonical" href="https://www.grlab.hu/" />
-        </Helmet>
+        <SEOHead />
         <Navbar />
         <main>
           <Routes>
