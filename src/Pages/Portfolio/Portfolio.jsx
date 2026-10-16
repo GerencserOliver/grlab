@@ -1,25 +1,17 @@
-import { Helmet } from 'react-helmet';
 import CTA from '../../components/CTA';
 import ScrollAnimation from '../../components/ScrollAnimation';
 import IntroAnimation from '../../components/IntroAnimation';
 import Projects from '../../components/Portfolio/Projects';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import SEOHead from '../../components/SEOHead';
 
 const Portfolio = () => {
   const { t } = useTranslation();
 
   return (
     <div>
-      <Helmet>
-        <title>Referenciák | GRLab</title>
-        <meta
-          name='description'
-          content='Tekintse meg weboldal-, webalkalmazás- és üzleti rendszer projektjeinket. Egyedi digitális megoldások magyar vállalkozásoknak.'
-        />
-        <meta name='robots' content='index, follow' />
-        <link rel='canonical' href='https://www.grlab.hu/portfolio' />
-      </Helmet>
+      <SEOHead />
       <IntroAnimation />
       <ScrollAnimation />
       <section className='border-b border-[#dfe7e1] bg-[#f5f7f4]'>

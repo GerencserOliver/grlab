@@ -1,23 +1,15 @@
-import { Helmet } from 'react-helmet'
 import CTA from '../../components/CTA'
 import ScrollAnimation from '../../components/ScrollAnimation'
 import IntroAnimation from '../../components/IntroAnimation'
 import { useTranslation } from 'react-i18next';
+import SEOHead from '../../components/SEOHead';
 
 const Contact = () => {
   const { t } = useTranslation();
 
   return (
     <div>
-      <Helmet>
-        <title>Kapcsolat | GRLab</title>
-        <meta
-          name='description'
-          content='Beszéljük át weboldal-, webalkalmazás- vagy egyedi üzleti rendszer ötletét. Kérjen személyre szabott ajánlatot.'
-        />
-        <meta name='robots' content='index, follow' />
-        <link rel='canonical' href='https://www.grlab.hu/contact' />
-      </Helmet>
+      <SEOHead />
       <IntroAnimation />
       <ScrollAnimation />
       <section className='border-b border-[#dfe7e1] bg-[#f5f7f4]'>

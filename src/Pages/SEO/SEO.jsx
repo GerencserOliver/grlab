@@ -1,4 +1,3 @@
-import { Helmet } from 'react-helmet';
 import ScrollAnimation from '../../components/ScrollAnimation';
 import IntroAnimation from '../../components/IntroAnimation';
 import { Link } from 'react-router-dom';
@@ -10,21 +9,14 @@ import Rivals from '../../components/SEO/Rivals';
 import Services from '../../components/SEO/Services';
 import SEOProcess from '../../components/SEO/SEOProcess';
 import SEOQuestions from '../../components/SEO/SEOQuestions';
+import SEOHead from '../../components/SEOHead';
 
 const SEO = () => {
   const { t } = useTranslation(); // Initialize translation function
 
   return (
     <div>
-      <Helmet>
-        <title>SEO Szolgáltatások | GRLab</title>
-        <meta
-          name="description"
-          content="Fedezze fel SEO szolgáltatásainkat, amelyek segítenek weboldala láthatóságának növelésében és a keresőmotorokban való jobb helyezés elérésében. Növelje online jelenlétét és vonzza a célközönséget."
-        />
-        <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://www.grlab.hu/seo" />
-      </Helmet>
+      <SEOHead />
       <IntroAnimation />
       <ScrollAnimation />
       <section className="border-b border-[#dfe7e1] bg-[#f5f7f4]">
