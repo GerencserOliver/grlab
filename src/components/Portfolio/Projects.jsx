@@ -18,6 +18,12 @@ import Szelvedo1 from '../../images/szelvedo/szelvedo_1.webp';
 import Szelvedo2 from '../../images/szelvedo/szelvedo_2.webp';
 import Szelvedo3 from '../../images/szelvedo/szelvedo_3.webp';
 import Szelvedo4 from '../../images/szelvedo/szelvedo_4.webp';
+import Fleetflow1 from '../../images/fleetflow/fleetflow-1.webp';
+import Fleetflow2 from '../../images/fleetflow/fleetflow-2.webp';
+import Fleetflow3 from '../../images/fleetflow/fleetflow-3.webp';
+import Fleetflow4 from '../../images/fleetflow/fleetflow-4.webp';
+import Fleetflow5 from '../../images/fleetflow/fleetflow-5.webp';
+import Fleetflow6 from '../../images/fleetflow/fleetflow-6.webp';
 
 const projectSections = [
     {
@@ -34,20 +40,36 @@ const projectSections = [
         url: "https://kunpeter-szelvedojavitas.hu",
     },
     {
-        key: 'jedligram',
+        key: 'pille',
         number: '02',
-        title: 'Jedligram',
-        description: 'Iskolai közösségi hálózat, ahol a felhasználók képeket oszthatnak meg, különböző csoportokhoz csatlakozhatnak, és mobilon is kényelmesen használhatják a platformot.',
+        title: 'Pille Webshop',
+        description: 'Komplett webshop saját irányítófelülettel, ahol a tulajdonos önállóan vehet fel termékeket és kezelheti a megrendeléseket, Foxpost, GLS és MPL szállítási lehetőségek integrációjával.',
         images: [
-            { source: jedligram1, alt: 'Jedligram projekt 1' },
-            { source: jedligram2, alt: 'Jedligram projekt 2' },
-            { source: jedligram3, alt: 'Jedligram projekt 3' },
+            { source: Pille4, alt: 'Pille projekt 1' },
+            { source: Pille2, alt: 'Pille projekt 2' },
+            { source: Pille3, alt: 'Pille projekt 3' },
+            { source: Pille1, alt: 'Pille projekt 4' },
+        ],
+        url: null,
+    },
+    {
+        key: 'fleetflow',
+        number: '03',
+        title: 'FleetFlow',
+        description: 'Nagyszabású irodai szoftver egy szállítmányozó cég számára, amelyben nyomon követhetők és adminisztrálhatók a sofőrök útjai, tankolásai és szervizkérelmei. A rendszer statisztikákat, többféle exportálási lehetőséget és különböző felhasználói szerepköröket biztosít. A sofőrök saját mobilalkalmazáson keresztül használhatják, míg az adminisztrátorok webes felületen kezelhetik a teljes flottát. A felhasználók email értesítéseket is kapnak a fontos eseményekről.',
+        images: [
+            { source: Fleetflow1, alt: 'Fleetflow projekt 1' },
+            { source: Fleetflow2, alt: 'Fleetflow projekt 2' },
+            { source: Fleetflow3, alt: 'Fleetflow projekt 3' },
+            { source: Fleetflow4, alt: 'Fleetflow projekt 4' },
+            { source: Fleetflow5, alt: 'Fleetflow projekt 5' },
+            { source: Fleetflow6, alt: 'Fleetflow projekt 6' },
         ],
         url: null,
     },
     {
         key: 'car-rental',
-        number: '03',
+        number: '04',
         title: 'Autókölcsönző',
         description: 'Autókölcsönző számára készült, mobilra is optimalizált webalkalmazás saját irányítófelülettel, ahol a tulajdonos könnyedén kezelheti az autókat.',
         images: [
@@ -59,7 +81,7 @@ const projectSections = [
     },
     {
         key: 'gym',
-        number: '04',
+        number: '05',
         title: 'Fitnesz és wellbeing',
         description: 'Konditerem számára készített bemutatkozó weboldal, amely mobil eszközökre is optimalizált, így minden képernyőméreten könnyen használható.',
         images: [
@@ -71,15 +93,14 @@ const projectSections = [
         url: null,
     },
     {
-        key: 'pille',
-        number: '05',
-        title: 'Pille webshop',
-        description: 'Komplett webshop saját irányítófelülettel, ahol a tulajdonos önállóan vehet fel termékeket és kezelheti a megrendeléseket, Foxpost, GLS és MPL szállítási lehetőségek integrációjával.',
+        key: 'jedligram',
+        number: '06',
+        title: 'Jedligram',
+        description: 'Iskolai közösségi hálózat, ahol a felhasználók képeket oszthatnak meg, különböző csoportokhoz csatlakozhatnak, és mobilon is kényelmesen használhatják a platformot.',
         images: [
-            { source: Pille4, alt: 'Pille projekt 1' },
-            { source: Pille2, alt: 'Pille projekt 2' },
-            { source: Pille3, alt: 'Pille projekt 3' },
-            { source: Pille1, alt: 'Pille projekt 4' },
+            { source: jedligram1, alt: 'Jedligram projekt 1' },
+            { source: jedligram2, alt: 'Jedligram projekt 2' },
+            { source: jedligram3, alt: 'Jedligram projekt 3' },
         ],
         url: null,
     },
