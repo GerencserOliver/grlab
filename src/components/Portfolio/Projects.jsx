@@ -1,65 +1,87 @@
 import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-
-import jedligram1 from '../../images/jedligram/jedligram_1.png';
-import jedligram2 from '../../images/jedligram/jedligram_2.jpg';
-import jedligram3 from '../../images/jedligram/jedligram_3.png';
-import CarRental1 from '../../images/carRental/carRental_1.png';
-import CarRental2 from '../../images/carRental/carRental_2.png';
-import CarRental3 from '../../images/carRental/carRental_3.png';
+import jedligram1 from '../../images/jedligram/jedligram_1.webp';
+import jedligram2 from '../../images/jedligram/jedligram_2.webp';
+import jedligram3 from '../../images/jedligram/jedligram_3.webp';
+import CarRental1 from '../../images/carRental/carRental_1.webp';
+import CarRental2 from '../../images/carRental/carRental_2.webp';
+import CarRental3 from '../../images/carRental/carRental_3.webp';
 import Gym1 from '../../images/gym/Professional weightlifting area – barbells, dumbbells, and power racks.webp';
 import Gym2 from '../../images/gym/High-intensity group training session – HIIT workout with certified trainers.webp';
 import Gym3 from '../../images/gym/Map - Conveniently located in Győr.webp';
-import Pille1 from '../../images/pille/pille_portfolio (1).png';
-import Pille2 from '../../images/pille/pille_portfolio (2).png';
-import Pille3 from '../../images/pille/pille_portfolio (3).png';
-import Pille4 from '../../images/pille/pille_portfolio (4).jpg';
+import Gym4 from '../../images/gym/Cardio zone with treadmills, rowing machines, and ellipticals – burn calories efficiently.webp';
+import Pille1 from '../../images/pille/pille_portfolio-_1_.webp';
+import Pille2 from '../../images/pille/pille_portfolio-_2_.webp';
+import Pille3 from '../../images/pille/pille_portfolio-_3_.webp';
+import Pille4 from '../../images/pille/pille_portfolio-_4_.webp';
+import Szelvedo1 from '../../images/szelvedo/szelvedo_1.webp';
+import Szelvedo2 from '../../images/szelvedo/szelvedo_2.webp';
+import Szelvedo3 from '../../images/szelvedo/szelvedo_3.webp';
+import Szelvedo4 from '../../images/szelvedo/szelvedo_4.webp';
 
 const projectSections = [
     {
-        key: 'jedligram',
+        key: 'kun-peter',
         number: '01',
-        title: 'Jedligram',
-        description: 'Egyedi, letisztult vizuális irány egy kreatív fotós projekt számára.',
+        title: 'Szélvédőjavító',
+        description: 'Egyéni vállalkozó számára készített bemutatkozó weboldal, amely mobil eszközökre is optimalizált. A weboldal keresőoptimalizált, ezért a releváns keresések esetén a Google találati listájának első helyein jelenik meg. A Google Cégprofilt is mi hoztuk létre és kezeljük, így a vállalkozás hirdetések fizetése nélkül is az első helyen jelenik meg a keresőben.',
         images: [
-            { source: jedligram1, alt: 'Jedligram kreatív fotós projekt – portréfotózás' },
-            { source: jedligram2, alt: 'Jedligram kreatív fotós projekt – termékfotózás' },
-            { source: jedligram3, alt: 'Jedligram kreatív fotós projekt – lifestyle fotózás' },
+            { source: Szelvedo1, alt: 'Szélvédőjavító projekt 1' },
+            { source: Szelvedo2, alt: 'Szélvédőjavító projekt 2' },
+            { source: Szelvedo3, alt: 'Szélvédőjavító projekt 3' },
+            { source: Szelvedo4, alt: 'Szélvédőjavító projekt 4' },
         ],
+        url: "https://kunpeter-szelvedojavitas.hu",
+    },
+    {
+        key: 'jedligram',
+        number: '02',
+        title: 'Jedligram',
+        description: 'Iskolai közösségi hálózat, ahol a felhasználók képeket oszthatnak meg, különböző csoportokhoz csatlakozhatnak, és mobilon is kényelmesen használhatják a platformot.',
+        images: [
+            { source: jedligram1, alt: 'Jedligram projekt 1' },
+            { source: jedligram2, alt: 'Jedligram projekt 2' },
+            { source: jedligram3, alt: 'Jedligram projekt 3' },
+        ],
+        url: null,
     },
     {
         key: 'car-rental',
-        number: '02',
+        number: '03',
         title: 'Autókölcsönző',
-        description: 'Prémium, bizalmat építő vizuális irány egy szolgáltatásközpontú autókölcsönző projekthez.',
+        description: 'Autókölcsönző számára készült, mobilra is optimalizált webalkalmazás saját irányítófelülettel, ahol a tulajdonos könnyedén kezelheti az autókat.',
         images: [
-            { source: CarRental1, alt: 'Autókölcsönző projekt – autóflotta bemutatása' },
-            { source: CarRental2, alt: 'Autókölcsönző projekt – online foglalási folyamat' },
-            { source: CarRental3, alt: 'Autókölcsönző projekt – ügyfélkapcsolati felület' },
+            { source: CarRental1, alt: 'Autókölcsönző projekt 1' },
+            { source: CarRental2, alt: 'Autókölcsönző projekt 2' },
+            { source: CarRental3, alt: 'Autókölcsönző projekt 3' },
         ],
+        url: null,
     },
     {
         key: 'gym',
-        number: '03',
+        number: '04',
         title: 'Fitnesz és wellbeing',
-        description: 'Energikus, mégis rendezett képi világ edzéshez, regenerációhoz és egészséges életmódhoz.',
+        description: 'Konditerem számára készített bemutatkozó weboldal, amely mobil eszközökre is optimalizált, így minden képernyőméreten könnyen használható.',
         images: [
-            { source: Gym1, alt: 'Professzionális súlyzós edzőterem' },
-            { source: Gym2, alt: 'Intenzív csoportos edzés' },
-            { source: Gym3, alt: 'Fitneszterem elhelyezkedését bemutató térkép' },
+            { source: Gym1, alt: 'Fitneszterem projekt 1' },
+            { source: Gym2, alt: 'Fitneszterem projekt 2' },
+            { source: Gym3, alt: 'Fitneszterem projekt 3' },
+            { source: Gym4, alt: 'Fitneszterem projekt 4' },
         ],
+        url: null,
     },
     {
         key: 'pille',
-        number: '04',
-        title: 'Pille projekt',
-        description: 'Egy összefüggő projekt vizuális részletei, egységes kompozícióban és könnyen áttekinthető formában.',
+        number: '05',
+        title: 'Pille webshop',
+        description: 'Komplett webshop saját irányítófelülettel, ahol a tulajdonos önállóan vehet fel termékeket és kezelheti a megrendeléseket, Foxpost, GLS és MPL szállítási lehetőségek integrációjával.',
         images: [
-            { source: Pille4, alt: 'Pille projekt részlete 1' },
-            { source: Pille2, alt: 'Pille projekt részlete 2' },
-            { source: Pille3, alt: 'Pille projekt részlete 3' },
-            { source: Pille1, alt: 'Pille projekt részlete 4' },
+            { source: Pille4, alt: 'Pille projekt 1' },
+            { source: Pille2, alt: 'Pille projekt 2' },
+            { source: Pille3, alt: 'Pille projekt 3' },
+            { source: Pille1, alt: 'Pille projekt 4' },
         ],
+        url: null,
     },
 ];
 
@@ -71,16 +93,13 @@ const Projects = () => {
         if (!activeImage) {
             return undefined;
         }
-
         const handleKeyDown = (event) => {
             if (event.key === 'Escape') {
                 setActiveImage(null);
             }
         };
-
         document.addEventListener('keydown', handleKeyDown);
         document.body.style.overflow = 'hidden';
-
         return () => {
             document.removeEventListener('keydown', handleKeyDown);
             document.body.style.overflow = '';
@@ -93,8 +112,6 @@ const Projects = () => {
     return (
         <section className='bg-white' aria-labelledby='projects-heading'>
             <div className='container mx-auto max-w-[1440px] px-6 py-16 md:px-10 md:py-20'>
-
-
                 <div className='mt-8 space-y-8'>
                     {projectSections.map((project) => (
                         <article key={project.key} className='scroll-in overflow-hidden rounded-3xl border border-[#dfe7e1] bg-[#f5f7f4] shadow-sm'>
@@ -107,11 +124,22 @@ const Projects = () => {
                                         {project.title}
                                     </h3>
                                 </div>
-                                <p className='max-w-2xl text-sm leading-relaxed text-[#315b5d] sm:text-right'>
-                                    {project.description}
-                                </p>
+                                <div className='max-w-3xl sm:text-right'>
+                                    <p className='text-sm leading-relaxed text-[#315b5d]'>
+                                        {project.description}
+                                    </p>
+                                    {project.url !== null && (
+                                        <a
+                                            href={project.url}
+                                            target='_blank'
+                                            rel='noopener noreferrer'
+                                            className='mt-2 inline-block text-sm font-bold text-orange-700 underline decoration-orange-300 underline-offset-4 transition hover:text-orange-900'
+                                        >
+                                            {project.url}
+                                        </a>
+                                    )}
+                                </div>
                             </div>
-
                             <div className={`grid grid-cols-2 gap-3 p-3 md:gap-4 md:p-5 ${project.images.length === 1 ? 'md:grid-cols-1' : project.images.length === 4 ? 'sm:grid-cols-4' : 'sm:grid-cols-3'}`}>
                                 {project.images.map((image, index) => (
                                     <button
