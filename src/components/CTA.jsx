@@ -1,6 +1,9 @@
+"use client";
+
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import ctaImg from '../images/Illustration-of-website-development.webp';
+import Image from 'next/image';
 
 const CTA = () => {
   const [formData, setFormData] = useState({
@@ -101,7 +104,7 @@ const CTA = () => {
           )}
         </form>
         <div className='w-full md:w-1/2'>
-          <img src={ctaImg} alt={t('cta.imageAlt')} loading='lazy' className='mx-auto h-auto w-full max-w-lg object-contain' />
+          <Image src={ctaImg} alt={t('cta.imageAlt')} loading='lazy' className='mx-auto h-auto w-full max-w-lg object-contain' />
         </div>
       </div>
     </section>

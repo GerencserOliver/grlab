@@ -1,7 +1,11 @@
-import { Link, useLocation } from 'react-router-dom';
+"use client";
+
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import logo from '../images/GR-website-design-and-seo-logo.webp';
 import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
+import Image from 'next/image';
 
 const links = [
   { key: 'website', href: '/website' },
@@ -12,12 +16,12 @@ const links = [
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const location = useLocation();
+  const pathname = usePathname();
   const { t, i18n } = useTranslation();
 
   useEffect(() => {
     setIsOpen(false);
-  }, [location.pathname]);
+  }, [pathname]);
 
   const changeLanguage = (lng) => {
     i18n.changeLanguage(lng);
@@ -27,8 +31,8 @@ const Navbar = () => {
   return (
     <nav className='sticky top-0 z-50 w-full border-b border-[#dfe7e1] bg-white/95 px-5 backdrop-blur md:px-10' aria-label={t('nav.ariaLabel')}>
       <div className='mx-auto flex h-24 max-w-[1440px] items-center justify-between'>
-        <Link to='/' aria-label={t('nav.home')}>
-          <img src={logo} alt='GRLab' className='w-16' fetchpriority='high' />
+        <Link href='/' aria-label={t('nav.home')}>
+          <Image src={logo} alt='GRLab' className='w-16' fetchPriority='high' />
         </Link>
 
         <button
@@ -46,8 +50,8 @@ const Navbar = () => {
           {links.map((link) => (
             <Link
               key={link.key}
-              to={link.href}
-              className={`rounded-lg px-4 py-3 font-poppins text-sm font-semibold transition-colors ${location.pathname === link.href ? 'bg-[#102a2d] text-white' : 'text-[#102a2d] hover:bg-[#eef4ef]'}`}
+              href={link.href}
+              className={`rounded-lg px-4 py-3 font-poppins text-sm font-semibold transition-colors ${pathname === link.href ? 'bg-[#102a2d] text-white' : 'text-[#102a2d] hover:bg-[#eef4ef]'}`}
             >
               {t(`nav.${link.key}`)}
             </Link>
@@ -59,9 +63,9 @@ const Navbar = () => {
         </div>
 
         <div id='mobile-navigation' className={`${isOpen ? 'flex' : 'hidden'} absolute left-0 top-24 w-full flex-col gap-2 border-b border-[#dfe7e1] bg-white p-5 shadow-lg md:hidden`}>
-          <Link to='/' className='rounded-lg px-4 py-3 font-semibold text-[#102a2d]'>{t('nav.home')}</Link>
+          <Link href='/' className='rounded-lg px-4 py-3 font-semibold text-[#102a2d]'>{t('nav.home')}</Link>
           {links.map((link) => (
-            <Link key={link.key} to={link.href} className='rounded-lg px-4 py-3 font-semibold text-[#102a2d]'>{t(`nav.${link.key}`)}</Link>
+            <Link key={link.key} href={link.href} className='rounded-lg px-4 py-3 font-semibold text-[#102a2d]'>{t(`nav.${link.key}`)}</Link>
           ))}
           <div className='mt-2 flex gap-2 border-t border-[#dfe7e1] pt-4'>
             <button type='button' onClick={() => changeLanguage('hu')} className='rounded-lg bg-[#eef4ef] px-4 py-2 font-bold'>HU</button>

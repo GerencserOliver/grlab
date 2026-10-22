@@ -1,7 +1,11 @@
-import { Link } from 'react-router-dom';
+"use client";
+
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { useTranslation } from 'react-i18next';
 
 const UsSection = () => {
+  const pathname = usePathname();
   const { t } = useTranslation();
 
   return (
@@ -26,7 +30,7 @@ const UsSection = () => {
             <p className='mt-3 leading-relaxed text-[#b9d0c5]'>{t('usSection.point3Text')}</p>
           </article>
         </div>
-        <Link to='/website' className='mt-10 inline-flex font-bold text-orange-300 transition-colors hover:text-white'>{t('usSection.learnMore')} <span className='ml-2' aria-hidden='true'>→</span></Link>
+        <Link href='/website' className='mt-10 inline-flex font-bold text-orange-300 transition-colors hover:text-white'>{t('usSection.learnMore')} <span className='ml-2' aria-hidden='true'>→</span></Link>
       </div>
     </section>
   );

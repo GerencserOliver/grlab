@@ -1,6 +1,7 @@
 import { useTranslation } from 'react-i18next'; // Fordítási hook importálása
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import Workspace from '../../images/workspace for website and seo.webp';
+import Image from 'next/image';
 
 const Rivals = () => {
   const { t } = useTranslation(); // Fordítás funkció inicializálása
@@ -16,14 +17,14 @@ const Rivals = () => {
         <p className="mb-6 font-poppins text-lg leading-relaxed text-[#dce9df] md:text-left md:text-xl">
           {t('rivals.description')}
         </p>
-        <Link to="/contact" className="mt-4 w-full rounded-full bg-orange-700 px-7 py-4 text-center font-poppins text-base font-bold text-white transition-colors hover:bg-orange-800 sm:w-auto">
+        <Link href="/contact" className="mt-4 w-full rounded-full bg-orange-700 px-7 py-4 text-center font-poppins text-base font-bold text-white transition-colors hover:bg-orange-800 sm:w-auto">
           {t('rivals.cta')}
         </Link>
       </div>
 
       {/* Kép rész */}
       <div className="scroll-in order-1 h-72 w-full sm:h-96 md:order-2 md:h-[520px] md:w-1/2">
-        <img src={Workspace} alt={t('rivals.imageAlt')} loading="lazy" className="h-full w-full object-cover" />
+        <Image src={Workspace} alt={t('rivals.imageAlt')} loading="lazy" className="h-full w-full object-cover" />
       </div>
     </section>
   );

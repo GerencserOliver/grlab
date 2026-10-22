@@ -3,6 +3,8 @@ import { useTranslation } from 'react-i18next';
 const Introduction = () => {
   const { t } = useTranslation();
 
+  const sections = t('introduction.sections', { returnObjects: true });
+
   return (
     <section className="flex items-center justify-center bg-white">
       <div className="scroll-in container mx-auto flex max-w-[1440px] flex-col px-6 py-20 md:px-10 md:py-24">
@@ -16,7 +18,7 @@ const Introduction = () => {
           </p>
         </div>
         <div className="mt-12 grid grid-cols-1 gap-5 scroll-in sm:grid-cols-2 lg:grid-cols-3">
-          {t('introduction.sections', { returnObjects: true }).map((section, index) => (
+          {Array.isArray(sections) && sections.map((section, index) => (
             <div
               key={index}
               className={`rounded-2xl border p-7 transition-colors ${index % 2 === 0 ? 'border-[#0f766e] bg-[#102a2d] text-white' : 'border-[#dfe7e1] bg-[#f5f7f4] text-black'}`}

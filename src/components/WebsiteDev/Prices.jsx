@@ -1,5 +1,5 @@
 import { useTranslation } from 'react-i18next';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 
 const Prices = () => {
   const { t } = useTranslation();
@@ -88,7 +88,7 @@ const Prices = () => {
                     )
                   )}
               </ul>
-              <Link to="/contact" className="mt-6 block w-full rounded-full bg-orange-700 px-6 py-3 text-center font-poppins text-base font-bold text-white transition-colors hover:bg-orange-800">{t('wdprices.requestQuote')}</Link>
+              <Link href="/contact" className="mt-6 block w-full rounded-full bg-orange-700 px-6 py-3 text-center font-poppins text-base font-bold text-white transition-colors hover:bg-orange-800">{t('wdprices.requestQuote')}</Link>
             </div>
           ))}
         </div>

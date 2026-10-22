@@ -1,5 +1,8 @@
+"use client";
+
+import Image from 'next/image';
 import Laptop from '../images/Laptop for Offering.webp';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { useTranslation } from 'react-i18next';
 
 const Offer = () => {
@@ -16,12 +19,12 @@ const Offer = () => {
         <p className='mb-6 font-poppins text-lg leading-relaxed text-[#dce9df] md:text-left md:text-xl'>
           {t('offer.description')}
         </p>
-        <Link to='/contact' className='mt-4 w-full rounded-full bg-orange-700 px-7 py-4 text-center font-poppins text-base font-bold text-white transition-colors hover:bg-orange-800 sm:w-auto'>{t('offer.button')}</Link>
+        <Link href='/contact' className='mt-4 w-full rounded-full bg-orange-700 px-7 py-4 text-center font-poppins text-base font-bold text-white transition-colors hover:bg-orange-800 sm:w-auto'>{t('offer.button')}</Link>
       </div>
 
       {/* Kép rész */}
       <div className='scroll-in order-1 h-72 w-full sm:h-96 md:order-2 md:h-[560px] md:w-1/2'>
-        <img src={Laptop} alt={t('offer.imageAlt')} loading='lazy' className='h-full w-full object-cover' />
+        <Image src={Laptop} alt={t('offer.imageAlt')} loading='lazy' className='h-full w-full object-cover' />
       </div>
     </section>
   );

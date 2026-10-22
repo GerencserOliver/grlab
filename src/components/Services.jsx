@@ -1,3 +1,5 @@
+"use client";
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLaptopCode, faSearch, faShoppingCart, faPaintBrush, faTools, faPenAlt } from '@fortawesome/free-solid-svg-icons';
 import { useTranslation } from 'react-i18next';

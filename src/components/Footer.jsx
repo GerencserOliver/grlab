@@ -1,8 +1,13 @@
-import { Link, useLocation } from 'react-router-dom';
+"use client";
+
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import Logo from '../images/GR-website-design-and-seo-logo.webp';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { useTranslation } from 'react-i18next';
+import { useEffect, useState } from 'react';
+import Image from 'next/image';
 
 const links = [
   { key: 'website', href: '/website' },
@@ -12,9 +17,13 @@ const links = [
 ];
 
 const Footer = () => {
-  const currentYear = new Date().getFullYear();
-  const location = useLocation();
+  const [currentYear, setCurrentYear] = useState(null);
+  const pathname = usePathname();
   const { t, i18n } = useTranslation();
+
+  useEffect(() => {
+    setCurrentYear(new Date().getFullYear());
+  }, []);
 
   const changeLanguage = (lng) => {
     i18n.changeLanguage(lng);
@@ -30,8 +39,8 @@ const Footer = () => {
           
           {/* Brand & Logo */}
           <div className="flex items-center justify-between md:justify-start">
-            <Link to="/" aria-label={t('nav.home')}>
-              <img
+            <Link href="/" aria-label={t('nav.home')}>
+              <Image
                 src={Logo}
                 alt="GRLab logo – Website Design and SEO Optimization Services"
                 className="w-20 hover:opacity-90 transition-opacity"
@@ -43,11 +52,11 @@ const Footer = () => {
           <nav aria-label="Footer navigation">
             <ul className="flex flex-wrap items-center gap-2">
               {links.map((link) => {
-                const isActive = location.pathname === link.href;
+                const isActive = pathname === link.href;
                 return (
                   <li key={link.key}>
                     <Link
-                      to={link.href}
+                      href={link.href}
                       className={`rounded-lg px-4 py-2.5 font-poppins text-sm font-semibold transition-colors ${
                         isActive
                           ? 'bg-[#102a2d] text-white'

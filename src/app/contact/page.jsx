@@ -1,19 +1,19 @@
+"use client";
+
 import CTA from '../../components/CTA'
 import ScrollAnimation from '../../components/ScrollAnimation'
 import IntroAnimation from '../../components/IntroAnimation'
 import { useTranslation } from 'react-i18next';
-import SEOHead from '../../components/SEOHead';
 
 const Contact = () => {
   const { t } = useTranslation();
 
   return (
     <div>
-      <SEOHead />
       <IntroAnimation />
       <ScrollAnimation />
       <section className='border-b border-[#dfe7e1] bg-[#f5f7f4]'>
-        <div className='container mx-auto flex max-w-[1440px] flex-col gap-8 px-6 py-16 md:flex-row md:items-end md:px-10 md:py-24'>
+        <div className='container mx-auto flex max-w-360 flex-col gap-8 px-6 py-16 md:flex-row md:items-end md:px-10 md:py-24'>
           <div className='scroll-in w-full md:w-2/3'>
             <p className='mb-5 text-sm font-bold uppercase tracking-[0.18em] text-orange-700'>
               {t('contact.subtitle')}

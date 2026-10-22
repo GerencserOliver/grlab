@@ -1,8 +1,10 @@
+"use client";
+
 import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import jedligram1 from '../../images/jedligram/jedligram_1.webp';
-import jedligram2 from '../../images/jedligram/jedligram_2.webp';
-import jedligram3 from '../../images/jedligram/jedligram_3.webp';
+import Jedligram1 from '../../images/jedligram/jedligram_1.webp';
+import Jedligram2 from '../../images/jedligram/jedligram_2.webp';
+import Jedligram3 from '../../images/jedligram/jedligram_3.webp';
 import CarRental1 from '../../images/carRental/carRental_1.webp';
 import CarRental2 from '../../images/carRental/carRental_2.webp';
 import CarRental3 from '../../images/carRental/carRental_3.webp';
@@ -24,6 +26,7 @@ import Fleetflow3 from '../../images/fleetflow/fleetflow-3.webp';
 import Fleetflow4 from '../../images/fleetflow/fleetflow-4.webp';
 import Fleetflow5 from '../../images/fleetflow/fleetflow-5.webp';
 import Fleetflow6 from '../../images/fleetflow/fleetflow-6.webp';
+import Image from 'next/image';
 
 const projectSections = [
     {
@@ -45,10 +48,10 @@ const projectSections = [
         title: 'Pille Webshop',
         description: 'Komplett webshop saját irányítófelülettel, ahol a tulajdonos önállóan vehet fel termékeket és kezelheti a megrendeléseket, Foxpost, GLS és MPL szállítási lehetőségek integrációjával.',
         images: [
-            { source: Pille4, alt: 'Pille projekt 1' },
+            { source: Pille4, alt: 'Pille projekt 4' },
             { source: Pille2, alt: 'Pille projekt 2' },
             { source: Pille3, alt: 'Pille projekt 3' },
-            { source: Pille1, alt: 'Pille projekt 4' },
+            { source: Pille1, alt: 'Pille projekt 1' },
         ],
         url: null,
     },
@@ -98,9 +101,9 @@ const projectSections = [
         title: 'Jedligram',
         description: 'Iskolai közösségi hálózat, ahol a felhasználók képeket oszthatnak meg, különböző csoportokhoz csatlakozhatnak, és mobilon is kényelmesen használhatják a platformot.',
         images: [
-            { source: jedligram1, alt: 'Jedligram projekt 1' },
-            { source: jedligram2, alt: 'Jedligram projekt 2' },
-            { source: jedligram3, alt: 'Jedligram projekt 3' },
+            { source: Jedligram1, alt: 'Jedligram projekt 1' },
+            { source: Jedligram2, alt: 'Jedligram projekt 2' },
+            { source: Jedligram3, alt: 'Jedligram projekt 3' },
         ],
         url: null,
     },
@@ -132,7 +135,7 @@ const Projects = () => {
 
     return (
         <section className='bg-white' aria-labelledby='projects-heading'>
-            <div className='container mx-auto max-w-[1440px] px-6 py-16 md:px-10 md:py-20'>
+            <div className='container mx-auto max-w-360 px-6 py-16 md:px-10 md:py-20'>
                 <div className='mt-8 space-y-8'>
                     {projectSections.map((project) => (
                         <article key={project.key} className='scroll-in overflow-hidden rounded-3xl border border-[#dfe7e1] bg-[#f5f7f4] shadow-sm'>
@@ -164,13 +167,13 @@ const Projects = () => {
                             <div className={`grid grid-cols-2 gap-3 p-3 md:gap-4 md:p-5 ${project.images.length === 1 ? 'md:grid-cols-1' : project.images.length === 4 ? 'sm:grid-cols-4' : 'sm:grid-cols-3'}`}>
                                 {project.images.map((image, index) => (
                                     <button
-                                        key={image.source}
+                                        key={index}
                                         type='button'
                                         onClick={() => setActiveImage(image)}
                                         className='group relative overflow-hidden rounded-2xl bg-[#dce9df] text-left shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-orange-700 focus:ring-offset-2'
                                         aria-label={openImageLabel}
                                     >
-                                        <img
+                                        <Image
                                             src={image.source}
                                             alt={image.alt}
                                             loading={index === 0 ? 'eager' : 'lazy'}
@@ -198,7 +201,7 @@ const Projects = () => {
                     onClick={() => setActiveImage(null)}
                 >
                     <div className='relative max-h-full max-w-6xl' onClick={(event) => event.stopPropagation()}>
-                        <img src={activeImage.source} alt={activeImage.alt} className='max-h-[85vh] max-w-full rounded-2xl object-contain shadow-2xl' />
+                        <Image src={activeImage.source} alt={activeImage.alt} className='max-h-[85vh] max-w-full rounded-2xl object-contain shadow-2xl' />
                         <button
                             type='button'
                             onClick={() => setActiveImage(null)}

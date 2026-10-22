@@ -1,8 +1,11 @@
+"use client";
+
 import Laptop from '../images/Laptop for price.webp';
 import Office from '../images/Website Design & Development.webp';
 import Buildings from '../images/UX Design & Optimization.webp';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { useTranslation } from 'react-i18next';
+import Image from 'next/image';
 
 const Prices = () => {
   const { t } = useTranslation();
@@ -42,7 +45,7 @@ const Prices = () => {
         <div className='mt-12 grid grid-cols-1 gap-5 scroll-in md:grid-cols-3'>
           {packages.map((pkg) => (
             <article key={pkg.name} className='group flex h-full flex-col overflow-hidden rounded-2xl border border-[#dfe7e1] bg-white transition-shadow hover:shadow-xl'>
-              <img src={pkg.image} alt={pkg.name} loading='lazy' className='aspect-[16/9] w-full object-cover' />
+              <Image src={pkg.image} alt={pkg.name} loading='lazy' className='aspect-[16/9] w-full object-cover' />
               <div className='flex flex-1 flex-col p-7'>
               <h3 className='font-poppins text-2xl font-bold text-[#102a2d] md:text-3xl'>
                 {pkg.name}
@@ -51,7 +54,7 @@ const Prices = () => {
                 {pkg.description}
               </p>
               <div className='mt-7'>
-                <Link to='/website' className='inline-flex w-full justify-center rounded-full bg-orange-700 px-5 py-3 font-poppins font-bold text-white transition-colors hover:bg-orange-800'>{t('prices.button_text')}</Link>
+                <Link href='/website' className='inline-flex w-full justify-center rounded-full bg-orange-700 px-5 py-3 font-poppins font-bold text-white transition-colors hover:bg-orange-800'>{t('prices.button_text')}</Link>
               </div>
               </div>
             </article>
