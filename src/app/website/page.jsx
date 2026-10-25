@@ -52,7 +52,7 @@ const Website = async () => {
         </div>
         <div className="items-center space-y-4 text-black right-0 z-10">
           <Image src={Construction} alt="Construction Site illustration of a website under construction"
-          className='w-full aspect-16/7 object-cover' fetchPriority='high' />
+          className='w-full aspect-16/7 object-cover' fetchPriority='high' loading='eager' />
         </div>
       </section>
       <WebsiteDev />

@@ -50,7 +50,7 @@ const SEO = async () => {
           </div>
         </div>
         <div className="mt-10 items-center space-y-4 text-black right-0 z-10">
-          <Image src={Business} alt={t('imageAlt')} className="aspect-16/7 w-full object-cover" fetchPriority="high" />
+          <Image src={Business} alt={t('imageAlt')} className="aspect-16/7 w-full object-cover" fetchPriority="high" loading="eager" />
         </div>
       </section>
       <Important />
