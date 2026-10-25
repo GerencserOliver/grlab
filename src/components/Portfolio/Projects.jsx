@@ -132,9 +132,9 @@ const Projects = () => {
                                     <p className='text-xs font-bold uppercase tracking-[0.18em] text-orange-700'>
                                         {project.number} / {t.has('label') ? t('label') : 'Projekt'}
                                     </p>
-                                    <h3 className='mt-1 font-poppins text-2xl font-bold text-[#102a2d] md:text-3xl'>
+                                    <h2 className='mt-1 font-poppins text-2xl font-bold text-[#102a2d] md:text-3xl'>
                                         {t(`${project.key}.title`)}
-                                    </h3>
+                                    </h2>
                                 </div>
                                 <div className='max-w-3xl sm:text-right'>
                                     <p className='text-sm leading-relaxed text-[#315b5d]'>

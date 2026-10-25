@@ -11,6 +11,9 @@ export async function generateMetadata() {
   return {
     title: t('portfolio.title'),
     description: t('portfolio.description'),
+    alternates: {
+      canonical: '/portfolio',
+    },
   };
 }
 

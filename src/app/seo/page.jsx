@@ -17,6 +17,9 @@ export async function generateMetadata() {
   return {
     title: t('seo.title'),
     description: t('seo.description'),
+    alternates: {
+      canonical: '/seo',
+    },
   };
 }
 
