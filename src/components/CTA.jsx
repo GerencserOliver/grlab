@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from 'react';
-import { useTranslation } from 'react-i18next';
+import { useTranslations } from 'next-intl';
 import ctaImg from '../images/Illustration-of-website-development.webp';
 import Image from 'next/image';
 
@@ -13,9 +13,8 @@ const CTA = () => {
   });
 
   const [status, setStatus] = useState('');
-  const { t } = useTranslation(); // useTranslation hook
+  const t = useTranslations('cta');
 
-  // Input változók kezelése
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prevData) => ({
@@ -24,11 +23,9 @@ const CTA = () => {
     }));
   };
 
-  // Az űrlap beküldése
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setStatus(t('cta.sending')); // Lokalizált státusz
-
+    setStatus(t('sending'));
     try {
       const response = await fetch('/api/send-email', {
         method: 'POST',
@@ -37,28 +34,27 @@ const CTA = () => {
         },
         body: JSON.stringify(formData),
       });
-
       if (response.ok) {
-        setStatus(t('cta.successMessage')); // Lokalizált sikerüzenet
+        setStatus(t('successMessage'));
       } else {
-        setStatus(t('cta.failureMessage')); // Lokalizált hibaüzenet
+        setStatus(t('failureMessage'));
       }
     } catch (error) {
-      setStatus(t('cta.errorMessage') + error.message); // Lokalizált hiba
+      setStatus(t('errorMessage') + error.message);
     }
   };
 
   return (
     <section className='flex items-center justify-center bg-[#f5f7f4] px-5 py-16 md:py-24'>
-      <div className='mx-auto flex w-full max-w-[1200px] flex-col-reverse items-center gap-10 md:flex-row'>
+      <div className='mx-auto flex w-full max-w-300 flex-col-reverse items-center gap-10 md:flex-row'>
         <form onSubmit={handleSubmit} className='w-full md:w-1/2' aria-describedby='contact-description'>
-          <p className='mb-4 text-sm font-bold uppercase tracking-[0.18em] text-orange-700'>{t('cta.eyebrow')}</p>
-          <h2 className='mb-4r font-poppins text-3xl font-extrabold leading-tight text-[#102a2d] text-left md:text-5xl'>
-            {t('cta.title')}
+          <p className='mb-4 text-sm font-bold uppercase tracking-[0.18em] text-orange-700'>{t('eyebrow')}</p>
+          <h2 className='mb-4 font-poppins text-3xl font-extrabold leading-tight text-[#102a2d] text-left md:text-5xl'>
+            {t('title')}
           </h2>
-          <p id='contact-description' className='mb-8 leading-relaxed text-[#315b5d] text-left'>{t('cta.description')}</p>
+          <p id='contact-description' className='mb-8 leading-relaxed text-[#315b5d] text-left'>{t('description')}</p>
           <div className='space-y-5'>
-            <label className='block font-semibold text-[#102a2d]' htmlFor='contact-name'>{t('cta.nameLabel')}
+            <label className='block font-semibold text-[#102a2d]' htmlFor='contact-name'>{t('nameLabel')}
             <input
               id='contact-name'
               name="name"
@@ -69,7 +65,7 @@ const CTA = () => {
               required
             />
             </label>
-            <label className='block font-semibold text-[#102a2d]' htmlFor='contact-email'>{t('cta.emailLabel')}
+            <label className='block font-semibold text-[#102a2d]' htmlFor='contact-email'>{t('emailLabel')}
             <input
               id='contact-email'
               name="email"
@@ -80,7 +76,7 @@ const CTA = () => {
               required
             />
             </label>
-            <label className='block font-semibold text-[#102a2d]' htmlFor='contact-message'>{t('cta.messageLabel')}
+            <label className='block font-semibold text-[#102a2d]' htmlFor='contact-message'>{t('messageLabel')}
             <textarea
               id='contact-message'
               name="message"
@@ -95,7 +91,7 @@ const CTA = () => {
             type="submit"
             className='mt-2 w-full rounded-xl bg-orange-700 px-6 py-4 font-poppins font-bold text-white transition-colors hover:bg-orange-800 focus:outline-none focus:ring-2 focus:ring-orange-300'
           >
-            {t('cta.submitButton')}
+            {t('submitButton')}
           </button>
           {status && (
             <p role='status' aria-live='polite' className='mt-4 text-sm font-semibold text-[#0f766e]'>
@@ -104,7 +100,7 @@ const CTA = () => {
           )}
         </form>
         <div className='w-full md:w-1/2'>
-          <Image src={ctaImg} alt={t('cta.imageAlt')} loading='lazy' className='mx-auto h-auto w-full max-w-lg object-contain' />
+          <Image src={ctaImg} alt={t('imageAlt')} loading='lazy' className='mx-auto h-auto w-full max-w-lg object-contain' />
         </div>
       </div>
     </section>

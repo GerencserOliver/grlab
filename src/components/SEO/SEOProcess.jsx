@@ -1,4 +1,4 @@
-import { useTranslation } from 'react-i18next';
+import { getTranslations } from 'next-intl/server';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faChartLine,
@@ -11,63 +11,62 @@ import {
   faRedo,
 } from '@fortawesome/free-solid-svg-icons';
 
-const SEOProcess = () => {
-  const { t } = useTranslation();
+const SEOProcess = async () => {
+  const t = await getTranslations('seoProcess');
 
   const steps = [
     {
-      title: t('seoProcess.steps.1.title'),
+      title: t('steps.1.title'),
       icon: faChartLine,
-      description: t('seoProcess.steps.1.description'),
+      description: t('steps.1.description'),
     },
     {
-      title: t('seoProcess.steps.2.title'),
+      title: t('steps.2.title'),
       icon: faSearch,
-      description: t('seoProcess.steps.2.description'),
+      description: t('steps.2.description'),
     },
     {
-      title: t('seoProcess.steps.3.title'),
+      title: t('steps.3.title'),
       icon: faFileAlt,
-      description: t('seoProcess.steps.3.description'),
+      description: t('steps.3.description'),
     },
     {
-      title: t('seoProcess.steps.4.title'),
+      title: t('steps.4.title'),
       icon: faCogs,
-      description: t('seoProcess.steps.4.description'),
+      description: t('steps.4.description'),
     },
     {
-      title: t('seoProcess.steps.5.title'),
+      title: t('steps.5.title'),
       icon: faPenNib,
-      description: t('seoProcess.steps.5.description'),
+      description: t('steps.5.description'),
     },
     {
-      title: t('seoProcess.steps.6.title'),
+      title: t('steps.6.title'),
       icon: faLink,
-      description: t('seoProcess.steps.6.description'),
+      description: t('steps.6.description'),
     },
     {
-      title: t('seoProcess.steps.7.title'),
+      title: t('steps.7.title'),
       icon: faChartBar,
-      description: t('seoProcess.steps.7.description'),
+      description: t('steps.7.description'),
     },
     {
-      title: t('seoProcess.steps.8.title'),
+      title: t('steps.8.title'),
       icon: faRedo,
-      description: t('seoProcess.steps.8.description'),
+      description: t('steps.8.description'),
     },
   ];
 
   return (
     <section className="flex items-center justify-center bg-white">
-      <div className="scroll-in container mx-auto flex max-w-[1440px] flex-col px-6 py-20 md:px-10 md:py-24">
-        <p className="mb-4 text-sm font-bold uppercase tracking-[0.18em] text-orange-700">{t('seoProcess.eyebrow')}</p>
+      <div className="scroll-in container mx-auto flex max-w-360 flex-col px-6 py-20 md:px-10 md:py-24">
+        <p className="mb-4 text-sm font-bold uppercase tracking-[0.18em] text-orange-700">{t('eyebrow')}</p>
         <h2 className="max-w-4xl font-poppins text-3xl font-extrabold leading-tight text-[#102a2d] md:text-5xl">
-          {t('seoProcess.heading')}
+          {t('heading')}
         </h2>
         <p className="mt-5 max-w-3xl text-lg leading-relaxed text-[#315b5d] md:text-xl">
-          {t('seoProcess.subheading')}
+          {t('subheading')}
         </p>
-
         <div className="mt-12 grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
           {steps.map((step, index) => (
             <article key={index} className="flex flex-col items-start rounded-2xl border border-[#dfe7e1] bg-[#f5f7f4] p-7 transition-shadow duration-300 hover:shadow-lg">

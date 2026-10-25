@@ -1,4 +1,3 @@
-
 import ScrollAnimation from "../components/ScrollAnimation";
 import IntroAnimation from "../components/IntroAnimation";
 import Hero from "../components/Hero";

@@ -1,26 +1,14 @@
 @import "tailwindcss";
 
-@font-face {
-  font-family: "Poppins";
-  src: url("./Poppins-Medium.ttf") format("truetype");
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
-
-@viewport {
-  zoom: 1.0;
-}
-
-.App {
-  text-align: center;
+@theme {
+  --font-sans: var(--font-poppins), sans-serif;
 }
 
 .wrapper {
   background-color: white !important;
 }
 
-li{
+li {
   transition: all 0.3s ease-in-out;
 }
 
@@ -29,20 +17,17 @@ li{
   color: white;
 }
 
-/* Alapértelmezett stílus */
 .scroll-in {
-  opacity: 0; /* Kezdetben átlátszó */
-  transform: translateY(20px); /* Alulról indul */
-  transition: all 0.7s ease-in-out; /* Simaság */
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.7s ease-in-out;
 }
 
 .scroll-in.show {
-  opacity: 1; /* Teljesen látható */
-  transform: translateY(0); /* Eredeti helyére kerül */
+  opacity: 1;
+  transform: translateY(0);
 }
 
-
-/* Intro Background Animation */
 .intro-background {
   position: fixed;
   width: 100%;
@@ -50,52 +35,12 @@ li{
   background-color: #0f766e;
   animation: fadeOut 0.7s ease-in-out forwards;
 }
+
 @keyframes fadeOut {
   0% {
     opacity: 1;
   }
   100% {
     opacity: 0;
-  }
-}
-
-.content {
-  text-align: center;
-  margin-top: 50px;
-}
-
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
   }
 }

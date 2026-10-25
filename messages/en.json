@@ -265,16 +265,34 @@
     "requestQuote": "Request a Quote"
   },
   "projects": {
-    "eyebrow": "Our work, real digital products",
-    "title": "Our Projects",
-    "intro": "The goal is consistent across every project: a clear experience and reliable technology aligned with the client's business goals.",
-    "description1": "Custom solutions, thoughtful user experiences and precise development.",
-    "description2": "Modern digital products built around real business requirements.",
-    "description3": "From the initial idea to a working digital product — planned, designed and developed.",
-    "viewProject": "View Project",
-    "digital": { "label": "Digital product", "title": "A modern web experience for business goals", "imageAlt": "Modern responsive website interface", "galleryAlt": "Digital product detail" },
-    "rental": { "label": "Service business website", "title": "A clear online presence for a car rental business", "imageAlt": "Car rental website concept", "galleryAlt": "Car rental website detail" },
-    "fitness": { "label": "Local service business", "title": "A digital introduction for a Győr fitness centre", "imageAlt": "Fitness centre website project", "galleryAlt": "Fitness centre website detail" }
+    "label": "Project",
+    "szelvedo": {
+      "title": "Windshield Repair",
+      "description": "A mobile-optimized showcase website built for a sole proprietor. The site is search-engine optimized, ranking at the top of Google search results for relevant queries. We also set up and manage their Google Business Profile, securing top positions in search without ad spend."
+    },
+    "pille": {
+      "title": "Pille Webshop",
+      "description": "A complete e-commerce store with a custom admin dashboard, allowing the business owner to independently add products and manage orders, integrated with Foxpost, GLS, and MPL shipping options."
+    },
+    "fleetflow": {
+      "title": "FleetFlow",
+      "description": "A large-scale enterprise software solution for a logistics company to track and manage driver trips, refuelings, and service requests. The system offers analytics, multiple export formats, and distinct user roles. Drivers use a dedicated mobile application while administrators manage the entire fleet via a web dashboard, with automated email notifications for key events."
+    },
+    "car-rental": {
+      "title": "Car Rental",
+      "description": "A mobile-optimized web application for a car rental business featuring a custom dashboard where the owner can effortlessly manage the fleet."
+    },
+    "gym": {
+      "title": "Fitness & Wellbeing",
+      "description": "A showcase website created for a gym, fully optimized for mobile devices to ensure a seamless experience across all screen sizes."
+    },
+    "jedligram": {
+      "title": "Jedligram",
+      "description": "A school social network where users can share photos, join communities, and enjoy a user-friendly mobile experience."
+    },
+    "openImage": "Open image",
+    "closeImage": "Close",
+    "imagePreview": "Image preview"
   },
   "seo": {
     "subtitle": "Technical SEO | Performance | Online Presence",
@@ -331,7 +349,8 @@
     "eyebrow": "More than visibility",
     "heading": "Build a digital foundation that works for your business",
     "description": "The goal isn't to use as many marketing buzzwords as possible. It's to build a practical digital foundation: a fast website, solid technical setup, Google Business Profile and, when needed, a custom business system.",
-    "cta": "Let's Talk"
+    "cta": "Let's Talk",
+    "imageAlt": "Illustration depicting competitor analysis and market positioning"
   },
   "seoProcess": {
     "eyebrow": "Measurable foundations",
@@ -399,5 +418,27 @@
     "description": "Tell us briefly what you want to improve or build. We will help clarify the options, functionality and next step.",
     "cardEyebrow": "Direct contact",
     "cardText": "We will get back to you and arrange an initial conversation about your project."
+  },
+  "seoOptimization": {
+    "home": {
+      "title": "GRLab | Custom Digital Solutions",
+      "description": "Custom websites, web applications, and digital business systems for companies in Győr and Hungary."
+    },
+    "website": {
+      "title": "Website Development | GRLab",
+      "description": "Modern, responsive websites and custom web solutions for businesses. Discover GRLab's web development services."
+    },
+    "seo": {
+      "title": "SEO Services | GRLab",
+      "description": "Search engine optimization for businesses: technical SEO, website optimization, and online visibility enhancement."
+    },
+    "portfolio": {
+      "title": "Portfolio & Projects | GRLab",
+      "description": "Explore GRLab's web development projects, references, and custom digital solutions."
+    },
+    "contact": {
+      "title": "Contact Us | GRLab",
+      "description": "Get in touch with GRLab for website development, SEO, or custom digital business solutions."
+    }
   }
 }

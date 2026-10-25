@@ -265,16 +265,34 @@
     "requestQuote": "Kérj ajánlatot"
   },
   "projects": {
-    "eyebrow": "Munkáink, valódi digitális termékek",
-    "title": "Projektjeink",
-    "intro": "A cél minden projektben ugyanaz: érthető felületet és működő technológiát adni, amely illeszkedik az ügyfél üzleti céljaihoz.",
-    "description1": "Egyedi megoldás, átgondolt felhasználói élmény és precíz fejlesztés.",
-    "description2": "Modern webes technológiákra épített, vállalkozási igényekhez igazított rendszer.",
-    "description3": "Az ötlettől a működő digitális termékig – megtervezve és lefejlesztve.",
-    "viewProject": "Projekt megtekintése",
-    "digital": { "label": "Digitális termék", "title": "Modern webes élmény üzleti célokra", "imageAlt": "Modern reszponzív weboldal felülete", "galleryAlt": "Digitális termék részlete" },
-    "rental": { "label": "Szolgáltatói weboldal", "title": "Átlátható online jelenlét egy autókölcsönzőnek", "imageAlt": "Autókölcsönző weboldal látványterve", "galleryAlt": "Autókölcsönző weboldal részlete" },
-    "fitness": { "label": "Helyi szolgáltató", "title": "Digitális bemutatkozás egy győri fitneszteremnek", "imageAlt": "Fitneszterem weboldal projekt", "galleryAlt": "Fitneszterem weboldal részlete" }
+    "label": "Projekt",
+    "szelvedo": {
+      "title": "Szélvédőjavító",
+      "description": "Egyéni vállalkozó számára készített bemutatkozó weboldal, amely mobil eszközökre is optimalizált. A weboldal keresőoptimalizált, ezért a releváns keresések esetén a Google találati listájának első helyein jelenik meg. A Google Cégprofilt is mi hoztuk létre és kezeljük, így a vállalkozás hirdetések fizetése nélkül is az első helyen jelenik meg a keresőben."
+    },
+    "pille": {
+      "title": "Pille Webshop",
+      "description": "Komplett webshop saját irányítófelülettel, ahol a tulajdonos önállóan vehet fel termékeket és kezelheti a megrendeléseket, Foxpost, GLS és MPL szállítási lehetőségek integrációjával."
+    },
+    "fleetflow": {
+      "title": "FleetFlow",
+      "description": "Nagyszabású irodai szoftver egy szállítmányozó cég számára, amelyben nyomon követhetők és adminisztrálhatók a sofőrök útjai, tankolásai és szervizkérelmei. A rendszer statisztikákat, többféle exportálási lehetőséget és különböző felhasználói szerepköröket biztosít. A sofőrök saját mobilalkalmazáson keresztül használhatják, míg az adminisztrátorok webes felületen kezelhetik a teljes flottát. A felhasználók email értesítéseket is kapnak a fontos eseményekről."
+    },
+    "car-rental": {
+      "title": "Autókölcsönző",
+      "description": "Autókölcsönző számára készült, mobilra is optimalizált webalkalmazás saját irányítófelülettel, ahol a tulajdonos könnyedén kezelheti az autókat."
+    },
+    "gym": {
+      "title": "Fitnesz és wellbeing",
+      "description": "Konditerem számára készített bemutatkozó weboldal, amely mobil eszközökre is optimalizált, így minden képernyőméreten könnyen használható."
+    },
+    "jedligram": {
+      "title": "Jedligram",
+      "description": "Iskolai közösségi hálózat, ahol a felhasználók képeket oszthatnak meg, különböző csoportokhoz csatlakozhatnak, és mobilon is kényelmesen használhatják a platformot."
+    },
+    "openImage": "Megnyitás",
+    "closeImage": "Bezárás",
+    "imagePreview": "Kép előnézete"
   },
   "seo": {
     "subtitle": "Technikai SEO | Teljesítmény | Online láthatóság",
@@ -331,7 +349,8 @@
     "eyebrow": "Nem csak jelenlétet építünk",
     "heading": "Építsünk stabil online jelenlétet",
     "description": "A cél nem az, hogy minél több marketinges kifejezést használjunk, hanem hogy a vállalkozásod számára működő digitális alapot építsünk: gyors weboldalt, megfelelő technikai felépítést, Google Cégprofilt és szükség esetén egyedi üzleti rendszert.",
-    "cta": "Beszéljük át"
+    "cta": "Beszéljük át",
+    "imageAlt": "Konkurenciaelemzést és piaci pozícionálást szemléltető illusztráció"
   },
   "seoProcess": {
     "eyebrow": "Mérhető alapok",
@@ -399,5 +418,27 @@
     "description": "Írd meg röviden, milyen problémát szeretnél megoldani. Segítünk tisztázni a lehetőségeket, a szükséges funkciókat és a következő lépést.",
     "cardEyebrow": "Közvetlen kapcsolat",
     "cardText": "Röviden válaszolunk, és egyeztetünk egy első beszélgetést a projektről."
+  },
+  "seoOptimization": {
+    "home": {
+      "title": "GRLab | Egyedi digitális megoldások",
+      "description": "Egyedi weboldalak, webalkalmazások és digitális üzleti rendszerek vállalkozásoknak Győrben és Magyarországon."
+    },
+    "website": {
+      "title": "Weboldal készítés | GRLab",
+      "description": "Modern, reszponzív weboldalak és egyedi webes megoldások vállalkozásoknak. Ismerd meg a GRLab webfejlesztési szolgáltatásait."
+    },
+    "seo": {
+      "title": "SEO szolgáltatások | GRLab",
+      "description": "Keresőoptimalizálás vállalkozásoknak: technikai SEO, weboldal-optimalizálás és online láthatóság fejlesztése."
+    },
+    "portfolio": {
+      "title": "Referenciák és projektek | GRLab",
+      "description": "Tekintsd meg a GRLab webfejlesztési projektjeit, referenciáit és egyedi digitális megoldásait."
+    },
+    "contact": {
+      "title": "Kapcsolat | GRLab",
+      "description": "Vedd fel a kapcsolatot a GRLabbal weboldalfejlesztés, SEO vagy egyedi digitális megoldások ügyében."
+    }
   }
 }

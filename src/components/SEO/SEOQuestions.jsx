@@ -1,24 +1,20 @@
 "use client";
 
 import { useState } from 'react';
-import { useTranslation } from 'react-i18next';
+import { useTranslations, useMessages } from 'next-intl';
 
 const SEOQuestions = () => {
-  const { t } = useTranslation();
+  const t = useTranslations('seoQuestions');
+  const messages = useMessages();
   const [openIndex, setOpenIndex] = useState(null);
 
   const toggleAccordion = (index) => {
     setOpenIndex(openIndex === index ? null : index);
   };
 
-  // Dinamikus lekérés: ha a JSON-ban objektumként ({ "1": {...}, "2": {...} })
-  // vagy tömbként van megadva, mindkét esetet biztonságosan kezeli.
-  const rawQuestions = t('seoQuestions.questions', { returnObjects: true }) || {};
-  const faqData = Array.isArray(rawQuestions)
-    ? rawQuestions
-    : Object.values(rawQuestions);
+  const rawQuestions = messages?.seoQuestions?.questions || {};
+  const faqData = Array.isArray(rawQuestions) ? rawQuestions : Object.values(rawQuestions);
 
-  // SEO Schema (JSON-LD) strukturált adatok generálása a Google kereső számára
   const faqSchema = {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
@@ -34,36 +30,30 @@ const SEOQuestions = () => {
 
   return (
     <section className="bg-gray-50 py-20 md:py-32">
-      {/* SEO Structured Data beágyazás */}
       {faqData.length > 0 && (
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
         />
       )}
-
       <div className="scroll-in container mx-auto max-w-3xl px-6">
-        
-        {/* Fejléc */}
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-5xl font-extrabold font-poppins text-gray-900 tracking-tight">
-            {t('seoQuestions.heading')}
+            {t('heading')}
           </h2>
           <div className="mt-4 h-1.5 w-20 bg-teal-600 rounded-full mx-auto" />
         </div>
-
-        {/* Harmonika Lista */}
         <div className="space-y-4">
           {faqData.map((item, index) => {
             const isOpen = openIndex === index;
             const contentId = `seo-faq-content-${index}`;
-
             return (
               <div
                 key={index}
                 className="bg-white border border-gray-200/80 rounded-2xl shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden"
               >
                 <button
+                  type="button"
                   onClick={() => toggleAccordion(index)}
                   aria-expanded={isOpen}
                   aria-controls={contentId}
@@ -72,10 +62,8 @@ const SEOQuestions = () => {
                   <span className="text-lg md:text-xl font-bold font-poppins text-gray-900 pr-4">
                     {item.question}
                   </span>
-
-                  {/* Forgó ikon */}
                   <div
-                    className={`flex-shrink-0 w-8 h-8 rounded-full bg-teal-50 flex items-center justify-center text-teal-600 transition-transform duration-300 ${
+                    className={`shrink-0 w-8 h-8 rounded-full bg-teal-50 flex items-center justify-center text-teal-600 transition-transform duration-300 ${
                       isOpen ? 'rotate-180 bg-teal-600 text-white' : ''
                     }`}
                   >
@@ -94,8 +82,6 @@ const SEOQuestions = () => {
                     </svg>
                   </div>
                 </button>
-
-                {/* Harmonika tartalom animációval */}
                 <div
                   id={contentId}
                   className={`grid transition-all duration-300 ease-in-out ${
@@ -114,7 +100,6 @@ const SEOQuestions = () => {
             );
           })}
         </div>
-
       </div>
     </section>
   );

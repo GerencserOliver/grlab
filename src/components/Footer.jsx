@@ -5,9 +5,9 @@ import { usePathname } from 'next/navigation';
 import Logo from '../images/GR-website-design-and-seo-logo.webp';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
-import { useTranslation } from 'react-i18next';
-import { useEffect, useState } from 'react';
+import { useTranslations, useLocale } from 'next-intl';
 import Image from 'next/image';
+import { useEffect, useState } from 'react';
 
 const links = [
   { key: 'website', href: '/website' },
@@ -19,27 +19,24 @@ const links = [
 const Footer = () => {
   const [currentYear, setCurrentYear] = useState(null);
   const pathname = usePathname();
-  const { t, i18n } = useTranslation();
+  const t = useTranslations('nav');
+  const locale = useLocale();
 
   useEffect(() => {
     setCurrentYear(new Date().getFullYear());
   }, []);
 
-  const changeLanguage = (lng) => {
-    i18n.changeLanguage(lng);
-    localStorage.setItem('language', lng);
+  const changeLanguage = (newLocale) => {
+    document.cookie = `NEXT_LOCALE=${newLocale}; path=/; max-age=31536000; SameSite=Lax`;
+    window.location.reload();
   };
 
   return (
     <footer className="w-full border-t border-[#dfe7e1] bg-[#f8faf8] text-[#102a2d]">
-      <div className="mx-auto max-w-[1440px] px-5 py-10 md:px-10 md:py-14">
-        
-        {/* Felső sáv: Logó, Navigáció és Nyelvválasztó */}
+      <div className="mx-auto max-w-360 px-5 py-10 md:px-10 md:py-14">
         <div className="flex flex-col gap-8 md:flex-row md:items-center md:justify-between">
-          
-          {/* Brand & Logo */}
           <div className="flex items-center justify-between md:justify-start">
-            <Link href="/" aria-label={t('nav.home')}>
+            <Link href="/" aria-label={t('home')}>
               <Image
                 src={Logo}
                 alt="GRLab logo – Website Design and SEO Optimization Services"
@@ -47,8 +44,6 @@ const Footer = () => {
               />
             </Link>
           </div>
-
-          {/* Navigációs Linkek */}
           <nav aria-label="Footer navigation">
             <ul className="flex flex-wrap items-center gap-2">
               {links.map((link) => {
@@ -63,24 +58,22 @@ const Footer = () => {
                           : 'text-[#102a2d] hover:bg-[#eef4ef]'
                       }`}
                     >
-                      {t(`nav.${link.key}`)}
+                      {t(link.key)}
                     </Link>
                   </li>
                 );
               })}
             </ul>
           </nav>
-
-          {/* Nyelvválasztó (Navbar stílus) */}
           <div
             className="flex w-fit gap-1 rounded-lg bg-[#eef4ef] p-1 border border-[#dfe7e1]"
-            aria-label={t('nav.languageLabel')}
+            aria-label={t('languageLabel')}
           >
             <button
               type="button"
               onClick={() => changeLanguage('hu')}
               className={`rounded-md px-3.5 py-1.5 text-xs font-bold transition-all ${
-                i18n.language === 'hu'
+                locale === 'hu'
                   ? 'bg-white text-[#102a2d] shadow-sm'
                   : 'text-[#315b5d] hover:text-[#102a2d]'
               }`}
@@ -91,7 +84,7 @@ const Footer = () => {
               type="button"
               onClick={() => changeLanguage('en')}
               className={`rounded-md px-3.5 py-1.5 text-xs font-bold transition-all ${
-                i18n.language === 'en'
+                locale === 'en'
                   ? 'bg-white text-[#102a2d] shadow-sm'
                   : 'text-[#315b5d] hover:text-[#102a2d]'
               }`}
@@ -100,14 +93,8 @@ const Footer = () => {
             </button>
           </div>
         </div>
-
-        {/* Elválasztó vonal */}
         <hr className="my-8 border-t border-[#dfe7e1]" />
-
-        {/* Alsó sáv: Copyright & Közösségi Média */}
         <div className="flex flex-col-reverse gap-6 items-center justify-between md:flex-row">
-          
-          {/* Copyright Szöveg */}
           <div className="text-center md:text-left">
             <p className="font-poppins text-sm font-bold text-[#0f766e]">
               © {currentYear} GRLab. All rights reserved.
@@ -116,40 +103,16 @@ const Footer = () => {
               Designed with passion for your success.
             </p>
           </div>
-
-          {/* Közösségi Média Gombok */}
           <div className="flex items-center gap-3">
             <a
-              href="mailto:info@grlab.com"
+              href="mailto:info@grlab.hu"
               className="flex h-11 w-11 items-center justify-center rounded-lg bg-[#eef4ef] text-[#102a2d] transition-all hover:bg-[#102a2d] hover:text-white"
               aria-label="Email"
             >
               <FontAwesomeIcon icon={faEnvelope} className="h-5 w-5" />
             </a>
-
-            {/* <a
-              href="https://www.facebook.com/oliver.gerencser.5/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex h-11 w-11 items-center justify-center rounded-lg bg-[#eef4ef] text-[#102a2d] transition-all hover:bg-[#102a2d] hover:text-white"
-              aria-label="Facebook"
-            >
-              <FontAwesomeIcon icon={faFacebookF} className="h-5 w-5" />
-            </a>
-
-            <a
-              href="https://www.instagram.com/oliveerphd/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex h-11 w-11 items-center justify-center rounded-lg bg-[#eef4ef] text-[#102a2d] transition-all hover:bg-[#102a2d] hover:text-white"
-              aria-label="Instagram"
-            >
-              <FontAwesomeIcon icon={faInstagram} className="h-5 w-5" />
-            </a> */}
           </div>
-
         </div>
-
       </div>
     </footer>
   );

@@ -5,7 +5,6 @@ import { useEffect } from 'react';
 const ScrollAnimation = () => {
   useEffect(() => {
     const sections = document.querySelectorAll('.scroll-in');
-
     const observer = new IntersectionObserver(
       (entries, observer) => {
         entries.forEach((entry) => {
@@ -19,11 +18,9 @@ const ScrollAnimation = () => {
         threshold: 0.1, // Akkor aktiválódik, amikor a szakasz 10%-ban látható
       }
     );
-
     sections.forEach((section) => {
       observer.observe(section);
     });
-
     return () => {
       observer.disconnect();
     };

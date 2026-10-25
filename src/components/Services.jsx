@@ -1,54 +1,52 @@
-"use client";
-
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLaptopCode, faSearch, faShoppingCart, faPaintBrush, faTools, faPenAlt } from '@fortawesome/free-solid-svg-icons';
-import { useTranslation } from 'react-i18next';
+import { getTranslations } from 'next-intl/server';
 
-const Services = () => {
-  const { t } = useTranslation();
+const Services = async () => {
+  const t = await getTranslations('services');
 
   const services = [
     {
-      name: t('services.web_design.name'),
-      description: t('services.web_design.description'),
+      name: t('web_design.name'),
+      description: t('web_design.description'),
       icon: faLaptopCode,
     },
     {
-      name: t('services.seo.name'),
-      description: t('services.seo.description'),
+      name: t('seo.name'),
+      description: t('seo.description'),
       icon: faSearch,
     },
     {
-      name: t('services.ecommerce.name'),
-      description: t('services.ecommerce.description'),
+      name: t('ecommerce.name'),
+      description: t('ecommerce.description'),
       icon: faShoppingCart,
     },
     {
-      name: t('services.ux_ui.name'),
-      description: t('services.ux_ui.description'),
+      name: t('ux_ui.name'),
+      description: t('ux_ui.description'),
       icon: faPaintBrush,
     },
     {
-      name: t('services.maintenance.name'),
-      description: t('services.maintenance.description'),
+      name: t('maintenance.name'),
+      description: t('maintenance.description'),
       icon: faTools,
     },
     {
-      name: t('services.content.name'),
-      description: t('services.content.description'),
+      name: t('content.name'),
+      description: t('content.description'),
       icon: faPenAlt,
     },
   ];
 
   return (
     <section className='flex items-center justify-center bg-white'>
-      <div className='container mx-auto flex max-w-[1440px] flex-col px-6 py-20 md:px-10 md:py-24'>
+      <div className='container mx-auto flex max-w-360 flex-col px-6 py-20 md:px-10 md:py-24'>
         <div className='scroll-in max-w-3xl'>
-          <p className='mb-4 text-sm font-bold uppercase tracking-[0.18em] text-orange-700'>{t('services.eyebrow')}</p>
+          <p className='mb-4 text-sm font-bold uppercase tracking-[0.18em] text-orange-700'>{t('eyebrow')}</p>
           <h2 className='font-poppins text-3xl font-extrabold leading-tight text-[#102a2d] md:text-5xl'>
-            {t('services.header.title')}
+            {t('header.title')}
           </h2>
-          <p className='mt-5 text-lg leading-relaxed text-[#315b5d] md:text-xl'>{t('services.header.description')}</p>
+          <p className='mt-5 text-lg leading-relaxed text-[#315b5d] md:text-xl'>{t('header.description')}</p>
         </div>
         <div className='mt-12 grid grid-cols-1 gap-5 scroll-in sm:grid-cols-2 lg:grid-cols-3'>
           {services.map((service, index) => (

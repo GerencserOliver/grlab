@@ -1,9 +1,6 @@
-"use client";
-
 import ScrollAnimation from '../../components/ScrollAnimation';
 import IntroAnimation from '../../components/IntroAnimation';
 import Link from 'next/link';
-import { useTranslation } from 'react-i18next';
 import Business from '../../images/Business image illustrating partner.webp';
 import CTA from '../../components/CTA';
 import Important from '../../components/SEO/Important';
@@ -12,9 +9,19 @@ import Services from '../../components/SEO/Services';
 import SEOProcess from '../../components/SEO/SEOProcess';
 import SEOQuestions from '../../components/SEO/SEOQuestions';
 import Image from 'next/image';
+import { getTranslations } from 'next-intl/server';
 
-const SEO = () => {
-  const { t } = useTranslation(); // Initialize translation function
+export async function generateMetadata() {
+  const t = await getTranslations('seoOptimization');
+
+  return {
+    title: t('seo.title'),
+    description: t('seo.description'),
+  };
+}
+
+const SEO = async () => {
+  const t = await getTranslations('seo');
 
   return (
     <div>
@@ -24,23 +31,23 @@ const SEO = () => {
         <div className="container mx-auto flex max-w-360 flex-col gap-8 px-6 py-16 md:flex-row md:items-end md:px-10 md:py-24">
           <div className="scroll-in w-full md:w-2/3">
             <p className="mb-5 text-sm font-bold uppercase tracking-[0.18em] text-orange-700">
-              {t('seo.subtitle')}
+              {t('subtitle')}
             </p>
             <h1 className="mb-5 font-poppins text-4xl font-extrabold leading-tight text-[#102a2d] sm:text-5xl md:text-7xl">
-              {t('seo.title')}
+              {t('title')}
             </h1>
             <p className="max-w-3xl text-lg leading-relaxed text-[#315b5d] md:text-xl">
-              {t('seo.description')}
+              {t('description')}
             </p>
           </div>
           <div className="w-full md:w-1/3 md:text-right">
             <Link href="/contact" className="inline-flex w-full justify-center rounded-full bg-orange-700 px-7 py-4 font-poppins text-lg font-bold text-white transition-colors hover:bg-orange-800 md:w-auto">
-              {t('seo.cta')}
+              {t('cta')}
             </Link>
           </div>
         </div>
         <div className="mt-10 items-center space-y-4 text-black right-0 z-10">
-          <Image src={Business} alt={t('seo.imageAlt')} className="aspect-16/7 w-full object-cover" fetchPriority="high" />
+          <Image src={Business} alt={t('imageAlt')} className="aspect-16/7 w-full object-cover" fetchPriority="high" />
         </div>
       </section>
       <Important />

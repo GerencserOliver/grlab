@@ -9,7 +9,6 @@ const IntroAnimation = () => {
     const timer = setTimeout(() => {
       setIntroVisible(false);
     }, 1000);
-
     return () => clearTimeout(timer);
   }, []);
 

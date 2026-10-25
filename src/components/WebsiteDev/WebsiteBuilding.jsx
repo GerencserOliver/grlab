@@ -7,55 +7,54 @@ import {
   faRocket,
   faLifeRing,
 } from '@fortawesome/free-solid-svg-icons';
-import { useTranslation } from 'react-i18next';
+import { getTranslations } from 'next-intl/server';
 
-const WebsiteBuilding = () => {
-  const { t } = useTranslation();
+const WebsiteBuilding = async () => {
+  const t = await getTranslations('websiteBuilding');
 
   const steps = [
     {
-      title: t('websiteBuilding.steps.0.title'),
+      title: t('steps.0.title'),
       icon: faHandshake,
-      description: t('websiteBuilding.steps.0.description'),
+      description: t('steps.0.description'),
     },
     {
-      title: t('websiteBuilding.steps.1.title'),
+      title: t('steps.1.title'),
       icon: faDraftingCompass,
-      description: t('websiteBuilding.steps.1.description'),
+      description: t('steps.1.description'),
     },
     {
-      title: t('websiteBuilding.steps.2.title'),
+      title: t('steps.2.title'),
       icon: faLightbulb,
-      description: t('websiteBuilding.steps.2.description'),
+      description: t('steps.2.description'),
     },
     {
-      title: t('websiteBuilding.steps.3.title'),
+      title: t('steps.3.title'),
       icon: faCode,
-      description: t('websiteBuilding.steps.3.description'),
+      description: t('steps.3.description'),
     },
     {
-      title: t('websiteBuilding.steps.4.title'),
+      title: t('steps.4.title'),
       icon: faRocket,
-      description: t('websiteBuilding.steps.4.description'),
+      description: t('steps.4.description'),
     },
     {
-      title: t('websiteBuilding.steps.5.title'),
+      title: t('steps.5.title'),
       icon: faLifeRing,
-      description: t('websiteBuilding.steps.5.description'),
+      description: t('steps.5.description'),
     },
   ];
 
   return (
     <section className="flex items-center justify-center bg-white">
-      <div className="scroll-in container mx-auto flex max-w-[1440px] flex-col px-6 py-20 md:px-10 md:py-24">
-        <p className="mb-4 text-sm font-bold uppercase tracking-[0.18em] text-orange-700">{t('websiteBuilding.eyebrow')}</p>
+      <div className="scroll-in container mx-auto flex max-w-360 flex-col px-6 py-20 md:px-10 md:py-24">
+        <p className="mb-4 text-sm font-bold uppercase tracking-[0.18em] text-orange-700">{t('eyebrow')}</p>
         <h2 className="max-w-4xl font-poppins text-3xl font-extrabold leading-tight text-[#102a2d] md:text-5xl">
-          {t('websiteBuilding.title')}
+          {t('title')}
         </h2>
         <p className="mt-5 max-w-3xl text-lg leading-relaxed text-[#315b5d] md:text-xl">
-          {t('websiteBuilding.description')}
+          {t('description')}
         </p>
-
         <div className="mt-12 grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
           {steps.map((step, index) => (
             <div

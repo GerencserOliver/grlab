@@ -13,9 +13,7 @@ export default function ScrollToTop() {
         setVisible(false);
       }
     };
-
     window.addEventListener("scroll", toggleVisibility);
-
     return () => window.removeEventListener("scroll", toggleVisibility);
   }, []);
 
