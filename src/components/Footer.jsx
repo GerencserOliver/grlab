@@ -39,7 +39,7 @@ const Footer = () => {
             <Link href="/" aria-label={t('home')}>
               <Image
                 src={Logo}
-                alt="GRLab logo – Website Design and SEO Optimization Services"
+                alt="GRLab logo"
                 className="w-20 hover:opacity-90 transition-opacity"
               />
             </Link>

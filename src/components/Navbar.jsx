@@ -33,7 +33,7 @@ const Navbar = () => {
     <nav className='sticky top-0 z-50 w-full border-b border-[#dfe7e1] bg-white/95 px-5 backdrop-blur md:px-10' aria-label={t('ariaLabel')}>
       <div className='mx-auto flex h-24 max-w-360 items-center justify-between'>
         <Link href='/' aria-label={t('home')}>
-          <Image src={logo} alt='GRLab' className='w-16' fetchPriority='high' loading="eager" />
+          <Image src={logo} alt='GRLab logo' className='w-16' fetchPriority='high' loading="eager" />
         </Link>
         <button
           type='button'

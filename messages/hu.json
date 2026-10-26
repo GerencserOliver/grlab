@@ -116,7 +116,8 @@
     "subtitle": "Weboldal készítés és fejlesztés | Gyors, modern, egyedi",
     "title": "Weboldal, ami a vállalkozásodhoz készül",
     "description": "Nem sablonban gondolkodunk. A vállalkozásod céljaihoz, arculatához és működéséhez igazított weboldalt fejlesztünk.",
-    "button_text": "Kérj ajánlatot"
+    "button_text": "Kérj ajánlatot",
+    "imageAlt": "Építkezési hely képe egy még készülő weboldalról"
   },
   "introduction": {
     "eyebrow": "A fejlesztés alapjai",
