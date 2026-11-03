@@ -8,9 +8,8 @@ export const SITE_NAME = 'GRLab';
 export const ORGANIZATION_ID = `${SITE_URL}/#organization`;
 export const WEBSITE_ID = `${SITE_URL}/#website`;
 
-// Expected asset: public/image/logo_social.webp (1200x630 recommended).
 export const DEFAULT_OG_IMAGE = {
-  url: `${SITE_URL}/image/logo_social.webp`,
+  url: `${SITE_URL}/logo_social.png`,
   width: 1200,
   height: 630,
   alt: 'GRLab – weboldal készítés és szoftverfejlesztés Győr',

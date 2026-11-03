@@ -72,8 +72,8 @@ const jsonLd = {
       },
       "geo": {
         "@type": "GeoCoordinates",
-        "latitude": 47.6875,
-        "longitude": 17.6504
+        "latitude": 47.63620920699451,
+        "longitude": 17.603831025997735
       },
       "areaServed": SERVICE_AREA,
       "contactPoint": {
