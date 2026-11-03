@@ -10,12 +10,20 @@
     "contact": "Kapcsolat",
     "openMenu": "Menü megnyitása",
     "closeMenu": "Menü bezárása",
-    "languageLabel": "Nyelvválasztó"
+    "languageLabel": "Nyelvválasztó",
+    "logoAlt": "GRLab logó",
+    "skipToContent": "Ugrás a tartalomra"
+  },
+  "footer": {
+    "navLabel": "Lábléc navigáció",
+    "rights": "Minden jog fenntartva.",
+    "tagline": "Weboldal készítés és szoftverfejlesztés Győrből, vállalkozásoknak.",
+    "emailLabel": "E-mail küldése a GRLab-nak"
   },
   "hero": {
-    "subtitle": "Weboldalak és egyedi digitális rendszerek | Győr",
-    "title": "Digitális megoldások, amelyek előreviszik a vállalkozásodat",
-    "description": "Weboldalt, webalkalmazást vagy egyedi üzleti rendszert készítünk úgy, hogy az ne csak jól nézzen ki, hanem segítsen ügyfeleket szerezni és egyszerűsíteni a működésedet.",
+    "subtitle": "Webfejlesztés kis- és középvállalkozásoknak | Győr",
+    "title": "Weboldal készítés és egyedi szoftverfejlesztés Győrben",
+    "description": "Győri fejlesztőcsapatként weboldalt, webalkalmazást vagy egyedi üzleti rendszert készítünk úgy, hogy az ne csak jól nézzen ki, hanem segítsen ügyfeleket szerezni és egyszerűsíteni a működésedet.",
     "button_text": "Beszéljük át a projektet",
     "secondaryButton": "Referenciák megtekintése",
     "proofPoints": ["Egyedi fejlesztés", "Mobilbarát működés", "Hosszú távú támogatás"],
@@ -32,11 +40,11 @@
     "packages": {
       "seo": {
         "name": "Online jelenlét",
-        "description": "Segítünk abban, hogy vállalkozása könnyebben megtalálható és professzionálisabb legyen online – technikai SEO-val, Google Cégprofil-kezeléssel és megfelelő webes struktúrával."
+        "description": "Segítünk abban, hogy a vállalkozásod könnyebben megtalálható és professzionálisabb legyen online – technikai SEO-val, Google Cégprofil-kezeléssel és megfelelő webes struktúrával."
       },
       "website": {
         "name": "Weboldal fejlesztés",
-        "description": "Modern, gyors és reszponzív weboldalakat készítünk, amelyek illeszkednek vállalkozása arculatához és céljaihoz."
+        "description": "Modern, gyors és reszponzív weboldalakat készítünk, amelyek illeszkednek a vállalkozásod arculatához és céljaihoz."
       },
       "ux": {
         "name": "Egyedi webalkalmazások",
@@ -78,8 +86,8 @@
   },
   "offer": {
     "eyebrow": "Kezdjük az ötlettel",
-    "header": "Van egy ötlete? Építsük meg együtt.",
-    "description": "Beszéljük át, mire van szüksége a vállalkozásának, és megmutatjuk, milyen digitális megoldással lehet a legegyszerűbben megvalósítani.",
+    "header": "Van egy ötleted? Építsük meg együtt.",
+    "description": "Beszéljük át, mire van szükséged a vállalkozásodnak, és megmutatjuk, milyen digitális megoldással lehet a legegyszerűbben megvalósítani.",
     "button": "Kérj ajánlatot",
     "imageAlt": "Modern digitális üzleti rendszer laptopon"
   },
@@ -227,15 +235,23 @@
   },
   "questions": {
     "eyebrow": "Gyakori kérdések",
-    "title": "Gyakran Ismételt Kérdések",
+    "title": "Gyakran ismételt kérdések",
     "faqData": [
       {
         "question": "Milyen vállalkozásoknak dolgoztok?",
         "answer": "Elsősorban egyéni vállalkozóknak és kis- és középvállalkozásoknak készítünk digitális megoldásokat. Egy egyszerű bemutatkozó weboldaltól egészen az összetettebb egyedi rendszerekig tudunk segíteni."
       },
       {
+        "question": "Győrön kívül is vállaltok projekteket?",
+        "answer": "Igen. Győri csapatként a környékbeli vállalkozásokkal személyesen is egyeztetünk, az ország többi részén pedig online dolgozunk együtt, így a távolság nem akadálya a közös munkának."
+      },
+      {
         "question": "Csak weboldalakat készítetek?",
         "answer": "Nem. Weboldalak mellett webalkalmazásokat, backend rendszereket, adatbázisokat, API-kat és mobilalkalmazásokat is fejlesztünk."
+      },
+      {
+        "question": "Miben más az egyedi fejlesztés, mint egy weboldalépítő vagy sablon?",
+        "answer": "A sablonos megoldások gyorsan elindíthatók, de a funkciók, a teljesítmény és a technikai SEO terén korlátozottabbak. Egyedi fejlesztésnél a weboldal a vállalkozásod folyamataihoz, arculatához és céljaihoz igazodik, és később szabadon bővíthető."
       },
       {
         "question": "Tudtok meglévő rendszert továbbfejleszteni?",
@@ -269,7 +285,7 @@
     "label": "Projekt",
     "szelvedo": {
       "title": "Szélvédőjavító",
-      "description": "Egyéni vállalkozó számára készített bemutatkozó weboldal, amely mobil eszközökre is optimalizált. A weboldal keresőoptimalizált, ezért a releváns keresések esetén a Google találati listájának első helyein jelenik meg. A Google Cégprofilt is mi hoztuk létre és kezeljük, így a vállalkozás hirdetések fizetése nélkül is az első helyen jelenik meg a keresőben."
+      "description": "Egyéni vállalkozó számára készített, mobil eszközökre optimalizált bemutatkozó weboldal. A weboldalt keresőoptimalizáltan fejlesztettük, a Google Cégprofilt pedig mi hoztuk létre és kezeljük, így a vállalkozás hirdetési költség nélkül is jól látható a releváns helyi keresésekben."
     },
     "pille": {
       "title": "Pille Webshop",
@@ -393,7 +409,7 @@
     }
   },
   "seoQuestions": {
-    "heading": "Gyakran Ismételt Kérdések az online jelenlétről",
+    "heading": "Gyakran ismételt kérdések az online jelenlétről",
     "questions": {
       "1": {
         "question": "Miért fontos a technikai SEO?",

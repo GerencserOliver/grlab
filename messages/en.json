@@ -10,11 +10,19 @@
     "contact": "Contact",
     "openMenu": "Open menu",
     "closeMenu": "Close menu",
-    "languageLabel": "Language selector"
+    "languageLabel": "Language selector",
+    "logoAlt": "GRLab logo",
+    "skipToContent": "Skip to main content"
+  },
+  "footer": {
+    "navLabel": "Footer navigation",
+    "rights": "All rights reserved.",
+    "tagline": "Website and software development from Győr, for businesses.",
+    "emailLabel": "Email GRLab"
   },
   "hero": {
-    "subtitle": "Web Development & Custom Digital Solutions | Győr",
-    "title": "Digital solutions for growing businesses",
+    "subtitle": "Web Development for Small & Medium Businesses | Győr",
+    "title": "Website Development and Custom Software in Győr",
     "description": "We build modern websites, web applications and mobile apps — from a professional online presence to custom business systems with backend, databases and integrations.",
     "button_text": "Discuss your project",
     "secondaryButton": "View our work",
@@ -234,8 +242,16 @@
         "answer": "We primarily work with individual entrepreneurs and small and medium-sized businesses. We can help with anything from a simple company website to a custom business application."
       },
       {
+        "question": "Do you work with clients outside Győr?",
+        "answer": "Yes. As a Győr-based team we can meet local businesses in person, and we work online with clients across the rest of the country, so distance is never a barrier."
+      },
+      {
         "question": "Do you only build websites?",
         "answer": "No. We also develop web applications, backend systems, databases, APIs and mobile applications."
+      },
+      {
+        "question": "How is custom development different from a website builder or template?",
+        "answer": "Templates launch quickly but are more limited in functionality, performance and technical SEO. With custom development the website is shaped around your processes, brand and goals, and it can be extended freely later."
       },
       {
         "question": "Can you work on an existing system?",
@@ -269,7 +285,7 @@
     "label": "Project",
     "szelvedo": {
       "title": "Windshield Repair",
-      "description": "A mobile-optimized showcase website built for a sole proprietor. The site is search-engine optimized, ranking at the top of Google search results for relevant queries. We also set up and manage their Google Business Profile, securing top positions in search without ad spend."
+      "description": "A mobile-optimized showcase website built for a sole proprietor. The site is developed with search engine optimization in mind, and we also set up and manage the Google Business Profile, so the business is clearly visible in relevant local searches without ad spend."
     },
     "pille": {
       "title": "Pille Webshop",
