@@ -1,31 +1,33 @@
 "use client";
 
 import { useState } from 'react';
+import Link from 'next/link';
 import { useTranslations } from 'next-intl';
 import ctaImg from '../images/Illustration-of-website-development.webp';
 import Image from 'next/image';
-import { BUSINESS } from '../lib/business';
+import { BUSINESS, PRIVACY_PATH } from '../lib/business';
 
-const INITIAL_FORM = { name: '', email: '', message: '', website: '' };
+const INITIAL_FORM = { name: '', email: '', message: '', consent: false, website: '' };
 
 const CTA = () => {
   // `website` is a honeypot: hidden from people, filled in by naive bots.
   const [formData, setFormData] = useState(INITIAL_FORM);
   const [status, setStatus] = useState({ type: 'idle', message: '' });
   const t = useTranslations('cta');
+  const tp = useTranslations('privacy');
   const isSending = status.type === 'sending';
 
   const handleChange = (e) => {
-    const { name, value } = e.target;
+    const { name, value, type, checked } = e.target;
     setFormData((prevData) => ({
       ...prevData,
-      [name]: value,
+      [name]: type === 'checkbox' ? checked : value,
     }));
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    if (isSending) return;
+    if (isSending || !formData.consent) return;
     setStatus({ type: 'sending', message: t('sending') });
     try {
       const response = await fetch('/api/send-email', {
@@ -99,6 +101,30 @@ const CTA = () => {
               required
             />
             </label>
+            <div className='flex items-start gap-3'>
+              <input
+                id='contact-consent'
+                name='consent'
+                type='checkbox'
+                checked={formData.consent}
+                onChange={handleChange}
+                disabled={isSending}
+                required
+                className='mt-1 h-5 w-5 shrink-0 cursor-pointer accent-orange-700'
+              />
+              <label htmlFor='contact-consent' className='text-sm leading-relaxed text-[#315b5d]'>
+                {tp('consentPrefix')}{' '}
+                <Link
+                  href={PRIVACY_PATH}
+                  target='_blank'
+                  rel='noopener'
+                  className='font-bold text-orange-700 underline decoration-orange-300 underline-offset-4 hover:text-orange-900'
+                >
+                  {tp('consentLink')}
+                </Link>
+                {tp('consentSuffix')}
+              </label>
+            </div>
             <div className='absolute -left-2499.75 h-0 w-0 overflow-hidden' aria-hidden='true'>
               <label htmlFor='contact-website'>Website</label>
               <input
@@ -115,7 +141,7 @@ const CTA = () => {
           <button
             type="submit"
             disabled={isSending}
-            className='mt-2 w-full rounded-xl bg-orange-700 px-6 py-4 font-poppins font-bold text-white transition-colors hover:bg-orange-800 focus:outline-none focus:ring-2 focus:ring-orange-300 disabled:cursor-not-allowed disabled:opacity-70'
+            className='mt-6 w-full rounded-xl bg-orange-700 px-6 py-4 font-poppins font-bold text-white transition-colors hover:bg-orange-800 focus:outline-none focus:ring-2 focus:ring-orange-300 disabled:cursor-not-allowed disabled:opacity-70'
           >
             {isSending ? t('sending') : t('submitButton')}
           </button>

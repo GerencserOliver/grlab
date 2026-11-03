@@ -9,8 +9,15 @@ export default getRequestConfig(async () => {
     locale = 'hu';
   }
 
+  // Legal copy (privacy policy + consent strings) lives in its own file so
+  // it can be reviewed/updated independently of the marketing copy.
+  const [base, legal] = await Promise.all([
+    import(`../../messages/${locale}.json`),
+    import(`../../messages/legal.${locale}.json`),
+  ]);
+
   return {
     locale,
-    messages: (await import(`../../messages/${locale}.json`)).default
+    messages: { ...base.default, ...legal.default }
   };
 });

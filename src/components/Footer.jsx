@@ -7,7 +7,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons';
 import { useTranslations, useLocale } from 'next-intl';
 import Image from 'next/image';
-import { BUSINESS } from '../lib/business';
+import { BUSINESS, PRIVACY_PATH } from '../lib/business';
 
 const links = [
   { key: 'website', href: '/website' },
@@ -20,6 +20,7 @@ const Footer = () => {
   const pathname = usePathname();
   const t = useTranslations('nav');
   const tf = useTranslations('footer');
+  const tp = useTranslations('privacy');
   const locale = useLocale();
   const currentYear = new Date().getFullYear();
 
@@ -104,6 +105,15 @@ const Footer = () => {
             </p>
             <p className="font-poppins text-xs text-[#315b5d] mt-1">
               {tf('tagline')}
+            </p>
+            <p className="mt-2 font-poppins text-xs">
+              <Link
+                href={PRIVACY_PATH}
+                aria-current={pathname === PRIVACY_PATH ? 'page' : undefined}
+                className="font-semibold text-[#315b5d] underline underline-offset-4 transition-colors hover:text-orange-700"
+              >
+                {tp('linkLabel')}
+              </Link>
             </p>
           </div>
           <div className="flex items-center gap-3">

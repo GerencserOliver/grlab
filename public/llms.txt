@@ -1,10 +1,23 @@
 # GRLab
 
-> Egyedi digitális megoldások, weboldalak, webalkalmazások és szoftveres rendszerek fejlesztése KKV-k számára.
+> Egyedi digitális megoldások, weboldalak, webalkalmazások és szoftveres rendszerek fejlesztése KKV-k számára Győrben és Magyarországon.
+
+## Cégadatok
+
+- Név: GRLab
+- Cím: Galgóczi Erzsébet utca 14, 9012 Győr, Magyarország
+- Telefon: +36 70 431 6723
+- E-mail: info@grlab.hu
+- Nyelv: magyar (alapértelmezett), angol
+- Nyitvatartás: hétfő–péntek 8:00–17:00
 
 ## Szolgáltatások
 
-- [Weboldal készítés](https://www.grlab.hu/website): Egyedi, villámgyors React/Next.js weboldalak fejlesztése.
-- [Google Cégprofil kezelés](https://www.grlab.hu/seo): Helyi SEO és Térkép optimálási szolgáltatások.
-- [Portfolio](https://www.grlab.hu/portfolio): Referenciáink és korábbi munkáink.
-- [Kapcsolat](https://www.grlab.hu/contact): Lépjen velünk kapcsolatba árajánlatért.
+- [Weboldal készítés](https://www.grlab.hu/website): Egyedi, gyors React/Next.js weboldalak, webshopok és webalkalmazások fejlesztése.
+- [Google Cégprofil és technikai SEO](https://www.grlab.hu/seo): Helyi SEO és Google Térkép optimalizálás.
+- [Referenciák](https://www.grlab.hu/portfolio): Referenciáink és korábbi munkáink.
+- [Kapcsolat](https://www.grlab.hu/contact): Ingyenes első konzultáció és ajánlatkérés.
+
+## Jogi információk
+
+- [Adatkezelési tájékoztató](https://www.grlab.hu/adatkezelesi-tajekoztato)

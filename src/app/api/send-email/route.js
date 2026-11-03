@@ -30,6 +30,11 @@ export async function POST(req) {
       return NextResponse.json({ success: true }, { status: 200 });
     }
 
+    // GDPR: processing is based on explicit consent, enforced server-side too.
+    if (body?.consent !== true) {
+      return NextResponse.json({ error: 'Az adatkezelési tájékoztató elfogadása kötelező.' }, { status: 400 });
+    }
+
     const name = cleanText(body?.name);
     const email = cleanText(body?.email);
     const message = cleanText(body?.message);
@@ -47,6 +52,7 @@ export async function POST(req) {
     const safeMessage = escapeHtml(message);
     // Strip line breaks so the value cannot inject extra header lines.
     const subjectName = name.replace(/[\r\n]+/g, ' ');
+    const consentTimestamp = new Date().toISOString();
 
     const { data, error } = await resend.emails.send({
       from: 'GRLab Kapcsolat <info@grlab.hu>',
@@ -59,6 +65,8 @@ export async function POST(req) {
         <p><strong>E-mail:</strong> ${safeEmail}</p>
         <p><strong>Üzenet:</strong></p>
         <p style="white-space: pre-wrap;">${safeMessage}</p>
+        <hr />
+        <p style="color:#555;font-size:12px;">Adatkezelési hozzájárulás megadva: ${consentTimestamp}. Megőrzési idő: 1 év a beérkezéstől.</p>
       `,
     });
 

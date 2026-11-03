@@ -1,8 +1,16 @@
 {
   "name": "GRLab",
-  "description": "Egyedi digitális megoldások, weboldalak, webalkalmazások és digitális üzleti rendszerek vállalkozásoknak.",
+  "description": "Egyedi digitális megoldások, weboldalak, webalkalmazások és digitális üzleti rendszerek vállalkozásoknak Győrben és Magyarországon.",
   "url": "https://www.grlab.hu",
   "contact_email": "info@grlab.hu",
+  "contact_phone": "+36704316723",
+  "address": {
+    "streetAddress": "Galgóczi Erzsébet utca 14",
+    "postalCode": "9012",
+    "addressLocality": "Győr",
+    "addressCountry": "HU"
+  },
+  "languages": ["hu", "en"],
   "services": [
     {
       "name": "Webfejlesztés",
@@ -11,6 +19,13 @@
     {
       "name": "SEO & Google Cégprofil",
       "url": "https://www.grlab.hu/seo"
+    },
+    {
+      "name": "Referenciák",
+      "url": "https://www.grlab.hu/portfolio"
     }
-  ]
+  ],
+  "legal": {
+    "privacy_policy": "https://www.grlab.hu/adatkezelesi-tajekoztato"
+  }
 }

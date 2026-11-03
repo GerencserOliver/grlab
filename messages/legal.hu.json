@@ -1,0 +1,98 @@
+{
+  "privacy": {
+    "linkLabel": "Adatkezelési tájékoztató",
+    "metaDescription": "A GRLab adatkezelési tájékoztatója: milyen személyes adatokat kezelünk a kapcsolatfelvételi űrlapon keresztül, miért, meddig, és milyen jogaid vannak.",
+    "title": "Adatkezelési tájékoztató",
+    "updated": "Utolsó frissítés: 2026. november 3.",
+    "intro": "Ez a tájékoztató azt ismerteti, hogyan kezeli a GRLab a www.grlab.hu weboldalon keresztül megadott személyes adataidat az Európai Unió általános adatvédelmi rendelete (GDPR, (EU) 2016/679) és az információs önrendelkezési jogról és az információszabadságról szóló 2011. évi CXII. törvény alapján.",
+    "consentPrefix": "Elolvastam és megértettem az",
+    "consentLink": "adatkezelési tájékoztatót",
+    "consentSuffix": ", és hozzájárulok ahhoz, hogy a megadott adataimat a GRLab az ajánlatkérésem megválaszolása és a kapcsolattartás céljából kezelje.",
+    "backToContact": "Vissza a kapcsolatfelvételhez",
+    "sections": [
+      {
+        "heading": "Az adatkezelő",
+        "paragraphs": ["A kapcsolatfelvételi űrlapon megadott adataid kezelője a GRLab."],
+        "items": ["Név: GRLab", "E-mail: info@grlab.hu", "Telefon: +36 70 431 6723"]
+      },
+      {
+        "heading": "Milyen adatokat kezelünk, és miért?",
+        "paragraphs": [
+          "A weboldalon keresztül csak akkor kezelünk személyes adatot, ha te magad küldöd el nekünk a kapcsolatfelvételi űrlapon.",
+          "Ha közvetlenül e-mailben vagy telefonon keresel meg minket, az így megismert adataidat ugyanebből a célból, a megkeresésed megválaszolásához szükséges mértékben kezeljük (GDPR 6. cikk (1) bekezdés b) pont – a szerződéskötést megelőző lépések, illetve f) pont – jogos érdek)."
+        ],
+        "items": [
+          "Kezelt adatok: név, e-mail-cím, valamint az üzenetben általad megadott információk.",
+          "Az adatkezelés célja: az ajánlatkérésed vagy megkeresésed megválaszolása, a kapcsolattartás és az ajánlat előkészítése.",
+          "Az adatkezelés jogalapja: a hozzájárulásod (GDPR 6. cikk (1) bekezdés a) pont), amelyet az űrlap elküldése előtt a jelölőnégyzet bejelölésével adsz meg.",
+          "Az adatok megadása nem kötelező, de nélküle az űrlapon keresztül nem tudjuk fogadni és megválaszolni a megkeresésedet."
+        ]
+      },
+      {
+        "heading": "Meddig őrizzük az adatokat?",
+        "paragraphs": [
+          "A megadott adatokat a megkeresés beérkezésétől számított 1 évig őrizzük meg, ezt követően töröljük őket.",
+          "Ha ez idő alatt szerződés jön létre köztünk, az adatokat a szerződéses kapcsolatra és a jogszabályi kötelezettségekre (például számviteli megőrzés) vonatkozó külön szabályok szerint kezeljük tovább.",
+          "A hozzájárulásodat bármikor visszavonhatod; ilyenkor az adataidat töröljük, kivéve, ha jogszabály további megőrzést ír elő. A visszavonás nem érinti a visszavonás előtti adatkezelés jogszerűségét."
+        ]
+      },
+      {
+        "heading": "Kik férnek hozzá az adatokhoz?",
+        "paragraphs": [
+          "Az adataidhoz a GRLab munkatársai férnek hozzá. A weboldal üzemeltetéséhez és az üzenetek kézbesítéséhez az alábbi szolgáltatókat vesszük igénybe, akik adatfeldolgozóként járnak el:"
+        ],
+        "items": [
+          "Resend (Resend, Inc.) – az űrlapról küldött üzenetek e-mailben történő továbbítása.",
+          "Google (Gmail) – a beérkező üzenetek fogadására használt e-mail szolgáltatás.",
+          "Vercel Inc. – a weboldal tárhelye és üzemeltetése, valamint névtelen, összesített forgalom- és teljesítménymérés (Vercel Web Analytics, Speed Insights)."
+        ],
+        "after": [
+          "Ezek a szolgáltatók az Egyesült Államokban is kezelhetnek adatokat. Az adattövábbítás megfelelő garanciák mellett történik (például az EU–USA adatvédelmi keretrendszer vagy az Európai Bizottság általános szerződési feltételei alapján).",
+          "Az adataidat nem értékesítjük, és marketing célból nem adjuk át harmadik félnek."
+        ]
+      },
+      {
+        "heading": "Sütik és hasonló technológiák",
+        "paragraphs": [
+          "A weboldal a nyelvválasztásod megjegyzéséhez egy technikailag szükséges sütit (NEXT_LOCALE) használ, amely legfeljebb 1 évig érvényes, és nem tartalmaz személyazonosításra alkalmas adatot.",
+          "A weboldal nem használ marketing- vagy nyomkövető sütiket. A forgalom- és teljesítménymérés sütik használata nélkül, összesített adatokkal történik."
+        ]
+      },
+      {
+        "heading": "Adatbiztonság",
+        "paragraphs": [
+          "Az adatokat titkosított (HTTPS) kapcsolaton keresztül továbbítjuk, a hozzáférést pedig a szükséges személyekre korlátozzuk."
+        ]
+      },
+      {
+        "heading": "A jogaid",
+        "paragraphs": ["Az adataid kezelésével kapcsolatban az alábbi jogok illetnek meg:"],
+        "items": [
+          "tájékoztatáshoz és hozzáféréshez való jog (GDPR 15. cikk),",
+          "helyesítéshez való jog (16. cikk),",
+          "törléshez való jog (17. cikk),",
+          "az adatkezelés korlátozásához való jog (18. cikk),",
+          "adathordozhatósághoz való jog (20. cikk),",
+          "tiltakozáshoz való jog (21. cikk),",
+          "a hozzájárulás bármikori visszavonásának joga (7. cikk (3) bekezdés)."
+        ],
+        "after": [
+          "Kérelmedet az info@grlab.hu e-mail-címen vagy telefonon jelezheted. A kérelmedre legfeljebb egy hónapon belül válaszolunk."
+        ]
+      },
+      {
+        "heading": "Jogorvoslat",
+        "paragraphs": [
+          "Ha úgy érzed, hogy az adataid kezelése sérti a jogaidat, panaszt tehetsz a Nemzeti Adatvédelmi és Információszabadság Hatóságnál (NAIH): 1055 Budapest, Falk Miksa utca 9–11.; levelezési cím: 1363 Budapest, Pf. 9.; e-mail: ugyfelszolgalat@naih.hu; web: www.naih.hu.",
+          "Jogaid megsértése esetén bírósághoz is fordulhatsz; a per – választásod szerint – a lakhelyed vagy tartózkodási helyed szerinti törvényszék előtt is megindítható."
+        ]
+      },
+      {
+        "heading": "A tájékoztató módosítása",
+        "paragraphs": [
+          "A tájékoztatót szükség esetén módosítjuk; a mindenkor hatályos változat ezen az oldalon érhető el."
+        ]
+      }
+    ]
+  }
+}
