@@ -10,17 +10,10 @@ import SEOProcess from '../../components/SEO/SEOProcess';
 import SEOQuestions from '../../components/SEO/SEOQuestions';
 import Image from 'next/image';
 import { getTranslations } from 'next-intl/server';
+import { buildPageMetadata } from '../../lib/seo';
 
 export async function generateMetadata() {
-  const t = await getTranslations('seoOptimization');
-
-  return {
-    title: t('seo.title'),
-    description: t('seo.description'),
-    alternates: {
-      canonical: '/seo',
-    },
-  };
+  return buildPageMetadata('seo', '/seo');
 }
 
 const SEO = async () => {
@@ -50,7 +43,7 @@ const SEO = async () => {
           </div>
         </div>
         <div className="mt-10 items-center space-y-4 text-black right-0 z-10">
-          <Image src={Business} alt={t('imageAlt')} className="aspect-16/7 w-full object-cover" fetchPriority="high" loading="eager" />
+          <Image src={Business} alt={t('imageAlt')} sizes="100vw" className="aspect-16/7 w-full object-cover" fetchPriority="high" loading="eager" />
         </div>
       </section>
       <Important />

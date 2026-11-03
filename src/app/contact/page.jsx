@@ -2,17 +2,10 @@ import CTA from '../../components/CTA'
 import ScrollAnimation from '../../components/ScrollAnimation'
 import IntroAnimation from '../../components/IntroAnimation'
 import { getTranslations } from 'next-intl/server';
+import { buildPageMetadata } from '../../lib/seo';
 
 export async function generateMetadata() {
-  const t = await getTranslations('seoOptimization');
-
-  return {
-    title: t('contact.title'),
-    description: t('contact.description'),
-    alternates: {
-      canonical: '/contact',
-    },
-  };
+  return buildPageMetadata('contact', '/contact');
 }
 
 const Contact = async () => {
@@ -35,7 +28,7 @@ const Contact = async () => {
           </div>
           <div className='w-full rounded-2xl border border-[#c9d8cc] bg-white p-6 shadow-sm md:w-1/3'>
             <p className='text-sm font-bold uppercase tracking-widest text-orange-700'>{t('cardEyebrow')}</p>
-            <a href='mailto:info@grlab.com' className='mt-3 block break-all text-lg font-bold text-[#102a2d] transition-colors hover:text-orange-700'>info@grlab.hu</a>
+            <a href='mailto:info@grlab.hu' className='mt-3 block break-all text-lg font-bold text-[#102a2d] transition-colors hover:text-orange-700'>info@grlab.hu</a>
             <p className='mt-3 text-sm leading-relaxed text-[#315b5d]'>{t('cardText')}</p>
           </div>
         </div>

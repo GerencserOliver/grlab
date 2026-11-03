@@ -11,17 +11,10 @@ import WebsiteBuilding from '../../components/WebsiteDev/WebsiteBuilding';
 import Construction from '../../images/Construction illustration of webdevelopment.webp';
 import Image from 'next/image';
 import { getTranslations } from 'next-intl/server';
+import { buildPageMetadata } from '../../lib/seo';
 
 export async function generateMetadata() {
-  const t = await getTranslations('seoOptimization');
-
-  return {
-    title: t('website.title'),
-    description: t('website.description'),
-    alternates: {
-      canonical: '/website',
-    },
-  };
+  return buildPageMetadata('website', '/website');
 }
 
 const Website = async () => {
@@ -51,7 +44,7 @@ const Website = async () => {
           </div>
         </div>
         <div className="items-center space-y-4 text-black right-0 z-10">
-          <Image src={Construction} alt={t('imageAlt')} className='w-full aspect-16/7 object-cover' fetchPriority='high' loading='eager' />
+          <Image src={Construction} alt={t('imageAlt')} sizes='100vw' className='w-full aspect-16/7 object-cover' fetchPriority='high' loading='eager' />
         </div>
       </section>
       <WebsiteDev />

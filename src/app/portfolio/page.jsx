@@ -4,17 +4,10 @@ import IntroAnimation from '../../components/IntroAnimation';
 import Projects from '../../components/Portfolio/Projects';
 import Link from 'next/link';
 import { getTranslations } from 'next-intl/server';
+import { buildPageMetadata } from '../../lib/seo';
 
 export async function generateMetadata() {
-  const t = await getTranslations('seoOptimization');
-
-  return {
-    title: t('portfolio.title'),
-    description: t('portfolio.description'),
-    alternates: {
-      canonical: '/portfolio',
-    },
-  };
+  return buildPageMetadata('portfolio', '/portfolio');
 }
 
 const Portfolio = async () => {
