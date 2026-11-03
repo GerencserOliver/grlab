@@ -4,16 +4,16 @@ import { useState } from 'react';
 import { useTranslations } from 'next-intl';
 import ctaImg from '../images/Illustration-of-website-development.webp';
 import Image from 'next/image';
+import { BUSINESS } from '../lib/business';
+
+const INITIAL_FORM = { name: '', email: '', message: '', website: '' };
 
 const CTA = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: ''
-  });
-
-  const [status, setStatus] = useState('');
+  // `website` is a honeypot: hidden from people, filled in by naive bots.
+  const [formData, setFormData] = useState(INITIAL_FORM);
+  const [status, setStatus] = useState({ type: 'idle', message: '' });
   const t = useTranslations('cta');
+  const isSending = status.type === 'sending';
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -25,7 +25,8 @@ const CTA = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setStatus(t('sending'));
+    if (isSending) return;
+    setStatus({ type: 'sending', message: t('sending') });
     try {
       const response = await fetch('/api/send-email', {
         method: 'POST',
@@ -35,14 +36,17 @@ const CTA = () => {
         body: JSON.stringify(formData),
       });
       if (response.ok) {
-        setStatus(t('successMessage'));
+        setFormData(INITIAL_FORM);
+        setStatus({ type: 'success', message: t('successMessage') });
       } else {
-        setStatus(t('failureMessage'));
+        setStatus({ type: 'error', message: t('failureMessage') });
       }
-    } catch (error) {
-      setStatus(t('errorMessage') + error.message);
+    } catch {
+      setStatus({ type: 'error', message: t('failureMessage') });
     }
   };
+
+  const fieldClass = 'mt-2 block w-full rounded-xl border border-[#c9d8cc] bg-white px-4 py-3 font-poppins text-base text-black outline-none focus:border-orange-700 focus:ring-2 focus:ring-orange-200 disabled:opacity-60';
 
   return (
     <section className='flex items-center justify-center bg-[#f5f7f4] px-5 py-16 md:py-24'>
@@ -60,8 +64,11 @@ const CTA = () => {
               name="name"
               value={formData.name}
               onChange={handleChange}
-              className='mt-2 block w-full rounded-xl border border-[#c9d8cc] bg-white px-4 py-3 font-poppins text-base text-black outline-none focus:border-orange-700 focus:ring-2 focus:ring-orange-200'
+              className={fieldClass}
               type='text'
+              autoComplete='name'
+              maxLength={120}
+              disabled={isSending}
               required
             />
             </label>
@@ -71,8 +78,12 @@ const CTA = () => {
               name="email"
               value={formData.email}
               onChange={handleChange}
-              className='mt-2 block w-full rounded-xl border border-[#c9d8cc] bg-white px-4 py-3 font-poppins text-base text-black outline-none focus:border-orange-700 focus:ring-2 focus:ring-orange-200'
+              className={fieldClass}
               type='email'
+              autoComplete='email'
+              inputMode='email'
+              maxLength={254}
+              disabled={isSending}
               required
             />
             </label>
@@ -82,25 +93,52 @@ const CTA = () => {
               name="message"
               value={formData.message}
               onChange={handleChange}
-              className='mt-2 block h-36 w-full rounded-xl border border-[#c9d8cc] bg-white px-4 py-3 font-poppins text-base text-black outline-none focus:border-orange-700 focus:ring-2 focus:ring-orange-200'
+              className={`${fieldClass} h-36`}
+              maxLength={5000}
+              disabled={isSending}
               required
             />
             </label>
+            <div className='absolute -left-2499.75 h-0 w-0 overflow-hidden' aria-hidden='true'>
+              <label htmlFor='contact-website'>Website</label>
+              <input
+                id='contact-website'
+                name='website'
+                value={formData.website}
+                onChange={handleChange}
+                type='text'
+                tabIndex={-1}
+                autoComplete='off'
+              />
+            </div>
           </div>
           <button
             type="submit"
-            className='mt-2 w-full rounded-xl bg-orange-700 px-6 py-4 font-poppins font-bold text-white transition-colors hover:bg-orange-800 focus:outline-none focus:ring-2 focus:ring-orange-300'
+            disabled={isSending}
+            className='mt-2 w-full rounded-xl bg-orange-700 px-6 py-4 font-poppins font-bold text-white transition-colors hover:bg-orange-800 focus:outline-none focus:ring-2 focus:ring-orange-300 disabled:cursor-not-allowed disabled:opacity-70'
           >
-            {t('submitButton')}
+            {isSending ? t('sending') : t('submitButton')}
           </button>
-          {status && (
-            <p role='status' aria-live='polite' className='mt-4 text-sm font-semibold text-[#0f766e]'>
-              {status}
+          {status.message && status.type !== 'sending' && (
+            <p
+              role={status.type === 'error' ? 'alert' : 'status'}
+              className={`mt-4 text-sm font-semibold ${status.type === 'error' ? 'text-red-700' : 'text-[#0f766e]'}`}
+            >
+              {status.message}
             </p>
           )}
+          <p className='mt-6 text-sm text-[#315b5d]'>
+            {t('phonePrompt')}{' '}
+            <a
+              href={BUSINESS.phoneHref}
+              className='font-bold text-orange-700 underline decoration-orange-300 underline-offset-4 transition-colors hover:text-orange-900'
+            >
+              {t('phoneAction')} {BUSINESS.phoneDisplay}
+            </a>
+          </p>
         </form>
         <div className='w-full md:w-1/2'>
-          <Image src={ctaImg} alt={t('imageAlt')} loading='lazy' className='mx-auto h-auto w-full max-w-lg object-contain' />
+          <Image src={ctaImg} alt={t('imageAlt')} loading='lazy' sizes='(min-width: 768px) 50vw, 100vw' className='mx-auto h-auto w-full max-w-lg object-contain' />
         </div>
       </div>
     </section>
