@@ -1,0 +1,98 @@
+{
+  "privacy": {
+    "linkLabel": "Privacy Policy",
+    "metaDescription": "GRLab privacy policy: what personal data we process through the contact form, why, for how long, and what rights you have.",
+    "title": "Privacy Policy",
+    "updated": "Last updated: 3 November 2026",
+    "intro": "This notice explains how GRLab processes the personal data you provide through www.grlab.hu, in accordance with the EU General Data Protection Regulation (GDPR, Regulation (EU) 2016/679) and Hungarian Act CXII of 2011 on Informational Self-determination and Freedom of Information.",
+    "consentPrefix": "I have read and understood the",
+    "consentLink": "privacy policy",
+    "consentSuffix": ", and I consent to GRLab processing my data in order to respond to my enquiry and stay in touch.",
+    "backToContact": "Back to contact",
+    "sections": [
+      {
+        "heading": "Data controller",
+        "paragraphs": ["The controller of the data you submit through the contact form is GRLab."],
+        "items": ["Name: GRLab", "Email: info@grlab.hu", "Phone: +36 70 431 6723"]
+      },
+      {
+        "heading": "What data do we process, and why?",
+        "paragraphs": [
+          "We only process personal data through this website when you send it to us yourself via the contact form.",
+          "If you contact us directly by email or phone, we process the data we receive for the same purpose and only to the extent needed to answer your enquiry (GDPR Art. 6(1)(b) – steps prior to entering into a contract, and Art. 6(1)(f) – legitimate interest)."
+        ],
+        "items": [
+          "Data processed: name, email address and any information you include in your message.",
+          "Purpose: responding to your quote request or enquiry, staying in touch and preparing a proposal.",
+          "Legal basis: your consent (GDPR Art. 6(1)(a)), which you give by ticking the checkbox before submitting the form.",
+          "Providing the data is voluntary, but without it we cannot receive and answer your enquiry through the form."
+        ]
+      },
+      {
+        "heading": "How long do we keep the data?",
+        "paragraphs": [
+          "We keep the data you submit for 1 year from receiving your enquiry and delete it afterwards.",
+          "If a contract is concluded within that period, we continue to process the data under the separate rules that apply to the contractual relationship and legal obligations (for example accounting record-keeping).",
+          "You can withdraw your consent at any time; we will then delete your data unless the law requires us to keep it longer. Withdrawal does not affect the lawfulness of processing carried out before it."
+        ]
+      },
+      {
+        "heading": "Who has access to the data?",
+        "paragraphs": [
+          "Your data is accessible to GRLab team members. To run the website and deliver messages we use the following providers, who act as data processors:"
+        ],
+        "items": [
+          "Resend (Resend, Inc.) – delivering messages sent through the form by email.",
+          "Google (Gmail) – the email service used to receive incoming messages.",
+          "Vercel Inc. – website hosting and operation, and anonymous, aggregated traffic and performance measurement (Vercel Web Analytics, Speed Insights)."
+        ],
+        "after": [
+          "These providers may also process data in the United States. Transfers take place under appropriate safeguards (for example the EU–US Data Privacy Framework or the European Commission's standard contractual clauses).",
+          "We do not sell your data and do not pass it to third parties for marketing purposes."
+        ]
+      },
+      {
+        "heading": "Cookies and similar technologies",
+        "paragraphs": [
+          "The website uses one technically necessary cookie (NEXT_LOCALE) to remember your language choice. It is valid for up to 1 year and contains no data that could identify you.",
+          "The website does not use marketing or tracking cookies. Traffic and performance measurement is done without cookies, using aggregated data."
+        ]
+      },
+      {
+        "heading": "Data security",
+        "paragraphs": [
+          "Data is transmitted over an encrypted (HTTPS) connection and access is limited to the people who need it."
+        ]
+      },
+      {
+        "heading": "Your rights",
+        "paragraphs": ["In relation to the processing of your data you have the following rights:"],
+        "items": [
+          "the right to information and access (GDPR Art. 15),",
+          "the right to rectification (Art. 16),",
+          "the right to erasure (Art. 17),",
+          "the right to restriction of processing (Art. 18),",
+          "the right to data portability (Art. 20),",
+          "the right to object (Art. 21),",
+          "the right to withdraw consent at any time (Art. 7(3))."
+        ],
+        "after": [
+          "You can submit a request at info@grlab.hu or by phone. We will respond within one month."
+        ]
+      },
+      {
+        "heading": "Legal remedies",
+        "paragraphs": [
+          "If you believe the processing of your data infringes your rights, you can lodge a complaint with the Hungarian National Authority for Data Protection and Freedom of Information (NAIH): 1055 Budapest, Falk Miksa utca 9–11.; postal address: 1363 Budapest, P.O. Box 9; email: ugyfelszolgalat@naih.hu; web: www.naih.hu.",
+          "You may also bring the matter before a court; at your choice, the case can be brought before the court of your place of residence or stay."
+        ]
+      },
+      {
+        "heading": "Changes to this notice",
+        "paragraphs": [
+          "We may update this notice when necessary; the current version is always available on this page."
+        ]
+      }
+    ]
+  }
+}

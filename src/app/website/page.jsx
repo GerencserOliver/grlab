@@ -1,5 +1,6 @@
 import ScrollAnimation from '../../components/ScrollAnimation';
 import IntroAnimation from '../../components/IntroAnimation';
+import JsonLd from '../../components/JsonLd';
 import Link from 'next/link';
 import CTA from '../../components/CTA';
 import WebsiteDev from '../../components/WebsiteDev/Introduction';
@@ -11,24 +12,65 @@ import WebsiteBuilding from '../../components/WebsiteDev/WebsiteBuilding';
 import Construction from '../../images/Construction illustration of webdevelopment.webp';
 import Image from 'next/image';
 import { getTranslations } from 'next-intl/server';
+import {
+  SITE_URL,
+  ORGANIZATION_ID,
+  SERVICE_AREA,
+  buildPageMetadata,
+  buildPageJsonLd,
+} from '../../lib/seo';
+
+const PATH = '/website';
 
 export async function generateMetadata() {
-  const t = await getTranslations('seoOptimization');
-
-  return {
-    title: t('website.title'),
-    description: t('website.description'),
-    alternates: {
-      canonical: '/website',
-    },
-  };
+  return buildPageMetadata('website', PATH);
 }
 
 const Website = async () => {
-  const t = await getTranslations('wdhero');
+  const [t, tm, tp, tn] = await Promise.all([
+    getTranslations('wdhero'),
+    getTranslations('seoOptimization'),
+    getTranslations('wdprices'),
+    getTranslations('nav'),
+  ]);
+
+  const serviceId = `${SITE_URL}${PATH}#service`;
+
+  const jsonLd = await buildPageJsonLd({
+    path: PATH,
+    key: 'website',
+    breadcrumbLabel: tn('website'),
+    pageExtra: { mainEntity: { '@id': serviceId } },
+    nodes: [
+      {
+        '@type': 'Service',
+        '@id': serviceId,
+        name: tm('website.title'),
+        description: tm('website.description'),
+        serviceType: 'Weboldal készítés és webfejlesztés',
+        url: `${SITE_URL}${PATH}`,
+        provider: { '@id': ORGANIZATION_ID },
+        areaServed: SERVICE_AREA,
+        hasOfferCatalog: {
+          '@type': 'OfferCatalog',
+          name: tp('title'),
+          itemListElement: ['basic', 'pro', 'premium'].map((tier) => ({
+            '@type': 'Offer',
+            itemOffered: {
+              '@type': 'Service',
+              name: tp(`${tier}.title`),
+              description: tp(`${tier}.description`),
+              provider: { '@id': ORGANIZATION_ID },
+            },
+          })),
+        },
+      },
+    ],
+  });
 
   return (
     <div>
+      <JsonLd data={jsonLd} />
       <IntroAnimation />
       <ScrollAnimation />
       <section className='border-b border-[#dfe7e1] bg-[#f5f7f4]'>
@@ -51,7 +93,7 @@ const Website = async () => {
           </div>
         </div>
         <div className="items-center space-y-4 text-black right-0 z-10">
-          <Image src={Construction} alt={t('imageAlt')} className='w-full aspect-16/7 object-cover' fetchPriority='high' loading='eager' />
+          <Image src={Construction} alt={t('imageAlt')} sizes='100vw' className='w-full aspect-16/7 object-cover' fetchPriority='high' loading='eager' />
         </div>
       </section>
       <WebsiteDev />

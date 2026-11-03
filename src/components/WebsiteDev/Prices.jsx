@@ -1,10 +1,33 @@
-import { getTranslations, getMessages } from 'next-intl/server';
+import { getTranslations } from 'next-intl/server';
 import Link from 'next/link';
+
+const TIERS = ['basic', 'pro', 'premium'];
+
+// Dark cards get light text; the 'pro' card is white with dark text.
+const TIER_STYLES = {
+  basic: {
+    card: 'border-[#0f766e] bg-[#102a2d]',
+    text: 'text-white',
+    bullet: 'marker:text-orange-300',
+    button: 'bg-orange-700 text-white hover:bg-orange-800',
+  },
+  pro: {
+    card: 'border-[#dfe7e1] bg-white',
+    text: 'text-[#102a2d]',
+    bullet: 'marker:text-orange-700',
+    button: 'bg-orange-700 text-white hover:bg-orange-800',
+  },
+  // The teal card needs a light button: orange-700 on #0f766e is nearly invisible.
+  premium: {
+    card: 'border-[#102a2d] bg-[#0f766e]',
+    text: 'text-white',
+    bullet: 'marker:text-orange-200',
+    button: 'bg-white text-[#0f766e] hover:bg-[#dce9df]',
+  },
+};
 
 const Prices = async () => {
   const t = await getTranslations('wdprices');
-  const messages = await getMessages();
-  const packages = ['basic', 'pro', 'premium'];
 
   return (
     <section className="flex items-center justify-center bg-[#f5f7f4]">
@@ -19,64 +42,46 @@ const Prices = async () => {
           </p>
         </div>
         <div className="mt-12 grid grid-cols-1 gap-5 scroll-in sm:grid-cols-2 lg:grid-cols-3">
-          {packages.map((packageType) => {
-            const features = messages?.wdprices?.[packageType]?.features || [];
+          {TIERS.map((tier) => {
+            const styles = TIER_STYLES[tier];
+            const features = t.raw(`${tier}.features`);
+            const title = t(`${tier}.title`);
             return (
-              <div
-                key={packageType}
-                className={`flex h-full flex-col justify-between rounded-2xl border p-7 ${
-                  packageType === 'basic'
-                    ? 'border-[#0f766e] bg-[#102a2d]'
-                    : packageType === 'pro'
-                    ? 'border-[#dfe7e1] bg-white'
-                    : 'border-[#102a2d] bg-[#0f766e]'
-                }`}
+              <article
+                key={tier}
+                className={`flex h-full flex-col justify-between rounded-2xl border p-7 ${styles.card}`}
               >
                 <div>
-                  <h2
-                    className={`${
-                      packageType === 'basic' || packageType === 'premium'
-                        ? 'text-white'
-                        : 'text-black'
-                    } font-bold font-poppins text-3xl md:text-4xl`}
-                  >
-                    {t(`${packageType}.title`)}
-                  </h2>
-                  <hr className="block border-gray-300 mt-3 mb-3" />
-                  <p
-                    className={`font-poppins font-bold text-xl md:text-2xl mb-6 md:text-left ${
-                      packageType === 'basic' || packageType === 'premium'
-                        ? 'text-white'
-                        : 'text-black'
-                    }`}
-                  >
-                    {t(`${packageType}.description`)}
+                  {/* h3: this section's own heading above is the h2 */}
+                  <h3 className={`${styles.text} font-poppins text-3xl font-bold md:text-4xl`}>
+                    {title}
+                  </h3>
+                  <hr className="mb-3 mt-3 block border-gray-300/60" />
+                  <p className={`${styles.text} mb-6 font-poppins text-lg font-semibold leading-snug md:text-xl`}>
+                    {t(`${tier}.description`)}
                   </p>
-                  <hr className="block border-gray-300 mt-3 mb-3" />
-                  <ul className="list-inside list-disc">
+                  <hr className="mb-3 mt-3 block border-gray-300/60" />
+                  <ul className={`list-outside list-disc pl-5 ${styles.bullet}`}>
                     {Array.isArray(features) &&
-                      features.map((feature, index) => (
-                        <li
-                          key={index}
-                          className={`font-poppins text-lg md:text-xl mt-3 ${
-                            packageType === 'basic' || packageType === 'premium'
-                              ? 'text-white'
-                              : 'text-black'
-                          }`}
-                        >
+                      features.map((feature) => (
+                        <li key={feature} className={`${styles.text} mt-3 font-poppins text-base md:text-lg`}>
                           {feature}
                         </li>
                       ))}
                   </ul>
                 </div>
-                <Link href="/contact" className="mt-6 block w-full rounded-full bg-orange-700 px-6 py-3 text-center font-poppins text-base font-bold text-white transition-colors hover:bg-orange-800">
+                <Link
+                  href="/contact"
+                  aria-label={`${t('requestQuote')}: ${title}`}
+                  className={`mt-8 block w-full rounded-full px-6 py-3 text-center font-poppins text-base font-bold transition-colors ${styles.button}`}
+                >
                   {t('requestQuote')}
                 </Link>
-              </div>
+              </article>
             );
           })}
         </div>
-        <p className="text-teal-700 font-poppins text-sm md:text-lg mb-6 mt-12 md:text-left">
+        <p className="mt-12 font-poppins text-sm text-[#0f766e] md:text-lg">
           {t('note')}
         </p>
       </div>

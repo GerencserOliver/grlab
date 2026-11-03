@@ -2,9 +2,13 @@ import Image from 'next/image';
 import Laptop from '../images/Laptop for Offering.webp';
 import Link from 'next/link';
 import { getTranslations } from 'next-intl/server';
+import { BUSINESS } from '../lib/business';
 
 const Offer = async () => {
-  const t = await getTranslations('offer');
+  const [t, tc] = await Promise.all([
+    getTranslations('offer'),
+    getTranslations('cta'),
+  ]);
 
   return (
     <section className='mt-8 flex flex-col items-center justify-center bg-[#102a2d] md:min-h-140 md:flex-row'>
@@ -17,9 +21,18 @@ const Offer = async () => {
           {t('description')}
         </p>
         <Link href='/contact' className='mt-4 w-full rounded-full bg-orange-700 px-7 py-4 text-center font-poppins text-base font-bold text-white transition-colors hover:bg-orange-800 sm:w-auto'>{t('button')}</Link>
+        <p className='mt-5 text-sm text-[#dce9df]'>
+          {tc('phonePrompt')}{' '}
+          <a
+            href={BUSINESS.phoneHref}
+            className='font-bold text-orange-300 underline decoration-orange-300/50 underline-offset-4 transition-colors hover:text-white'
+          >
+            {tc('phoneAction')} {BUSINESS.phoneDisplay}
+          </a>
+        </p>
       </div>
       <div className='scroll-in order-1 h-72 w-full sm:h-96 md:order-2 md:h-140 md:w-1/2'>
-        <Image src={Laptop} alt={t('imageAlt')} loading='lazy' className='h-full w-full object-cover' />
+        <Image src={Laptop} alt={t('imageAlt')} loading='lazy' sizes='(min-width: 768px) 50vw, 100vw' className='h-full w-full object-cover' />
       </div>
     </section>
   );

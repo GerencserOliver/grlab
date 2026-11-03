@@ -21,7 +21,7 @@ const Rivals = async () => {
         </Link>
       </div>
       <div className="scroll-in order-1 h-72 w-full sm:h-96 md:order-2 md:h-130 md:w-1/2">
-        <Image src={Workspace} alt={t('imageAlt')} loading="lazy" className="h-full w-full object-cover" />
+        <Image src={Workspace} alt={t('imageAlt')} loading="lazy" sizes="(min-width: 768px) 50vw, 100vw" className="h-full w-full object-cover" />
       </div>
     </section>
   );

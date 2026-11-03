@@ -11,9 +11,30 @@ const MAX_LENGTHS = {
 
 const cleanText = (value) => String(value || '').trim();
 
+// User input is interpolated into an HTML e-mail, so it must be escaped.
+const escapeHtml = (value) =>
+  value
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;');
+
 export async function POST(req) {
   try {
     const body = await req.json();
+
+    // Honeypot: real visitors never see or fill this field. Pretend success so
+    // bots get no signal that they were filtered.
+    if (cleanText(body?.website)) {
+      return NextResponse.json({ success: true }, { status: 200 });
+    }
+
+    // GDPR: processing is based on explicit consent, enforced server-side too.
+    if (body?.consent !== true) {
+      return NextResponse.json({ error: 'Az adatkezelési tájékoztató elfogadása kötelező.' }, { status: 400 });
+    }
+
     const name = cleanText(body?.name);
     const email = cleanText(body?.email);
     const message = cleanText(body?.message);
@@ -26,23 +47,32 @@ export async function POST(req) {
       return NextResponse.json({ error: 'Egy vagy több mező túl hosszú.' }, { status: 413 });
     }
 
+    const safeName = escapeHtml(name);
+    const safeEmail = escapeHtml(email);
+    const safeMessage = escapeHtml(message);
+    // Strip line breaks so the value cannot inject extra header lines.
+    const subjectName = name.replace(/[\r\n]+/g, ' ');
+    const consentTimestamp = new Date().toISOString();
+
     const { data, error } = await resend.emails.send({
       from: 'GRLab Kapcsolat <info@grlab.hu>',
       to: ['grlabteam@gmail.com'],
       replyTo: email,
-      subject: `Új megkeresés a weboldalról: ${name}`,
+      subject: `Új megkeresés a weboldalról: ${subjectName}`,
       html: `
         <h2>Új üzenet érkezett a GRLab weboldalról</h2>
-        <p><strong>Név:</strong> ${name}</p>
-        <p><strong>E-mail:</strong> ${email}</p>
+        <p><strong>Név:</strong> ${safeName}</p>
+        <p><strong>E-mail:</strong> ${safeEmail}</p>
         <p><strong>Üzenet:</strong></p>
-        <p style="white-space: pre-wrap;">${message}</p>
+        <p style="white-space: pre-wrap;">${safeMessage}</p>
+        <hr />
+        <p style="color:#555;font-size:12px;">Adatkezelési hozzájárulás megadva: ${consentTimestamp}. Megőrzési idő: 1 év a beérkezéstől.</p>
       `,
     });
 
     if (error) {
       console.error('Resend error:', error);
-      return NextResponse.json({ success: false, error: error.message }, { status: 500 });
+      return NextResponse.json({ success: false, error: 'Az üzenetet nem sikerült elküldeni.' }, { status: 500 });
     }
 
     return NextResponse.json({ success: true, data }, { status: 200 });

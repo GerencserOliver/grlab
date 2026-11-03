@@ -1,5 +1,6 @@
 import ScrollAnimation from '../../components/ScrollAnimation';
 import IntroAnimation from '../../components/IntroAnimation';
+import JsonLd from '../../components/JsonLd';
 import Link from 'next/link';
 import Business from '../../images/Business image illustrating partner.webp';
 import CTA from '../../components/CTA';
@@ -10,24 +11,73 @@ import SEOProcess from '../../components/SEO/SEOProcess';
 import SEOQuestions from '../../components/SEO/SEOQuestions';
 import Image from 'next/image';
 import { getTranslations } from 'next-intl/server';
+import {
+  SITE_URL,
+  ORGANIZATION_ID,
+  SERVICE_AREA,
+  buildPageMetadata,
+  buildPageJsonLd,
+} from '../../lib/seo';
+
+const PATH = '/seo';
+const SEO_SERVICE_KEYS = [
+  'seoStrategy',
+  'keywordResearch',
+  'onPageOptimization',
+  'technicalSeo',
+  'linkBuilding',
+  'contentMarketing',
+];
 
 export async function generateMetadata() {
-  const t = await getTranslations('seoOptimization');
-
-  return {
-    title: t('seo.title'),
-    description: t('seo.description'),
-    alternates: {
-      canonical: '/seo',
-    },
-  };
+  return buildPageMetadata('seo', PATH);
 }
 
 const SEO = async () => {
-  const t = await getTranslations('seo');
+  const [t, tm, ts, tn] = await Promise.all([
+    getTranslations('seo'),
+    getTranslations('seoOptimization'),
+    getTranslations('SEOservices'),
+    getTranslations('nav'),
+  ]);
+
+  const serviceId = `${SITE_URL}${PATH}#service`;
+
+  const jsonLd = await buildPageJsonLd({
+    path: PATH,
+    key: 'seo',
+    breadcrumbLabel: tn('seo'),
+    pageExtra: { mainEntity: { '@id': serviceId } },
+    nodes: [
+      {
+        '@type': 'Service',
+        '@id': serviceId,
+        name: tm('seo.title'),
+        description: tm('seo.description'),
+        serviceType: 'Technikai SEO és Google Cégprofil',
+        url: `${SITE_URL}${PATH}`,
+        provider: { '@id': ORGANIZATION_ID },
+        areaServed: SERVICE_AREA,
+        hasOfferCatalog: {
+          '@type': 'OfferCatalog',
+          name: ts('heading'),
+          itemListElement: SEO_SERVICE_KEYS.map((key) => ({
+            '@type': 'Offer',
+            itemOffered: {
+              '@type': 'Service',
+              name: ts(`${key}.name`),
+              description: ts(`${key}.description`),
+              provider: { '@id': ORGANIZATION_ID },
+            },
+          })),
+        },
+      },
+    ],
+  });
 
   return (
     <div>
+      <JsonLd data={jsonLd} />
       <IntroAnimation />
       <ScrollAnimation />
       <section className="border-b border-[#dfe7e1] bg-[#f5f7f4]">
@@ -50,7 +100,7 @@ const SEO = async () => {
           </div>
         </div>
         <div className="mt-10 items-center space-y-4 text-black right-0 z-10">
-          <Image src={Business} alt={t('imageAlt')} className="aspect-16/7 w-full object-cover" fetchPriority="high" loading="eager" />
+          <Image src={Business} alt={t('imageAlt')} sizes="100vw" className="aspect-16/7 w-full object-cover" fetchPriority="high" loading="eager" />
         </div>
       </section>
       <Important />

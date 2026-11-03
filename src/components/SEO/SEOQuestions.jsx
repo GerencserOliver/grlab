@@ -1,19 +1,21 @@
 "use client";
 
 import { useState } from 'react';
-import { useTranslations, useMessages } from 'next-intl';
+import { useTranslations } from 'next-intl';
+import JsonLd from '../JsonLd';
+import { BUSINESS } from '../../lib/business';
 
 const SEOQuestions = () => {
   const t = useTranslations('seoQuestions');
-  const messages = useMessages();
+  const tc = useTranslations('cta');
   const [openIndex, setOpenIndex] = useState(null);
 
   const toggleAccordion = (index) => {
     setOpenIndex(openIndex === index ? null : index);
   };
 
-  const rawQuestions = messages?.seoQuestions?.questions || {};
-  const faqData = Array.isArray(rawQuestions) ? rawQuestions : Object.values(rawQuestions);
+  const rawQuestions = t.raw('questions');
+  const faqData = Array.isArray(rawQuestions) ? rawQuestions : Object.values(rawQuestions || {});
 
   const faqSchema = {
     '@context': 'https://schema.org',
@@ -29,61 +31,54 @@ const SEOQuestions = () => {
   };
 
   return (
-    <section className="bg-gray-50 py-20 md:py-32">
-      {faqData.length > 0 && (
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-        />
-      )}
+    <section className="bg-[#f5f7f4] py-20 md:py-24">
+      {faqData.length > 0 && <JsonLd data={faqSchema} />}
       <div className="scroll-in container mx-auto max-w-3xl px-6">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-5xl font-extrabold font-poppins text-gray-900 tracking-tight">
+        <div className="mb-12 text-center">
+          <h2 className="font-poppins text-3xl font-extrabold tracking-tight text-[#102a2d] md:text-5xl">
             {t('heading')}
           </h2>
-          <div className="mt-4 h-1.5 w-20 bg-teal-600 rounded-full mx-auto" />
+          <div className="mx-auto mt-5 h-1 w-16 rounded-full bg-orange-700" />
         </div>
         <div className="space-y-4">
           {faqData.map((item, index) => {
             const isOpen = openIndex === index;
             const contentId = `seo-faq-content-${index}`;
+            const buttonId = `seo-faq-button-${index}`;
             return (
               <div
-                key={index}
-                className="bg-white border border-gray-200/80 rounded-2xl shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden"
+                key={item.question}
+                className="overflow-hidden rounded-2xl border border-[#dfe7e1] bg-white shadow-sm transition-shadow duration-300 hover:shadow-md"
               >
-                <button
-                  type="button"
-                  onClick={() => toggleAccordion(index)}
-                  aria-expanded={isOpen}
-                  aria-controls={contentId}
-                  className="flex justify-between items-center w-full p-6 text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-teal-500 rounded-2xl"
-                >
-                  <span className="text-lg md:text-xl font-bold font-poppins text-gray-900 pr-4">
-                    {item.question}
-                  </span>
-                  <div
-                    className={`shrink-0 w-8 h-8 rounded-full bg-teal-50 flex items-center justify-center text-teal-600 transition-transform duration-300 ${
-                      isOpen ? 'rotate-180 bg-teal-600 text-white' : ''
-                    }`}
+                <h3>
+                  <button
+                    id={buttonId}
+                    type="button"
+                    onClick={() => toggleAccordion(index)}
+                    aria-expanded={isOpen}
+                    aria-controls={contentId}
+                    className="flex w-full items-center justify-between rounded-2xl p-6 text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-orange-700"
                   >
-                    <svg
-                      className="w-4 h-4"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
+                    <span className="pr-4 font-poppins text-lg font-bold text-[#102a2d] md:text-xl">
+                      {item.question}
+                    </span>
+                    <span
+                      aria-hidden="true"
+                      className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[#eef4ef] text-[#0f766e] transition-transform duration-300 ${
+                        isOpen ? 'rotate-180 bg-orange-700 text-white' : ''
+                      }`}
                     >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth="2"
-                        d="M19 9l-7 7-7-7"
-                      />
-                    </svg>
-                  </div>
-                </button>
+                      <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
+                      </svg>
+                    </span>
+                  </button>
+                </h3>
                 <div
                   id={contentId}
+                  role="region"
+                  aria-labelledby={buttonId}
+                  inert={!isOpen}
                   className={`grid transition-all duration-300 ease-in-out ${
                     isOpen
                       ? 'grid-rows-[1fr] opacity-100'
@@ -91,7 +86,7 @@ const SEOQuestions = () => {
                   }`}
                 >
                   <div className="overflow-hidden">
-                    <p className="px-6 pb-6 text-gray-600 font-poppins text-base md:text-lg leading-relaxed border-t border-gray-100 pt-4">
+                    <p className="border-t border-[#dfe7e1] px-6 pb-6 pt-4 font-poppins text-base leading-relaxed text-[#315b5d] md:text-lg">
                       {item.answer}
                     </p>
                   </div>
@@ -100,6 +95,15 @@ const SEOQuestions = () => {
             );
           })}
         </div>
+        <p className="mt-10 text-center text-base text-[#315b5d]">
+          {tc('phonePrompt')}{' '}
+          <a
+            href={BUSINESS.phoneHref}
+            className="font-bold text-orange-700 underline decoration-orange-300 underline-offset-4 transition-colors hover:text-orange-900"
+          >
+            {tc('phoneAction')} {BUSINESS.phoneDisplay}
+          </a>
+        </p>
       </div>
     </section>
   );

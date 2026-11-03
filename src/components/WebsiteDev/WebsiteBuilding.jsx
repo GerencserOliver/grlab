@@ -9,41 +9,16 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import { getTranslations } from 'next-intl/server';
 
+const STEP_ICONS = [faHandshake, faDraftingCompass, faLightbulb, faCode, faRocket, faLifeRing];
+
 const WebsiteBuilding = async () => {
   const t = await getTranslations('websiteBuilding');
 
-  const steps = [
-    {
-      title: t('steps.0.title'),
-      icon: faHandshake,
-      description: t('steps.0.description'),
-    },
-    {
-      title: t('steps.1.title'),
-      icon: faDraftingCompass,
-      description: t('steps.1.description'),
-    },
-    {
-      title: t('steps.2.title'),
-      icon: faLightbulb,
-      description: t('steps.2.description'),
-    },
-    {
-      title: t('steps.3.title'),
-      icon: faCode,
-      description: t('steps.3.description'),
-    },
-    {
-      title: t('steps.4.title'),
-      icon: faRocket,
-      description: t('steps.4.description'),
-    },
-    {
-      title: t('steps.5.title'),
-      icon: faLifeRing,
-      description: t('steps.5.description'),
-    },
-  ];
+  const steps = STEP_ICONS.map((icon, index) => ({
+    icon,
+    title: t(`steps.${index}.title`),
+    description: t(`steps.${index}.description`),
+  }));
 
   return (
     <section className="flex items-center justify-center bg-white">
@@ -55,27 +30,28 @@ const WebsiteBuilding = async () => {
         <p className="mt-5 max-w-3xl text-lg leading-relaxed text-[#315b5d] md:text-xl">
           {t('description')}
         </p>
-        <div className="mt-12 grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
-          {steps.map((step, index) => (
-            <div
-              key={index}
+        {/* An ordered list: the process is a sequence. */}
+        <ol className="mt-12 grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
+          {steps.map((step) => (
+            <li
+              key={step.title}
               className="flex flex-col items-start rounded-2xl border border-[#dfe7e1] bg-[#f5f7f4] p-7 transition-shadow duration-300 hover:shadow-lg"
             >
               <FontAwesomeIcon
                 icon={step.icon}
                 size="3x"
-                className="mb-4 text-orange-700"
+                className="text-orange-700"
+                aria-hidden="true"
               />
-              <h3 className="mt-4 font-poppins text-2xl font-bold text-[#102a2d]">
+              <h3 className="mt-6 font-poppins text-2xl font-bold text-[#102a2d]">
                 {step.title}
               </h3>
               <p className="mt-4 font-poppins text-base leading-relaxed text-[#315b5d]">
                 {step.description}
               </p>
-              <hr className="block md:hidden border-gray-300 mt-6 mb-3 w-full" />
-            </div>
+            </li>
           ))}
-        </div>
+        </ol>
       </div>
     </section>
   );

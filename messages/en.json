@@ -10,11 +10,21 @@
     "contact": "Contact",
     "openMenu": "Open menu",
     "closeMenu": "Close menu",
-    "languageLabel": "Language selector"
+    "languageLabel": "Language selector",
+    "logoAlt": "GRLab logo",
+    "skipToContent": "Skip to main content",
+    "callUs": "Call us"
+  },
+  "footer": {
+    "navLabel": "Footer navigation",
+    "rights": "All rights reserved.",
+    "tagline": "Website and software development from Győr, for businesses.",
+    "emailLabel": "Email GRLab",
+    "callLabel": "Call GRLab"
   },
   "hero": {
-    "subtitle": "Web Development & Custom Digital Solutions | Győr",
-    "title": "Digital solutions for growing businesses",
+    "subtitle": "Web Development for Small & Medium Businesses | Győr",
+    "title": "Website Development and Custom Software in Győr",
     "description": "We build modern websites, web applications and mobile apps — from a professional online presence to custom business systems with backend, databases and integrations.",
     "button_text": "Discuss your project",
     "secondaryButton": "View our work",
@@ -98,7 +108,7 @@
   "cta": {
     "eyebrow": "Next step",
     "title": "Let's talk about your idea",
-    "description": "Tell us briefly what you need. We'll get back to you and discuss how your idea can become a working digital solution.",
+    "description": "Tell us briefly what you need. We'll get back to you and discuss how your idea can become a working digital solution. Your first consultation is free.",
     "namePlaceholder": "Full Name",
     "emailPlaceholder": "Email Address",
     "messagePlaceholder": "What can we help you with?",
@@ -108,9 +118,11 @@
     "imageAlt": "Discussing a digital project on a laptop",
     "submitButton": "Send Message",
     "sending": "Sending...",
-    "successMessage": "Message sent successfully!",
-    "failureMessage": "Failed to send message.",
-    "errorMessage": "Error: "
+    "successMessage": "Thank you, we received your message! We'll be in touch soon.",
+    "failureMessage": "Failed to send message. Please email info@grlab.hu directly or give us a call.",
+    "errorMessage": "Error: ",
+    "phonePrompt": "Prefer to talk?",
+    "phoneAction": "Call us:"
   },
   "wdhero": {
     "subtitle": "Website Development | Fast, Modern, Custom | Győr",
@@ -234,8 +246,16 @@
         "answer": "We primarily work with individual entrepreneurs and small and medium-sized businesses. We can help with anything from a simple company website to a custom business application."
       },
       {
+        "question": "Do you work with clients outside Győr?",
+        "answer": "Yes. We can meet clients in Győr both in person and online, while for clients elsewhere in the country we hold meetings online, so distance is never a barrier."
+      },
+      {
         "question": "Do you only build websites?",
         "answer": "No. We also develop web applications, backend systems, databases, APIs and mobile applications."
+      },
+      {
+        "question": "How is custom development different from a website builder or template?",
+        "answer": "Templates launch quickly but are more limited in functionality, performance and technical SEO. With custom development the website is shaped around your processes, brand and goals, and it can be extended freely later."
       },
       {
         "question": "Can you work on an existing system?",
@@ -267,9 +287,10 @@
   },
   "projects": {
     "label": "Project",
+    "imageAlt": "{title} – screenshot {number}",
     "szelvedo": {
       "title": "Windshield Repair",
-      "description": "A mobile-optimized showcase website built for a sole proprietor. The site is search-engine optimized, ranking at the top of Google search results for relevant queries. We also set up and manage their Google Business Profile, securing top positions in search without ad spend."
+      "description": "A mobile-optimized showcase website built for a sole proprietor. The site is developed with search engine optimization in mind, and we also set up and manage the Google Business Profile, so the business is clearly visible in relevant local searches without ad spend."
     },
     "pille": {
       "title": "Pille Webshop",
@@ -351,7 +372,7 @@
     "heading": "Build a digital foundation that works for your business",
     "description": "The goal isn't to use as many marketing buzzwords as possible. It's to build a practical digital foundation: a fast website, solid technical setup, Google Business Profile and, when needed, a custom business system.",
     "cta": "Let's Talk",
-    "imageAlt": "Illustration depicting competitor analysis and market positioning"
+    "imageAlt": "Workspace with a laptop and notes during website and online presence development"
   },
   "seoProcess": {
     "eyebrow": "Measurable foundations",
@@ -418,7 +439,9 @@
     "title": "Let's discuss your next digital project",
     "description": "Tell us briefly what you want to improve or build. We will help clarify the options, functionality and next step.",
     "cardEyebrow": "Direct contact",
-    "cardText": "We will get back to you and arrange an initial conversation about your project."
+    "cardEmailLabel": "Email",
+    "cardPhoneLabel": "Phone",
+    "cardText": "We will get back to you and arrange a free initial conversation about your project."
   },
   "seoOptimization": {
     "home": {
