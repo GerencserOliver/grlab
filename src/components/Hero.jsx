@@ -31,19 +31,26 @@ const Hero = async () => {
               {t('secondaryButton')}
             </Link>
           </div>
-          <div className='mt-6 flex flex-wrap gap-4'>
+          <ul className='mt-6 flex flex-wrap gap-4'>
             {Array.isArray(proofPoints) &&
               proofPoints.map((point) => (
-                <span key={point} className="inline-flex items-center gap-2 text-sm font-semibold text-[#102a2d]">
-                  <FontAwesomeIcon icon={faCheck} className="text-orange-700" />
+                <li key={point} className="inline-flex items-center gap-2 text-sm font-semibold text-[#102a2d]">
+                  <FontAwesomeIcon icon={faCheck} className="text-orange-700" aria-hidden="true" />
                   {point}
-                </span>
+                </li>
               ))}
-          </div>
+          </ul>
         </div>
         <div className='scroll-in relative w-full md:w-2/5'>
           <div className='absolute -inset-3 rotate-3 rounded-4xl bg-[#dce9df]' aria-hidden='true'></div>
-          <Image src={heroImg} alt={t('imageAlt')} className='relative aspect-4/3 w-full rounded-3xl object-cover shadow-2xl' />
+          <Image
+            src={heroImg}
+            alt={t('imageAlt')}
+            sizes='(min-width: 768px) 40vw, 100vw'
+            fetchPriority='high'
+            loading='eager'
+            className='relative aspect-4/3 w-full rounded-3xl object-cover shadow-2xl'
+          />
           <div className='absolute -bottom-5 left-5 right-5 rounded-xl bg-[#102a2d] px-5 py-4 text-white shadow-xl'>
             <p className='text-xs font-bold uppercase tracking-widest text-orange-300'>{t('cardLabel')}</p>
             <p className='mt-1 font-poppins text-base md:text-lg'>{t('cardText')}</p>

@@ -7,7 +7,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { useTranslations, useLocale } from 'next-intl';
 import Image from 'next/image';
-import { useEffect, useState } from 'react';
 
 const links = [
   { key: 'website', href: '/website' },
@@ -17,14 +16,11 @@ const links = [
 ];
 
 const Footer = () => {
-  const [currentYear, setCurrentYear] = useState(null);
   const pathname = usePathname();
   const t = useTranslations('nav');
+  const tf = useTranslations('footer');
   const locale = useLocale();
-
-  useEffect(() => {
-    setCurrentYear(new Date().getFullYear());
-  }, []);
+  const currentYear = new Date().getFullYear();
 
   const changeLanguage = (newLocale) => {
     document.cookie = `NEXT_LOCALE=${newLocale}; path=/; max-age=31536000; SameSite=Lax`;
@@ -39,12 +35,12 @@ const Footer = () => {
             <Link href="/" aria-label={t('home')}>
               <Image
                 src={Logo}
-                alt="GRLab logo"
+                alt={t('logoAlt')}
                 className="w-20 hover:opacity-90 transition-opacity"
               />
             </Link>
           </div>
-          <nav aria-label="Footer navigation">
+          <nav aria-label={tf('navLabel')}>
             <ul className="flex flex-wrap items-center gap-2">
               {links.map((link) => {
                 const isActive = pathname === link.href;
@@ -52,6 +48,7 @@ const Footer = () => {
                   <li key={link.key}>
                     <Link
                       href={link.href}
+                      aria-current={isActive ? 'page' : undefined}
                       className={`rounded-lg px-4 py-2.5 font-poppins text-sm font-semibold transition-colors ${
                         isActive
                           ? 'bg-[#102a2d] text-white'
@@ -67,11 +64,14 @@ const Footer = () => {
           </nav>
           <div
             className="flex w-fit gap-1 rounded-lg bg-[#eef4ef] p-1 border border-[#dfe7e1]"
+            role="group"
             aria-label={t('languageLabel')}
           >
             <button
               type="button"
               onClick={() => changeLanguage('hu')}
+              aria-pressed={locale === 'hu'}
+              lang="hu"
               className={`rounded-md px-3.5 py-1.5 text-xs font-bold transition-all ${
                 locale === 'hu'
                   ? 'bg-white text-[#102a2d] shadow-sm'
@@ -83,6 +83,8 @@ const Footer = () => {
             <button
               type="button"
               onClick={() => changeLanguage('en')}
+              aria-pressed={locale === 'en'}
+              lang="en"
               className={`rounded-md px-3.5 py-1.5 text-xs font-bold transition-all ${
                 locale === 'en'
                   ? 'bg-white text-[#102a2d] shadow-sm'
@@ -97,17 +99,17 @@ const Footer = () => {
         <div className="flex flex-col-reverse gap-6 items-center justify-between md:flex-row">
           <div className="text-center md:text-left">
             <p className="font-poppins text-sm font-bold text-[#0f766e]">
-              © {currentYear} GRLab. All rights reserved.
+              © {currentYear} GRLab. {tf('rights')}
             </p>
             <p className="font-poppins text-xs text-[#315b5d] mt-1">
-              Designed with passion for your success.
+              {tf('tagline')}
             </p>
           </div>
           <div className="flex items-center gap-3">
             <a
               href="mailto:info@grlab.hu"
               className="flex h-11 w-11 items-center justify-center rounded-lg bg-[#eef4ef] text-[#102a2d] transition-all hover:bg-[#102a2d] hover:text-white"
-              aria-label="Email"
+              aria-label={tf('emailLabel')}
             >
               <FontAwesomeIcon icon={faEnvelope} className="h-5 w-5" />
             </a>

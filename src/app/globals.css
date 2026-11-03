@@ -33,6 +33,7 @@ li {
   width: 100%;
   height: 100%;
   background-color: #0f766e;
+  pointer-events: none;
   animation: fadeOut 0.7s ease-in-out forwards;
 }
 
@@ -42,5 +43,26 @@ li {
   }
   100% {
     opacity: 0;
+  }
+}
+
+/* Never hide content behind a JS-driven reveal when scripting is unavailable
+   (crawlers, no-JS, print) or when the user prefers reduced motion. */
+@media (scripting: none) {
+  .scroll-in {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scroll-in {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .intro-background {
+    animation-duration: 0.01ms;
   }
 }
