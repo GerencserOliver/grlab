@@ -4,9 +4,10 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import Logo from '../images/GR-website-design-and-seo-logo.webp';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import { faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons';
 import { useTranslations, useLocale } from 'next-intl';
 import Image from 'next/image';
+import { BUSINESS } from '../lib/business';
 
 const links = [
   { key: 'website', href: '/website' },
@@ -107,11 +108,19 @@ const Footer = () => {
           </div>
           <div className="flex items-center gap-3">
             <a
-              href="mailto:info@grlab.hu"
+              href={BUSINESS.phoneHref}
+              className="inline-flex h-11 items-center gap-2 rounded-lg bg-[#eef4ef] px-4 text-sm font-bold text-[#102a2d] transition-all hover:bg-[#102a2d] hover:text-white"
+              aria-label={`${tf('callLabel')}: ${BUSINESS.phoneDisplay}`}
+            >
+              <FontAwesomeIcon icon={faPhone} className="h-4 w-4" aria-hidden="true" />
+              {BUSINESS.phoneDisplay}
+            </a>
+            <a
+              href={BUSINESS.emailHref}
               className="flex h-11 w-11 items-center justify-center rounded-lg bg-[#eef4ef] text-[#102a2d] transition-all hover:bg-[#102a2d] hover:text-white"
               aria-label={tf('emailLabel')}
             >
-              <FontAwesomeIcon icon={faEnvelope} className="h-5 w-5" />
+              <FontAwesomeIcon icon={faEnvelope} className="h-5 w-5" aria-hidden="true" />
             </a>
           </div>
         </div>
