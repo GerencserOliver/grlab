@@ -1,7 +1,7 @@
 // Portfolio project metadata shared by the gallery (client) and the
 // CollectionPage JSON-LD (server). Text comes from messages/*.json -> projects.<key>.
 export const PROJECTS = [
-  { key: 'szelvedo', url: 'https://kunpeter-szelvedojavitas.hu' },
+  { key: 'szelvedo', url: 'https://www.kunpeter-szelvedojavitas.hu' },
   { key: 'pille', url: null },
   { key: 'fleetflow', url: null },
   { key: 'car-rental', url: null },

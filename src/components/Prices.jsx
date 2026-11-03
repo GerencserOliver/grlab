@@ -13,17 +13,20 @@ const Prices = async () => {
       image: Laptop,
       name: t('packages.seo.name'),
       description: t('packages.seo.description'),
+      link: '/seo',
     },
     {
       image: Office,
       name: t('packages.website.name'),
       description: t('packages.website.description'),
+      link: '/website',
     },
     {
       image: Buildings,
       alt: 'UX Design',
       name: t('packages.ux.name'),
       description: t('packages.ux.description'),
+      link: '/website',
     },
   ];
 
@@ -51,7 +54,7 @@ const Prices = async () => {
                 {pkg.description}
               </p>
               <div className='mt-7'>
-                <Link href='/website' className='inline-flex w-full justify-center rounded-full bg-orange-700 px-5 py-3 font-poppins font-bold text-white transition-colors hover:bg-orange-800'>{t('button_text')}</Link>
+                <Link href={pkg.link} className='inline-flex w-full justify-center rounded-full bg-orange-700 px-5 py-3 font-poppins font-bold text-white transition-colors hover:bg-orange-800'>{t('button_text')}</Link>
               </div>
               </div>
             </article>

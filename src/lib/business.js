@@ -7,7 +7,7 @@ export const BUSINESS = {
   email: 'info@grlab.hu',
   emailHref: 'mailto:info@grlab.hu',
   streetAddress: 'Galgóczi Erzsébet utca 14',
-  postalCode: '9013',
+  postalCode: '9012',
   locality: 'Győr',
   region: 'Győr-Moson-Sopron',
   country: 'HU',
