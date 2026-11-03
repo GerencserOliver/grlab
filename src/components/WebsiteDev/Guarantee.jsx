@@ -2,13 +2,15 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCheck, faComments, faLifeRing } from '@fortawesome/free-solid-svg-icons';
 import Office from '../../images/Laptop in an office illustrating website development.webp';
 import Link from 'next/link';
-import { getTranslations, getMessages } from 'next-intl/server';
+import { getTranslations } from 'next-intl/server';
 import Image from 'next/image';
+
+const POINT_ICONS = [faCheck, faComments, faLifeRing];
 
 const Guarantee = async () => {
   const t = await getTranslations('guarantee');
-  const messages = await getMessages();
-  const points = messages?.guarantee?.points || [];
+  const rawPoints = t.raw('points');
+  const points = Array.isArray(rawPoints) ? rawPoints : [];
 
   return (
     <section className="flex flex-col items-center justify-center bg-[#102a2d] md:flex-row">
@@ -21,9 +23,9 @@ const Guarantee = async () => {
           {t('description')}
         </p>
         <ul className="mt-2 grid w-full gap-3 text-sm text-[#dce9df] sm:grid-cols-3 md:text-base">
-          {Array.isArray(points) && points.map((point, index) => (
-            <li key={index} className="flex flex-col gap-2 rounded-xl border border-[#426b6b] p-3 items-center justify-center text-center">
-              <FontAwesomeIcon icon={[faCheck, faComments, faLifeRing][index]} className="text-orange-300" />
+          {points.map((point, index) => (
+            <li key={point} className="flex flex-col gap-2 rounded-xl border border-[#426b6b] p-3 items-center justify-center text-center">
+              <FontAwesomeIcon icon={POINT_ICONS[index] ?? faCheck} className="text-orange-300" aria-hidden="true" />
               <span className="hyphens-auto text-center">{point}</span>
             </li>
           ))}
@@ -33,7 +35,7 @@ const Guarantee = async () => {
         </Link>
       </div>
       <div className="scroll-in order-1 h-72 w-full overflow-hidden sm:h-96 md:order-1 md:h-140 md:w-1/2">
-        <Image src={Office} alt={t('imageAlt')} loading="lazy" className="h-full w-full object-cover" />
+        <Image src={Office} alt={t('imageAlt')} loading="lazy" sizes="(min-width: 768px) 50vw, 100vw" className="h-full w-full object-cover" />
       </div>
     </section>
   );

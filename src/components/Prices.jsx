@@ -23,7 +23,6 @@ const Prices = async () => {
     },
     {
       image: Buildings,
-      alt: 'UX Design',
       name: t('packages.ux.name'),
       description: t('packages.ux.description'),
       link: '/website',
@@ -45,7 +44,8 @@ const Prices = async () => {
         <div className='mt-12 grid grid-cols-1 gap-5 scroll-in md:grid-cols-3'>
           {packages.map((pkg) => (
             <article key={pkg.name} className='group flex h-full flex-col overflow-hidden rounded-2xl border border-[#dfe7e1] bg-white transition-shadow hover:shadow-xl'>
-              <Image src={pkg.image} alt={pkg.name} loading='lazy' className='aspect-video w-full object-cover' />
+              {/* Decorative illustration: the adjacent heading already names the service, so an empty alt avoids a duplicate announcement. */}
+              <Image src={pkg.image} alt='' loading='lazy' sizes='(min-width: 768px) 33vw, 100vw' className='aspect-video w-full object-cover' />
               <div className='flex flex-1 flex-col p-7'>
               <h3 className='font-poppins text-2xl font-bold text-[#102a2d] md:text-3xl'>
                 {pkg.name}
@@ -54,7 +54,13 @@ const Prices = async () => {
                 {pkg.description}
               </p>
               <div className='mt-7'>
-                <Link href={pkg.link} className='inline-flex w-full justify-center rounded-full bg-orange-700 px-5 py-3 font-poppins font-bold text-white transition-colors hover:bg-orange-800'>{t('button_text')}</Link>
+                <Link
+                  href={pkg.link}
+                  aria-label={`${t('button_text')}: ${pkg.name}`}
+                  className='inline-flex w-full justify-center rounded-full bg-orange-700 px-5 py-3 font-poppins font-bold text-white transition-colors hover:bg-orange-800'
+                >
+                  {t('button_text')}
+                </Link>
               </div>
               </div>
             </article>
