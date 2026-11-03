@@ -1,20 +1,63 @@
 import CTA from '../../components/CTA';
 import ScrollAnimation from '../../components/ScrollAnimation';
 import IntroAnimation from '../../components/IntroAnimation';
+import JsonLd from '../../components/JsonLd';
 import Projects from '../../components/Portfolio/Projects';
 import Link from 'next/link';
 import { getTranslations } from 'next-intl/server';
-import { buildPageMetadata } from '../../lib/seo';
+import { PROJECTS } from '../../lib/projects';
+import {
+  SITE_URL,
+  ORGANIZATION_ID,
+  buildPageMetadata,
+  buildPageJsonLd,
+} from '../../lib/seo';
+
+const PATH = '/portfolio';
 
 export async function generateMetadata() {
-  return buildPageMetadata('portfolio', '/portfolio');
+  return buildPageMetadata('portfolio', PATH);
 }
 
 const Portfolio = async () => {
-  const t = await getTranslations('portfolio');
+  const [t, tp, tn] = await Promise.all([
+    getTranslations('portfolio'),
+    getTranslations('projects'),
+    getTranslations('nav'),
+  ]);
+
+  const listId = `${SITE_URL}${PATH}#projects`;
+
+  const jsonLd = await buildPageJsonLd({
+    path: PATH,
+    key: 'portfolio',
+    breadcrumbLabel: tn('portfolio'),
+    pageType: 'CollectionPage',
+    pageExtra: { mainEntity: { '@id': listId } },
+    nodes: [
+      {
+        '@type': 'ItemList',
+        '@id': listId,
+        name: t('title'),
+        numberOfItems: PROJECTS.length,
+        itemListElement: PROJECTS.map(({ key, url }, index) => ({
+          '@type': 'ListItem',
+          position: index + 1,
+          item: {
+            '@type': 'CreativeWork',
+            name: tp(`${key}.title`),
+            description: tp(`${key}.description`),
+            creator: { '@id': ORGANIZATION_ID },
+            ...(url && { url }),
+          },
+        })),
+      },
+    ],
+  });
 
   return (
     <div>
+      <JsonLd data={jsonLd} />
       <IntroAnimation />
       <ScrollAnimation />
       <section className='border-b border-[#dfe7e1] bg-[#f5f7f4]'>

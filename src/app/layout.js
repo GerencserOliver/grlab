@@ -5,9 +5,18 @@ import { getMessages, getTranslations } from 'next-intl/server';
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import ScrollToTop from "../components/ScrollToTop";
+import JsonLd from "../components/JsonLd";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
-import { SITE_URL, SITE_NAME, buildPageMetadata } from "../lib/seo";
+import {
+  SITE_URL,
+  SITE_NAME,
+  ORGANIZATION_ID,
+  WEBSITE_ID,
+  BUSINESS,
+  SERVICE_AREA,
+  buildPageMetadata,
+} from "../lib/seo";
 
 const poppinsMedium = localFont({
   src: "../fonts/Poppins-Medium.ttf",
@@ -39,9 +48,81 @@ export async function generateMetadata() {
   };
 }
 
-// Serialise JSON-LD safely: a literal "</script>" inside any string value
-// would otherwise terminate the tag early.
-const serializeJsonLd = (data) => JSON.stringify(data).replace(/</g, "\\u003c");
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "ProfessionalService",
+      "@id": ORGANIZATION_ID,
+      "name": SITE_NAME,
+      "url": SITE_URL,
+      "image": `${SITE_URL}/logo.png`,
+      "logo": `${SITE_URL}/logo.png`,
+      "description": "Egyedi weboldalak, webalkalmazások és digitális üzleti rendszerek vállalkozásoknak Győrben és Magyarországon.",
+      "telephone": BUSINESS.phone,
+      "email": BUSINESS.email,
+      "priceRange": "$$",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": BUSINESS.streetAddress,
+        "postalCode": BUSINESS.postalCode,
+        "addressLocality": BUSINESS.locality,
+        "addressRegion": BUSINESS.region,
+        "addressCountry": BUSINESS.country
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 47.6875,
+        "longitude": 17.6504
+      },
+      "areaServed": SERVICE_AREA,
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "customer service",
+        "telephone": BUSINESS.phone,
+        "email": BUSINESS.email,
+        "areaServed": "HU",
+        "availableLanguage": ["hu", "en"]
+      },
+      "sameAs": [
+        "https://www.google.com/search?kgmid=/g/11p1g_qc4r&q=GRLab"
+      ],
+      "knowsAbout": [
+        "Weboldal készítés",
+        "Mobilalkalmazás fejlesztés",
+        "Google Cégprofil készítés",
+        "Egyedi szoftverfejlesztés",
+        "Digitális üzleti rendszerek",
+        "Webshop fejlesztés",
+        "SEO optimalizálás",
+        "UX/UI tervezés"
+      ],
+      "serviceType": [
+        "Weboldal készítés",
+        "Webshop fejlesztés",
+        "Egyedi szoftverfejlesztés",
+        "Mobilalkalmazás fejlesztés",
+        "Technikai SEO és Google Cégprofil",
+        "UX/UI tervezés"
+      ],
+      "foundingDate": "2026-09-01",
+      "foundingLocation": {
+        "@type": "Place",
+        "name": "Győr, Hungary"
+      },
+      "openingHours": "Mo-Fr 08:00-17:00",
+      "keywords": "weboldal készítés Győr, webfejlesztés, mobilalkalmazás fejlesztés, digitális üzleti rendszerek, webdesign, UX/UI tervezés, SEO optimalizálás, webshop fejlesztés, google cégprofil készítés, egyedi szoftverfejlesztés, keresőoptimalizálás"
+    },
+    {
+      "@type": "WebSite",
+      "@id": WEBSITE_ID,
+      "url": SITE_URL,
+      "name": SITE_NAME,
+      "inLanguage": "hu-HU",
+      "publisher": { "@id": ORGANIZATION_ID }
+    }
+  ]
+};
 
 export default async function RootLayout({ children }) {
   const [messages, t] = await Promise.all([
@@ -49,104 +130,13 @@ export default async function RootLayout({ children }) {
     getTranslations('nav'),
   ]);
 
-  const ORGANIZATION_ID = `${SITE_URL}/#organization`;
-
-  // Exact street address / postal code are not in the codebase. Provide them
-  // via environment variables so no placeholder data is ever published to
-  // Google. They are omitted from the markup until set.
-  const streetAddress = process.env.BUSINESS_STREET_ADDRESS;
-  const postalCode = process.env.BUSINESS_POSTAL_CODE;
-
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "ProfessionalService",
-        "@id": ORGANIZATION_ID,
-        "name": SITE_NAME,
-        "url": SITE_URL,
-        "image": `${SITE_URL}/logo.png`,
-        "logo": `${SITE_URL}/logo.png`,
-        "description": "Egyedi weboldalak, webalkalmazások és digitális üzleti rendszerek vállalkozásoknak Győrben és Magyarországon.",
-        "telephone": "+36704316723",
-        "email": "info@grlab.hu",
-        "priceRange": "$$",
-        "address": {
-          "@type": "PostalAddress",
-          ...(streetAddress && { "streetAddress": streetAddress }),
-          ...(postalCode && { "postalCode": postalCode }),
-          "addressLocality": "Győr",
-          "addressRegion": "Győr-Moson-Sopron",
-          "addressCountry": "HU"
-        },
-        "geo": {
-          "@type": "GeoCoordinates",
-          "latitude": 47.6875,
-          "longitude": 17.6504
-        },
-        "areaServed": [
-          { "@type": "City", "name": "Győr" },
-          { "@type": "City", "name": "Budapest" },
-          { "@type": "Country", "name": "Magyarország" }
-        ],
-        "contactPoint": {
-          "@type": "ContactPoint",
-          "contactType": "customer service",
-          "telephone": "+36704316723",
-          "email": "info@grlab.hu",
-          "areaServed": "HU",
-          "availableLanguage": ["hu", "en"]
-        },
-        "sameAs": [
-          "https://www.google.com/search?kgmid=/g/11p1g_qc4r&q=GRLab"
-        ],
-        "knowsAbout": [
-          "Weboldal készítés",
-          "Mobilalkalmazás fejlesztés",
-          "Google Cégprofil készítés",
-          "Egyedi szoftverfejlesztés",
-          "Digitális üzleti rendszerek",
-          "Webshop fejlesztés",
-          "SEO optimalizálás",
-          "UX/UI tervezés"
-        ],
-        "serviceType": [
-          "Weboldal készítés",
-          "Webshop fejlesztés",
-          "Egyedi szoftverfejlesztés",
-          "Mobilalkalmazás fejlesztés",
-          "Technikai SEO és Google Cégprofil",
-          "UX/UI tervezés"
-        ],
-        "foundingDate": "2026-09-01",
-        "foundingLocation": {
-          "@type": "Place",
-          "name": "Győr, Hungary"
-        },
-        "openingHours": "Mo-Fr 08:00-17:00",
-        "keywords": "weboldal készítés Győr, webfejlesztés, mobilalkalmazás fejlesztés, digitális üzleti rendszerek, webdesign, UX/UI tervezés, SEO optimalizálás, webshop fejlesztés, google cégprofil készítés, egyedi szoftverfejlesztés, keresőoptimalizálás"
-      },
-      {
-        "@type": "WebSite",
-        "@id": `${SITE_URL}/#website`,
-        "url": SITE_URL,
-        "name": SITE_NAME,
-        "inLanguage": "hu-HU",
-        "publisher": { "@id": ORGANIZATION_ID }
-      }
-    ]
-  };
-
   return (
     <html 
       lang="hu" 
       className={`${poppinsMedium.variable} h-full antialiased`}
     >
       <head>
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: serializeJsonLd(jsonLd) }}
-        />
+        <JsonLd data={jsonLd} />
       </head>
       <body className="min-h-full flex flex-col font-poppins">
         <NextIntlClientProvider messages={messages}>
