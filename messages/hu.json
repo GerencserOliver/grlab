@@ -12,13 +12,15 @@
     "closeMenu": "Menü bezárása",
     "languageLabel": "Nyelvválasztó",
     "logoAlt": "GRLab logó",
-    "skipToContent": "Ugrás a tartalomra"
+    "skipToContent": "Ugrás a tartalomra",
+    "callUs": "Hívj minket"
   },
   "footer": {
     "navLabel": "Lábléc navigáció",
     "rights": "Minden jog fenntartva.",
     "tagline": "Weboldal készítés és szoftverfejlesztés Győrből, vállalkozásoknak.",
-    "emailLabel": "E-mail küldése a GRLab-nak"
+    "emailLabel": "E-mail küldése a GRLab-nak",
+    "callLabel": "Hívás a GRLab-nak"
   },
   "hero": {
     "subtitle": "Webfejlesztés kis- és középvállalkozásoknak | Győr",
@@ -106,7 +108,7 @@
   "cta": {
     "eyebrow": "Következő lépés",
     "title": "Beszéljük át az ötletedet!",
-    "description": "Írd meg röviden, mire lenne szükséged. Megnézzük, hogyan lehet az elképzelésből működő digitális megoldás.",
+    "description": "Írd meg röviden, mire lenne szükséged. Megnézzük, hogyan lehet az elképzelésből működő digitális megoldás. Az első konzultáció ingyenes.",
     "namePlaceholder": "Teljes név",
     "emailPlaceholder": "E-mail cím",
     "messagePlaceholder": "Miben segíthetünk?",
@@ -116,9 +118,11 @@
     "imageAlt": "Digitális projekt egyeztetése laptopon",
     "submitButton": "Üzenet küldése",
     "sending": "Küldés folyamatban...",
-    "successMessage": "Üzenet sikeresen elküldve!",
-    "failureMessage": "Az üzenet küldése nem sikerült.",
-    "errorMessage": "Hiba: "
+    "successMessage": "Köszönjük, üzeneted megkaptuk! Hamarosan jelentkezünk.",
+    "failureMessage": "Az üzenet küldése nem sikerült. Írj közvetlenül az info@grlab.hu címre, vagy hívj minket.",
+    "errorMessage": "Hiba: ",
+    "phonePrompt": "Inkább telefonálnál?",
+    "phoneAction": "Hívj minket:"
   },
   "wdhero": {
     "subtitle": "Weboldal készítés és fejlesztés | Gyors, modern, egyedi",
@@ -243,7 +247,7 @@
       },
       {
         "question": "Győrön kívül is vállaltok projekteket?",
-        "answer": "Igen. Győri csapatként a környékbeli vállalkozásokkal személyesen is egyeztetünk, az ország többi részén pedig online dolgozunk együtt, így a távolság nem akadálya a közös munkának."
+        "answer": "Igen. A győri ügyfelekkel személyesen és online is tudunk egyeztetni, az ország többi részén élő ügyfelekkel pedig online tartjuk a megbeszéléseket, így a távolság nem akadálya a közös munkának."
       },
       {
         "question": "Csak weboldalakat készítetek?",
@@ -283,6 +287,7 @@
   },
   "projects": {
     "label": "Projekt",
+    "imageAlt": "{title} – képernyőkép {number}",
     "szelvedo": {
       "title": "Szélvédőjavító",
       "description": "Egyéni vállalkozó számára készített, mobil eszközökre optimalizált bemutatkozó weboldal. A weboldalt keresőoptimalizáltan fejlesztettük, a Google Cégprofilt pedig mi hoztuk létre és kezeljük, így a vállalkozás hirdetési költség nélkül is jól látható a releváns helyi keresésekben."
@@ -367,7 +372,7 @@
     "heading": "Építsünk stabil online jelenlétet",
     "description": "A cél nem az, hogy minél több marketinges kifejezést használjunk, hanem hogy a vállalkozásod számára működő digitális alapot építsünk: gyors weboldalt, megfelelő technikai felépítést, Google Cégprofilt és szükség esetén egyedi üzleti rendszert.",
     "cta": "Beszéljük át",
-    "imageAlt": "Konkurenciaelemzést és piaci pozícionálást szemléltető illusztráció"
+    "imageAlt": "Munkaasztal laptoppal és jegyzetekkel weboldal- és online jelenlét-fejlesztés közben"
   },
   "seoProcess": {
     "eyebrow": "Mérhető alapok",
@@ -434,7 +439,9 @@
     "title": "Beszéljük át a következő digitális projektedet",
     "description": "Írd meg röviden, milyen problémát szeretnél megoldani. Segítünk tisztázni a lehetőségeket, a szükséges funkciókat és a következő lépést.",
     "cardEyebrow": "Közvetlen kapcsolat",
-    "cardText": "Röviden válaszolunk, és egyeztetünk egy első beszélgetést a projektről."
+    "cardEmailLabel": "E-mail",
+    "cardPhoneLabel": "Telefon",
+    "cardText": "Röviden válaszolunk, és egyeztetünk egy első, ingyenes beszélgetést a projektről."
   },
   "seoOptimization": {
     "home": {
