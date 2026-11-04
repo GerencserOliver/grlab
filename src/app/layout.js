@@ -27,7 +27,7 @@ const poppinsMedium = localFont({
 export const viewport = {
   width: "device-width",
   initialScale: 1,
-  themeColor: "#0f766e",
+  themeColor: "#0a66c2",
 };
 
 export async function generateMetadata() {

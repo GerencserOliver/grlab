@@ -8,10 +8,14 @@ import {
   faLightbulb,
 } from '@fortawesome/free-solid-svg-icons';
 
+// Brand gradient: logo blue -> teal -> green, every stop >= 5:1 against white text.
+const BRAND_GRADIENT = 'bg-linear-to-br from-[#0a62b8] via-[#0b7a8c] to-[#0f6b57]';
+
 // Complete class strings (not concatenated) so Tailwind can detect them.
 export const ACCENTS = {
   teal: 'bg-linear-to-br from-[#0f766e] via-[#0b5d57] to-[#102a2d]',
-  orange: 'bg-linear-to-br from-orange-700 via-[#9a3412] to-[#102a2d]',
+  brand: BRAND_GRADIENT,
+  orange: BRAND_GRADIENT, // legacy key (used by existing posts); renders the brand gradient
   slate: 'bg-linear-to-br from-[#315b5d] via-[#1e4044] to-[#102a2d]',
 };
 

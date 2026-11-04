@@ -1,7 +1,72 @@
 @import "tailwindcss";
 
+/* ---------------------------------------------------------------------------
+   GRLab brand palette
+   Sampled from src/images/grlab_nav_logo.webp:
+     blue   #157fdf  -> azure #1999eb -> cyan #13c1f8   (the "G")
+     green  #42d79c  -> #5edb93 -> #8df08c               (the "R")
+     navy   #1d527e                                      (the braces)
+   The bright logo tones are too light for text on white (#157fdf is 4.1:1), so
+   the interactive primary is the darkened step 700 (#0a66c2: 5.7:1 on white,
+   5.3:1 on the beige section background). The bright tones are used for
+   gradients, rings and accents on dark surfaces. Contrast of every pair used
+   in the UI was checked against WCAG AA.
+   Change a value here and the whole site follows.
+   --------------------------------------------------------------------------- */
+:root {
+  --brand-50: #f0f8ff;
+  --brand-100: #dcefff;
+  --brand-200: #b9defe;
+  --brand-300: #5ccff9; /* accent text/links on dark surfaces (8.4:1 on #102a2d) */
+  --brand-400: #13c1f8; /* logo cyan */
+  --brand-500: #1999eb; /* logo azure */
+  --brand-600: #157fdf; /* logo blue */
+  --brand-700: #0a66c2; /* primary: buttons, links, eyebrows on light (white text 5.7:1) */
+  --brand-800: #0a56a8; /* hover */
+  --brand-900: #0b4585;
+  --brand-950: #083a70;
+
+  --brand-green-300: #8df08c;
+  --brand-green-400: #5edb93;
+  --brand-green-500: #42d79c; /* logo green */
+  --brand-green-700: #0f766e; /* readable green-teal on light (5.5:1 on white) */
+}
+
 @theme {
   --font-sans: var(--font-poppins), sans-serif;
+
+  /* Semantic names for new code: bg-brand-700, text-brand-300, from-brand-green-500 ... */
+  --color-brand-50: var(--brand-50);
+  --color-brand-100: var(--brand-100);
+  --color-brand-200: var(--brand-200);
+  --color-brand-300: var(--brand-300);
+  --color-brand-400: var(--brand-400);
+  --color-brand-500: var(--brand-500);
+  --color-brand-600: var(--brand-600);
+  --color-brand-700: var(--brand-700);
+  --color-brand-800: var(--brand-800);
+  --color-brand-900: var(--brand-900);
+  --color-brand-950: var(--brand-950);
+  --color-brand-green-300: var(--brand-green-300);
+  --color-brand-green-400: var(--brand-green-400);
+  --color-brand-green-500: var(--brand-green-500);
+  --color-brand-green-700: var(--brand-green-700);
+
+  /* Legacy alias: the components were written with Tailwind's `orange-*` utilities
+     (bg-orange-700, text-orange-300, ring-orange-300 ...). Re-pointing the orange
+     scale at the brand scale re-colours all of them at once. Prefer `brand-*`
+     in new code. */
+  --color-orange-50: var(--brand-50);
+  --color-orange-100: var(--brand-100);
+  --color-orange-200: var(--brand-200);
+  --color-orange-300: var(--brand-300);
+  --color-orange-400: var(--brand-400);
+  --color-orange-500: var(--brand-500);
+  --color-orange-600: var(--brand-600);
+  --color-orange-700: var(--brand-700);
+  --color-orange-800: var(--brand-800);
+  --color-orange-900: var(--brand-900);
+  --color-orange-950: var(--brand-950);
 }
 
 .wrapper {
@@ -32,7 +97,7 @@ li {
   position: fixed;
   width: 100%;
   height: 100%;
-  background-color: #0f766e;
+  background-image: linear-gradient(135deg, var(--brand-700), var(--brand-green-700));
   pointer-events: none;
   animation: fadeOut 0.7s ease-in-out forwards;
 }
