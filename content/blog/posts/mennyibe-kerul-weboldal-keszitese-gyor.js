@@ -13,11 +13,11 @@ const post = {
     keywords: ['weboldal készítés Győr', 'weboldal ára', 'weboldal készítés ára', 'céges weboldal költség', 'webfejlesztés Győr'],
     tags: ['Weboldal készítés', 'Árak', 'Győr'],
     body: `
-Ha weboldalt szeretnél, szinte biztosan ez az első kérdésed: mennyibe kerül? A válasz kellemetlenül hangzik, de őszinte: attól függ. Két weboldal ára között nagyságrendi különbség is lehet, és ez nem feltétlenül átverés – egyszerűen két teljesen más feladatról van szó. Ebben a cikkben végigvesszük, mitől függ a weboldal készítés ára, mire figyelj az ajánlatnál, és hogyan készül fel az első egyeztetésre, hogy ténylegesen összehasonlítható ajánlatokat kapj.
+Ha weboldalt szeretnél, szinte biztosan ez az első kérdésed: mennyibe kerül? A válasz kellemetlenül hangzik, de őszinte: attól függ. Két weboldal ára között nagyságrendi különbség is lehet, és ez nem feltétlenül átverés – egyszerűen két teljesen más feladatról van szó. Ebben a cikkben végigvesszük, mitől függ a weboldal készítés ára, mire figyelj az ajánlatnál, és hogyan készülj fel az első egyeztetésre, hogy valóban összehasonlítható ajánlatokat kapj.
 
 ## Miért nincs „fix ára” egy weboldalnak?
 
-Egy weboldal nem polcról levéve vásárolt termék, hanem munka: tervezés, grafika, fejlesztés, tesztelés, élesítés. Egy négyoldalas bemutatkozó oldal és egy foglalási rendszerrel, felhasználói fiókokkal és admin felülettel bővített webalkalmazás egyaránt „weboldal”, de a munkaórák száma jelentősen eltér. Ezért a komoly fejlesztők nem listárát, hanem a feladathoz igazított ajánlatot adnak.
+Egy weboldal nem polcról levett termék, hanem munka: tervezés, grafika, fejlesztés, tesztelés, élesítés. Egy négyoldalas bemutatkozó oldal és egy foglalási rendszerrel, felhasználói fiókokkal és admin felülettel bővített webalkalmazás egyaránt „weboldal”, de a munkaórák száma jelentősen eltér. Ezért a komoly fejlesztők nem listaárat, hanem a feladathoz igazított ajánlatot adnak.
 
 ## Mitől függ a weboldal ára?
 
@@ -37,7 +37,7 @@ Három tipikus út van, és mindegyiknek megvan a helye.
 - **Sablonra épülő oldal:** olcsóbb kiindulás, de a testreszabás határai hamar előjönnek, és sok sablon felesleges kódot cipel.
 - **Egyedi fejlesztés:** a céljaidhoz és a folyamataidhoz igazított, gyors és jól bővíthető megoldás – nagyobb kezdő befektetéssel, de hosszú távon rugalmasabb.
 
-Nincs univerzálisan „jobb” út. Egy helyi szolgáltatónak, aki az első online jelenlétét építi, elegendgő lehet egy jól felépített, egyszerű oldal; egy növő cégnek, amelynek saját rendszerre van szüksége, az egyedi fejlesztés térül meg.
+Nincs univerzálisan „jobb” út. Egy helyi szolgáltatónak, aki az első online jelenlétét építi, elegendő lehet egy jól felépített, egyszerű oldal; egy növekvő cégnek, amelynek saját rendszerre van szüksége, az egyedi fejlesztés térül meg.
 
 ## Rejtett költségek, amelyekre érdemes rákérdezni
 
