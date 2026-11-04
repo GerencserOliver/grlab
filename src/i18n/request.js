@@ -9,15 +9,18 @@ export default getRequestConfig(async () => {
     locale = 'hu';
   }
 
-  // Legal copy (privacy policy + consent strings) lives in its own file so
-  // it can be reviewed/updated independently of the marketing copy.
-  const [base, legal] = await Promise.all([
+  // Messages are split by concern so they can be edited independently:
+  //   <locale>.json        marketing / page copy
+  //   legal.<locale>.json  privacy policy + consent strings
+  //   blog.<locale>.json   blog UI + 404 page strings (blog post bodies live in content/blog)
+  const [base, legal, blog] = await Promise.all([
     import(`../../messages/${locale}.json`),
     import(`../../messages/legal.${locale}.json`),
+    import(`../../messages/blog.${locale}.json`),
   ]);
 
   return {
     locale,
-    messages: { ...base.default, ...legal.default }
+    messages: { ...base.default, ...legal.default, ...blog.default }
   };
 });
