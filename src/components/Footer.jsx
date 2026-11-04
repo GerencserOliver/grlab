@@ -13,6 +13,7 @@ const links = [
   { key: 'website', href: '/website' },
   { key: 'seo', href: '/seo' },
   { key: 'portfolio', href: '/portfolio' },
+  { key: 'blog', href: '/blog' },
   { key: 'contact', href: '/contact' },
 ];
 
@@ -21,8 +22,12 @@ const Footer = () => {
   const t = useTranslations('nav');
   const tf = useTranslations('footer');
   const tp = useTranslations('privacy');
+  const tb = useTranslations('blog');
   const locale = useLocale();
   const currentYear = new Date().getFullYear();
+
+  const label = (key) => (key === 'blog' ? tb('navLabel') : t(key));
+  const isActive = (href) => pathname === href || (href === '/blog' && pathname?.startsWith('/blog/'));
 
   const changeLanguage = (newLocale) => {
     document.cookie = `NEXT_LOCALE=${newLocale}; path=/; max-age=31536000; SameSite=Lax`;
@@ -45,19 +50,19 @@ const Footer = () => {
           <nav aria-label={tf('navLabel')}>
             <ul className="flex flex-wrap items-center gap-2">
               {links.map((link) => {
-                const isActive = pathname === link.href;
+                const active = isActive(link.href);
                 return (
                   <li key={link.key}>
                     <Link
                       href={link.href}
-                      aria-current={isActive ? 'page' : undefined}
+                      aria-current={active ? 'page' : undefined}
                       className={`rounded-lg px-4 py-2.5 font-poppins text-sm font-semibold transition-colors ${
-                        isActive
+                        active
                           ? 'bg-[#102a2d] text-white'
                           : 'text-[#102a2d] hover:bg-[#eef4ef]'
                       }`}
                     >
-                      {t(link.key)}
+                      {label(link.key)}
                     </Link>
                   </li>
                 );
