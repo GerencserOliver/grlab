@@ -110,26 +110,28 @@ const BlogPost = async ({ params }) => {
       <ReadingProgress />
 
       <header className={`relative overflow-hidden ${ACCENTS[post.accent] ?? ACCENTS.teal}`}>
-        <div className='pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_18%_22%,rgba(255,255,255,0.18),transparent_45%)]' aria-hidden='true' />
-        <div className='pointer-events-none absolute inset-0 opacity-[0.1] bg-[radial-gradient(circle,#fff_1.5px,transparent_1.5px)] bg-size-[24px_24px]' aria-hidden='true' />
+        {/* Dark scrim + a gentle highlight keep all header text above WCAG AA (4.5:1) on every part of the gradient. */}
+        <div className='pointer-events-none absolute inset-0 bg-black/25' aria-hidden='true' />
+        <div className='pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_18%_22%,rgba(255,255,255,0.1),transparent_45%)]' aria-hidden='true' />
+        <div className='pointer-events-none absolute inset-0 opacity-[0.08] bg-[radial-gradient(circle,#fff_1.5px,transparent_1.5px)] bg-size-[24px_24px]' aria-hidden='true' />
         <div className='relative mx-auto max-w-5xl px-6 py-14 md:px-10 md:py-24'>
           <nav aria-label={t('breadcrumbLabel')}>
-            <ol className='flex flex-wrap items-center gap-2 text-sm font-semibold text-white/85'>
-              <li><Link href='/' className='hover:text-white hover:underline'>{tn('home')}</Link></li>
+            <ol className='flex flex-wrap items-center gap-2 text-sm font-semibold text-white'>
+              <li><Link href='/' className='underline-offset-4 hover:underline'>{tn('home')}</Link></li>
               <li aria-hidden='true'>/</li>
-              <li><Link href={BLOG_PATH} className='hover:text-white hover:underline'>{t('navLabel')}</Link></li>
+              <li><Link href={BLOG_PATH} className='underline-offset-4 hover:underline'>{t('navLabel')}</Link></li>
             </ol>
           </nav>
-          <ul className='mt-8 flex flex-wrap gap-2' aria-label='Tags'>
+          <ul className='mt-8 flex flex-wrap gap-2'>
             {post.tags?.map((tag) => (
-              <li key={tag} className='rounded-full bg-white/15 px-3 py-1 text-xs font-bold uppercase tracking-wider text-white'>{tag}</li>
+              <li key={tag} className='rounded-full bg-black/30 px-3 py-1 text-xs font-bold uppercase tracking-wider text-white'>{tag}</li>
             ))}
           </ul>
           <h1 className='mt-5 font-poppins text-3xl font-extrabold leading-tight text-white sm:text-4xl md:text-6xl'>
             {post.title}
           </h1>
-          <p className='mt-6 max-w-3xl text-lg leading-relaxed text-white/90 md:text-xl'>{post.excerpt}</p>
-          <p className='mt-8 text-sm font-semibold text-white/90'>
+          <p className='mt-6 max-w-3xl text-lg leading-relaxed text-white md:text-xl'>{post.excerpt}</p>
+          <p className='mt-8 text-sm font-semibold text-white'>
             {t('authorName')}
             <span aria-hidden='true'> · </span>
             <time dateTime={post.publishedAt}>{dateLabel}</time>

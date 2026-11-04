@@ -111,6 +111,17 @@ li {
   }
 }
 
+/* Keyboard focus indicator that is visible on ANY surface (WCAG 2.4.7 / 1.4.11):
+   a brand-blue outline separated from the element by a white gap, so it reads on
+   white, beige, the dark #102a2d sections and the gradient covers alike. It is
+   un-layered on purpose, so it wins over the per-component `focus:outline-none`
+   / `focus:ring-*` utilities. Only shown for keyboard focus (:focus-visible). */
+:where(a, button, input, textarea, select, summary, [tabindex]):focus-visible {
+  outline: 2px solid var(--brand-700);
+  outline-offset: 2px;
+  box-shadow: 0 0 0 2px #fff;
+}
+
 /* Never hide content behind a JS-driven reveal when scripting is unavailable
    (crawlers, no-JS, print) or when the user prefers reduced motion. */
 @media (scripting: none) {
