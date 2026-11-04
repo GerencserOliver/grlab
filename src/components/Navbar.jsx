@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import logo from '../images/GR-website-design-and-seo-logo.webp';
+import logo from '../images/grlab_nav_logo.webp';
 import { useEffect, useState } from 'react';
 import { useTranslations, useLocale } from 'next-intl';
 import Image from 'next/image';
@@ -43,7 +43,7 @@ const Navbar = () => {
     <header className='sticky top-0 z-50 w-full border-b border-[#dfe7e1] bg-white/95 px-5 backdrop-blur md:px-10'>
       <nav className='mx-auto flex h-24 max-w-360 items-center justify-between' aria-label={t('ariaLabel')}>
         <Link href='/' aria-label={t('home')}>
-          <Image src={logo} alt={t('logoAlt')} className='w-16' fetchPriority='high' loading="eager" />
+          <Image src={logo} alt={t('logoAlt')} className='h-auto w-16' fetchPriority='high' loading="eager" />
         </Link>
         <div className='flex items-center gap-1 md:hidden'>
           <a

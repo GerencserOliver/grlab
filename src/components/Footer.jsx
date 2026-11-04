@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import Logo from '../images/GR-website-design-and-seo-logo.webp';
+import Logo from '../images/grlab_nav_logo.webp';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons';
 import { useTranslations, useLocale } from 'next-intl';
@@ -43,7 +43,7 @@ const Footer = () => {
               <Image
                 src={Logo}
                 alt={t('logoAlt')}
-                className="w-20 hover:opacity-90 transition-opacity"
+                className="h-auto w-20 hover:opacity-90 transition-opacity"
               />
             </Link>
           </div>
