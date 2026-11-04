@@ -18,6 +18,13 @@
 - [Referenciák](https://www.grlab.hu/portfolio): Referenciáink és korábbi munkáink.
 - [Kapcsolat](https://www.grlab.hu/contact): Ingyenes első konzultáció és ajánlatkérés.
 
+## Blog
+
+- [Blog](https://www.grlab.hu/blog): Gyakorlati cikkek weboldalról, helyi SEO-ról és szoftverfejlesztésről (magyarul és angolul).
+- [Mennyibe kerül egy weboldal készítése Győrben?](https://www.grlab.hu/blog/mennyibe-kerul-weboldal-keszitese-gyor)
+- [Google Cégprofil beállítása lépésről lépésre](https://www.grlab.hu/blog/google-cegprofil-beallitas-helyi-seo-gyor)
+- [Egyedi szoftverfejlesztés vagy kész rendszer?](https://www.grlab.hu/blog/egyedi-szoftverfejlesztes-vagy-kesz-rendszer)
+
 ## Jogi információk
 
 - [Adatkezelési tájékoztató](https://www.grlab.hu/adatkezelesi-tajekoztato)

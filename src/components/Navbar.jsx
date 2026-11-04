@@ -14,6 +14,7 @@ const links = [
   { key: 'website', href: '/website' },
   { key: 'seo', href: '/seo' },
   { key: 'portfolio', href: '/portfolio' },
+  { key: 'blog', href: '/blog' },
   { key: 'contact', href: '/contact' },
 ];
 
@@ -21,8 +22,13 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const pathname = usePathname();
   const t = useTranslations('nav');
+  const tb = useTranslations('blog');
   const locale = useLocale();
   const callLabel = `${t('callUs')}: ${BUSINESS.phoneDisplay}`;
+
+  const label = (key) => (key === 'blog' ? tb('navLabel') : t(key));
+  // The Blog item stays highlighted on individual posts (/blog/<slug>) too.
+  const isActive = (href) => pathname === href || (href === '/blog' && pathname?.startsWith('/blog/'));
 
   useEffect(() => {
     setIsOpen(false);
@@ -63,10 +69,10 @@ const Navbar = () => {
             <Link
               key={link.key}
               href={link.href}
-              aria-current={pathname === link.href ? 'page' : undefined}
-              className={`rounded-lg px-3 py-3 font-poppins text-sm font-semibold transition-colors lg:px-4 ${pathname === link.href ? 'bg-[#102a2d] text-white' : 'text-[#102a2d] hover:bg-[#eef4ef]'}`}
+              aria-current={isActive(link.href) ? 'page' : undefined}
+              className={`rounded-lg px-2.5 py-3 font-poppins text-sm font-semibold transition-colors lg:px-4 ${isActive(link.href) ? 'bg-[#102a2d] text-white' : 'text-[#102a2d] hover:bg-[#eef4ef]'}`}
             >
-              {t(link.key)}
+              {label(link.key)}
             </Link>
           ))}
           <a
@@ -85,7 +91,7 @@ const Navbar = () => {
         <div id='mobile-navigation' className={`${isOpen ? 'flex' : 'hidden'} absolute left-0 top-24 w-full flex-col gap-2 border-b border-[#dfe7e1] bg-white p-5 shadow-lg md:hidden`}>
           <Link href='/' aria-current={pathname === '/' ? 'page' : undefined} className='rounded-lg px-4 py-3 font-semibold text-[#102a2d]'>{t('home')}</Link>
           {links.map((link) => (
-            <Link key={link.key} href={link.href} aria-current={pathname === link.href ? 'page' : undefined} className='rounded-lg px-4 py-3 font-semibold text-[#102a2d]'>{t(link.key)}</Link>
+            <Link key={link.key} href={link.href} aria-current={isActive(link.href) ? 'page' : undefined} className='rounded-lg px-4 py-3 font-semibold text-[#102a2d]'>{label(link.key)}</Link>
           ))}
           <a
             href={BUSINESS.phoneHref}
