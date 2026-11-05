@@ -11,21 +11,21 @@ const Offer = async () => {
   ]);
 
   return (
-    <section className='mt-8 flex flex-col items-center justify-center bg-[#102a2d] md:min-h-140 md:flex-row'>
+    <section className='mt-8 flex flex-col items-center justify-center bg-ink md:min-h-140 md:flex-row'>
       <div className='scroll-in container mx-auto order-2 flex flex-col p-8 text-white md:order-1 md:w-1/2 md:items-start md:px-16'>
-        <p className='mb-5 text-sm font-bold uppercase tracking-[0.18em] text-orange-300'>{t('eyebrow')}</p>
+        <p className='mb-5 text-sm font-bold uppercase tracking-[0.18em] text-brand-300'>{t('eyebrow')}</p>
         <h2 className='mb-6 mt-6 font-poppins text-3xl font-extrabold leading-tight text-white md:mt-0 md:text-left md:text-5xl'>
           {t('header')}
         </h2>
-        <p className='mb-6 font-poppins text-lg leading-relaxed text-[#dce9df] md:text-left md:text-xl'>
+        <p className='mb-6 font-poppins text-lg leading-relaxed text-soft md:text-left md:text-xl'>
           {t('description')}
         </p>
-        <Link href='/contact' className='mt-4 w-full rounded-full bg-orange-700 px-7 py-4 text-center font-poppins text-base font-bold text-white transition-colors hover:bg-orange-800 sm:w-auto'>{t('button')}</Link>
-        <p className='mt-5 text-sm text-[#dce9df]'>
+        <Link href='/contact' className='mt-4 w-full rounded-full bg-brand-700 px-7 py-4 text-center font-poppins text-base font-bold text-white transition-colors hover:bg-brand-800 sm:w-auto'>{t('button')}</Link>
+        <p className='mt-5 text-sm text-soft'>
           {tc('phonePrompt')}{' '}
           <a
             href={BUSINESS.phoneHref}
-            className='font-bold text-orange-300 underline decoration-orange-300/50 underline-offset-4 transition-colors hover:text-white'
+            className='font-bold text-brand-300 underline decoration-brand-300/50 underline-offset-4 transition-colors hover:text-white'
           >
             {tc('phoneAction')} {BUSINESS.phoneDisplay}
           </a>
