@@ -2,22 +2,23 @@
 
 /* ---------------------------------------------------------------------------
    GRLab brand palette
-   Sampled from src/images/grlab_nav_logo.webp:
+   Sampled from the official logo (public/logo.png, src/images/grlab_nav_logo.webp):
      blue   #157fdf  -> azure #1999eb -> cyan #13c1f8   (the "G")
      green  #42d79c  -> #5edb93 -> #8df08c               (the "R")
-     navy   #1d527e                                      (the braces)
+     navy   #0c1828                                      (the logo tile background)
    The bright logo tones are too light for text on white (#157fdf is 4.1:1), so
    the interactive primary is the darkened step 700 (#0a66c2: 5.7:1 on white,
-   5.3:1 on the beige section background). The bright tones are used for
+   5.3:1 on the light section background). The bright tones are used for
    gradients, rings and accents on dark surfaces. Contrast of every pair used
-   in the UI was checked against WCAG AA.
-   Change a value here and the whole site follows.
+   in the UI was checked against WCAG AA (and re-verified with axe-core).
+   Change a value here and the whole site follows: components use the semantic
+   utilities - bg-brand-700, text-ink, bg-surface-alt, border-line - never raw hex.
    --------------------------------------------------------------------------- */
 :root {
   --brand-50: #f0f8ff;
   --brand-100: #dcefff;
   --brand-200: #b9defe;
-  --brand-300: #5ccff9; /* accent text/links on dark surfaces (8.4:1 on #102a2d) */
+  --brand-300: #5ccff9; /* accent text/links on dark surfaces (9:1 on the dark ink) */
   --brand-400: #13c1f8; /* logo cyan */
   --brand-500: #1999eb; /* logo azure */
   --brand-600: #157fdf; /* logo blue */
@@ -29,13 +30,25 @@
   --brand-green-300: #8df08c;
   --brand-green-400: #5edb93;
   --brand-green-500: #42d79c; /* logo green */
-  --brand-green-700: #0f766e; /* readable green-teal on light (5.5:1 on white) */
+  --brand-green-700: #0d7a54; /* readable logo-green on light (5.3:1 on white, white text 5.3:1) */
+
+  /* Cool neutrals that sit well next to the blue-green logo (all text pairs checked for AA) */
+  --ink: #0c1828;          /* headings + dark sections; matches the logo tile background (17:1 on white) */
+  --ink-body: #2a435f;     /* long-form body text (10:1 on white) */
+  --ink-muted: #3b5573;    /* secondary text (7.7:1 on white, 7.2:1 on surface-alt) */
+  --surface-alt: #f4f8fc;  /* alternate section background */
+  --surface-tint: #e6eff8; /* chips, toggles, subtle panels */
+  --soft: #d6e6f5;         /* soft blue: blobs, light text on dark (12.7:1 on ink) */
+  --line: #dce6f0;         /* hairlines on light */
+  --line-strong: #c5d5e6;  /* input borders / dividers on light */
+  --on-dark-muted: #b4c9de; /* secondary text on dark (9.5:1 on ink) */
+  --line-dark: #35547a;    /* hairlines on dark */
 }
 
 @theme {
   --font-sans: var(--font-poppins), sans-serif;
 
-  /* Semantic names for new code: bg-brand-700, text-brand-300, from-brand-green-500 ... */
+  /* Utilities: bg-brand-700, text-brand-300, from-brand-green-500, bg-surface-alt, text-ink-muted, border-line ... */
   --color-brand-50: var(--brand-50);
   --color-brand-100: var(--brand-100);
   --color-brand-200: var(--brand-200);
@@ -52,25 +65,54 @@
   --color-brand-green-500: var(--brand-green-500);
   --color-brand-green-700: var(--brand-green-700);
 
-  /* Legacy alias: the components were written with Tailwind's `orange-*` utilities
-     (bg-orange-700, text-orange-300, ring-orange-300 ...). Re-pointing the orange
-     scale at the brand scale re-colours all of them at once. Prefer `brand-*`
-     in new code. */
-  --color-orange-50: var(--brand-50);
-  --color-orange-100: var(--brand-100);
-  --color-orange-200: var(--brand-200);
-  --color-orange-300: var(--brand-300);
-  --color-orange-400: var(--brand-400);
-  --color-orange-500: var(--brand-500);
-  --color-orange-600: var(--brand-600);
-  --color-orange-700: var(--brand-700);
-  --color-orange-800: var(--brand-800);
-  --color-orange-900: var(--brand-900);
-  --color-orange-950: var(--brand-950);
+  --color-ink: var(--ink);
+  --color-ink-body: var(--ink-body);
+  --color-ink-muted: var(--ink-muted);
+  --color-surface-alt: var(--surface-alt);
+  --color-surface-tint: var(--surface-tint);
+  --color-soft: var(--soft);
+  --color-line: var(--line);
+  --color-line-strong: var(--line-strong);
+  --color-on-dark-muted: var(--on-dark-muted);
+  --color-line-dark: var(--line-dark);
 }
 
 .wrapper {
   background-color: white !important;
+  color: var(--ink);
+}
+
+/* Premium dark panels: a soft blue + green glow echoing the logo gradient. Only
+   full dark sections/cards (section/aside), not small .bg-ink chips or pills.
+   Worst-case text contrast over the brightest part of the glow is still >= 7:1. */
+section.bg-ink,
+aside.bg-ink {
+  background-image:
+    radial-gradient(60rem 28rem at 8% -10%, rgb(21 127 223 / 0.28), transparent 60%),
+    radial-gradient(48rem 24rem at 100% 110%, rgb(66 215 156 / 0.16), transparent 60%);
+}
+
+/* Thin logo-gradient accent under the sticky header. */
+header.sticky {
+  position: sticky;
+}
+header.sticky::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 -1px 0;
+  height: 2px;
+  background-image: linear-gradient(90deg, var(--brand-600), var(--brand-400) 45%, var(--brand-green-500));
+  opacity: 0.9;
+  pointer-events: none;
+}
+
+::selection {
+  background: var(--brand-200);
+  color: var(--ink);
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 li {
@@ -113,9 +155,10 @@ li {
 
 /* Keyboard focus indicator that is visible on ANY surface (WCAG 2.4.7 / 1.4.11):
    a brand-blue outline separated from the element by a white gap, so it reads on
-   white, beige, the dark #102a2d sections and the gradient covers alike. It is
-   un-layered on purpose, so it wins over the per-component `focus:outline-none`
-   / `focus:ring-*` utilities. Only shown for keyboard focus (:focus-visible). */
+   white, the cool light sections, the dark ink sections and the gradient covers
+   alike. It is un-layered on purpose, so it wins over the per-component
+   `focus:outline-none` / `focus:ring-*` utilities. Only shown for keyboard focus
+   (:focus-visible). */
 :where(a, button, input, textarea, select, summary, [tabindex]):focus-visible {
   outline: 2px solid var(--brand-700);
   outline-offset: 2px;
@@ -132,6 +175,10 @@ li {
 }
 
 @media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
   .scroll-in {
     opacity: 1;
     transform: none;
