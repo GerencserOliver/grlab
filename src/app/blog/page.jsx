@@ -35,6 +35,7 @@ const BlogIndex = async () => {
   const featured = posts.find((post) => post.featured) ?? posts[0];
   const rest = posts.filter((post) => post !== featured);
   const url = `${SITE_URL}${BLOG_PATH}`;
+  const dateToFormat = (date) => new Date(date).toISOString();
 
   const jsonLd = {
     '@context': 'https://schema.org',
@@ -49,10 +50,11 @@ const BlogIndex = async () => {
         publisher: { '@id': ORGANIZATION_ID },
         blogPost: posts.map((post) => ({
           '@type': 'BlogPosting',
+          author: { '@id': ORGANIZATION_ID },
           headline: post.title,
           url: `${url}/${post.slug}`,
-          datePublished: post.publishedAt,
-          dateModified: post.updatedAt,
+          datePublished: dateToFormat(post.publishedAt),
+          dateModified: dateToFormat(post.updatedAt),
         })),
       },
       {

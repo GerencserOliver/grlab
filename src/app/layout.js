@@ -134,6 +134,7 @@ export default async function RootLayout({ children }) {
     <html 
       lang="hu" 
       className={`${poppinsMedium.variable} h-full antialiased`}
+      data-scroll-behavior="smooth"
     >
       <head>
         <JsonLd data={jsonLd} />

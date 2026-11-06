@@ -17,7 +17,7 @@ const Hero = async () => {
           <p className='mb-6 text-sm font-bold uppercase tracking-[0.18em] text-brand-700 md:text-base'>
             {t('subtitle')}
           </p>
-          <h1 className='mb-6 font-poppins text-4xl font-extrabold leading-[1.05] text-ink sm:text-5xl md:text-7xl'>
+          <h1 className='md:hyphens-auto lg:hyphens-none sm:hyphens-none mb-6 font-poppins text-4xl font-extrabold leading-[1.05] text-ink sm:text-5xl md:text-7xl'>
             {t('title')}
           </h1>
           <p className='mb-8 max-w-3xl font-poppins text-lg leading-relaxed text-ink-muted sm:text-xl md:text-2xl'>

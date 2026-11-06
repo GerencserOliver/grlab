@@ -27,6 +27,7 @@ export async function generateMetadata({ params }) {
   const path = `${BLOG_PATH}/${slug}`;
   const base = await buildPageMetadata('home', path);
   const title = `${post.title} | ${SITE_NAME}`;
+  const dateToFormat = (date) => new Date(date).toISOString();
 
   return {
     ...base,
@@ -41,8 +42,8 @@ export async function generateMetadata({ params }) {
       title,
       description: post.description,
       url: `${SITE_URL}${path}`,
-      publishedTime: post.publishedAt,
-      modifiedTime: post.updatedAt,
+      publishedTime: dateToFormat(post.publishedAt),
+      modifiedTime: dateToFormat(post.updatedAt),
       authors: [SITE_NAME],
       tags: post.tags,
     },
