@@ -6,23 +6,23 @@ const TIERS = ['basic', 'pro', 'premium'];
 // Dark cards get light text; the 'pro' card is white with dark text.
 const TIER_STYLES = {
   basic: {
-    card: 'border-[#0f766e] bg-[#102a2d]',
+    card: 'border-brand-green-700 bg-ink',
     text: 'text-white',
-    bullet: 'marker:text-orange-300',
-    button: 'bg-orange-700 text-white hover:bg-orange-800',
+    bullet: 'marker:text-brand-300',
+    button: 'bg-brand-700 text-white hover:bg-brand-800',
   },
   pro: {
-    card: 'border-[#dfe7e1] bg-white',
-    text: 'text-[#102a2d]',
-    bullet: 'marker:text-orange-700',
-    button: 'bg-orange-700 text-white hover:bg-orange-800',
+    card: 'border-line bg-white',
+    text: 'text-ink',
+    bullet: 'marker:text-brand-700',
+    button: 'bg-brand-700 text-white hover:bg-brand-800',
   },
-  // The teal card needs a light button: orange-700 on #0f766e is nearly invisible.
+  // The green card needs a light button: brand-700 on the green is hard to see.
   premium: {
-    card: 'border-[#102a2d] bg-[#0f766e]',
+    card: 'border-ink bg-brand-green-700',
     text: 'text-white',
-    bullet: 'marker:text-orange-200',
-    button: 'bg-white text-[#0f766e] hover:bg-[#dce9df]',
+    bullet: 'marker:text-brand-200',
+    button: 'bg-white text-brand-green-700 hover:bg-soft',
   },
 };
 
@@ -30,14 +30,14 @@ const Prices = async () => {
   const t = await getTranslations('wdprices');
 
   return (
-    <section className="flex items-center justify-center bg-[#f5f7f4]">
+    <section className="flex items-center justify-center bg-surface-alt">
       <div className="scroll-in container mx-auto flex max-w-360 flex-col px-6 py-20 md:px-10 md:py-24">
         <div className="max-w-3xl">
-          <p className="mb-4 text-sm font-bold uppercase tracking-[0.18em] text-orange-700">{t('eyebrow')}</p>
-          <h2 className="font-poppins text-3xl font-extrabold leading-tight text-[#102a2d] md:text-5xl">
+          <p className="mb-4 text-sm font-bold uppercase tracking-[0.18em] text-brand-700">{t('eyebrow')}</p>
+          <h2 className="font-poppins text-3xl font-extrabold leading-tight text-ink md:text-5xl">
             {t('title')}
           </h2>
-          <p className="mt-5 text-lg leading-relaxed text-[#315b5d] md:text-xl">
+          <p className="mt-5 text-lg leading-relaxed text-ink-muted md:text-xl">
             {t('description')}
           </p>
         </div>
@@ -56,11 +56,11 @@ const Prices = async () => {
                   <h3 className={`${styles.text} font-poppins text-3xl font-bold md:text-4xl`}>
                     {title}
                   </h3>
-                  <hr className="mb-3 mt-3 block border-gray-300/60" />
+                  <hr className="mb-3 mt-3 block border-line-strong/60" />
                   <p className={`${styles.text} mb-6 font-poppins text-lg font-semibold leading-snug md:text-xl`}>
                     {t(`${tier}.description`)}
                   </p>
-                  <hr className="mb-3 mt-3 block border-gray-300/60" />
+                  <hr className="mb-3 mt-3 block border-line-strong/60" />
                   <ul className={`list-outside list-disc pl-5 ${styles.bullet}`}>
                     {Array.isArray(features) &&
                       features.map((feature) => (
@@ -81,7 +81,7 @@ const Prices = async () => {
             );
           })}
         </div>
-        <p className="mt-12 font-poppins text-sm text-[#0f766e] md:text-lg">
+        <p className="mt-12 font-poppins text-sm text-brand-green-700 md:text-lg">
           {t('note')}
         </p>
       </div>
