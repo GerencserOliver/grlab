@@ -6,13 +6,30 @@ import {
   faCode,
   faRocket,
   faLightbulb,
+  faStar,
+  faHeart,
+  faUser,
+  faClock,
 } from '@fortawesome/free-solid-svg-icons';
+
+// Gradients derived from the logo (blue -> teal -> green) and the dark navy ink.
+// Every stop keeps white text >= 6:1.
+const BRAND_GRADIENT = 'bg-linear-to-br from-[#0a62b8] via-[#0b7a8c] to-[#0d6a4a]';
+const GREEN_GRADIENT = 'bg-linear-to-br from-brand-green-700 via-[#0c5c44] to-ink';
 
 // Complete class strings (not concatenated) so Tailwind can detect them.
 export const ACCENTS = {
+  brand: BRAND_GRADIENT,
+  green: GREEN_GRADIENT,
   teal: 'bg-linear-to-br from-[#0f766e] via-[#0b5d57] to-[#102a2d]',
   orange: 'bg-linear-to-br from-orange-700 via-[#9a3412] to-[#102a2d]',
-  slate: 'bg-linear-to-br from-[#315b5d] via-[#1e4044] to-[#102a2d]',
+  slate: 'bg-linear-to-br from-[#2f5b86] via-[#1b3f66] to-ink',
+  gray: 'bg-linear-to-br from-[#4b5563] via-[#1f2937] to-ink',
+  black: 'bg-linear-to-br from-ink via-[#1f2937] to-ink',
+  blue: 'bg-linear-to-br from-blue-700 via-[#1d4ed8] to-[#1e40af]',
+  purple: 'bg-linear-to-br from-purple-700 via-[#7e22ce] to-[#4c1d95]',
+  pink: 'bg-linear-to-br from-pink-700 via-[#be185d] to-[#831843]',
+  red: 'bg-linear-to-br from-red-700 via-[#dc2626] to-[#7f1d1d]',
 };
 
 const ICONS = {
@@ -22,6 +39,10 @@ const ICONS = {
   code: faCode,
   rocket: faRocket,
   lightbulb: faLightbulb,
+  star: faStar,
+  heart: faHeart,
+  user: faUser,
+  clock: faClock,
 };
 
 /**

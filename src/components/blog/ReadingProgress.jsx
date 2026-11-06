@@ -26,7 +26,7 @@ const ReadingProgress = () => {
 
   return (
     <div aria-hidden='true' className='fixed left-0 top-24 z-40 h-1 w-full bg-transparent'>
-      <div className='h-full bg-orange-700' style={{ width: `${progress}%` }} />
+      <div className='h-full bg-brand-700' style={{ width: `${progress}%` }} />
     </div>
   );
 };

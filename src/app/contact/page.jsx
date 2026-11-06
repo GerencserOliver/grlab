@@ -33,36 +33,36 @@ const Contact = async () => {
       <JsonLd data={jsonLd} />
       <IntroAnimation />
       <ScrollAnimation />
-      <section className='border-b border-[#dfe7e1] bg-[#f5f7f4]'>
+      <section className='border-b border-line bg-surface-alt'>
         <div className='container mx-auto flex max-w-360 flex-col gap-8 px-6 py-16 md:flex-row md:items-end md:px-10 md:py-24'>
           <div className='scroll-in w-full md:w-2/3'>
-            <p className='mb-5 text-sm font-bold uppercase tracking-[0.18em] text-orange-700'>
+            <p className='mb-5 text-sm font-bold uppercase tracking-[0.18em] text-brand-700'>
               {t('subtitle')}
             </p>
-            <h1 className='mb-5 font-poppins text-4xl font-extrabold leading-tight text-[#102a2d] sm:text-5xl md:text-7xl'>
+            <h1 className='mb-5 font-poppins text-4xl font-extrabold leading-tight text-ink sm:text-5xl md:text-7xl'>
               {t('title')}
             </h1>
-            <p className='max-w-2xl text-lg leading-relaxed text-[#315b5d] md:text-xl'>{t('description')}</p>
+            <p className='max-w-2xl text-lg leading-relaxed text-ink-muted md:text-xl'>{t('description')}</p>
           </div>
-          <div className='w-full rounded-2xl border border-[#c9d8cc] bg-white p-6 shadow-sm md:w-1/3'>
-            <p className='text-sm font-bold uppercase tracking-widest text-orange-700'>{t('cardEyebrow')}</p>
+          <div className='w-full rounded-2xl border border-line-strong bg-white p-6 shadow-sm md:w-1/3'>
+            <p className='text-sm font-bold uppercase tracking-widest text-brand-700'>{t('cardEyebrow')}</p>
             <ul className='mt-4 space-y-4'>
               <li>
-                <span className='flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-[#315b5d]'>
+                <span className='flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-ink-muted'>
                   <FontAwesomeIcon icon={faPhone} aria-hidden='true' />
                   {t('cardPhoneLabel')}
                 </span>
-                <a href={BUSINESS.phoneHref} className='mt-1 block text-lg font-bold text-[#102a2d] transition-colors hover:text-orange-700'>{BUSINESS.phoneDisplay}</a>
+                <a href={BUSINESS.phoneHref} className='mt-1 block text-lg font-bold text-ink transition-colors hover:text-brand-700'>{BUSINESS.phoneDisplay}</a>
               </li>
               <li>
-                <span className='flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-[#315b5d]'>
+                <span className='flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-ink-muted'>
                   <FontAwesomeIcon icon={faEnvelope} aria-hidden='true' />
                   {t('cardEmailLabel')}
                 </span>
-                <a href={BUSINESS.emailHref} className='mt-1 block break-all text-lg font-bold text-[#102a2d] transition-colors hover:text-orange-700'>{BUSINESS.email}</a>
+                <a href={BUSINESS.emailHref} className='mt-1 block break-all text-lg font-bold text-ink transition-colors hover:text-brand-700'>{BUSINESS.email}</a>
               </li>
             </ul>
-            <p className='mt-5 text-sm leading-relaxed text-[#315b5d]'>{t('cardText')}</p>
+            <p className='mt-5 text-sm leading-relaxed text-ink-muted'>{t('cardText')}</p>
           </div>
         </div>
       </section>

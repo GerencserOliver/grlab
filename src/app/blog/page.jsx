@@ -35,6 +35,7 @@ const BlogIndex = async () => {
   const featured = posts.find((post) => post.featured) ?? posts[0];
   const rest = posts.filter((post) => post !== featured);
   const url = `${SITE_URL}${BLOG_PATH}`;
+  const dateToFormat = (date) => new Date(date).toISOString();
 
   const jsonLd = {
     '@context': 'https://schema.org',
@@ -49,10 +50,11 @@ const BlogIndex = async () => {
         publisher: { '@id': ORGANIZATION_ID },
         blogPost: posts.map((post) => ({
           '@type': 'BlogPosting',
+          author: { '@id': ORGANIZATION_ID },
           headline: post.title,
           url: `${url}/${post.slug}`,
-          datePublished: post.publishedAt,
-          dateModified: post.updatedAt,
+          datePublished: dateToFormat(post.publishedAt),
+          dateModified: dateToFormat(post.updatedAt),
         })),
       },
       {
@@ -70,15 +72,15 @@ const BlogIndex = async () => {
       <JsonLd data={jsonLd} />
       <IntroAnimation />
       <ScrollAnimation />
-      <section className='relative overflow-hidden border-b border-[#dfe7e1] bg-[#f5f7f4]'>
-        <div className='pointer-events-none absolute -right-24 -top-24 h-96 w-96 rounded-full bg-[#dce9df] blur-3xl' aria-hidden='true' />
+      <section className='relative overflow-hidden border-b border-line bg-surface-alt'>
+        <div className='pointer-events-none absolute -right-24 -top-24 h-96 w-96 rounded-full bg-soft blur-3xl' aria-hidden='true' />
         <div className='container relative mx-auto max-w-360 px-6 py-16 md:px-10 md:py-24'>
           <div className='scroll-in max-w-4xl'>
-            <p className='mb-5 text-sm font-bold uppercase tracking-[0.18em] text-orange-700'>{t('eyebrow')}</p>
-            <h1 className='mb-5 font-poppins text-4xl font-extrabold leading-tight text-[#102a2d] sm:text-5xl md:text-7xl'>
+            <p className='mb-5 text-sm font-bold uppercase tracking-[0.18em] text-brand-700'>{t('eyebrow')}</p>
+            <h1 className='mb-5 font-poppins text-4xl font-extrabold leading-tight text-ink sm:text-5xl md:text-7xl'>
               {t('title')}
             </h1>
-            <p className='max-w-3xl text-lg leading-relaxed text-[#315b5d] md:text-xl'>{t('subtitle')}</p>
+            <p className='max-w-3xl text-lg leading-relaxed text-ink-muted md:text-xl'>{t('subtitle')}</p>
           </div>
         </div>
       </section>
@@ -92,7 +94,7 @@ const BlogIndex = async () => {
               </div>
               {rest.length > 0 && (
                 <>
-                  <h2 className='scroll-in mt-16 font-poppins text-2xl font-bold text-[#102a2d] md:text-3xl'>{t('latest')}</h2>
+                  <h2 className='scroll-in mt-16 font-poppins text-2xl font-bold text-ink md:text-3xl'>{t('latest')}</h2>
                   <ul className='scroll-in mt-8 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3'>
                     {rest.map((post) => (
                       <li key={post.slug}>
@@ -104,7 +106,7 @@ const BlogIndex = async () => {
               )}
             </>
           ) : (
-            <p className='text-lg text-[#315b5d]'>{t('empty')}</p>
+            <p className='text-lg text-ink-muted'>{t('empty')}</p>
           )}
         </div>
       </section>

@@ -30,34 +30,34 @@ const Prices = async () => {
   ];
 
   return (
-    <section className='flex items-center justify-center bg-[#f5f7f4]'>
+    <section className='flex items-center justify-center bg-surface-alt'>
       <div className='container mx-auto flex max-w-360 flex-col px-6 py-20 md:px-10 md:py-24'>
         <div className='scroll-in max-w-3xl'>
-          <p className='mb-4 text-sm font-bold uppercase tracking-[0.18em] text-orange-700'>{t('eyebrow')}</p>
-          <h2 className='font-poppins text-3xl font-extrabold leading-tight text-[#102a2d] md:text-5xl'>
+          <p className='mb-4 text-sm font-bold uppercase tracking-[0.18em] text-brand-700'>{t('eyebrow')}</p>
+          <h2 className='font-poppins text-3xl font-extrabold leading-tight text-ink md:text-5xl'>
             {t('header.title')}
           </h2>
-          <p className='mt-5 text-lg leading-relaxed text-[#315b5d] md:text-xl'>
+          <p className='mt-5 text-lg leading-relaxed text-ink-muted md:text-xl'>
             {t('header.subtitle')}
           </p>
         </div>
         <div className='mt-12 grid grid-cols-1 gap-5 scroll-in md:grid-cols-3'>
           {packages.map((pkg) => (
-            <article key={pkg.name} className='group flex h-full flex-col overflow-hidden rounded-2xl border border-[#dfe7e1] bg-white transition-shadow hover:shadow-xl'>
+            <article key={pkg.name} className='group flex h-full flex-col overflow-hidden rounded-2xl border border-line bg-white transition-shadow hover:shadow-xl'>
               {/* Decorative illustration: the adjacent heading already names the service, so an empty alt avoids a duplicate announcement. */}
               <Image src={pkg.image} alt='' loading='lazy' sizes='(min-width: 768px) 33vw, 100vw' className='aspect-video w-full object-cover' />
               <div className='flex flex-1 flex-col p-7'>
-              <h3 className='font-poppins text-2xl font-bold text-[#102a2d] md:text-3xl'>
+              <h3 className='font-poppins text-2xl font-bold text-ink md:text-3xl'>
                 {pkg.name}
               </h3>
-              <p className='mt-4 flex-1 font-poppins text-base leading-relaxed text-[#315b5d]'>
+              <p className='mt-4 flex-1 font-poppins text-base leading-relaxed text-ink-muted'>
                 {pkg.description}
               </p>
               <div className='mt-7'>
                 <Link
                   href={pkg.link}
                   aria-label={`${t('button_text')}: ${pkg.name}`}
-                  className='inline-flex w-full justify-center rounded-full bg-orange-700 px-5 py-3 font-poppins font-bold text-white transition-colors hover:bg-orange-800'
+                  className='inline-flex w-full justify-center rounded-full bg-brand-700 px-5 py-3 font-poppins font-bold text-white transition-colors hover:bg-brand-800'
                 >
                   {t('button_text')}
                 </Link>

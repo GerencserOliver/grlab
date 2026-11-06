@@ -80,26 +80,26 @@ const SEO = async () => {
       <JsonLd data={jsonLd} />
       <IntroAnimation />
       <ScrollAnimation />
-      <section className="border-b border-[#dfe7e1] bg-[#f5f7f4]">
+      <section className="border-b border-line bg-surface-alt">
         <div className="container mx-auto flex max-w-360 flex-col gap-8 px-6 py-16 md:flex-row md:items-end md:px-10 md:py-24">
           <div className="scroll-in w-full md:w-2/3">
-            <p className="mb-5 text-sm font-bold uppercase tracking-[0.18em] text-orange-700">
+            <p className="mb-5 text-sm font-bold uppercase tracking-[0.18em] text-brand-700">
               {t('subtitle')}
             </p>
-            <h1 className="mb-5 font-poppins text-4xl font-extrabold leading-tight text-[#102a2d] sm:text-5xl md:text-7xl">
+            <h1 className="mb-5 font-poppins text-4xl font-extrabold leading-tight text-ink sm:text-5xl md:text-7xl">
               {t('title')}
             </h1>
-            <p className="max-w-3xl text-lg leading-relaxed text-[#315b5d] md:text-xl">
+            <p className="max-w-3xl text-lg leading-relaxed text-ink-muted md:text-xl">
               {t('description')}
             </p>
           </div>
           <div className="w-full md:w-1/3 md:text-right">
-            <Link href="/contact" className="inline-flex w-full justify-center rounded-full bg-orange-700 px-7 py-4 font-poppins text-lg font-bold text-white transition-colors hover:bg-orange-800 md:w-auto">
+            <Link href="/contact" className="inline-flex w-full justify-center rounded-full bg-brand-700 px-7 py-4 font-poppins text-lg font-bold text-white transition-colors hover:bg-brand-800 md:w-auto">
               {t('cta')}
             </Link>
           </div>
         </div>
-        <div className="mt-10 items-center space-y-4 text-black right-0 z-10">
+        <div className="mt-10 items-center space-y-4 text-ink right-0 z-10">
           <Image src={Business} alt={t('imageAlt')} sizes="100vw" className="aspect-16/7 w-full object-cover" fetchPriority="high" loading="eager" />
         </div>
       </section>

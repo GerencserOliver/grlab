@@ -16,7 +16,7 @@ const post = {
   publishedAt: '2026-01-01', // YYYY-MM-DD
   updatedAt: '2026-01-01', // bump when you materially edit the post
   featured: false, // true = shown as the large card on /blog (otherwise the newest post is)
-  accent: 'teal', // cover colour: 'teal' | 'orange' | 'slate'
+  accent: 'teal', // cover colour: 'teal' | 'brand' (blue-green) | 'slate'
   icon: 'code', // cover icon: 'chart' | 'search' | 'cogs' | 'code' | 'rocket' | 'lightbulb'
 
   hu: {

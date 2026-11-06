@@ -13,24 +13,24 @@ const Guarantee = async () => {
   const points = Array.isArray(rawPoints) ? rawPoints : [];
 
   return (
-    <section className="flex flex-col items-center justify-center bg-[#102a2d] md:flex-row">
+    <section className="flex flex-col items-center justify-center bg-ink md:flex-row">
       <div className="scroll-in order-2 container mx-auto flex flex-col p-8 text-white md:order-2 md:w-1/2 md:items-start md:px-16 md:py-20">
-        <p className="mb-5 text-sm font-bold uppercase tracking-[0.18em] text-orange-300">{t('eyebrow')}</p>
+        <p className="mb-5 text-sm font-bold uppercase tracking-[0.18em] text-brand-300">{t('eyebrow')}</p>
         <h2 className="mb-6 mt-6 font-poppins text-3xl font-extrabold leading-tight text-white md:mt-0 md:text-left md:text-5xl">
           {t('title')}
         </h2>
-        <p className="mb-6 font-poppins text-lg leading-relaxed text-[#dce9df] md:text-left md:text-xl">
+        <p className="mb-6 font-poppins text-lg leading-relaxed text-soft md:text-left md:text-xl">
           {t('description')}
         </p>
-        <ul className="mt-2 grid w-full gap-3 text-sm text-[#dce9df] sm:grid-cols-3 md:text-base">
+        <ul className="mt-2 grid w-full gap-3 text-sm text-soft sm:grid-cols-3 md:text-base">
           {points.map((point, index) => (
-            <li key={point} className="flex flex-col gap-2 rounded-xl border border-[#426b6b] p-3 items-center justify-center text-center">
-              <FontAwesomeIcon icon={POINT_ICONS[index] ?? faCheck} className="text-orange-300" aria-hidden="true" />
+            <li key={point} className="flex flex-col gap-2 rounded-xl border border-line-dark p-3 items-center justify-center text-center">
+              <FontAwesomeIcon icon={POINT_ICONS[index] ?? faCheck} className="text-brand-300" aria-hidden="true" />
               <span className="hyphens-auto text-center">{point}</span>
             </li>
           ))}
         </ul>
-        <Link href="/contact" className="mt-6 inline-flex w-full justify-center rounded-full bg-orange-700 px-7 py-4 font-poppins text-lg font-bold text-white transition-colors hover:bg-orange-800 md:w-auto">
+        <Link href="/contact" className="mt-6 inline-flex w-full justify-center rounded-full bg-brand-700 px-7 py-4 font-poppins text-lg font-bold text-white transition-colors hover:bg-brand-800 md:w-auto">
           {t('button')}
         </Link>
       </div>

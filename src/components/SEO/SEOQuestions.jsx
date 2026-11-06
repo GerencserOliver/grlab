@@ -31,14 +31,14 @@ const SEOQuestions = () => {
   };
 
   return (
-    <section className="bg-[#f5f7f4] py-20 md:py-24">
+    <section className="bg-surface-alt py-20 md:py-24">
       {faqData.length > 0 && <JsonLd data={faqSchema} />}
       <div className="scroll-in container mx-auto max-w-3xl px-6">
         <div className="mb-12 text-center">
-          <h2 className="font-poppins text-3xl font-extrabold tracking-tight text-[#102a2d] md:text-5xl">
+          <h2 className="font-poppins text-3xl font-extrabold tracking-tight text-ink md:text-5xl">
             {t('heading')}
           </h2>
-          <div className="mx-auto mt-5 h-1 w-16 rounded-full bg-orange-700" />
+          <div className="mx-auto mt-5 h-1 w-16 rounded-full bg-brand-700" />
         </div>
         <div className="space-y-4">
           {faqData.map((item, index) => {
@@ -48,7 +48,7 @@ const SEOQuestions = () => {
             return (
               <div
                 key={item.question}
-                className="overflow-hidden rounded-2xl border border-[#dfe7e1] bg-white shadow-sm transition-shadow duration-300 hover:shadow-md"
+                className="overflow-hidden rounded-2xl border border-line bg-white shadow-sm transition-shadow duration-300 hover:shadow-md"
               >
                 <h3>
                   <button
@@ -57,15 +57,15 @@ const SEOQuestions = () => {
                     onClick={() => toggleAccordion(index)}
                     aria-expanded={isOpen}
                     aria-controls={contentId}
-                    className="flex w-full items-center justify-between rounded-2xl p-6 text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-orange-700"
+                    className="flex w-full items-center justify-between rounded-2xl p-6 text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-700"
                   >
-                    <span className="pr-4 font-poppins text-lg font-bold text-[#102a2d] md:text-xl">
+                    <span className="pr-4 font-poppins text-lg font-bold text-ink md:text-xl">
                       {item.question}
                     </span>
                     <span
                       aria-hidden="true"
-                      className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[#eef4ef] text-[#0f766e] transition-transform duration-300 ${
-                        isOpen ? 'rotate-180 bg-orange-700 text-white' : ''
+                      className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-surface-tint text-brand-green-700 transition-transform duration-300 ${
+                        isOpen ? 'rotate-180 bg-brand-700 text-white' : ''
                       }`}
                     >
                       <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -86,7 +86,7 @@ const SEOQuestions = () => {
                   }`}
                 >
                   <div className="overflow-hidden">
-                    <p className="border-t border-[#dfe7e1] px-6 pb-6 pt-4 font-poppins text-base leading-relaxed text-[#315b5d] md:text-lg">
+                    <p className="border-t border-line px-6 pb-6 pt-4 font-poppins text-base leading-relaxed text-ink-muted md:text-lg">
                       {item.answer}
                     </p>
                   </div>
@@ -95,11 +95,11 @@ const SEOQuestions = () => {
             );
           })}
         </div>
-        <p className="mt-10 text-center text-base text-[#315b5d]">
+        <p className="mt-10 text-center text-base text-ink-muted">
           {tc('phonePrompt')}{' '}
           <a
             href={BUSINESS.phoneHref}
-            className="font-bold text-orange-700 underline decoration-orange-300 underline-offset-4 transition-colors hover:text-orange-900"
+            className="font-bold text-brand-700 underline decoration-brand-300 underline-offset-4 transition-colors hover:text-brand-900"
           >
             {tc('phoneAction')} {BUSINESS.phoneDisplay}
           </a>
