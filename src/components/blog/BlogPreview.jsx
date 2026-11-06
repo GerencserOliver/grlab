@@ -20,15 +20,15 @@ const BlogPreview = async () => {
       <div className='container mx-auto max-w-360 px-6 py-20 md:px-10 md:py-24'>
         <div className='scroll-in flex flex-col gap-6 md:flex-row md:items-end md:justify-between'>
           <div className='max-w-3xl'>
-            <p className='mb-4 text-sm font-bold uppercase tracking-[0.18em] text-orange-700'>{t('homeEyebrow')}</p>
-            <h2 id='blog-preview-heading' className='font-poppins text-3xl font-extrabold leading-tight text-[#102a2d] md:text-5xl'>
+            <p className='mb-4 text-sm font-bold uppercase tracking-[0.18em] text-brand-700'>{t('homeEyebrow')}</p>
+            <h2 id='blog-preview-heading' className='font-poppins text-3xl font-extrabold leading-tight text-ink md:text-5xl'>
               {t('homeTitle')}
             </h2>
-            <p className='mt-5 text-lg leading-relaxed text-[#315b5d] md:text-xl'>{t('homeText')}</p>
+            <p className='mt-5 text-lg leading-relaxed text-ink-muted md:text-xl'>{t('homeText')}</p>
           </div>
           <Link
             href={BLOG_PATH}
-            className='inline-flex items-center gap-3 self-start rounded-full border-2 border-[#102a2d] px-6 py-3 font-poppins text-base font-bold text-[#102a2d] transition-colors hover:bg-[#102a2d] hover:text-white md:self-auto'
+            className='inline-flex items-center gap-3 self-start rounded-full border-2 border-ink px-6 py-3 font-poppins text-base font-bold text-ink transition-colors hover:bg-ink hover:text-white md:self-auto'
           >
             {t('homeAll')} <FontAwesomeIcon icon={faArrowRight} aria-hidden='true' />
           </Link>
