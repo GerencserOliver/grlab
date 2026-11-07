@@ -67,6 +67,7 @@ const BlogPost = async ({ params }) => {
   const related = getRelatedPosts(post.slug, locale, 2);
   const dateLabel = formatPostDate(post.publishedAt, locale);
   const isUpdated = post.updatedAt !== post.publishedAt;
+  const dateToFormat = (date) => new Date(date).toISOString();
 
   const jsonLd = {
     '@context': 'https://schema.org',
@@ -79,8 +80,8 @@ const BlogPost = async ({ params }) => {
         url,
         mainEntityOfPage: { '@type': 'WebPage', '@id': url },
         inLanguage: post.locale === 'en' ? 'en' : 'hu-HU',
-        datePublished: post.publishedAt,
-        dateModified: post.updatedAt,
+        datePublished: dateToFormat(post.publishedAt),
+        dateModified: dateToFormat(post.updatedAt),
         image: [DEFAULT_OG_IMAGE.url],
         keywords: post.keywords?.join(', '),
         articleSection: post.tags?.[0],

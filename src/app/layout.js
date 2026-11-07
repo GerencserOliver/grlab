@@ -43,7 +43,7 @@ export async function generateMetadata() {
     },
     icons: {
       icon: "/favicon.ico",
-      apple: "/logo192.png",
+      apple: "/apple-touch-icon.png",
     },
   };
 }

@@ -34,7 +34,7 @@ const Contact = async () => {
       <IntroAnimation />
       <ScrollAnimation />
       <section className='border-b border-line bg-surface-alt'>
-        <div className='container mx-auto flex max-w-360 flex-col gap-8 px-6 py-16 md:flex-row md:items-end md:px-10 md:py-24'>
+        <div className='container mx-auto flex max-w-360 flex-col gap-8 px-6 py-16 md:flex-row md:items-start md:px-10 md:py-24'>
           <div className='scroll-in w-full md:w-2/3'>
             <p className='mb-5 text-sm font-bold uppercase tracking-[0.18em] text-brand-700'>
               {t('subtitle')}
