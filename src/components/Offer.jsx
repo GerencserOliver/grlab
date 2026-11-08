@@ -3,11 +3,13 @@ import Laptop from '../images/Laptop for Offering.webp';
 import Link from 'next/link';
 import { getTranslations } from 'next-intl/server';
 import { BUSINESS } from '../lib/business';
+import ResponseGuarantee from './trust/ResponseGuarantee';
 
 const Offer = async () => {
-  const [t, tc] = await Promise.all([
+  const [t, tc, tg] = await Promise.all([
     getTranslations('offer'),
     getTranslations('cta'),
+    getTranslations('promise'),
   ]);
 
   return (
@@ -30,6 +32,7 @@ const Offer = async () => {
             {tc('phoneAction')} {BUSINESS.phoneDisplay}
           </a>
         </p>
+        <ResponseGuarantee text={tg('response')} tone='dark' className='mt-3' />
       </div>
       <div className='scroll-in order-1 h-72 w-full sm:h-96 md:order-2 md:h-140 md:w-1/2'>
         <Image src={Laptop} alt={t('imageAlt')} loading='lazy' sizes='(min-width: 768px) 50vw, 100vw' className='h-full w-full object-cover' />

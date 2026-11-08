@@ -26,7 +26,7 @@ const UsSection = async () => {
             <p className='mt-3 leading-relaxed text-on-dark-muted'>{t('point3Text')}</p>
           </article>
         </div>
-        <Link href='/website' className='mt-10 inline-flex font-bold text-brand-300 transition-colors hover:text-white'>{t('learnMore')} <span className='ml-2' aria-hidden='true'>→</span></Link>
+        <Link href='/rolunk' className='mt-10 inline-flex font-bold text-brand-300 transition-colors hover:text-white'>{t('learnMore')} <span className='ml-2' aria-hidden='true'>→</span></Link>
       </div>
     </section>
   );

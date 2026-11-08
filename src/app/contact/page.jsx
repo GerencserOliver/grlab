@@ -6,6 +6,7 @@ import { getTranslations } from 'next-intl/server';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons';
 import { BUSINESS } from '../../lib/business';
+import ResponseGuarantee from '../../components/trust/ResponseGuarantee';
 import { ORGANIZATION_ID, buildPageMetadata, buildPageJsonLd } from '../../lib/seo';
 
 const PATH = '/contact';
@@ -15,9 +16,10 @@ export async function generateMetadata() {
 }
 
 const Contact = async () => {
-  const [t, tn] = await Promise.all([
+  const [t, tn, tg] = await Promise.all([
     getTranslations('contact'),
     getTranslations('nav'),
+    getTranslations('promise'),
   ]);
 
   const jsonLd = await buildPageJsonLd({
@@ -63,6 +65,7 @@ const Contact = async () => {
               </li>
             </ul>
             <p className='mt-5 text-sm leading-relaxed text-ink-muted'>{t('cardText')}</p>
+            <ResponseGuarantee text={tg('response')} note={tg('quote')} className='mt-4' />
           </div>
         </div>
       </section>
