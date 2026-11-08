@@ -14,6 +14,7 @@ const links = [
   { key: 'seo', href: '/seo' },
   { key: 'portfolio', href: '/portfolio' },
   { key: 'blog', href: '/blog' },
+  { key: 'about', href: '/rolunk' },
   { key: 'contact', href: '/contact' },
 ];
 
@@ -23,10 +24,11 @@ const Footer = () => {
   const tf = useTranslations('footer');
   const tp = useTranslations('privacy');
   const tb = useTranslations('blog');
+  const ta = useTranslations('about');
   const locale = useLocale();
   const currentYear = new Date().getFullYear();
 
-  const label = (key) => (key === 'blog' ? tb('navLabel') : t(key));
+  const label = (key) => (key === 'blog' ? tb('navLabel') : key === 'about' ? ta('navLabel') : t(key));
   const isActive = (href) => pathname === href || (href === '/blog' && pathname?.startsWith('/blog/'));
 
   const changeLanguage = (newLocale) => {

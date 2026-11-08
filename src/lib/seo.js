@@ -63,6 +63,8 @@ export async function buildPageMetadata(key, path) {
  * @param {object} opts
  * @param {string} opts.path            canonical path, e.g. '/website'
  * @param {'home'|'website'|'seo'|'portfolio'|'contact'} opts.key  seoOptimization.* key (name/description)
+ * @param {string} [opts.name]        explicit page name (skips the seoOptimization lookup)
+ * @param {string} [opts.description] explicit description (skips the seoOptimization lookup)
  * @param {string} opts.breadcrumbLabel visible breadcrumb label for this page
  * @param {string} [opts.pageType]      schema.org WebPage subtype
  * @param {object} [opts.pageExtra]     extra properties merged into the WebPage node (e.g. mainEntity)
@@ -71,6 +73,8 @@ export async function buildPageMetadata(key, path) {
 export async function buildPageJsonLd({
   path,
   key,
+  name,
+  description,
   breadcrumbLabel,
   pageType = 'WebPage',
   pageExtra = {},
@@ -91,8 +95,8 @@ export async function buildPageJsonLd({
         '@type': pageType,
         '@id': `${url}#webpage`,
         url,
-        name: tm(`${key}.title`),
-        description: tm(`${key}.description`),
+        name: name ?? tm(`${key}.title`),
+        description: description ?? tm(`${key}.description`),
         inLanguage: locale === 'en' ? 'en' : 'hu-HU',
         isPartOf: { '@id': WEBSITE_ID },
         about: { '@id': ORGANIZATION_ID },

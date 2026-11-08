@@ -5,7 +5,8 @@ import Link from 'next/link';
 import CTA from '../../components/CTA';
 import WebsiteDev from '../../components/WebsiteDev/Introduction';
 import Guarantee from '../../components/WebsiteDev/Guarantee';
-import Prices from '../../components/WebsiteDev/Prices';
+import PricingTable from '../../components/trust/PricingTable';
+import { PACKAGES, MAINTENANCE, CURRENCY_CODE } from '../../../content/pricing';
 import Services from '../../components/Services';
 import Questions from '../../components/WebsiteDev/Questions';
 import WebsiteBuilding from '../../components/WebsiteDev/WebsiteBuilding';
@@ -30,7 +31,7 @@ const Website = async () => {
   const [t, tm, tp, tn] = await Promise.all([
     getTranslations('wdhero'),
     getTranslations('seoOptimization'),
-    getTranslations('wdprices'),
+    getTranslations('pricing'),
     getTranslations('nav'),
   ]);
 
@@ -54,12 +55,19 @@ const Website = async () => {
         hasOfferCatalog: {
           '@type': 'OfferCatalog',
           name: tp('title'),
-          itemListElement: ['basic', 'pro', 'premium'].map((tier) => ({
+          itemListElement: [...PACKAGES.filter((pkg) => pkg.id !== 'gbp'), MAINTENANCE].map((pkg) => ({
             '@type': 'Offer',
+            priceCurrency: CURRENCY_CODE,
+            priceSpecification: {
+              '@type': 'PriceSpecification',
+              minPrice: pkg.price,
+              priceCurrency: CURRENCY_CODE,
+              valueAddedTaxIncluded: true,
+            },
             itemOffered: {
               '@type': 'Service',
-              name: tp(`${tier}.title`),
-              description: tp(`${tier}.description`),
+              name: tp(`items.${pkg.id}.name`),
+              description: tp(`items.${pkg.id}.description`),
               provider: { '@id': ORGANIZATION_ID },
             },
           })),
@@ -99,7 +107,7 @@ const Website = async () => {
       <WebsiteDev />
       <Guarantee />
       <Services />
-      <Prices />
+      <PricingTable />
       <WebsiteBuilding />
       <Questions />
       <CTA />

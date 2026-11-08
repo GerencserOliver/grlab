@@ -6,6 +6,7 @@ import { useTranslations } from 'next-intl';
 import ctaImg from '../images/Illustration-of-website-development.webp';
 import Image from 'next/image';
 import { BUSINESS, PRIVACY_PATH } from '../lib/business';
+import ResponseGuarantee from './trust/ResponseGuarantee';
 
 const INITIAL_FORM = { name: '', email: '', message: '', consent: false, website: '' };
 
@@ -15,6 +16,7 @@ const CTA = () => {
   const [status, setStatus] = useState({ type: 'idle', message: '' });
   const t = useTranslations('cta');
   const tp = useTranslations('privacy');
+  const tg = useTranslations('promise');
   const isSending = status.type === 'sending';
 
   const handleChange = (e) => {
@@ -153,7 +155,8 @@ const CTA = () => {
               {status.message}
             </p>
           )}
-          <p className='mt-6 text-sm text-ink-muted'>
+          <ResponseGuarantee text={tg('response')} note={tg('quote')} className='mt-5' />
+          <p className='mt-5 text-sm text-ink-muted'>
             {t('phonePrompt')}{' '}
             <a
               href={BUSINESS.phoneHref}
