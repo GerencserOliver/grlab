@@ -158,54 +158,6 @@
     "imageAlt": "Modern development workspace with laptop",
     "points": ["Clear communication", "Responsive support", "A system built to evolve"]
   },
-  "wdprices": {
-    "eyebrow": "A clear proposal",
-    "title": "Every project is different",
-    "description": "We don't want to force different businesses into fixed packages. A simple company website and a custom business application are completely different projects, so we prepare an individual proposal based on your requirements.",
-    "startingFrom": "Custom quote",
-    "requestQuote": "Request a Quote",
-    "note": "The final price depends on the required functionality, design, integrations and development effort.",
-    "basic": {
-      "title": "Website",
-      "price": "Custom quote",
-      "description": "For businesses that need a professional and reliable online presence.",
-      "features": [
-        "Custom or tailored design",
-        "Responsive layout",
-        "Contact form",
-        "Technical SEO foundations",
-        "Google Business Profile support",
-        "Performance optimization"
-      ]
-    },
-    "pro": {
-      "title": "Web Application",
-      "price": "Custom quote",
-      "description": "For businesses that need custom functionality in addition to a public-facing website.",
-      "features": [
-        "Custom user interface",
-        "Authentication and user roles",
-        "Backend and database",
-        "API integrations",
-        "Admin interface",
-        "Custom business functionality"
-      ]
-    },
-    "premium": {
-      "title": "Custom System",
-      "price": "Custom quote",
-      "description": "For complex web or mobile products built around specific business processes.",
-      "features": [
-        "Fully custom development",
-        "Web and/or mobile application",
-        "Backend and database",
-        "APIs and external integrations",
-        "Administration interface",
-        "Multiple user roles",
-        "Maintenance and further development"
-      ]
-    }
-  },
   "websiteBuilding": {
     "eyebrow": "A clear process",
     "title": "How we work together",

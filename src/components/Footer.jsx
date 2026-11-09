@@ -14,7 +14,7 @@ const links = [
   { key: 'seo', href: '/seo' },
   { key: 'portfolio', href: '/portfolio' },
   { key: 'blog', href: '/blog' },
-  { key: 'about', href: '/rolunk' },
+  { key: 'about', href: '/about' },
   { key: 'contact', href: '/contact' },
 ];
 

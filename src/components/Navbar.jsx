@@ -15,6 +15,7 @@ const links = [
   { key: 'seo', href: '/seo' },
   { key: 'portfolio', href: '/portfolio' },
   { key: 'blog', href: '/blog' },
+  { key: 'about', href: '/about' },
   { key: 'contact', href: '/contact' },
 ];
 
@@ -23,10 +24,11 @@ const Navbar = () => {
   const pathname = usePathname();
   const t = useTranslations('nav');
   const tb = useTranslations('blog');
+  const ta = useTranslations('about');
   const locale = useLocale();
   const callLabel = `${t('callUs')}: ${BUSINESS.phoneDisplay}`;
 
-  const label = (key) => (key === 'blog' ? tb('navLabel') : t(key));
+  const label = (key) => (key === 'blog' ? tb('navLabel') : key === 'about' ? ta('navLabel') : t(key));
   // The Blog item stays highlighted on individual posts (/blog/<slug>) too.
   const isActive = (href) => pathname === href || (href === '/blog' && pathname?.startsWith('/blog/'));
 

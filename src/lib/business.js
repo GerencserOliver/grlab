@@ -14,9 +14,7 @@ export const BUSINESS = {
   country: 'HU',
 };
 
-// Public Google Business Profile (shown on the reviews block). Replace with the direct
-// review link (g.page/... or the "Write a review" short link) when you have it.
-export const GOOGLE_PROFILE_URL = 'https://www.google.com/search?kgmid=/g/11p1g_qc4r&q=GRLab';
+export const GOOGLE_PROFILE_URL = 'https://g.page/r/CZbmGpszeKpvEBM/review';
 
-export const ABOUT_PATH = '/rolunk';
-export const PRIVACY_PATH = '/adatkezelesi-tajekoztato';
+export const ABOUT_PATH = '/about';
+export const PRIVACY_PATH = '/privacy-policy';

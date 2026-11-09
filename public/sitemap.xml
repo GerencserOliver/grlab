@@ -31,13 +31,13 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://www.grlab.hu/rolunk</loc>
+    <loc>https://www.grlab.hu/about</loc>
     <lastmod>2026-11-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.grlab.hu/adatkezelesi-tajekoztato</loc>
+    <loc>https://www.grlab.hu/privacy-policy</loc>
     <lastmod>2026-11-03</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.2</priority>

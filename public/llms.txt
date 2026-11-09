@@ -17,7 +17,7 @@
 - [Google Cégprofil és technikai SEO](https://www.grlab.hu/seo): Helyi SEO és Google Térkép optimalizálás.
 - [Referenciák](https://www.grlab.hu/portfolio): Referenciáink és korábbi munkáink.
 - [Kapcsolat](https://www.grlab.hu/contact): Ingyenes első konzultáció és ajánlatkérés. 24 órán belül garantáltan válaszolunk.
-- [Rólunk](https://www.grlab.hu/rolunk): Két győri fejlesztő (Jedlik Ányos Technikum, Széchenyi István Egyetem), csapat, tanulmányok és ügyfélvélemények.
+- [Rólunk](https://www.grlab.hu/about): Két győri fejlesztő (Jedlik Ányos Technikum, Széchenyi István Egyetem), csapat, tanulmányok és ügyfélvélemények.
 
 ## Kezdőárak (bruttó, áfával együtt)
 
@@ -40,4 +40,4 @@ Részletek: https://www.grlab.hu/website#kezdoarak – minden projektre rövid e
 
 ## Jogi információk
 
-- [Adatkezelési tájékoztató](https://www.grlab.hu/adatkezelesi-tajekoztato)
+- [Adatkezelési tájékoztató](https://www.grlab.hu/privacy-policy)
