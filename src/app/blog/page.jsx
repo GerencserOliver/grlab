@@ -53,6 +53,7 @@ const BlogIndex = async () => {
           author: { '@id': ORGANIZATION_ID },
           headline: post.title,
           url: `${url}/${post.slug}`,
+          image: `${SITE_URL}/logo.png`,
           datePublished: dateToFormat(post.publishedAt),
           dateModified: dateToFormat(post.updatedAt),
         })),

@@ -51,14 +51,14 @@ const Contact = async () => {
             <ul className='mt-4 space-y-4'>
               <li>
                 <span className='flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-ink-muted'>
-                  <FontAwesomeIcon icon={faPhone} aria-hidden='true' />
+                  <FontAwesomeIcon icon={faPhone} className='w-3.5 h-3.5' aria-hidden='true' />
                   {t('cardPhoneLabel')}
                 </span>
                 <a href={BUSINESS.phoneHref} className='mt-1 block text-lg font-bold text-ink transition-colors hover:text-brand-700'>{BUSINESS.phoneDisplay}</a>
               </li>
               <li>
                 <span className='flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-ink-muted'>
-                  <FontAwesomeIcon icon={faEnvelope} aria-hidden='true' />
+                  <FontAwesomeIcon icon={faEnvelope} className='w-3.5 h-3.5' aria-hidden='true' />
                   {t('cardEmailLabel')}
                 </span>
                 <a href={BUSINESS.emailHref} className='mt-1 block break-all text-lg font-bold text-ink transition-colors hover:text-brand-700'>{BUSINESS.email}</a>

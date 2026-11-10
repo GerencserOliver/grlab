@@ -17,6 +17,9 @@ import {
   SERVICE_AREA,
   buildPageMetadata,
 } from "../lib/seo";
+import '@fortawesome/fontawesome-svg-core/styles.css';
+import { config } from '@fortawesome/fontawesome-svg-core';
+config.autoAddCss = false;
 
 const poppinsMedium = localFont({
   src: "../fonts/Poppins-Medium.ttf",
