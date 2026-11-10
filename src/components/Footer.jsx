@@ -7,13 +7,14 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons';
 import { useTranslations, useLocale } from 'next-intl';
 import Image from 'next/image';
-import { BUSINESS, PRIVACY_PATH } from '../lib/business';
+import { BUSINESS, PRIVACY_PATH, SOCIAL } from '../lib/business';
 
 const links = [
   { key: 'website', href: '/website' },
   { key: 'seo', href: '/seo' },
   { key: 'portfolio', href: '/portfolio' },
   { key: 'blog', href: '/blog' },
+  { key: 'about', href: '/about' },
   { key: 'contact', href: '/contact' },
 ];
 
@@ -23,10 +24,12 @@ const Footer = () => {
   const tf = useTranslations('footer');
   const tp = useTranslations('privacy');
   const tb = useTranslations('blog');
+  const ta = useTranslations('about');
+  const ts = useTranslations('social');
   const locale = useLocale();
   const currentYear = new Date().getFullYear();
 
-  const label = (key) => (key === 'blog' ? tb('navLabel') : t(key));
+  const label = (key) => (key === 'blog' ? tb('navLabel') : key === 'about' ? ta('navLabel') : t(key));
   const isActive = (href) => pathname === href || (href === '/blog' && pathname?.startsWith('/blog/'));
 
   const changeLanguage = (newLocale) => {
@@ -121,7 +124,7 @@ const Footer = () => {
               </Link>
             </p>
           </div>
-          <div className="flex items-center gap-3">
+          <div className="flex flex-wrap items-center justify-center gap-3 md:justify-end">
             <a
               href={BUSINESS.phoneHref}
               className="inline-flex h-11 items-center gap-2 rounded-lg bg-surface-tint px-4 text-sm font-bold text-ink transition-all hover:bg-ink hover:text-white"
@@ -136,6 +139,24 @@ const Footer = () => {
               aria-label={tf('emailLabel')}
             >
               <FontAwesomeIcon icon={faEnvelope} className="h-5 w-5" aria-hidden="true" />
+            </a>
+            <a
+              href={SOCIAL.linkedin}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex h-11 w-11 items-center justify-center rounded-lg bg-surface-tint font-poppins text-base font-extrabold text-ink transition-all hover:bg-ink hover:text-white"
+              aria-label={ts('linkedin')}
+            >
+              <span aria-hidden="true">in</span>
+            </a>
+            <a
+              href={SOCIAL.facebook}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex h-11 w-11 items-center justify-center rounded-lg bg-surface-tint font-poppins text-lg font-extrabold text-ink transition-all hover:bg-ink hover:text-white"
+              aria-label={ts('facebook')}
+            >
+              <span aria-hidden="true">f</span>
             </a>
           </div>
         </div>

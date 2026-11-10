@@ -27,7 +27,7 @@ import Fleetflow4 from '../../images/fleetflow/fleetflow_4.webp';
 import Fleetflow5 from '../../images/fleetflow/fleetflow_5.webp';
 import Fleetflow6 from '../../images/fleetflow/fleetflow_6.webp';
 import Image from 'next/image';
-import { PROJECT_URLS } from '../../lib/projects';
+import { PROJECT_URLS, PROJECT_KINDS } from '../../lib/projects';
 
 // Alt text is generated from the localized project title (messages: projects.imageAlt).
 const projectSections = [
@@ -43,6 +43,7 @@ const GRID_SIZES = '(min-width: 1280px) 22vw, (min-width: 640px) 30vw, 46vw';
 
 const Projects = () => {
     const t = useTranslations('projects');
+    const tt = useTranslations('portfolioTrust');
     const [activeImage, setActiveImage] = useState(null);
     const closeButtonRef = useRef(null);
     const lastFocusedRef = useRef(null);
@@ -80,16 +81,21 @@ const Projects = () => {
                     {projectSections.map((project, projectIndex) => {
                         const title = t(`${project.key}.title`);
                         const url = PROJECT_URLS[project.key];
+                        const isSchool = PROJECT_KINDS[project.key] === 'school';
                         return (
                             <article key={project.key} className='scroll-in overflow-hidden rounded-3xl border border-line bg-surface-alt shadow-sm'>
                                 <div className='flex flex-col gap-3 border-b border-line px-5 py-5 sm:flex-row sm:items-end sm:justify-between md:px-7'>
                                     <div>
-                                        <p className='text-xs font-bold uppercase tracking-[0.18em] text-brand-700'>
+                                        <p className='flex flex-wrap items-center gap-2 text-xs font-bold uppercase tracking-[0.18em] text-brand-700'>
                                             {project.number} / {t('label')}
+                                            <span className={`rounded-full px-3 py-1 tracking-wider ${isSchool ? 'bg-surface-tint text-ink ring-1 ring-line-strong' : 'bg-brand-700 text-white'}`}>
+                                                {isSchool ? tt('schoolBadge') : tt('clientBadge')}
+                                            </span>
                                         </p>
                                         <h2 className='mt-1 font-poppins text-2xl font-bold text-ink md:text-3xl'>
                                             {title}
                                         </h2>
+                                        {isSchool && <p className='mt-1 text-sm font-semibold text-ink-muted'>{tt('schoolNote')}</p>}
                                     </div>
                                     <div className='max-w-3xl sm:text-right'>
                                         <p className='text-sm leading-relaxed text-ink-muted'>

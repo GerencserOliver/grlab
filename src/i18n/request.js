@@ -13,14 +13,16 @@ export default getRequestConfig(async () => {
   //   <locale>.json        marketing / page copy
   //   legal.<locale>.json  privacy policy + consent strings
   //   blog.<locale>.json   blog UI + 404 page strings (blog post bodies live in content/blog)
-  const [base, legal, blog] = await Promise.all([
+  //   trust.<locale>.json  pricing, reviews, About page, response promise (prices/quotes live in content/)
+  const [base, legal, blog, trust] = await Promise.all([
     import(`../../messages/${locale}.json`),
     import(`../../messages/legal.${locale}.json`),
     import(`../../messages/blog.${locale}.json`),
+    import(`../../messages/trust.${locale}.json`),
   ]);
 
   return {
     locale,
-    messages: { ...base.default, ...legal.default, ...blog.default }
+    messages: { ...base.default, ...legal.default, ...blog.default, ...trust.default }
   };
 });

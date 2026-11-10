@@ -158,54 +158,6 @@
     "imageAlt": "Modern fejlesztői munkakörnyezet",
     "points": ["Átlátható egyeztetés", "Gyors segítség", "Továbbfejleszthető rendszer"]
   },
-  "wdprices": {
-    "eyebrow": "Átlátható ajánlat",
-    "title": "Minden projekt más",
-    "description": "Nem szeretnénk mesterségesen előre meghatározott csomagokba szorítani az igényeidet. Egy egyszerű bemutatkozó oldal és egy összetett üzleti rendszer teljesen más fejlesztési feladat.",
-    "startingFrom": "Egyedi ajánlat",
-    "requestQuote": "Kérj ajánlatot",
-    "note": "Az ajánlatot a funkciók, a projekt összetettsége és a szükséges fejlesztési idő alapján állítjuk össze.",
-    "basic": {
-      "title": "Weboldal",
-      "price": "Egyedi ajánlat",
-      "description": "Ideális választás, ha professzionális online jelenlétre van szükséged.",
-      "features": [
-        "Egyedi vagy a vállalkozáshoz igazított design",
-        "Reszponzív megjelenés",
-        "Kapcsolati űrlap",
-        "Alapvető technikai SEO",
-        "Google Cégprofilhoz igazított online jelenlét",
-        "Teljesítmény optimalizálás"
-      ]
-    },
-    "pro": {
-      "title": "Webalkalmazás",
-      "price": "Egyedi ajánlat",
-      "description": "Ha a weboldal mellett már üzleti funkciókra és saját rendszerre is szükséged van.",
-      "features": [
-        "Egyedi felhasználói felület",
-        "Bejelentkezés és jogosultságkezelés",
-        "Backend és adatbázis",
-        "API-integrációk",
-        "Adminisztrációs felület",
-        "Egyedi üzleti funkciók"
-      ]
-    },
-    "premium": {
-      "title": "Komplex rendszer",
-      "price": "Egyedi ajánlat",
-      "description": "Összetett webes vagy mobil rendszer egyedi üzleti folyamatokra.",
-      "features": [
-        "Teljesen egyedi fejlesztés",
-        "Webes és/vagy mobilalkalmazás",
-        "Backend és adatbázis",
-        "API-k és külső rendszerek integrációja",
-        "Adminisztrációs felület",
-        "Többféle felhasználói szerepkör",
-        "Üzemeltetés és továbbfejlesztés"
-      ]
-    }
-  },
   "websiteBuilding": {
     "eyebrow": "Átlátható folyamat",
     "title": "Így dolgozunk együtt",

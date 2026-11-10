@@ -85,7 +85,9 @@ const jsonLd = {
         "availableLanguage": ["hu", "en"]
       },
       "sameAs": [
-        "https://www.google.com/search?kgmid=/g/11p1g_qc4r&q=GRLab"
+        "https://www.google.com/search?kgmid=/g/11p1g_qc4r&q=GRLab",
+        "https://www.linkedin.com/company/grlab-gyor",
+        "https://www.facebook.com/profile.php?id=61596553672951"
       ],
       "knowsAbout": [
         "Weboldal készítés",

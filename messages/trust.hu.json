@@ -1,0 +1,204 @@
+{
+  "trustBar": {
+    "ariaLabel": "Miért válassz minket?",
+    "response": "24 órán belül garantáltan válaszolunk",
+    "price": "Kezdőárak 79 900 Ft-tól (bruttó)",
+    "speed": "Bemutatkozó oldal pár nap alatt",
+    "team": "Egyetemi mérnöki háttérrel rendelkező csapat"
+  },
+  "promise": {
+    "response": "24 órán belül garantáltan válaszolunk.",
+    "quote": "Minden projektre rövid egyeztetés után készítünk végleges, egyedi ajánlatot."
+  },
+  "pricing": {
+    "eyebrow": "Átlátható árak",
+    "title": "Kedvező kezdőárak, pár napos átfutással",
+    "subtitle": "Kis- és középvállalkozásokra szabtuk az árainkat: az átlagos ügynökségi díjak alatt dolgozunk, a minőségből viszont nem engedünk.",
+    "grossBadge": "Bruttó árak",
+    "grossNote": "Minden feltüntetett ár bruttó összeg, vagyis az áfát tartalmazza.",
+    "from": "Kezdőár",
+    "currency": "Ft",
+    "gross": "bruttó",
+    "perMonth": "/ hó",
+    "deliveryLabel": "Átfutás",
+    "requestQuote": "Ajánlatot kérek",
+    "quoteNote": "A kezdőárak tájékoztató jellegűek. Minden projektre rövid egyeztetés után készítünk végleges, egyedi ajánlatot.",
+    "maintenanceEyebrow": "Üzemeltetés",
+    "items": {
+      "landing": {
+        "name": "Bemutatkozó / landing oldal",
+        "description": "Gyors, mobilbarát bemutatkozó oldal 1–5 aloldallal.",
+        "delivery": "pár nap",
+        "features": [
+          "1–5 oldal",
+          "Reszponzív, gyors megjelenés",
+          "Kapcsolatfelvételi űrlap",
+          "Alap technikai SEO"
+        ]
+      },
+      "company": {
+        "name": "Céges weboldal",
+        "description": "Többoldalas, kétnyelvű (HU/EN) weboldal blogrendszerrel.",
+        "delivery": "kb. 1 hét",
+        "features": [
+          "Több aloldal",
+          "Magyar és angol nyelv",
+          "Blog",
+          "Technikai SEO alapok"
+        ]
+      },
+      "shop": {
+        "name": "Webshop",
+        "description": "Saját admin felületű webáruház, könnyű termék- és készletkezeléssel.",
+        "delivery": "1–2 hét",
+        "features": [
+          "Egyedi admin felület",
+          "Egyszerű termékfeltöltés",
+          "Készletkezelés",
+          "Fizetés és szállítás integrálása (igény szerint)"
+        ]
+      },
+      "webapp": {
+        "name": "Egyedi webalkalmazás / SaaS",
+        "description": "A folyamataidra szabott webalkalmazás bejelentkezéssel és jogosultságokkal.",
+        "delivery": "pár hét",
+        "features": [
+          "Bejelentkezés és szerepkörök",
+          "Backend és adatbázis",
+          "Admin felület",
+          "API-integrációk"
+        ]
+      },
+      "ecosystem": {
+        "name": "Teljes rendszer webbel és mobilappal",
+        "description": "Webalkalmazás és mobilalkalmazás egy összehangolt rendszerben.",
+        "delivery": "kb. 1 hónap",
+        "features": [
+          "Webalkalmazás + mobilalkalmazás",
+          "Backend, adatbázis és API",
+          "Több felhasználói szerepkör",
+          "Továbbfejlesztési támogatás"
+        ]
+      },
+      "gbp": {
+        "name": "Google Cégprofil beállítás",
+        "description": "Hogy a vállalkozásod rendezetten, pontos adatokkal jelenjen meg a Google Keresőben és a Térképen.",
+        "delivery": "1–2 nap",
+        "features": [
+          "Profil létrehozása, segítség az ellenőrzésben",
+          "Kategóriák, szolgáltatások, nyitvatartás",
+          "Fotók és bemutatkozó szöveg",
+          "Alap helyi SEO tanácsok"
+        ]
+      },
+      "maintenance": {
+        "name": "Karbantartás és támogatás",
+        "description": "Havi díjas gondoskodás, hogy a weboldalad vagy rendszered az élesítés után is megbízhatóan működjön.",
+        "delivery": "havi díj",
+        "features": [
+          "Frissítések és hibajavítás",
+          "Gyors támogatás",
+          "Továbbfejlesztési javaslatok"
+        ]
+      }
+    }
+  },
+  "reviews": {
+    "eyebrow": "Ügyfélvélemények",
+    "title": "Ezt mondják az ügyfeleink",
+    "subtitle": "Valódi, 5 csillagos vélemények a Google Cégprofilunkról.",
+    "translated": "A vélemények magyar nyelven íródtak.",
+    "stars": "{count} az 5 csillagból",
+    "source": "Google-vélemény",
+    "googleTitle": "Dolgoztál velünk?",
+    "googleText": "Segíts másoknak is: írd meg a véleményedet, vagy olvasd el az eddigieket a Google Cégprofilunkon.",
+    "projects": {
+      "car-rental": "Autókölcsönző webalkalmazás",
+      "fleetflow": "Flottakezelő rendszer és mobilapp",
+      "pille": "Webshop saját admin felülettel",
+      "gym": "Edzőterem bemutatkozó oldala",
+      "szelvedo": "Weboldal és helyi SEO"
+    },
+    "googleWrite": "Értékelés írása a Google-on",
+    "googleRead": "Összes vélemény elolvasása"
+  },
+  "about": {
+    "navLabel": "Rólunk",
+    "metaTitle": "Rólunk – győri webfejlesztők és szoftverfejlesztők | GRLab",
+    "metaDescription": "Ismerd meg a GRLab-ot: két győri szoftverfejlesztő a Jedlik Ányos Technikumból és a Széchenyi István Egyetemről. Modern technológiák, kedvező árak, 24 órán belüli válasz.",
+    "eyebrow": "Rólunk",
+    "title": "Két győri fejlesztő, aki pontosan és gyorsan dolgozik",
+    "intro": "Két jó barát vagyunk Győrből. A Jedlik Ányos Technikumban szoftverfejlesztő végzettséget szereztünk, jelenleg pedig a Széchenyi István Egyetemen tanulunk mérnökinformatikus (BSc) szakon. Frontend, backend és mobil területen egyaránt otthon vagyunk, és a legmodernebb technológiákkal dolgozunk.",
+    "ctaPrimary": "Beszéljük meg a projektedet",
+    "ctaSecondary": "Kezdőárak megtekintése",
+    "storyEyebrow": "Kik vagyunk",
+    "storyTitle": "Egyetemi tudás, ügynökségi felár nélkül",
+    "storyText": "A tanulmányaink mellett dolgozunk, ezért az árainkat az átlagos ügynökségi díjak alatt tudjuk tartani. A friss, egyetemi szintű tudás és a gyakorlati tapasztalat viszont ugyanúgy megvan: pontosan tervezünk, gyorsan fejlesztünk, és a határidőket komolyan vesszük.",
+    "educationTitle": "Tanulmányaink",
+    "education": [
+      {
+        "school": "Jedlik Ányos Gépipari és Informatikai Technikum, Győr",
+        "detail": "Szoftverfejlesztő végzettség"
+      },
+      {
+        "school": "Széchenyi István Egyetem, Győr",
+        "detail": "Mérnökinformatikus BSc (folyamatban)"
+      }
+    ],
+    "teamEyebrow": "A csapat",
+    "teamTitle": "Akikkel dolgozni fogsz",
+    "githubLabel": "{name} GitHub-profilja",
+    "githubLink": "GitHub-profil",
+    "focusLabel": "Szakterületek",
+    "team": {
+      "dominik": {
+        "name": "Dominik",
+        "role": "Backend, adatbázis és rendszertervezés",
+        "focus": [
+          "Backend",
+          "Adatbázis",
+          "Mobil",
+          "Rendszertervezés",
+          "SEO"
+        ]
+      },
+      "oliver": {
+        "name": "Olivér",
+        "role": "Frontend, UI/UX és mobil",
+        "focus": [
+          "Frontend",
+          "Mobil",
+          "UI/UX design",
+          "Rendszertervezés"
+        ]
+      }
+    },
+    "valuesEyebrow": "Hogyan dolgozunk",
+    "valuesTitle": "Három dolog, amiben biztos lehetsz",
+    "values": [
+      {
+        "title": "Pontosság",
+        "text": "Mérnöki alapossággal tervezünk és tesztelünk, hogy a rendszer elsőre jól működjön."
+      },
+      {
+        "title": "Gyorsaság",
+        "text": "Egy bemutatkozó oldal pár nap alatt elkészül, egy webshop 1–2 hét alatt, egy teljes rendszer pedig nagyjából egy hónap alatt."
+      },
+      {
+        "title": "Korrekt együttműködés",
+        "text": "Átlátható folyamat, 24 órán belüli válasz és támogatás az élesítés után is."
+      }
+    ],
+    "linkedinLabel": "{name} LinkedIn-profilja (új lapon nyílik)",
+    "linkedinLink": "LinkedIn-profil"
+  },
+  "portfolioTrust": {
+    "clientBadge": "Ügyfélprojekt",
+    "schoolBadge": "Iskolai projekt",
+    "schoolNote": "Iskolai közösségi hálózat a Jedlik Ányos Technikum számára."
+  },
+  "social": {
+    "linkedin": "GRLab a LinkedIn-en (új lapon nyílik)",
+    "facebook": "GRLab a Facebookon (új lapon nyílik)"
+  }
+}

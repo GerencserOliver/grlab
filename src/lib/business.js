@@ -14,4 +14,16 @@ export const BUSINESS = {
   country: 'HU',
 };
 
-export const PRIVACY_PATH = '/adatkezelesi-tajekoztato';
+// Direct 'write a review' link of the Google Business Profile.
+export const GOOGLE_REVIEW_URL = 'https://g.page/r/CZbmGpszeKpvEBM/review';
+// Public Google Business Profile / knowledge panel (to read all reviews).
+export const GOOGLE_PROFILE_URL = 'https://www.google.com/search?kgmid=/g/11p1g_qc4r&q=GRLab';
+
+// Official company social profiles (also listed in the Organization JSON-LD `sameAs` in layout.js).
+export const SOCIAL = {
+  linkedin: 'https://www.linkedin.com/company/grlab-gyor',
+  facebook: 'https://www.facebook.com/profile.php?id=61596553672951',
+};
+
+export const ABOUT_PATH = '/about';
+export const PRIVACY_PATH = '/privacy-policy';

@@ -15,6 +15,7 @@ const links = [
   { key: 'seo', href: '/seo' },
   { key: 'portfolio', href: '/portfolio' },
   { key: 'blog', href: '/blog' },
+  { key: 'about', href: '/about' },
   { key: 'contact', href: '/contact' },
 ];
 
@@ -23,10 +24,11 @@ const Navbar = () => {
   const pathname = usePathname();
   const t = useTranslations('nav');
   const tb = useTranslations('blog');
+  const ta = useTranslations('about');
   const locale = useLocale();
   const callLabel = `${t('callUs')}: ${BUSINESS.phoneDisplay}`;
 
-  const label = (key) => (key === 'blog' ? tb('navLabel') : t(key));
+  const label = (key) => (key === 'blog' ? tb('navLabel') : key === 'about' ? ta('navLabel') : t(key));
   // The Blog item stays highlighted on individual posts (/blog/<slug>) too.
   const isActive = (href) => pathname === href || (href === '/blog' && pathname?.startsWith('/blog/'));
 
@@ -45,7 +47,7 @@ const Navbar = () => {
         <Link href='/' aria-label={t('home')}>
           <Image src={logo} alt={t('logoAlt')} className='h-auto w-16' fetchPriority='high' loading="eager" />
         </Link>
-        <div className='flex items-center gap-1 md:hidden'>
+        <div className='flex items-center gap-1 lg:hidden'>
           <a
             href={BUSINESS.phoneHref}
             aria-label={callLabel}
@@ -64,7 +66,7 @@ const Navbar = () => {
             <span className='text-2xl' aria-hidden='true'>{isOpen ? '×' : '☰'}</span>
           </button>
         </div>
-        <div className='hidden items-center gap-1 md:flex lg:gap-2'>
+        <div className='hidden items-center gap-1 lg:flex xl:gap-2'>
           {links.map((link) => (
             <Link
               key={link.key}
@@ -88,7 +90,7 @@ const Navbar = () => {
             <button type='button' onClick={() => changeLanguage('en')} aria-pressed={locale === 'en'} lang='en' className={`rounded-md px-3 py-2 text-xs font-bold ${locale === 'en' ? 'bg-white text-ink shadow-sm' : 'text-ink-muted'}`}>EN</button>
           </div>
         </div>
-        <div id='mobile-navigation' className={`${isOpen ? 'flex' : 'hidden'} absolute left-0 top-24 w-full flex-col gap-2 border-b border-line bg-white p-5 shadow-lg md:hidden`}>
+        <div id='mobile-navigation' className={`${isOpen ? 'flex' : 'hidden'} absolute left-0 top-24 w-full flex-col gap-2 border-b border-line bg-white p-5 shadow-lg lg:hidden`}>
           <Link href='/' aria-current={pathname === '/' ? 'page' : undefined} className='rounded-lg px-4 py-3 font-semibold text-ink'>{t('home')}</Link>
           {links.map((link) => (
             <Link key={link.key} href={link.href} aria-current={isActive(link.href) ? 'page' : undefined} className='rounded-lg px-4 py-3 font-semibold text-ink'>{label(link.key)}</Link>

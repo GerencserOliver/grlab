@@ -16,7 +16,20 @@
 - [Weboldal készítés](https://www.grlab.hu/website): Egyedi, gyors React/Next.js weboldalak, webshopok és webalkalmazások fejlesztése.
 - [Google Cégprofil és technikai SEO](https://www.grlab.hu/seo): Helyi SEO és Google Térkép optimalizálás.
 - [Referenciák](https://www.grlab.hu/portfolio): Referenciáink és korábbi munkáink.
-- [Kapcsolat](https://www.grlab.hu/contact): Ingyenes első konzultáció és ajánlatkérés.
+- [Kapcsolat](https://www.grlab.hu/contact): Ingyenes első konzultáció és ajánlatkérés. 24 órán belül garantáltan válaszolunk.
+- [Rólunk](https://www.grlab.hu/about): Két győri fejlesztő (Jedlik Ányos Technikum, Széchenyi István Egyetem), csapat, tanulmányok és ügyfélvélemények.
+
+## Kezdőárak (bruttó, áfával együtt)
+
+Részletek: https://www.grlab.hu/website#pricing – minden projektre rövid egyeztetés után készül végleges ajánlat.
+
+- Bemutatkozó / landing oldal (1–5 oldal): 79 900 Ft-tól, átfutás: pár nap
+- Céges weboldal (többoldalas, kétnyelvű, blog): 149 000 Ft-tól, átfutás: kb. 1 hét
+- Webshop (saját admin, könnyű termék- és készletkezelés): 249 000 Ft-tól, átfutás: 1–2 hét
+- Egyedi webalkalmazás / SaaS: 390 000 Ft-tól, átfutás: pár hét
+- Teljes rendszer webbel és mobilappal: 990 000 Ft-tól, átfutás: kb. 1 hónap
+- Google Cégprofil beállítás: 29 900 Ft-tól, átfutás: 1–2 nap
+- Karbantartás és támogatás: 9 900 Ft / hó
 
 ## Blog
 
@@ -27,4 +40,4 @@
 
 ## Jogi információk
 
-- [Adatkezelési tájékoztató](https://www.grlab.hu/adatkezelesi-tajekoztato)
+- [Adatkezelési tájékoztató](https://www.grlab.hu/privacy-policy)

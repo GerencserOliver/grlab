@@ -12,6 +12,7 @@ import ReadingProgress from '../../../components/blog/ReadingProgress';
 import { ACCENTS } from '../../../components/blog/PostCover';
 import { SITE_URL, SITE_NAME, DEFAULT_OG_IMAGE, buildPageMetadata } from '../../../lib/seo';
 import { BUSINESS } from '../../../lib/business';
+import ResponseGuarantee from '../../../components/trust/ResponseGuarantee';
 import { BLOG_PATH, getPostBySlug, getRelatedPosts, formatPostDate } from '../../../lib/blog';
 import { parseMarkdown, extractHeadings } from '../../../lib/markdown';
 
@@ -53,9 +54,10 @@ export async function generateMetadata({ params }) {
 
 const BlogPost = async ({ params }) => {
   const { slug } = await params;
-  const [t, tn, locale] = await Promise.all([
+  const [t, tn, tg, locale] = await Promise.all([
     getTranslations('blog'),
     getTranslations('nav'),
+    getTranslations('promise'),
     getLocale(),
   ]);
 
@@ -182,6 +184,7 @@ const BlogPost = async ({ params }) => {
                   <FontAwesomeIcon icon={faPhone} aria-hidden='true' /> {BUSINESS.phoneDisplay}
                 </a>
               </div>
+              <ResponseGuarantee text={tg('response')} tone='dark' className='mt-5' />
             </aside>
           </article>
         </div>

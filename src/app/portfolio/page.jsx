@@ -3,6 +3,7 @@ import ScrollAnimation from '../../components/ScrollAnimation';
 import IntroAnimation from '../../components/IntroAnimation';
 import JsonLd from '../../components/JsonLd';
 import Projects from '../../components/Portfolio/Projects';
+import Reviews from '../../components/trust/Reviews';
 import Link from 'next/link';
 import { getTranslations } from 'next-intl/server';
 import { PROJECTS } from '../../lib/projects';
@@ -84,6 +85,7 @@ const Portfolio = async () => {
         </div>
       </section>
       <Projects />
+      <Reviews />
       <CTA />
     </div>
   );

@@ -26,6 +26,41 @@
     }
   ],
   "legal": {
-    "privacy_policy": "https://www.grlab.hu/adatkezelesi-tajekoztato"
+    "privacy_policy": "https://www.grlab.hu/privacy-policy"
+  },
+  "social": {
+    "facebook": "https://www.facebook.com/profile.php?id=61596553672951",
+    "linkedin": "https://www.linkedin.com/company/grlab-gyor"
+  },
+  "review": {
+    "google": "https://g.page/r/CZbmGpszeKpvEBM/review"
+  },
+  "logo": {
+    "url": "https://www.grlab.hu/logo.png",
+    "width": 512,
+    "height": 512
+  },
+  "favicon": {
+    "url": "https://www.grlab.hu/favicon.ico",
+    "width": 32,
+    "height": 32
+  },
+  "open_graph": {
+    "title": "GRLab - Egyedi digitális megoldások Győrben és Magyarországon",
+    "description": "Egyedi digitális megoldások, weboldalak, webalkalmazások és digitális üzleti rendszerek vállalkozásoknak Győrben és Magyarországon.",
+    "image": {
+      "url": "https://www.grlab.hu/logo_social.png",
+      "width": 1200,
+      "height": 630
+    }
+  },
+  "sitemap": {
+    "url": "https://www.grlab.hu/sitemap.xml"
+  },
+  "robots_txt": {
+    "url": "https://www.grlab.hu/robots.txt"
+  },
+  "google_profile": {
+    "url": "https://www.google.com/search?kgmid=/g/11p1g_qc4r&q=GRLab"
   }
 }
