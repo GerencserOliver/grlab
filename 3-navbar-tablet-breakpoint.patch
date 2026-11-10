@@ -1,0 +1,31 @@
+diff --git a/src/components/Navbar.jsx b/src/components/Navbar.jsx
+index ca82e69..39f98fe 100644
+--- a/src/components/Navbar.jsx
++++ b/src/components/Navbar.jsx
+@@ -47,7 +47,7 @@ const Navbar = () => {
+         <Link href='/' aria-label={t('home')}>
+           <Image src={logo} alt={t('logoAlt')} className='h-auto w-16' fetchPriority='high' loading="eager" />
+         </Link>
+-        <div className='flex items-center gap-1 md:hidden'>
++        <div className='flex items-center gap-1 lg:hidden'>
+           <a
+             href={BUSINESS.phoneHref}
+             aria-label={callLabel}
+@@ -66,7 +66,7 @@ const Navbar = () => {
+             <span className='text-2xl' aria-hidden='true'>{isOpen ? '×' : '☰'}</span>
+           </button>
+         </div>
+-        <div className='hidden items-center gap-1 md:flex lg:gap-2'>
++        <div className='hidden items-center gap-1 lg:flex xl:gap-2'>
+           {links.map((link) => (
+             <Link
+               key={link.key}
+@@ -90,7 +90,7 @@ const Navbar = () => {
+             <button type='button' onClick={() => changeLanguage('en')} aria-pressed={locale === 'en'} lang='en' className={`rounded-md px-3 py-2 text-xs font-bold ${locale === 'en' ? 'bg-white text-ink shadow-sm' : 'text-ink-muted'}`}>EN</button>
+           </div>
+         </div>
+-        <div id='mobile-navigation' className={`${isOpen ? 'flex' : 'hidden'} absolute left-0 top-24 w-full flex-col gap-2 border-b border-line bg-white p-5 shadow-lg md:hidden`}>
++        <div id='mobile-navigation' className={`${isOpen ? 'flex' : 'hidden'} absolute left-0 top-24 w-full flex-col gap-2 border-b border-line bg-white p-5 shadow-lg lg:hidden`}>
+           <Link href='/' aria-current={pathname === '/' ? 'page' : undefined} className='rounded-lg px-4 py-3 font-semibold text-ink'>{t('home')}</Link>
+           {links.map((link) => (
+             <Link key={link.key} href={link.href} aria-current={isActive(link.href) ? 'page' : undefined} className='rounded-lg px-4 py-3 font-semibold text-ink'>{label(link.key)}</Link>

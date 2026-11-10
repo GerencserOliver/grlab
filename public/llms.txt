@@ -21,7 +21,7 @@
 
 ## Kezdőárak (bruttó, áfával együtt)
 
-Részletek: https://www.grlab.hu/website#kezdoarak – minden projektre rövid egyeztetés után készül végleges ajánlat.
+Részletek: https://www.grlab.hu/website#pricing – minden projektre rövid egyeztetés után készül végleges ajánlat.
 
 - Bemutatkozó / landing oldal (1–5 oldal): 79 900 Ft-tól, átfutás: pár nap
 - Céges weboldal (többoldalas, kétnyelvű, blog): 149 000 Ft-tól, átfutás: kb. 1 hét

@@ -29,43 +29,77 @@
         "name": "Presentation / landing site",
         "description": "A fast, mobile-friendly presentation site with 1–5 pages.",
         "delivery": "a few days",
-        "features": ["1–5 pages", "Responsive, fast layout", "Contact form", "Basic technical SEO"]
+        "features": [
+          "1–5 pages",
+          "Responsive, fast layout",
+          "Contact form",
+          "Basic technical SEO"
+        ]
       },
       "company": {
         "name": "Company website",
         "description": "A multi-page, bilingual (HU/EN) website with a blog.",
         "delivery": "about 1 week",
-        "features": ["Multiple subpages", "Hungarian and English", "Blog", "Technical SEO foundations"]
+        "features": [
+          "Multiple subpages",
+          "Hungarian and English",
+          "Blog",
+          "Technical SEO foundations"
+        ]
       },
       "shop": {
         "name": "Online store",
         "description": "A store with its own admin interface and easy product and stock management.",
         "delivery": "1–2 weeks",
-        "features": ["Custom admin interface", "Easy product upload", "Stock management", "Payment and shipping integration (on request)"]
+        "features": [
+          "Custom admin interface",
+          "Easy product upload",
+          "Stock management",
+          "Payment and shipping integration (on request)"
+        ]
       },
       "webapp": {
         "name": "Custom web application / SaaS",
         "description": "A web application built around your processes, with login and permissions.",
         "delivery": "a few weeks",
-        "features": ["Login and user roles", "Backend and database", "Admin interface", "API integrations"]
+        "features": [
+          "Login and user roles",
+          "Backend and database",
+          "Admin interface",
+          "API integrations"
+        ]
       },
       "ecosystem": {
         "name": "Full system: web + mobile app",
         "description": "A web application and a mobile app working together as one system.",
         "delivery": "about 1 month",
-        "features": ["Web application + mobile app", "Backend, database and API", "Multiple user roles", "Further development support"]
+        "features": [
+          "Web application + mobile app",
+          "Backend, database and API",
+          "Multiple user roles",
+          "Further development support"
+        ]
       },
       "gbp": {
         "name": "Google Business Profile setup",
         "description": "Get your business shown properly on Google Search and Maps.",
         "delivery": "1–2 days",
-        "features": ["Profile creation, help with verification", "Categories, services, opening hours", "Photos and description", "Basic local SEO tips"]
+        "features": [
+          "Profile creation, help with verification",
+          "Categories, services, opening hours",
+          "Photos and description",
+          "Basic local SEO tips"
+        ]
       },
       "maintenance": {
         "name": "Maintenance and support",
         "description": "Monthly care so your website or system keeps running reliably after launch.",
         "delivery": "monthly fee",
-        "features": ["Updates and bug fixes", "Fast support", "Suggestions for further development"]
+        "features": [
+          "Updates and bug fixes",
+          "Fast support",
+          "Suggestions for further development"
+        ]
       }
     }
   },
@@ -76,16 +110,17 @@
     "translated": "The reviews were written in Hungarian and are translated here.",
     "stars": "{count} out of 5 stars",
     "source": "Google review",
-    "googleTitle": "Read all the reviews",
-    "googleText": "See our full ratings on our Google Business Profile.",
-    "googleButton": "Reviews on Google",
+    "googleTitle": "Worked with us?",
+    "googleText": "Help others decide: write your review, or read the existing ones on our Google Business Profile.",
     "projects": {
       "car-rental": "Car rental web application",
       "fleetflow": "Fleet management system and mobile app",
       "pille": "Online store with its own admin",
       "gym": "Gym presentation website",
       "szelvedo": "Website and local SEO"
-    }
+    },
+    "googleWrite": "Write a Google review",
+    "googleRead": "Read all reviews"
   },
   "about": {
     "navLabel": "About us",
@@ -101,8 +136,14 @@
     "storyText": "We work alongside our studies, which lets us keep our prices below typical agency rates. The fresh, university-level knowledge and hands-on experience are all there: we plan precisely, build quickly and take deadlines seriously.",
     "educationTitle": "Our studies",
     "education": [
-      { "school": "Jedlik Ányos Technical School of Mechanical Engineering and IT, Győr", "detail": "Software developer qualification" },
-      { "school": "Széchenyi István University, Győr", "detail": "Computer Science Engineering BSc (in progress)" }
+      {
+        "school": "Jedlik Ányos Technical School of Mechanical Engineering and IT, Győr",
+        "detail": "Software developer qualification"
+      },
+      {
+        "school": "Széchenyi István University, Győr",
+        "detail": "Computer Science Engineering BSc (in progress)"
+      }
     ],
     "teamEyebrow": "The team",
     "teamTitle": "The people you will work with",
@@ -113,25 +154,51 @@
       "dominik": {
         "name": "Dominik",
         "role": "Backend, database and system architecture",
-        "focus": ["Backend", "Database", "Mobile", "System architecture", "SEO"]
+        "focus": [
+          "Backend",
+          "Database",
+          "Mobile",
+          "System architecture",
+          "SEO"
+        ]
       },
       "oliver": {
         "name": "Olivér",
         "role": "Frontend, UI/UX and mobile",
-        "focus": ["Frontend", "Mobile", "UI/UX design", "System architecture"]
+        "focus": [
+          "Frontend",
+          "Mobile",
+          "UI/UX design",
+          "System architecture"
+        ]
       }
     },
     "valuesEyebrow": "How we work",
     "valuesTitle": "Three things you can count on",
     "values": [
-      { "title": "Precision", "text": "We plan and test with engineering thoroughness so the system works right from the start." },
-      { "title": "Speed", "text": "A presentation site takes a few days, an online store 1–2 weeks, and a full system roughly a month." },
-      { "title": "Fair collaboration", "text": "A transparent process, a reply within 24 hours and support after launch." }
-    ]
+      {
+        "title": "Precision",
+        "text": "We plan and test with engineering thoroughness so the system works right from the start."
+      },
+      {
+        "title": "Speed",
+        "text": "A presentation site takes a few days, an online store 1–2 weeks, and a full system roughly a month."
+      },
+      {
+        "title": "Fair collaboration",
+        "text": "A transparent process, a reply within 24 hours and support after launch."
+      }
+    ],
+    "linkedinLabel": "{name}'s LinkedIn profile (opens in a new tab)",
+    "linkedinLink": "LinkedIn profile"
   },
   "portfolioTrust": {
     "clientBadge": "Client project",
     "schoolBadge": "School project",
     "schoolNote": "A school social network for Jedlik Ányos Technical School."
+  },
+  "social": {
+    "linkedin": "GRLab on LinkedIn (opens in a new tab)",
+    "facebook": "GRLab on Facebook (opens in a new tab)"
   }
 }

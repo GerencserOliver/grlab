@@ -43,7 +43,7 @@ const About = async () => {
     jobTitle: t(`team.${member.id}.role`),
     worksFor: { '@id': ORGANIZATION_ID },
     knowsAbout: t.raw(`team.${member.id}.focus`),
-    sameAs: [member.github],
+    sameAs: [member.github, member.linkedin],
   }));
 
   const jsonLd = await buildPageJsonLd({
@@ -84,7 +84,7 @@ const About = async () => {
                 {t('ctaPrimary')} <FontAwesomeIcon icon={faArrowRight} aria-hidden='true' />
               </Link>
               <Link
-                href='/website#kezdoarak'
+                href='/website#pricing'
                 className='inline-flex items-center justify-center rounded-full border-2 border-ink px-7 py-4 font-poppins text-base font-bold text-ink transition-colors hover:bg-ink hover:text-white'
               >
                 {t('ctaSecondary')}

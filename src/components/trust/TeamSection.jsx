@@ -42,15 +42,26 @@ const TeamSection = async () => {
                         </li>
                       ))}
                   </ul>
-                  <a
-                    href={member.github}
-                    target='_blank'
-                    rel='noopener noreferrer'
-                    aria-label={t('githubLabel', { name })}
-                    className='mt-6 inline-flex w-fit items-center gap-2 font-poppins text-base font-bold text-brand-700 underline decoration-brand-300 underline-offset-4 transition-colors hover:text-brand-900'
-                  >
-                    {t('githubLink')} <FontAwesomeIcon icon={faArrowRight} aria-hidden='true' />
-                  </a>
+                  <div className='mt-6 flex flex-wrap gap-x-6 gap-y-2'>
+                    <a
+                      href={member.linkedin}
+                      target='_blank'
+                      rel='noopener noreferrer'
+                      aria-label={t('linkedinLabel', { name })}
+                      className='inline-flex w-fit items-center gap-2 font-poppins text-base font-bold text-brand-700 underline decoration-brand-300 underline-offset-4 transition-colors hover:text-brand-900'
+                    >
+                      {t('linkedinLink')} <FontAwesomeIcon icon={faArrowRight} aria-hidden='true' />
+                    </a>
+                    <a
+                      href={member.github}
+                      target='_blank'
+                      rel='noopener noreferrer'
+                      aria-label={t('githubLabel', { name })}
+                      className='inline-flex w-fit items-center gap-2 font-poppins text-base font-bold text-brand-700 underline decoration-brand-300 underline-offset-4 transition-colors hover:text-brand-900'
+                    >
+                      {t('githubLink')} <FontAwesomeIcon icon={faArrowRight} aria-hidden='true' />
+                    </a>
+                  </div>
                 </article>
               </li>
             );

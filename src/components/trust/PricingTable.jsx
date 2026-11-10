@@ -24,7 +24,7 @@ const PricingTable = async () => {
   const maintenanceFeatures = t.raw(`items.${MAINTENANCE.id}.features`);
 
   return (
-    <section id='kezdoarak' className='scroll-mt-28 bg-surface-alt' aria-labelledby='pricing-heading'>
+    <section id='pricing' className='scroll-mt-28 bg-surface-alt' aria-labelledby='pricing-heading'>
       <div className='container mx-auto flex max-w-360 flex-col px-6 py-20 md:px-10 md:py-24'>
         <div className='scroll-in max-w-3xl'>
           <p className='mb-4 flex flex-wrap items-center gap-3 text-sm font-bold uppercase tracking-[0.18em] text-brand-700'>

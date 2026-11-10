@@ -2,7 +2,7 @@ import { getLocale, getTranslations } from 'next-intl/server';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar, faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import { REVIEWS } from '../../../content/reviews';
-import { GOOGLE_PROFILE_URL } from '../../lib/business';
+import { GOOGLE_REVIEW_URL, GOOGLE_PROFILE_URL } from '../../lib/business';
 
 /**
  * Real Google reviews as visible quotes (deliberately no Review/AggregateRating schema:
@@ -50,14 +50,24 @@ const Reviews = async () => {
                 <h3 className='font-poppins text-2xl font-extrabold leading-tight'>{t('googleTitle')}</h3>
                 <p className='mt-3 text-lg leading-relaxed'>{t('googleText')}</p>
               </div>
-              <a
-                href={GOOGLE_PROFILE_URL}
-                target='_blank'
-                rel='noopener noreferrer'
-                className='mt-8 inline-flex w-full items-center justify-center gap-3 rounded-full bg-white px-6 py-3 font-poppins text-base font-bold text-ink transition-colors hover:bg-soft'
-              >
-                {t('googleButton')} <FontAwesomeIcon icon={faArrowRight} aria-hidden='true' />
-              </a>
+              <div className='mt-8 flex flex-col gap-3'>
+                <a
+                  href={GOOGLE_REVIEW_URL}
+                  target='_blank'
+                  rel='noopener noreferrer'
+                  className='inline-flex w-full items-center justify-center gap-3 rounded-full bg-white px-6 py-3 font-poppins text-base font-bold text-ink transition-colors hover:bg-soft'
+                >
+                  {t('googleWrite')} <FontAwesomeIcon icon={faArrowRight} aria-hidden='true' />
+                </a>
+                <a
+                  href={GOOGLE_PROFILE_URL}
+                  target='_blank'
+                  rel='noopener noreferrer'
+                  className='inline-flex w-full items-center justify-center rounded-full border-2 border-white/70 px-6 py-3 font-poppins text-base font-bold text-white transition-colors hover:bg-white/15'
+                >
+                  {t('googleRead')}
+                </a>
+              </div>
             </div>
           </li>
         </ul>
