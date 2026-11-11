@@ -30,7 +30,7 @@ export const REVIEWS = [
     rating: 5,
     projectKey: 'pille',
     quote: {
-      hu: 'Webshopot csináltak nekünk, az volt a fő szempont hogy az admint mi is könnyen tudjuk kezelni a termékfeltöltésnél. Ezt tökéletesen megoldották, az oldal is száguld, a vásárlók is szeretik. Köszi a munkát!',
+      hu: 'Webshopot csináltak nekünk, az volt a fő szempont hogy az admint mi is könnyen tudjuk kezelni a termékfeltöltésnél. Ezt tökéletesen megoldották, az oldal gyors, a vásárlók is szeretik. Köszi a munkát!',
       en: 'They built us an online store, and the main requirement was that we could easily manage the admin when uploading products. They solved that perfectly, the site is fast and customers love it. Thanks for the work!',
     },
   },

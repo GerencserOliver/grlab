@@ -6,9 +6,11 @@
 import mennyibeKerulWeboldal from './posts/mennyibe-kerul-weboldal-keszitese-gyor';
 import googleCegprofilHelyiSeo from './posts/google-cegprofil-beallitas-helyi-seo-gyor';
 import egyediSzoftverfejlesztes from './posts/egyedi-szoftverfejlesztes-vagy-kesz-rendszer';
+import hogyanGyorsitjaFel from './posts/hogyan-gyorsitja-fel-a-vallalkozasodat-egy-egyedi-webalkalmazas';
 
 export const posts = [
   mennyibeKerulWeboldal,
   googleCegprofilHelyiSeo,
   egyediSzoftverfejlesztes,
+  hogyanGyorsitjaFel,
 ];

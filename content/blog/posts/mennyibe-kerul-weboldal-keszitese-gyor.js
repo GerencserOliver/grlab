@@ -2,7 +2,7 @@ const post = {
   slug: 'mennyibe-kerul-weboldal-keszitese-gyor',
   publishedAt: '2026-11-04',
   updatedAt: '2026-11-04',
-  featured: true,
+  featured: false,
   accent: 'teal',
   icon: 'chart',
 
