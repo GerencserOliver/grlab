@@ -38,6 +38,7 @@ Részletek: https://www.grlab.hu/website#pricing – minden projektre rövid egy
 - [Google Cégprofil beállítása lépésről lépésre](https://www.grlab.hu/blog/google-cegprofil-beallitas-helyi-seo-gyor)
 - [Egyedi szoftverfejlesztés vagy kész rendszer?](https://www.grlab.hu/blog/egyedi-szoftverfejlesztes-vagy-kesz-rendszer)
 - [Hogyan gyorsítja fel a vállalkozásodat egy egyedi webalkalmazás?](https://www.grlab.hu/blog/hogyan-gyorsitja-fel-a-vallalkozasodat-egy-egyedi-webalkalmazas)
+- [Technikai SEO és PageSpeed: Miért számít a weboldal sebessége?](https://www.grlab.hu/blog/technikai-seo-es-pagespeed-miert-szamit-a-weboldal-sebessege)
 
 ## Jogi információk
 
