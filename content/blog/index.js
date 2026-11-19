@@ -7,10 +7,12 @@ import mennyibeKerulWeboldal from './posts/mennyibe-kerul-weboldal-keszitese-gyo
 import googleCegprofilHelyiSeo from './posts/google-cegprofil-beallitas-helyi-seo-gyor';
 import egyediSzoftverfejlesztes from './posts/egyedi-szoftverfejlesztes-vagy-kesz-rendszer';
 import hogyanGyorsitjaFel from './posts/hogyan-gyorsitja-fel-a-vallalkozasodat-egy-egyedi-webalkalmazas';
+import technikaiSeo from './posts/technikai-seo-es-pagespeed-miert-szamit-a-weboldal-sebessege';
 
 export const posts = [
   mennyibeKerulWeboldal,
   googleCegprofilHelyiSeo,
   egyediSzoftverfejlesztes,
   hogyanGyorsitjaFel,
+  technikaiSeo,
 ];
